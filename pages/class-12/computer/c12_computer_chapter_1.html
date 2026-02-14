@@ -276,30 +276,100 @@
                     <h3>3. Relational Database Model:</h3>
                     <p>In relational database model, a collection of data items is organized in a table from which data can be accessed in many different ways. This model can handle many to many relationship smoothly. The data on customer order and item ordered are managed in table as follows:</p>
                     
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-sm">
-                            <thead><tr><th colspan="3">Table: Customer</th></tr></thead>
-                            <tr><td>CustomerID</td><td>Name</td><td>Address</td></tr>
-                        </table>
+                    <div class="relational-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem; overflow-x: auto;">
+                        <svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+                            <style>
+                                .table-rect { fill: white; stroke: #333; stroke-width: 1.5; }
+                                .table-header { fill: #f0f0f0; stroke: #333; stroke-width: 1.5; }
+                                .cell-text { font-family: sans-serif; font-size: 13px; text-anchor: start; dominant-baseline: middle; }
+                                .header-text { font-family: sans-serif; font-size: 13px; font-weight: bold; text-anchor: start; dominant-baseline: middle; }
+                                .relation-arrow { stroke: #000; stroke-width: 1.5; fill: none; marker-end: url(#arrow-rel); }
+                            </style>
+                            <defs>
+                                <marker id="arrow-rel" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                                </marker>
+                            </defs>
+
+                            <!-- Table 1: Customer (x=10) -->
+                            <g transform="translate(10, 20)">
+                                <!-- Heading -->
+                                <rect class="table-header" width="140" height="25" />
+                                <text class="header-text" x="5" y="12.5">Table: Customer</text>
+                                <!-- Rows -->
+                                <rect class="table-rect" y="25" width="140" height="25" />
+                                <text class="cell-text" x="5" y="37.5">CustomerID</text>
+                                <rect class="table-rect" y="50" width="140" height="25" />
+                                <text class="cell-text" x="5" y="62.5">Name</text>
+                                <rect class="table-rect" y="75" width="140" height="25" />
+                                <text class="cell-text" x="5" y="87.5">Address</text>
+                                <rect class="table-rect" y="100" width="140" height="25" />
+                                <text class="cell-text" x="5" y="112.5">.........................</text>
+                            </g>
+
+                            <!-- Table 2: Order (x=210) -->
+                            <g transform="translate(210, 20)">
+                                <rect class="table-header" width="140" height="25" />
+                                <text class="header-text" x="5" y="12.5">Table: Order</text>
+                                <rect class="table-rect" y="25" width="140" height="25" />
+                                <text class="cell-text" x="5" y="37.5">OrderID</text>
+                                <rect class="table-rect" y="50" width="140" height="25" />
+                                <text class="cell-text" x="5" y="62.5">CustomerID</text>
+                                <rect class="table-rect" y="75" width="140" height="25" />
+                                <text class="cell-text" x="5" y="87.5">OrderDate</text>
+                                <rect class="table-rect" y="100" width="140" height="25" />
+                                <text class="cell-text" x="5" y="112.5">.........................</text>
+                            </g>
+
+                            <!-- Table 3: ItemsOrdered (x=410) -->
+                            <g transform="translate(410, 20)">
+                                <rect class="table-header" width="140" height="25" />
+                                <text class="header-text" x="5" y="12.5">Table: ItemsOrdered</text>
+                                <rect class="table-rect" y="25" width="140" height="25" />
+                                <text class="cell-text" x="5" y="37.5">OrderID</text>
+                                <rect class="table-rect" y="50" width="140" height="25" />
+                                <text class="cell-text" x="5" y="62.5">ItemID</text>
+                                <rect class="table-rect" y="75" width="140" height="25" />
+                                <text class="cell-text" x="5" y="87.5">Quantity</text>
+                                <rect class="table-rect" y="100" width="140" height="25" />
+                                <text class="cell-text" x="5" y="112.5">.........................</text>
+                            </g>
+
+                             <!-- Table 4: Items (x=610) -->
+                            <g transform="translate(610, 20)">
+                                <rect class="table-header" width="140" height="25" />
+                                <text class="header-text" x="5" y="12.5">Table: Items</text>
+                                <rect class="table-rect" y="25" width="140" height="25" />
+                                <text class="cell-text" x="5" y="37.5">ItemID</text>
+                                <rect class="table-rect" y="50" width="140" height="25" />
+                                <text class="cell-text" x="5" y="62.5">Description</text>
+                                <rect class="table-rect" y="75" width="140" height="25" />
+                                <text class="cell-text" x="5" y="87.5">Price</text>
+                                <rect class="table-rect" y="100" width="140" height="25" />
+                                <text class="cell-text" x="5" y="112.5">.........................</text>
+                            </g>
+
+                            <!-- Arrows -->
+                            <!-- Order(CustomerID) -> Customer(CustomerID) -->
+                            <!-- Order(CustomerID) is at x=210, y=50+12.5=62.5 relative to group. Group at 20. Abs Y = 82.5 -->
+                            <!-- Customer(CustomerID) is at x=150 (end of table), y=37.5. Abs Y = 57.5 -->
+                            <!-- Path: Start Left of Order.CustomerID -> Left -> Up -> Right -> Right of Customer.CustomerID -->
+                            
+                            <!-- Actually image shows lines connecting from the side of the box. -->
+                            <!-- Arrow 1: Order.CustomerID to Customer.CustomerID -->
+                            <path class="relation-arrow" d="M210,82 L180,82 L180,57 L150,57" />
+
+                            <!-- Arrow 2: ItemsOrdered.OrderID to Order.OrderID -->
+                            <path class="relation-arrow" d="M410,57 L380,57 L380,57 L350,57" />
+
+                            <!-- Arrow 3: ItemsOrdered.ItemID to Items.ItemID -->
+                            <!-- ItemsOrdered.ItemID is at y=82.5 -->
+                            <!-- Items.ItemID is at y=57.5 -->
+                            <path class="relation-arrow" d="M550,82 L580,82 L580,57 L610,57" />
+
+                        </svg>
                     </div>
-                     <div class="table-responsive" style="margin-top: 0.5rem;">
-                        <table class="table table-bordered table-sm">
-                            <thead><tr><th colspan="3">Table: Order</th></tr></thead>
-                            <tr><td>OrderID</td><td>CustomerID</td><td>OrderDate</td></tr>
-                        </table>
-                    </div>
-                     <div class="table-responsive" style="margin-top: 0.5rem;">
-                        <table class="table table-bordered table-sm">
-                            <thead><tr><th colspan="3">Table: ItemsOrdered</th></tr></thead>
-                            <tr><td>OrderID</td><td>ItemID</td><td>Quantity</td></tr>
-                        </table>
-                    </div>
-                     <div class="table-responsive" style="margin-top: 0.5rem;">
-                        <table class="table table-bordered table-sm">
-                            <thead><tr><th colspan="3">Table: Items</th></tr></thead>
-                            <tr><td>ItemID</td><td>Description</td><td>Price</td></tr>
-                        </table>
-                    </div>
+                    <div style="text-align: center; font-style: italic; margin-bottom: 2rem;">fig: Relational Database model</div>
 
                     <h2 id="basics">Basic things to know</h2>
                     <ul>
