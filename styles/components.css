@@ -5,7 +5,8 @@
 .relational-graph-container,
 .tree-container {
     width: 100%;
-    /* overflow-x: auto;  <-- REMOVED: User wants scaling (fixed ratio), not scrolling */
+    max-width: 100%;
+    overflow: hidden; /* Protect against SVG overflow */
     margin-bottom: 2rem;
     display: block;
 }
@@ -13,10 +14,10 @@
 .network-graph-container svg,
 .relational-graph-container svg,
 .tree-container svg {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    display: block; /* Removes bottom space */
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    display: block;
 }
 
 /* --- Cards --- */
@@ -89,6 +90,7 @@
 }
 
 /* --- Grids --- */
+/* --- Grids --- */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -106,17 +108,9 @@
     min-width: 0;
 }
 
-/* Stack grids earlier (tablets/small laptops) to allow wide content like tables */
-@media (max-width: 1024px) {
-    .grid-2,
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-}
-
 .grid-subjects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Reduced from 300px for better mobile fit */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
     gap: var(--spacing-lg);
 }
 
@@ -163,21 +157,28 @@
     margin-bottom: var(--spacing-sm);
 }
 
-/* --- Responsive Helpers --- */
-@media (max-width: 900px) {
-    .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
+/* --- Responsive Helpers & Grid Overrides --- */
+/* Strict stacking for tablets and mobile to fix overflow */
+@media (max-width: 1024px) {
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr !important; /* Force stack */
+        gap: var(--spacing-md);
+    }
+    
+    .section {
+        padding: var(--spacing-xl) 0;
     }
 }
 
 @media (max-width: 600px) {
-    .grid-2, .grid-3 {
-        grid-template-columns: 1fr;
-    }
-    
     .hero {
         padding: 100px 0 60px;
         text-align: center;
+    }
+    
+    /* Ensure no horizontal overflow on very small text */
+    .badge {
+        font-size: 0.7rem;
     }
 }
 
@@ -473,7 +474,7 @@
 
 .table {
     width: 100%;
-    min-width: 600px; /* Force minimum width to prevent content crushing/wrapping too much */
+    /* min-width: 600px; REMOVED: Causing unnecessary scrollbars on small tables. Content will wrap naturally. */
     border-collapse: collapse;
     margin-bottom: var(--spacing-md);
 }
