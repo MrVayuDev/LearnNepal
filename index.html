@@ -30,6 +30,12 @@
     });
   }
 </script>
+    <!-- Loading Screen -->
+    <div id="loader-overlay">
+      <div class="loader-spinner"></div>
+      <div class="loader-text">LearnNepal</div>
+    </div>
+
     <!-- Header -->
     <header class="header">
       <div class="container header-container">
@@ -274,8 +280,25 @@
           if (document.getElementById('home-body')) {
              document.getElementById('home-body').innerHTML = marked.parse(markdownBody);
           }
+
+
+           // Hide Loader
+           const loader = document.getElementById('loader-overlay');
+           if (loader) {
+             loader.classList.add('hidden');
+             setTimeout(() => {
+               loader.style.display = 'none';
+             }, 500);
+           }
         })
-        .catch(err => console.error("Error loading CMS content:", err));
+        .catch(err => {
+            console.error("Error loading CMS content:", err);
+            // Ensure loader is hidden even on error
+            const loader = document.getElementById('loader-overlay');
+            if (loader) {
+                loader.classList.add('hidden');
+            }
+        });
     </script>
   </body>
 </html>

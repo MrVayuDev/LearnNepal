@@ -5,6 +5,7 @@
 @import "components.css";
 @import "ads.css";
 @import "animations.css";
+@import "loader.css";
 
 /* Global Styles */
 .container {
