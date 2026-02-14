@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -199,83 +199,58 @@
                     <h3>2. Network Database model:</h3>
                     <p>In network database models network of connection between data elements are established. This model overcomes the problem faced in hierarchical model of searching from bottom or middle. This model is more flexible than hierarchical model as it represent many to many relationship. It allows each record to have multiple parents and multiple children.</p>
                     
-                    <div class="network-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem;">
-                        <!-- Network Model SVG -->
-                        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Style -->
-                            <style>
-                                .node-rect { fill: #4a90e2; stroke: #357abd; stroke-width: 1; rx: 4; ry: 4; }
-                                .node-text { fill: white; font-family: sans-serif; font-size: 14px; text-anchor: middle; dominant-baseline: middle; }
-                                .edge { stroke: #333; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
-                            </style>
+                                        <div class="network-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                        <!-- Digitalized Network Model from User Sketch -->
+                        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
                             <defs>
-                                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                <marker id="arrow-net" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
                                     <path d="M0,0 L0,6 L9,3 z" fill="#333" />
                                 </marker>
                             </defs>
-
+                            <style>
+                                .net-node { fill: #ffffff; stroke: #333; stroke-width: 2; }
+                                .net-text { font-family: 'Comic Sans MS', sans-serif; font-size: 16px; text-anchor: middle; dominant-baseline: middle; fill: #333; }
+                                .net-edge { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrow-net); }
+                            </style>
+                            
                             <!-- Nodes -->
-                            <!-- Level 0: Gurukul College -->
-                            <g transform="translate(225, 20)">
-                                <rect class="node-rect" width="150" height="40" />
-                                <text class="node-text" x="75" y="20">Gurukul College</text>
+                            <!-- College -->
+                            <g transform="translate(300, 50)">
+                                <ellipse cx="0" cy="0" rx="70" ry="30" class="net-node"/>
+                                <text x="0" y="0" class="net-text">College</text>
                             </g>
-
-                            <!-- Level 1: Science, Examination, Library -->
-                            <g transform="translate(50, 100)">
-                                <rect class="node-rect" width="120" height="40" />
-                                <text class="node-text" x="60" y="20">Science</text>
+                            
+                            <!-- Computer Science -->
+                            <g transform="translate(150, 200)">
+                                <ellipse cx="0" cy="0" rx="80" ry="35" class="net-node"/>
+                                <text x="0" y="-10" class="net-text">Computer</text>
+                                <text x="0" y="10" class="net-text">Science</text>
                             </g>
-                            <g transform="translate(240, 100)">
-                                <rect class="node-rect" width="120" height="40" />
-                                <text class="node-text" x="60" y="20">Examination</text>
+                            
+                            <!-- Library -->
+                            <g transform="translate(450, 200)">
+                                <ellipse cx="0" cy="0" rx="70" ry="35" class="net-node"/>
+                                <text x="0" y="0" class="net-text">Library</text>
                             </g>
-                            <g transform="translate(430, 100)">
-                                <rect class="node-rect" width="120" height="40" />
-                                <text class="node-text" x="60" y="20">Library</text>
+                            
+                            <!-- Students -->
+                            <g transform="translate(300, 350)">
+                                <ellipse cx="0" cy="0" rx="70" ry="30" class="net-node"/>
+                                <text x="0" y="0" class="net-text">Students</text>
                             </g>
-
-                            <!-- Level 2: Faculties, Books, Students -->
-                            <g transform="translate(20, 200)">
-                                <rect class="node-rect" width="120" height="40" />
-                                <text class="node-text" x="60" y="20">Faculties</text>
-                            </g>
-                             <!-- Students is shared -->
-                            <g transform="translate(240, 200)">
-                                <rect class="node-rect" width="120" height="40" />
-                                <text class="node-text" x="60" y="20">Students</text>
-                            </g>
-                            <g transform="translate(430, 200)"> <!-- This is usually Books/Students, let's put Books here based to structure -->
-                                <rect class="node-rect" width="120" height="40" />
-                                <text class="node-text" x="60" y="20">Books</text>
-                            </g>
-
+                            
                             <!-- Edges -->
-                            <!-- Gurukul to L1 -->
-                            <path class="edge" d="M300,60 L110,100" /> <!-- To Science -->
-                            <path class="edge" d="M300,60 L300,100" /> <!-- To Exam -->
-                            <path class="edge" d="M300,60 L490,100" /> <!-- To Library -->
-
-                            <!-- Science to L2 -->
-                            <path class="edge" d="M110,140 L80,200" /> <!-- To Faculties -->
-                            <path class="edge" d="M110,140 L240,200" /> <!-- To Students (Science->Students) -->
+                            <!-- College -> CS -->
+                            <path d="M260,70 L180,170" class="net-edge"/> 
                             
-                            <!-- Exam to L2 -->
-                            <path class="edge" d="M300,140 L300,200" /> <!-- To Students (Exam->Students) -->
-
-                            <!-- Library to L2 -->
-                            <path class="edge" d="M490,140 L490,200" /> <!-- To Books -->
+                            <!-- College -> Lib -->
+                            <path d="M340,70 L420,170" class="net-edge"/> 
                             
-                            <!-- Complex Connections (Network) -->
-                            <!-- Students to Library (Upward arrow) -->
-                            <path class="edge" d="M360,220 L430,140" /> 
+                            <!-- CS -> Students -->
+                            <path d="M190,225 L260,325" class="net-edge"/> 
                             
-                            <!-- Books to Students or Students to Books (Side Arrow) -->
-                             <!-- Based on image it looks like Books -> Students or Library -> Students -->
-                             <!-- Let's add arrow from Library to Students as well, giving Students 3 parents? -->
-                             <!-- Or Books to Students. -->
-                             <path class="edge" d="M430,220 L360,220" /> <!-- Books -> Students -->
-
+                            <!-- Lib -> Students -->
+                            <path d="M410,225 L340,325" class="net-edge"/> 
                         </svg>
                     </div>
                     
@@ -595,7 +570,7 @@
                         <li><strong>Access Control:</strong> This is the most fundamental layer. It ensures only the right people can access the database. This includes:
                             <ul>
                                 <li><em>Authentication:</em> verifying a user's identity, usually with a username and password. Multi-factor authentication adds an extra layer of security.</li>
-                                <li><em>Authorization:</em> defining what an authenticated user is allowed to do. The principle of least privilege is key here—users are given only the minimum permissions needed for their job.</li>
+                                <li><em>Authorization:</em> defining what an authenticated user is allowed to do. The principle of least privilege is key hereâ€”users are given only the minimum permissions needed for their job.</li>
                             </ul>
                         </li>
                         <li><strong>Data Encryption:</strong> This is a vital last line of defense that makes data unreadable to anyone who doesn't have the decryption key. It's used in two main ways:
@@ -699,48 +674,58 @@
                     <h3>Key Figures and Their Workings</h3>
                     <p>ER diagrams are built using three core components: entities, attributes, and relationships.</p>
                     
-                    <div class="table-responsive" style="margin-bottom: 1.5rem;">
-                        <table class="table table-bordered" style="vertical-align: middle; text-align: center;">
-                            <thead>
-                                <tr style="background-color: #43a047; color: white;">
-                                    <th>Figures</th>
-                                    <th>Symbols</th>
-                                    <th>Represents</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Rectangle</td>
-                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><rect x="5" y="5" width="50" height="20" fill="none" stroke="#333" stroke-width="2"/></svg></td>
-                                    <td>Entities in ER Model</td>
-                                </tr>
-                                <tr>
-                                    <td>Ellipse</td>
-                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><ellipse cx="30" cy="15" rx="25" ry="12" fill="none" stroke="#333" stroke-width="2"/></svg></td>
-                                    <td>Attributes in ER Model</td>
-                                </tr>
-                                <tr>
-                                    <td>Diamond</td>
-                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><path d="M30,2 L55,15 L30,28 L5,15 Z" fill="none" stroke="#333" stroke-width="2"/></svg></td>
-                                    <td>Relationships among Entities</td>
-                                </tr>
-                                <tr>
-                                    <td>Line</td>
-                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="15" x2="55" y2="15" stroke="#333" stroke-width="2"/></svg></td>
-                                    <td>Attributes to Entities and Entity Sets with Other Relationship Types</td>
-                                </tr>
-                                <tr>
-                                    <td>Double Ellipse</td>
-                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><ellipse cx="30" cy="15" rx="25" ry="12" fill="none" stroke="#333" stroke-width="2"/><ellipse cx="30" cy="15" rx="19" ry="8" fill="none" stroke="#333" stroke-width="2"/></svg></td>
-                                    <td>Multi-Valued Attributes</td>
-                                </tr>
-                                <tr>
-                                    <td>Double Rectangle</td>
-                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><rect x="5" y="5" width="50" height="20" fill="none" stroke="#333" stroke-width="2"/><rect x="9" y="9" width="42" height="12" fill="none" stroke="#333" stroke-width="2"/></svg></td>
-                                    <td>Weak Entity</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="key-figures-container" style="width: 100%; overflow-x: auto; margin-bottom: 2rem;">
+                        <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; min-width: 600px;">
+                          <style>
+                            .header-text { fill: white; font-family: Arial, sans-serif; font-weight: bold; font-size: 16px; }
+                            .cell-text { fill: #333; font-family: Arial, sans-serif; font-size: 14px; }
+                            .symbol-stroke { stroke: #333; stroke-width: 2; fill: none; }
+                            .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+                          </style>
+
+                          <rect width="800" height="500" fill="white" />
+                          <rect width="800" height="50" fill="#4CAF50" /> 
+                          <line x1="180" y1="0" x2="180" y2="500" class="grid-line" />
+                          <line x1="320" y1="0" x2="320" y2="500" class="grid-line" />
+                          
+                          <line x1="0" y1="50" x2="800" y2="50" class="grid-line" />
+                          <line x1="0" y1="125" x2="800" y2="125" class="grid-line" />
+                          <line x1="0" y1="200" x2="800" y2="200" class="grid-line" />
+                          <line x1="0" y1="275" x2="800" y2="275" class="grid-line" />
+                          <line x1="0" y1="350" x2="800" y2="350" class="grid-line" />
+                          <line x1="0" y1="425" x2="800" y2="425" class="grid-line" />
+
+                          <text x="20" y="30" class="header-text">Figures</text>
+                          <text x="190" y="30" class="header-text">Symbols</text>
+                          <text x="330" y="30" class="header-text">Represents</text>
+
+                          <text x="20" y="95" class="cell-text">Rectangle</text>
+                          <rect x="220" y="75" width="60" height="30" class="symbol-stroke" />
+                          <text x="330" y="95" class="cell-text">Entities in ER Model</text>
+
+                          <text x="20" y="170" class="cell-text">Ellipse</text>
+                          <ellipse cx="250" cy="165" rx="35" ry="18" class="symbol-stroke" />
+                          <text x="330" y="170" class="cell-text">Attributes in ER Model</text>
+
+                          <text x="20" y="245" class="cell-text">Diamond</text>
+                          <path d="M250 210 L280 240 L250 270 L220 240 Z" class="symbol-stroke" />
+                          <text x="330" y="245" class="cell-text">Relationships among Entities</text>
+
+                          <text x="20" y="320" class="cell-text">Line</text>
+                          <line x1="220" y1="315" x2="280" y2="315" class="symbol-stroke" />
+                          <text x="330" y="315" class="cell-text">Attributes Entities and Entity Sets with Other</text>
+                          <text x="330" y="335" class="cell-text">Relationship Types</text>
+
+                          <text x="20" y="395" class="cell-text">Double Ellipse</text>
+                          <ellipse cx="250" cy="390" rx="35" ry="18" class="symbol-stroke" />
+                          <ellipse cx="250" cy="390" rx="30" ry="14" class="symbol-stroke" />
+                          <text x="330" y="395" class="cell-text">Multi-Valued Attributes</text>
+
+                          <text x="20" y="470" class="cell-text">Double Rectangle</text>
+                          <rect x="220" y="450" width="60" height="30" class="symbol-stroke" />
+                          <rect x="225" y="455" width="50" height="20" class="symbol-stroke" />
+                          <text x="330" y="470" class="cell-text">Weak Entity</text>
+                        </svg> 
                     </div>
 
                     <ul>
@@ -798,6 +783,323 @@
             <li><strong>Keys Distinction:</strong> Clearly understand the difference between Primary Key (unique identifier) and Foreign Key (reference to another table).</li>
         </ul>
     </div>
+
+                    <div class="mcq-section" style="margin-top: 4rem; border-top: 2px solid #eee; padding-top: 2rem;">
+                        <h3>Multiple Choice Questions</h3>
+                        <ol class="mcq-list" style="padding-left: 1.5rem;">
+                            <!-- Q1 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2082 Q.No. 1] Which of the following is the purpose of using primary key in database?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>To uniquely identify a record</li>
+                                    <li>To store duplicate record</li>
+                                    <li>To backup data</li>
+                                    <li>To enhance database size</li>
+                                </ul>
+                            </li>
+                            <!-- Q2 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2082 Q.No. 2] A company needs to modify an existing table by adding a new column for employee email addresses. For this, which SQL command should be used?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>CREATE</li>
+                                    <li>ALTER</li>
+                                    <li>SELECT</li>
+                                    <li>UPDATE</li>
+                                </ul>
+                            </li>
+                            <!-- Q3 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2081 GIE Set A Q.No. 1] Which SQL Query selects all records from a table named "Address" where the value of the column "Address" has its second last letter ending with an "a"?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li>SELECT FROM Address WHERE Address = 'a';</li>
+                                    <li>SELECT FROM Address WHERE Address LIKE 'a_%';</li>
+                                    <li>SELECT FROM Address WHERE Address LIKE '%_a_';</li> <!-- Corrected from logic, but user text says '%_a' which means ends with a? No, second last letter ending with a. Logic: %a_. User text says '%_a' in option C? Wait. User said: c. SELECT FROM Address WHERE Address LIKE '%_a'; d. SELECT FROM Address WHERE Address LIKE '%a_%' -->
+                                    <!-- User text:
+                                    c. SELECT FROM Address WHERE Address LIKE '%_a'; 
+                                    d. SELECT FROM Address WHERE Address LIKE '%a_%';
+                                    Actually "second last letter ending with 'a'" means patterns like "...ax".
+                                    Use user's exact text for options. 
+                                    User Text:
+                                    a. SLELECT FROM Address WHERE Address = 'a'; 
+                                    b. SELECT FROM Address WHERE Address LIKE 'a_%'; 
+                                    c. SELECT FROM Address WHERE Address LIKE '%_a'; 
+                                    d. SELECT FROM Address WHERE Address LIKE '%a_%';
+                                    Answer is d (according to user key). '%a_%' means 'anything' then 'a' then 'one char'. Yes.
+                                    -->
+                                    <li>SLELECT FROM Address WHERE Address = 'a';</li>
+                                    <li>SELECT FROM Address WHERE Address LIKE 'a_%';</li>
+                                    <li>SELECT FROM Address WHERE Address LIKE '%_a';</li>
+                                    <li>SELECT FROM Address WHERE Address LIKE '%a_%';</li>
+                                </ul>
+                            </li>
+                            <!-- Q4 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2081 GIE Set A Q.No. 2] What is used for data security in the database?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Data integrity</li>
+                                    <li>Data encryption</li>
+                                    <li>Data auditing</li>
+                                    <li>Data authentication</li>
+                                </ul>
+                            </li>
+                            <!-- Q5 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2081 GIE Set A Q.No. 3] Which SQL command is used to define the field ID of the table student as PRIMARY KEY Which has already been created with the schema (ID, Name, DOB, Address)?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li>ALTER TABLE Student ADD PRIMARY KEY (ID);</li>
+                                    <li>INSERT INTO Student ID PRIMARY KEY (ID);</li>
+                                    <li>ALTER TABLE Student ADD ID PRIMARY KEY;</li>
+                                    <li>INSERT INTO Student ADD ID PRIMARY KEY;</li>
+                                </ul>
+                            </li>
+                            <!-- Q6 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2081 GIE Set B Q.No. 1] The statement in SQL which allows to change the definition of a table is:</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Delete</li>
+                                    <li>Update</li>
+                                    <li>Create</li>
+                                    <li>Alter</li>
+                                </ul>
+                            </li>
+                            <!-- Q7 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2081 GIE Set B Q.No. 2] Which of the following key is considered unique in a table?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Candidate key</li>
+                                    <li>Primary key</li>
+                                    <li>Super key</li>
+                                    <li>Foreign key</li>
+                                </ul>
+                            </li>
+                            <!-- Q8 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[Unknown] With SQL, how will you select records of those employees from a table named "staff" whose salary is less than 20000.</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li>Select from staff where salary is less than 20000;</li>
+                                    <li>Select from staff where salary &lt; 20000;</li>
+                                    <li>Select from staff where salary &lt;= 20000;</li>
+                                    <li>Select from staff where salary &gt; 20000;</li>
+                                </ul>
+                            </li>
+                            <!-- Q9 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2081 Q.No. 1] Which one of the following given statement is correct?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li>Select * from emp where empid = 103;</li>
+                                    <li>Select from enp where eopid = 103;</li>
+                                    <li>Select eopid where enp = 103 from emp;</li>
+                                    <li>Select eopid where eopid = 103 and table = emp;</li>
+                                </ul>
+                            </li>
+                            <!-- Q10 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2081 Q.No. 2] Which database system normally offers better performance for geographically dispersed users?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr; gap: 0.5rem;">
+                                    <li>Centralized database system</li>
+                                    <li>Distributed database system</li>
+                                    <li>NoSQL database system</li>
+                                    <li>Relational database system</li>
+                                </ul>
+                            </li>
+                            <!-- Q11 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2080 GIE Set A Q.No. 1] Which of the following uniquely Identifies each record in the table?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Fields</li>
+                                    <li>Record</li>
+                                    <li>Row</li>
+                                    <li>Primary Key</li>
+                                </ul>
+                            </li>
+                            <!-- Q12 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2080 GIE Set A Q.No. 2] Which SQL statement will show the names and heights of all basketball players taller than 6 feet?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li>SELECT name FROM Player WHERE height &gt; 6;</li>
+                                    <li>SELECT name FROM Player WHERE height &gt;= 6;</li>
+                                    <li>SELECT name, height FROM Player WHERE height &gt; 6;</li>
+                                    <li>SELECT name, height FROM Player WHERE height &lt; 8;</li>
+                                </ul>
+                            </li>
+                            <!-- Q13 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2080 GIE Set A Q.No. 5] Which function is used to connect to MySql database?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>mysqli_connect()</li>
+                                    <li>mysqli_Open()</li>
+                                    <li>mysqli_query()</li>
+                                    <li>$mysqli_con()</li>
+                                </ul>
+                            </li>
+                            <!-- Q14 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2080 GIE Set B Q.No. 1] Which SQL keyword is used to retrieve data from a table?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>SELECT</li>
+                                    <li>FROM</li>
+                                    <li>WHERE</li>
+                                    <li>JOIN</li>
+                                </ul>
+                            </li>
+                            <!-- Q15 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2080 GIE Set B Q.No. 2] Which of the following principle apply to 2NF?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li>A table must have a primary key</li>
+                                    <li>All non-key attributes must be dependent on the primary key</li>
+                                    <li>All attributes must be atomic</li>
+                                    <li>A table must have at least more than two attributes</li>
+                                </ul>
+                            </li>
+                            <!-- Q16 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2080 Q.No. 2] Which of the following is DML statement?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Create</li>
+                                    <li>Select</li>
+                                    <li>Create view Alter</li>
+                                    <li>Drop</li>
+                                </ul>
+                            </li>
+                            <!-- Q17 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2080 Q.No. 6] Which function is used to connect to mySQL database?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>mySqLi_open ()</li>
+                                    <li>mySqLi .connect()</li>
+                                    <li>var mySqLi_query()</li>
+                                    <li>$mySqLi_con()</li>
+                                </ul>
+                            </li>
+                            <!-- Q18 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2079 GIE Set A Q.No. 1] Which statement is used to delete a table in SQL?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>REMOVE</li>
+                                    <li>DROP</li>
+                                    <li>Alter</li>
+                                    <li>Rename</li>
+                                </ul>
+                            </li>
+                            <!-- Q19 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2079 GIE Set A Q.No. 2] With SQL, how do you select all the records from a table named "NEB" where the value of the column "department" is "CDC"?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <li>Select * from NEB where department is exactly CDC:</li>
+                                    <li>Select from NEB where department is equal to 'CDC'</li>
+                                    <li>Select * from NEB where department = 'CDC';</li>
+                                    <li>Select from NEB where department is not in CDC:</li>
+                                </ul>
+                            </li>
+                            <!-- Q20 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2079 GIE Set B Q.No. 1] Which key is an attribute of a table that matches a primary key attribute in another table to create a relationship?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Candidate</li>
+                                    <li>Primary</li>
+                                    <li>Foreign</li>
+                                    <li>National</li>
+                                </ul>
+                            </li>
+                            <!-- Q21 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2079 GIE Set B Q.No. 2] What is called the user has identified via a username and password in DBMS?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Authentication</li>
+                                    <li>Authorization</li>
+                                    <li>Accounting</li>
+                                    <li>Auditing</li>
+                                </ul>
+                            </li>
+                            <!-- Q22 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2079 Set A Q.No. 1] Which of the following SQL statement is used to DELETE rows from a database table?</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>DELETE</li>
+                                    <li>REMOVE</li>
+                                    <li>DROP</li>
+                                    <li>CLEAR</li>
+                                </ul>
+                            </li>
+                            <!-- Q23 -->
+                            <li style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">[2079 Set A Q.No. 2] A field that is used to uniquely define a particular record in a table is called:</p>
+                                <ul style="list-style-type: lower-alpha; padding-left: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                    <li>Primary Key</li>
+                                    <li>Entity</li>
+                                    <li>Relationship</li>
+                                    <li>Constraints</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <div class="answer-key" style="margin-top: 3rem; padding: 1.5rem; background-color: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
+                            <h4 style="margin-bottom: 1rem; color: #2c3e50;">Answer Key</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 10px; font-family: monospace; font-size: 1.1rem;">
+                                <div>1. a</div>
+                                <div>2. b</div>
+                                <div>3. d</div>
+                                <div>4. b</div>
+                                <div>5. a</div>
+                                <div>6. d</div>
+                                <div>7. b</div>
+                                <div>8. b</div>
+                                <div>9. a</div>
+                                <div>10. b</div>
+                                <div>11. d</div>
+                                <div>12. c</div>
+                                <div>13. a</div>
+                                <div>14. a</div>
+                                <div>15. b</div>
+                                <div>16. b</div>
+                                <div>17. b</div>
+                                <div>18. b</div>
+                                <div>19. c</div>
+                                <div>20. c</div>
+                                <div>21. a</div>
+                                <div>22. a</div>
+                                <div>23. a</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="short-answer-section" style="margin-top: 4rem; border-top: 2px solid #eee; padding-top: 2rem;">
+                        <h3>Short Answer Questions</h3>
+                        <ol style="padding-left: 1.5rem; line-height: 1.6; list-style-type: decimal;">
+                            <li style="margin-bottom: 1rem;"><strong>[2082 Q.No. 10]</strong> Write any three differences between DDL and DML. Give examples of each.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2082 Q.No. 10 OR]</strong> What is normalization? Explain 2NF and 3NF.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2081 GIE Set A Q.No. 10]</strong> Evaluate the normalization process in relational database. Provide examples to illustrate 2NF normalization form.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2081 GIE Set A Q.No. 10 OR]</strong> Write the SQL DDL statement to create an employee table with the mentioned schema with following attributes:<br> 
+                            Employee ID: INT (PRIMARY KEY), Name: CHAR (30), Address: CHAR (20), Gender: CHAR (2), Post: CHAR (15)</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2081 GIE Set B Q.No. 10]</strong> List the different types of database model. Explain Relational Database model in brief.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2081 GIE Set B Q.No. 10 OR]</strong> Write any five differences between centralized and distributed database model.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2081 Q.No. 10]</strong> Evaluate the advantages of DBMS compared to traditional file-based data storage systems.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2081 Q.No. 10 OR]</strong> How does Second Normal Form (2NF) differ from First Normal Form (1NF), and what are the key benefits of achieving 2NF in database design? Explain.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2080 GIE Set A Q.No. 10]</strong> What is the importance of a database? Describe.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2080 GIE Set A Q.No. 10 OR]</strong> Describe the relational data model.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2080 GIE Set B Q.No. 10]</strong> Describe the second normal form (2NF) with an example.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2080 GIE Set B Q.No. 10 OR]</strong> What are the importance of database security in database management systems? Describe.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2080 Q.No. 10]</strong> Explain the Relational Data model with example.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2080 Q.No. 10 OR]</strong> Write SQL DDL commands to execute the following task with reference to the schema given below: student_info (regno as integer, name as character (25), class integer, gender character (1), address character (25)).</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2079 GIE Set A Q.No. 10 / 2073 Set D Q.No. 9]</strong> Explain Relational database model.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2079 GIE Set A Q.No. 10 OR]</strong> Demonstrate any two DDL statements with an example.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2079 GIE Set B Q.No. 10]</strong> What are the roles of the database administrator? Describe.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2079 GIE Set B Q.No. 10 OR]</strong> Describe the DDL statement with an example in SQL.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2079 Set A Q.No. 10 / 2076 GIE Set B Q.No. 10 / 2075 Set A Q.No. 8]</strong> Differentiate the centralized and distributed database system.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2079 Set A Q.No. 10 OR]</strong> What are the purposes of normalization? Give an example of 2NF.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2078 Set C Q.No. 8]</strong> Explain the different database model with suitable examples.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2078 Set C Q.No. 9]</strong> Explain entity, attribute and relationship in Relational Database Management System.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2078 Set C Q.No. 10]</strong> Explain the role of Database Administrator (DBA).</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2077 Set D Q.No. 4]</strong> Describe 1NF, 2NF and 3NF normalization concept to database design.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2076 GIE Set A Q.No. 7]</strong> What are the importances of normalization in DBMS? Explain.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2076 GIE Set A Q.No. 8]</strong> Explain E-R diagram in DBMS.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2076 GIE Set B Q.No. 7 / 2074 Set A Q.No. 8]</strong> Describe the normalization in DBMS?</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2076 GIE Set B Q.No. 8]</strong> What are the major functions of DBA? Explain.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2076 Q.No. 7]</strong> Explain the different types of data integrity in DBMS.</li>
+                            <li style="margin-bottom: 1rem;"><strong>[2076 Q.No. 8]</strong> What is SQL? Describe the DML with an example.</li>
+                        </ol>
+                    </div>
 </article>
 
                 <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
@@ -855,3 +1157,4 @@
     <script src="../../../scripts/app.js"></script>
 </body>
 </html>
+
