@@ -170,7 +170,7 @@
                     <h3>1. Hierarchical Database Model:</h3>
                     <p>It is the oldest model database. We frequently find data exhibiting a hierarchical(level or tree structure) relationship. For example: data on customer, order and term ordered are in hierarchy as follows:</p>
                     
-                    <div class="tree-container" style="overflow-x: auto; padding: 20px; margin-bottom: 2rem;">
+                    <div class="tree-container" style="padding: 20px; margin-bottom: 2rem;">
                         <div class="tree">
                             <ul>
                                 <li>
@@ -199,7 +199,7 @@
                     <h3>2. Network Database model:</h3>
                     <p>In network database models network of connection between data elements are established. This model overcomes the problem faced in hierarchical model of searching from bottom or middle. This model is more flexible than hierarchical model as it represent many to many relationship. It allows each record to have multiple parents and multiple children.</p>
                     
-                    <div class="network-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem; overflow-x: auto;">
+                    <div class="network-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem;">
                         <!-- Network Model SVG -->
                         <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
                             <!-- Style -->
@@ -282,7 +282,7 @@
                     <h3>3. Relational Database Model:</h3>
                     <p>In relational database model, a collection of data items is organized in a table from which data can be accessed in many different ways. This model can handle many to many relationship smoothly. The data on customer order and item ordered are managed in table as follows:</p>
                     
-                    <div class="relational-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem; overflow-x: auto;">
+                    <div class="relational-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem;">
                         <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
                             <style>
                                 .table-rect { fill: white; stroke: #333; stroke-width: 1.5; }
@@ -449,22 +449,26 @@
                     <div class="grid-2">
                         <div>
                         <h6>Students Table</h6>
-                        <table class="table table-bordered table-sm">
-                            <tr><th>StudentID</th><th>StudentName</th></tr>
-                            <tr><td>1</td><td>Alice</td></tr>
-                            <tr><td>2</td><td>Bob</td></tr>
-                            <tr><td>3</td><td>Alice</td></tr>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm">
+                                <tr><th>StudentID</th><th>StudentName</th></tr>
+                                <tr><td>1</td><td>Alice</td></tr>
+                                <tr><td>2</td><td>Bob</td></tr>
+                                <tr><td>3</td><td>Alice</td></tr>
+                            </table>
+                        </div>
                         </div>
                         <div>
                         <h6>Enrollment Table</h6>
-                        <table class="table table-bordered table-sm">
-                            <tr><th>StudentID</th><th>Course</th><th>Instructor</th></tr>
-                            <tr><td>1</td><td>Math</td><td>Smith</td></tr>
-                            <tr><td>1</td><td>Physics</td><td>Johnson</td></tr>
-                            <tr><td>2</td><td>Chemistry</td><td>Williams</td></tr>
-                            <tr><td>3</td><td>Chemistry</td><td>Williams</td></tr>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm">
+                                <tr><th>StudentID</th><th>Course</th><th>Instructor</th></tr>
+                                <tr><td>1</td><td>Math</td><td>Smith</td></tr>
+                                <tr><td>1</td><td>Physics</td><td>Johnson</td></tr>
+                                <tr><td>2</td><td>Chemistry</td><td>Williams</td></tr>
+                                <tr><td>3</td><td>Chemistry</td><td>Williams</td></tr>
+                            </table>
+                        </div>
                         </div>
                     </div>
 
@@ -476,32 +480,38 @@
                     <div class="grid-2">
                          <div>
                             <h6>Student Table</h6>
-                            <table class="table table-bordered table-sm">
-                                <tr><th>StudentID</th><th>StudentName</th></tr>
-                                <tr><td>1</td><td>Alice</td></tr>
-                                <tr><td>2</td><td>Bob</td></tr>
-                                <tr><td>3</td><td>Alice</td></tr>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-sm">
+                                    <tr><th>StudentID</th><th>StudentName</th></tr>
+                                    <tr><td>1</td><td>Alice</td></tr>
+                                    <tr><td>2</td><td>Bob</td></tr>
+                                    <tr><td>3</td><td>Alice</td></tr>
+                                </table>
+                            </div>
                          </div>
                          <div>
                             <h6>Enrollment Table</h6>
-                            <table class="table table-bordered table-sm">
-                                <tr><th>StudentID</th><th>Course</th></tr>
-                                <tr><td>1</td><td>Math</td></tr>
-                                <tr><td>1</td><td>Physics</td></tr>
-                                <tr><td>2</td><td>Chemistry</td></tr>
-                                <tr><td>3</td><td>Chemistry</td></tr>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-sm">
+                                    <tr><th>StudentID</th><th>Course</th></tr>
+                                    <tr><td>1</td><td>Math</td></tr>
+                                    <tr><td>1</td><td>Physics</td></tr>
+                                    <tr><td>2</td><td>Chemistry</td></tr>
+                                    <tr><td>3</td><td>Chemistry</td></tr>
+                                </table>
+                            </div>
                          </div>
                     </div>
-                    <div style="margin-top: 1rem; width: 50%;">
+                    <div style="margin-top: 1rem; width: 100%;">
                         <h6>Course Table</h6>
-                        <table class="table table-bordered table-sm">
-                            <tr><th>Course</th><th>Instructor</th></tr>
-                            <tr><td>Math</td><td>Smith</td></tr>
-                            <tr><td>Physics</td><td>Johnson</td></tr>
-                            <tr><td>Chemistry</td><td>Williams</td></tr>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm">
+                                <tr><th>Course</th><th>Instructor</th></tr>
+                                <tr><td>Math</td><td>Smith</td></tr>
+                                <tr><td>Physics</td><td>Johnson</td></tr>
+                                <tr><td>Chemistry</td><td>Williams</td></tr>
+                            </table>
+                        </div>
                     </div>
 
                     <h2 id="languages">Database Language</h2>
@@ -619,7 +629,7 @@
                     <p>An Entity-Relationship (ER) diagram is a visual tool used to model the logical structure of a database. It acts as a blueprint, showing how different pieces of information, or entities, relate to each other. By using standardized symbols, it helps developers and analysts understand the relationships, attributes, and constraints of a database before it's actually built.</p>
 
                     <h5 style="text-align:center; margin-top: 1rem;">Level 1: ER Model Classification</h5>
-                    <div style="width: 100%; overflow-x: auto; display: flex; justify-content: center;">
+                    <div style="width: 100%; display: flex; justify-content: center;">
     <svg viewBox="0 0 800 400" style="max-width: 100%; height: auto;" xmlns="http://www.w3.org/2000/svg">
       <rect width="100%" height="100%" fill="white" />
       

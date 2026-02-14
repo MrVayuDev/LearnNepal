@@ -5,11 +5,17 @@
 .relational-graph-container,
 .tree-container {
     width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    /* overflow-x: auto;  <-- REMOVED: User wants scaling (fixed ratio), not scrolling */
     margin-bottom: 2rem;
-    display: block; /* Ensure it behaves as a block for scrolling */
+    display: block;
+}
+
+.network-graph-container svg,
+.relational-graph-container svg,
+.tree-container svg {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
 }
 
 /* --- Cards --- */
@@ -92,6 +98,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .grid-subjects {
@@ -442,11 +455,19 @@
 /* --- Tables --- */
 
 /* --- Tables --- */
+/* --- Tables --- */
 .table-responsive {
     display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin-bottom: var(--spacing-md);
+}
+
+.table {
+    width: 100%;
+    min-width: 600px; /* Force minimum width to prevent content crushing/wrapping too much */
+    border-collapse: collapse;
     margin-bottom: var(--spacing-md);
 }
 

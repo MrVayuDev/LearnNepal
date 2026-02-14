@@ -36,10 +36,11 @@ input, button, textarea, select {
 }
 
 /* Robust word wrapping for text content only */
-p, h1, h2, h3, h4, h5, h6, li {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: manual; /* Avoid auto-hyphenation glitches */
+/* Robust word wrapping globally */
+p, h1, h2, h3, h4, h5, h6, li, span, div, a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    /* Removed hyphens: auto to prevent visual glitches */
 }
 
 a {
