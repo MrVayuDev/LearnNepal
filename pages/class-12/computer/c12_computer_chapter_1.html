@@ -193,6 +193,86 @@
                     <h3>2. Network Database model:</h3>
                     <p>In network database models network of connection between data elements are established. This model overcomes the problem faced in hierarchical model of searching from bottom or middle. This model is more flexible than hierarchical model as it represent many to many relationship. It allows each record to have multiple parents and multiple children.</p>
                     
+                    <div class="network-graph-container" style="display: flex; justify-content: center; margin-bottom: 2rem; overflow-x: auto;">
+                        <!-- Network Model SVG -->
+                        <svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Style -->
+                            <style>
+                                .node-rect { fill: #4a90e2; stroke: #357abd; stroke-width: 1; rx: 4; ry: 4; }
+                                .node-text { fill: white; font-family: sans-serif; font-size: 14px; text-anchor: middle; dominant-baseline: middle; }
+                                .edge { stroke: #333; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+                            </style>
+                            <defs>
+                                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+                                </marker>
+                            </defs>
+
+                            <!-- Nodes -->
+                            <!-- Level 0: Gurukul College -->
+                            <g transform="translate(225, 20)">
+                                <rect class="node-rect" width="150" height="40" />
+                                <text class="node-text" x="75" y="20">Gurukul College</text>
+                            </g>
+
+                            <!-- Level 1: Science, Examination, Library -->
+                            <g transform="translate(50, 100)">
+                                <rect class="node-rect" width="120" height="40" />
+                                <text class="node-text" x="60" y="20">Science</text>
+                            </g>
+                            <g transform="translate(240, 100)">
+                                <rect class="node-rect" width="120" height="40" />
+                                <text class="node-text" x="60" y="20">Examination</text>
+                            </g>
+                            <g transform="translate(430, 100)">
+                                <rect class="node-rect" width="120" height="40" />
+                                <text class="node-text" x="60" y="20">Library</text>
+                            </g>
+
+                            <!-- Level 2: Faculties, Books, Students -->
+                            <g transform="translate(20, 200)">
+                                <rect class="node-rect" width="120" height="40" />
+                                <text class="node-text" x="60" y="20">Faculties</text>
+                            </g>
+                             <!-- Students is shared -->
+                            <g transform="translate(240, 200)">
+                                <rect class="node-rect" width="120" height="40" />
+                                <text class="node-text" x="60" y="20">Students</text>
+                            </g>
+                            <g transform="translate(430, 200)"> <!-- This is usually Books/Students, let's put Books here based to structure -->
+                                <rect class="node-rect" width="120" height="40" />
+                                <text class="node-text" x="60" y="20">Books</text>
+                            </g>
+
+                            <!-- Edges -->
+                            <!-- Gurukul to L1 -->
+                            <path class="edge" d="M300,60 L110,100" /> <!-- To Science -->
+                            <path class="edge" d="M300,60 L300,100" /> <!-- To Exam -->
+                            <path class="edge" d="M300,60 L490,100" /> <!-- To Library -->
+
+                            <!-- Science to L2 -->
+                            <path class="edge" d="M110,140 L80,200" /> <!-- To Faculties -->
+                            <path class="edge" d="M110,140 L240,200" /> <!-- To Students (Science->Students) -->
+                            
+                            <!-- Exam to L2 -->
+                            <path class="edge" d="M300,140 L300,200" /> <!-- To Students (Exam->Students) -->
+
+                            <!-- Library to L2 -->
+                            <path class="edge" d="M490,140 L490,200" /> <!-- To Books -->
+                            
+                            <!-- Complex Connections (Network) -->
+                            <!-- Students to Library (Upward arrow) -->
+                            <path class="edge" d="M360,220 L430,140" /> 
+                            
+                            <!-- Books to Students or Students to Books (Side Arrow) -->
+                             <!-- Based on image it looks like Books -> Students or Library -> Students -->
+                             <!-- Let's add arrow from Library to Students as well, giving Students 3 parents? -->
+                             <!-- Or Books to Students. -->
+                             <path class="edge" d="M430,220 L360,220" /> <!-- Books -> Students -->
+
+                        </svg>
+                    </div>
+                    
                     <h3>3. Relational Database Model:</h3>
                     <p>In relational database model, a collection of data items is organized in a table from which data can be accessed in many different ways. This model can handle many to many relationship smoothly. The data on customer order and item ordered are managed in table as follows:</p>
                     
