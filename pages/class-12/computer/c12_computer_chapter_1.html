@@ -86,7 +86,7 @@
                     <span>&bull;</span>
                     <span>Unit 1</span>
                     <span>&bull;</span>
-                    <span><i class="icon-clock"></i> 25 Min Read</span>
+                    
                 </div>
 
                 <article class="content-block">
@@ -612,8 +612,121 @@
                     <h2 id="er-diagram">ER- Diagram</h2>
                     <p>An Entity-Relationship (ER) diagram is a visual tool used to model the logical structure of a database. It acts as a blueprint, showing how different pieces of information, or entities, relate to each other. By using standardized symbols, it helps developers and analysts understand the relationships, attributes, and constraints of a database before it's actually built.</p>
 
+                    <h5 style="text-align:center; margin-top: 1rem;">Level 1: ER Model Classification</h5>
+                    <div style="width: 100%; overflow-x: auto; display: flex; justify-content: center;">
+    <svg viewBox="0 0 800 400" style="max-width: 100%; height: auto; min-width: 600px;" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="white" />
+      
+      <style>
+        .root-box { fill: #2e7d32; stroke: #1b5e20; stroke-width: 2; }
+        .category-box { fill: #e8f5e9; stroke: #4caf50; stroke-width: 2; }
+        .text-main { fill: white; font-family: Arial, sans-serif; font-weight: bold; font-size: 18px; }
+        .text-cat { fill: #2e7d32; font-family: Arial, sans-serif; font-weight: bold; font-size: 16px; }
+        .text-item { fill: #2e7d32; font-family: Arial, sans-serif; font-size: 14px; }
+        .line { stroke: #333; stroke-width: 2; fill: none; }
+        .arrow { fill: #333; }
+      </style>
+
+      <path d="M 400,60 L 400,90" class="line" />
+      <path d="M 120,90 L 680,90" class="line" />
+      <path d="M 120,90 L 120,120" class="line" />
+      <path d="M 400,90 L 400,120" class="line" />
+      <path d="M 680,90 L 680,120" class="line" />
+
+      <rect x="300" y="20" width="200" height="40" rx="8" class="root-box" />
+      <text x="400" y="47" text-anchor="middle" class="text-main">ER Model</text>
+
+      <rect x="40" y="120" width="160" height="40" rx="5" class="category-box" />
+      <text x="120" y="145" text-anchor="middle" class="text-cat">Entity</text>
+      <path d="M 100,160 L 100,240" class="line" />
+      <path d="M 100,200 L 130,200" class="line" />
+      <polygon points="130,197 138,200 130,203" class="arrow" />
+      <text x="145" y="205" class="text-item">Strong Entity</text>
+      <path d="M 100,240 L 130,240" class="line" />
+      <polygon points="130,237 138,240 130,243" class="arrow" />
+      <text x="145" y="245" class="text-item">Weak Entity</text>
+
+      <rect x="320" y="120" width="160" height="40" rx="5" class="category-box" />
+      <text x="400" y="145" text-anchor="middle" class="text-cat">Attribute</text>
+      <path d="M 380,160 L 380,320" class="line" />
+      <path d="M 380,200 L 410,200" class="line" />
+      <polygon points="410,197 418,200 410,203" class="arrow" />
+      <text x="425" y="205" class="text-item">Key Attribute</text>
+      <path d="M 380,240 L 410,240" class="line" />
+      <polygon points="410,237 418,240 410,243" class="arrow" />
+      <text x="425" y="245" class="text-item">Composite Attribute</text>
+      <path d="M 380,280 L 410,280" class="line" />
+      <polygon points="410,277 418,280 410,283" class="arrow" />
+      <text x="425" y="285" class="text-item">Multivalued Attribute</text>
+      <path d="M 380,320 L 410,320" class="line" />
+      <polygon points="410,317 418,320 410,323" class="arrow" />
+      <text x="425" y="325" class="text-item">Derived Attribute</text>
+
+      <rect x="600" y="120" width="160" height="40" rx="5" class="category-box" />
+      <text x="680" y="145" text-anchor="middle" class="text-cat">Relationship</text>
+      <path d="M 660,160 L 660,320" class="line" />
+      <path d="M 660,200 L 690,200" class="line" />
+      <polygon points="690,197 698,200 690,203" class="arrow" />
+      <text x="705" y="205" class="text-item">One to One</text>
+      <path d="M 660,240 L 690,240" class=\"line\" />
+      <polygon points="690,237 698,240 690,243" class="arrow" />
+      <text x="705" y="245" class="text-item">One to Many</text>
+      <path d="M 660,280 L 690,280" class="line" />
+      <polygon points="690,277 698,280 690,283" class="arrow" />
+      <text x="705" y="285" class="text-item">Many to One</text>
+      <path d="M 660,320 L 690,320" class="line" />
+      <polygon points="690,317 698,320 690,323" class="arrow" />
+      <text x="705" y="325" class="text-item">Many to Many</text>
+    </svg>
+</div>
+
                     <h3>Key Figures and Their Workings</h3>
                     <p>ER diagrams are built using three core components: entities, attributes, and relationships.</p>
+                    
+                    <div class="table-responsive" style="margin-bottom: 1.5rem;">
+                        <table class="table table-bordered" style="vertical-align: middle; text-align: center;">
+                            <thead>
+                                <tr style="background-color: #43a047; color: white;">
+                                    <th>Figures</th>
+                                    <th>Symbols</th>
+                                    <th>Represents</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rectangle</td>
+                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><rect x="5" y="5" width="50" height="20" fill="none" stroke="#333" stroke-width="2"/></svg></td>
+                                    <td>Entities in ER Model</td>
+                                </tr>
+                                <tr>
+                                    <td>Ellipse</td>
+                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><ellipse cx="30" cy="15" rx="25" ry="12" fill="none" stroke="#333" stroke-width="2"/></svg></td>
+                                    <td>Attributes in ER Model</td>
+                                </tr>
+                                <tr>
+                                    <td>Diamond</td>
+                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><path d="M30,2 L55,15 L30,28 L5,15 Z" fill="none" stroke="#333" stroke-width="2"/></svg></td>
+                                    <td>Relationships among Entities</td>
+                                </tr>
+                                <tr>
+                                    <td>Line</td>
+                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><line x1="5" y1="15" x2="55" y2="15" stroke="#333" stroke-width="2"/></svg></td>
+                                    <td>Attributes to Entities and Entity Sets with Other Relationship Types</td>
+                                </tr>
+                                <tr>
+                                    <td>Double Ellipse</td>
+                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><ellipse cx="30" cy="15" rx="25" ry="12" fill="none" stroke="#333" stroke-width="2"/><ellipse cx="30" cy="15" rx="19" ry="8" fill="none" stroke="#333" stroke-width="2"/></svg></td>
+                                    <td>Multi-Valued Attributes</td>
+                                </tr>
+                                <tr>
+                                    <td>Double Rectangle</td>
+                                    <td><svg width="60" height="30" style="display:inline-block; vertical-align:middle;"><rect x="5" y="5" width="50" height="20" fill="none" stroke="#333" stroke-width="2"/><rect x="9" y="9" width="42" height="12" fill="none" stroke="#333" stroke-width="2"/></svg></td>
+                                    <td>Weak Entity</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     <ul>
                         <li><strong>Entities:</strong> Represented by a rectangle, an entity is a real-world object or concept that you want to store data about. Think of entities as the nouns in your database. <em>Example: Student, Course, Instructor.</em></li>
                         <li><strong>Attributes:</strong> Represented by an oval or listed within the entity rectangle, attributes are the properties or characteristics of an entity. <em>Example: A Student entity might have attributes like StudentID, StudentName, and StudentMajor.</em></li>
@@ -659,7 +772,17 @@
                     </ul>
                     <p>Data integrity is protected through various constraints and rules defined within the database schema, such as UNIQUE, NOT NULL, CHECK, and FOREIGN KEY constraints. These measures prevent the entry of incorrect, incomplete, or duplicate data.</p>
 
-                </article>
+                
+    <div class="tips-box" style="background-color: #E8F5E9; border-left: 5px solid #2E7D32; padding: 15px; margin-top: 30px; border-radius: 4px;">
+        <h4 style="color: #2E7D32; margin-top: 0;"><i class="fas fa-lightbulb"></i> Tips for Students</h4>
+        <ul style="margin-bottom: 0;">
+            <li><strong>Acronyms Matter:</strong> Memorize the full forms of DDL (Data Definition Language) and DML (Data Manipulation Language) as they are frequently asked.</li>
+            <li><strong>Normalization Practice:</strong> Don't just memorize the definitions. Practice converting a unnormalized table into 1NF, 2NF, and 3NF with your own examples.</li>
+            <li><strong>ER Diagram Logic:</strong> When drawing ER diagrams, always ask "How many?" to determine the relationship type (One-to-One, One-to-Many, etc.).</li>
+            <li><strong>Keys Distinction:</strong> Clearly understand the difference between Primary Key (unique identifier) and Foreign Key (reference to another table).</li>
+        </ul>
+    </div>
+</article>
 
                 <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
                     <a href="c12_computer_syllabus.html" class="btn btn-outline">&larr; Back to Syllabus</a>

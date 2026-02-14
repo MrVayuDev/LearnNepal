@@ -289,3 +289,197 @@
     color: var(--color-primary);
     background: var(--color-bg-alt);
 }
+
+/* Tree Responsiveness */
+@media (max-width: 768px) {
+    .tree ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0;
+        padding-left: 20px; /* Indent child lists */
+    }
+    
+    .tree li {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+        float: none; /* Reset float if any */
+    }
+
+    /* Hide standard connectors */
+    .tree li::before, .tree li::after, .tree ul ul::before {
+        display: none;
+    }
+
+    /* Add vertical connectors */
+    .tree ul ul {
+        border-left: 2px solid var(--color-border);
+        margin-left: 10px; /* Space for the border */
+    }
+
+    .tree li {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .tree ul ul li::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background: var(--color-border);
+        left: 0;
+        top: 22px; /* Center with text approx */
+        border: none;
+    }
+    
+    .tree li span {
+        width: auto;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Compact Tree (Vertical Leaves) for wider screens to avoid scrolling */
+.tree-compact ul ul ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0;
+    display: flex; /* Ensure flex behavior overrides generic tree */
+}
+
+.tree-compact ul ul ul::before {
+    display: none; /* Remove top vertical line for this level container */
+}
+
+.tree-compact ul ul ul li {
+    float: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0 0 20px; /* Indent */
+    position: relative;
+}
+
+/* Remove standard top connectors for leaf items */
+.tree-compact ul ul ul li::before,
+.tree-compact ul ul ul li::after {
+    display: none;
+}
+
+/* Add left vertical line for the group */
+.tree-compact ul ul li > ul {
+    border-left: 2px solid var(--color-border);
+    margin-left: 50%; /* Center align with parent */
+    transform: translateX(-1px); /* Perfect center alignment adjustment */
+    padding-left: 0; /* Remove default padding since we use margin for centering */
+    margin-top: 0;
+    
+    /* Reset flex direction */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Adjust connector for the parent to the vertical list */
+
+
+/* Let's refine the vertical connector logic for .tree-compact */
+/* Level 3 items (Strong, Weak, etc.) */
+.tree-compact ul ul ul {
+    border-left: 2px solid var(--color-border);
+    margin-left: 50%;
+    padding-left: 0;
+    margin-top: 0;
+    position: relative;
+    top: 0;
+}
+
+.tree-compact ul ul ul li {
+    padding-left: 15px; /* Space for connector */
+    text-align: left;
+}
+
+.tree-compact ul ul ul li::before {
+    content: '';
+    position: absolute; 
+    top: 22px; /* Approx center of text */
+    left: 0;
+    width: 15px;
+    height: 2px;
+    border-top: 2px solid var(--color-border);
+    border-right: none;
+    border-left: none;
+    display: block;
+}
+
+
+
+/* Reset span styles for vertical items */
+.tree-compact ul ul ul li span {
+    margin: 0;
+    display: inline-block;
+}
+
+/* --- Tables --- */
+
+/* --- Tables --- */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: var(--spacing-md);
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--color-text-main);
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--color-border);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--color-border);
+    background-color: var(--color-bg-alt);
+    font-weight: 600;
+    text-align: left;
+}
+
+.table-bordered {
+    border: 1px solid var(--color-border);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--color-border); /* Explicit border for all cells */
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.3rem; 
+}
+
+/* Mobile Friendly Adjustments */
+@media (max-width: 600px) {
+    .table th, .table td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+
+
