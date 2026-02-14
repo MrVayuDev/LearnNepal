@@ -14,8 +14,9 @@
 .relational-graph-container svg,
 .tree-container svg {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     max-width: 100%;
+    display: block; /* Removes bottom space */
 }
 
 /* --- Cards --- */

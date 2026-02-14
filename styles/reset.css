@@ -44,6 +44,14 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 /* Ensure documentation content specifically handles overflow safely */
 .docs-content {
+    width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Aggressively handle all children within docs-content to prevent any overflow */
+.docs-content * {
+    max-width: 100%; /* Force all children to respect container width */
     overflow-wrap: anywhere;
     word-break: break-word;
 }
