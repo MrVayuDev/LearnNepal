@@ -379,7 +379,7 @@ body {
 
 @media (max-width: 768px) {
     .docs-content {
-        padding: 1.5rem 0; /* Minimized padding for mobile */
+        padding: 1.5rem 1rem; /* Added horizontal padding to prevent edge touching */
     }
 }
 
@@ -387,6 +387,15 @@ body {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-lg);
   color: var(--color-primary);
+  overflow-wrap: break-word; /* Ensure long words break */
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  .chapter-title {
+    font-size: 1.75rem; /* Smaller font for mobile */
+  }
 }
 
 .chapter-meta {
@@ -444,7 +453,60 @@ body {
   }
 
   .sidebar {
-    display: none; /* In v1, hiding sidebar on mobile or making it a drawer would be better. For now, hiding. */
-    /* TODO: Add mobile sidebar toggle */
+    position: fixed;
+    top: var(--header-height);
+    left: -280px; /* Hide off-screen */
+    height: calc(100vh - var(--header-height));
+    width: 280px;
+    z-index: 1001;
+    transition: left var(--transition-normal);
+    box-shadow: var(--shadow-lg);
   }
+
+  .sidebar.active {
+    left: 0;
+  }
+  
+  /* Sidebar Overlay */
+  .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+  }
+
+  .sidebar-overlay.active {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+
+/* Mobile Sidebar Toggle Button */
+.mobile-sidebar-toggle {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 900px) {
+    .mobile-sidebar-toggle {
+        display: flex;
+    }
 }

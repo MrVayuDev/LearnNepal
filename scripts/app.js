@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDropdownsForMobile();
     initSidebarAccordion();
     initSidebarAccordion();
+    initMobileSidebar(); // Add Sidebar Logic
     initProgressBar();
     initBackToTop();
     initOfflineDetection();
@@ -178,4 +179,41 @@ function initDropdownsForMobile() {
             }
         });
     });
+}
+
+function initMobileSidebar() {
+    // Only init if toggle exists on page
+    const toggle = document.querySelector('.mobile-sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    // Create Overlay if it doesn't exist
+    let overlay = document.querySelector('.sidebar-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'sidebar-overlay';
+        document.body.appendChild(overlay);
+    }
+
+    if (toggle && sidebar) {
+        toggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+        
+        // Close on overlay click
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        
+        // Close on link click
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (link.getAttribute('href') !== '#' && !link.classList.contains('sidebar-group-title')) {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                }
+            });
+        });
+    }
 }
