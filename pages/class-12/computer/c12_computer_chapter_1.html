@@ -82,51 +82,437 @@
                 <h1 class="chapter-title">Unit 1: Database Management System (DBMS)</h1>
                 
                 <div class="chapter-meta">
-                    <span>Last Updated: Dec 2025</span>
+                    <span>Last Updated: Feb 2026</span>
                     <span>&bull;</span>
                     <span>Unit 1</span>
+                    <span>&bull;</span>
+                    <span><i class="icon-clock"></i> 25 Min Read</span>
                 </div>
 
                 <article class="content-block">
-                    <p class="text-lead">Understanding the core concepts of data, information, databases, and database management systems.</p>
-                    
-                    <h2 id="intro">1.1 Introduction</h2>
-                    <p>
-                        A <strong>Database</strong> is a collection of related data. By data, we mean known facts that can be recorded and that have implicit meaning.
-                        For example, names, telephone numbers, and addresses of people you know.
-                    </p>
-                    <p>
-                        A <strong>Database Management System (DBMS)</strong> is a software package designed to define, manipulate, retrieve and manage data in a database.
-                        Examples include MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.
-                    </p>
-                    
-                    <div class="note-box">
-                        <strong>Exam Tip:</strong> Remember the difference between Data (raw facts) and Information (processed data).
-                    </div>
+                    <h2 id="data">Data</h2>
+                    <p>Data is a collection of raw facts and figures which is isolated, un-interpreted, unrelated and unorganized but able to organize into useful information. <em>Eg: Ram, Kathmandu, 29.</em></p>
 
-                    <h2 id="advantages">1.2 Advantages of DBMS</h2>
+                    <h2 id="database">Database</h2>
+                    <p>Database is a structured, organized collection of data that is stored and accessed electronically. It is managed by a software system called a Database Management System (DBMS), which provides the tools to store, retrieve, update, and manage the data efficiently. In essence, a database is a central repository where information about people, places, or things is stored in an organized manner.</p>
+
+                    <h3 id="adv-database">Advantages of using a Database</h3>
+                    <ol>
+                        <li><strong>Reduced Data Redundancy:</strong> Databases are designed to minimize data duplication. Instead of storing the same information in multiple places, data is stored once and can be accessed by various applications. This not only saves storage space but also makes data management more efficient.</li>
+                        <li><strong>Improved Data Consistency:</strong> By reducing data redundancy, databases help ensure data consistency. If a piece of information, such as a customer's address, needs to be updated, it only needs to be changed in one place. This prevents different applications from having conflicting versions of the same data.</li>
+                        <li><strong>Enhanced Data Security:</strong> Databases provide robust security features to protect sensitive information from unauthorized access. These features include access controls, user authentication, and encryption, which allow administrators to define who can view, modify, or delete specific data.</li>
+                        <li><strong>Data Sharing and Multi-User Access:</strong> Databases are designed to allow multiple users to access and work with the same data simultaneously without causing conflicts. This facilitates collaboration and ensures that all users are working with the most current information.</li>
+                        <li><strong>Data Integrity:</strong> Databases enforce data integrity through rules and constraints. These rules ensure that the data is accurate, consistent, and reliable. For example, a database can be configured to prevent a user from entering a non-numeric value into a "phone number" field.</li>
+                        <li><strong>Efficient Data Access and Retrieval:</strong> Databases provide powerful query languages (like SQL) and indexing techniques that enable users to quickly and efficiently retrieve the exact data they need from large datasets. This makes it possible to generate reports, perform analysis, and make informed decisions in a timely manner.</li>
+                        <li><strong>Improved Backup and Recovery:</strong> Modern DBMSs come with built-in tools for automated backup and recovery. This is crucial for business continuity, as it allows organizations to restore their data to a consistent state in the event of a system failure or disaster.</li>
+                    </ol>
+
+                    <h3 id="disadv-database">Disadvantages of Database</h3>
+                    <ol>
+                        <li><strong>Increased Cost:</strong>
+                            <ul>
+                                <li>Cost of Hardware and Software: This is the first disadvantage of the database management system. This is because, for DBMS, it is mandatory to have a high-speed processor and also a large memory size.</li>
+                                <li>Cost of Staff Training: Educated staff (database administrator, application programmers, data entry operations) who maintains the database management system also requires a good amount of salary.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Complexity:</strong> As we all know that nowadays all companies are using the database management system as it fulfills lots of requirements and also solves the problem. But a problem arises, that is all this functionality has made the database management system an extremely complex software.</li>
+                        <li><strong>Performance:</strong> The traditional file system is written for small organizations and for some specific applications due to which performance is generally very good. But for the small-scale firms, DBMS does not give a good performance as its speed is very slow.</li>
+                        <li><strong>Frequency Upgrade:</strong> Nowadays in this world, we need to stay up-to-date about the latest technologies, developments arriving in the market. Frequently upgrade of the products is done by the DBMS vendors to add new functionality to the systems.</li>
+                    </ol>
+
+                    <h2 id="dbms">DBMS (Database Management System)</h2>
+                    <p>Database Management System (DBMS) is a collection of interrelated data and a set of software tools/programs that access, process, and manipulate data. It allows access, retrieval, and use of that data by considering appropriate security measures. The Database Management system (DBMS) is really useful for better data integration and security.</p>
+
+                    <h3>Objective of DBMS</h3>
                     <ul>
-                        <li><strong>Data Independence:</strong> Application programs are independent of the details of data representation and storage.</li>
-                        <li><strong>Efficient Data Access:</strong> A DBMS utilizes a variety of sophisticated techniques to store and retrieve data efficiently.</li>
-                        <li><strong>Data Integrity and Security:</strong> Data is accessed through the DBMS, which can check authorization and integrity constraints.</li>
-                        <li><strong>Concurrent Access:</strong> Multiple users can access the database at the same time without conflict.</li>
+                        <li>Provide for mass storage of relevant data.</li>
+                        <li>Making easy access to data for authorized user.</li>
+                        <li>Providing prompt response to users' request for data.</li>
+                        <li>Allow multiple users to be active at one time.</li>
+                        <li>Protect the data from physical harm and unauthorized access.</li>
+                        <li>Provide security with user access privilege.</li>
+                        <li>Combining interrelated data to generate report.</li>
+                        <li>Provide multiple views for same data.</li>
                     </ul>
 
-                    <h2 id="models">1.3 Data Models</h2>
-                    <p>Data models define how the logical structure of a database is modeled.</p>
+                    <h3>Advantages of DBMS</h3>
+                    <ul>
+                        <li><strong>Data integration:</strong> Due to the Database Management System we have access to well-managed and synchronized forms of data thus it makes data handling very easy and gives an integrated view of how a particular organization is working and also helps to keep track of how one segment of the company affects another segment.</li>
+                        <li><strong>Data abstraction:</strong> The major purpose of a database system is to provide users with an abstract view of the data. Since many complex algorithms are used by the developers to increase the efficiency of databases that are being hidden by the users through various data abstraction levels to allow users to easily interact with the system.</li>
+                        <li><strong>Reduction in data Redundancy:</strong> When working with a structured database, DBMS provides the feature to prevent the input of duplicate items in the database. for e.g. If there are two same students in different rows, then one of the duplicate data will be deleted.</li>
+                        <li><strong>Data sharing:</strong> A DBMS provides a platform for sharing data across multiple applications and users, which can increase productivity and collaboration.</li>
+                        <li><strong>Data consistency and accuracy:</strong> DBMS ensures that data is consistent and accurate by enforcing data integrity constraints and preventing data duplication. This helps to eliminate data discrepancies and errors that can occur when data is stored and managed manually.</li>
+                        <li><strong>Data organization:</strong> A DBMS provides a systematic approach to organizing data in a structured way, which makes it easier to retrieve and manage data efficiently.</li>
+                        <li><strong>Efficient data access and retrieval:</strong> DBMS allows for efficient data access and retrieval by providing indexing and query optimization techniques that speed up data retrieval. This reduces the time required to process large volumes of data and increases the overall performance of the system.</li>
+                        <li><strong>Concurrency and maintained Atomicity:</strong> That means, if some operation is performed on one particular table of the database, then the change must be reflected for the entire database. The DBMS allows concurrent access to multiple users by using the synchronization technique.</li>
+                        <li><strong>Scalability and flexibility:</strong> DBMS is highly scalable and can easily accommodate changes in data volumes and user requirements. DBMS can easily handle large volumes of data, and can scale up or down depending on the needs of the organization. It provides flexibility in data storage, retrieval, and manipulation, allowing users to easily modify the structure and content of the database as needed.</li>
+                        <li><strong>Data Security:</strong> The more accessible and usable the database, the more it is prone to security issues. As the number of users increases, the data transferring or data sharing rate also increases thus increasing the risk of data security. It is widely used in the corporate world where companies invest large amounts of money, time, and effort to ensure data is secure and used properly. A Database Management System (DBMS) provides a better platform for data privacy and security policies thus, helping companies to improve Data Security.</li>
+                    </ul>
+
+                    <h3>Disadvantages of DBMS</h3>
+                    <ul>
+                        <li><strong>Complexity:</strong> The provision of the functionality that is expected of a good DBMS makes the DBMS an extremely complex piece of software. Database designers, developers, database administrators and end-users must understand this functionality to take full advantage of it. Failure to understand the system can lead to bad design decisions, which leads to a serious consequence for an organization.</li>
+                        <li><strong>Size:</strong> The functionality of DBMS makes use of a large piece of software which occupies megabytes of disk space.</li>
+                        <li><strong>Performance:</strong> Performance may not run as fast as desired.</li>
+                        <li><strong>Higher impact of a failure:</strong> The centralization of resources increases the vulnerability of the system because all users and applications rely on the availability of DBMS, the failure of any component can bring operation to halt.</li>
+                        <li><strong>Cost of DBMS:</strong> The cost of DBMS varies significantly depending on the environment and functionality provided. There is also the recurrent annual maintenance cost.</li>
+                    </ul>
+
+                    <h2 id="models">Database Model</h2>
+                    <p>Database models are used to organize data. It determines the manner in which data can be stored, organized and manipulated in a database system. The different types of database model are given below:</p>
+
+                    <h3>1. Hierarchical Database Model:</h3>
+                    <p>It is the oldest model database. We frequently find data exhibiting a hierarchical(level or tree structure) relationship. For example: data on customer, order and term ordered are in hierarchy as follows:</p>
+                    
+                    <div class="tree-container" style="overflow-x: auto; padding: 20px; margin-bottom: 2rem;">
+                        <div class="tree">
+                            <ul>
+                                <li>
+                                    <span>Shoes</span>
+                                    <ul>
+                                        <li>
+                                            <span>Gents</span>
+                                            <ul>
+                                                <li><span>Casual</span></li>
+                                                <li><span>Sneakers</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Ladies</span>
+                                            <ul>
+                                                <li><span>Casual</span></li>
+                                                <li><span>Sneakers</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>2. Network Database model:</h3>
+                    <p>In network database models network of connection between data elements are established. This model overcomes the problem faced in hierarchical model of searching from bottom or middle. This model is more flexible than hierarchical model as it represent many to many relationship. It allows each record to have multiple parents and multiple children.</p>
+                    
+                    <h3>3. Relational Database Model:</h3>
+                    <p>In relational database model, a collection of data items is organized in a table from which data can be accessed in many different ways. This model can handle many to many relationship smoothly. The data on customer order and item ordered are managed in table as follows:</p>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm">
+                            <thead><tr><th colspan="3">Table: Customer</th></tr></thead>
+                            <tr><td>CustomerID</td><td>Name</td><td>Address</td></tr>
+                        </table>
+                    </div>
+                     <div class="table-responsive" style="margin-top: 0.5rem;">
+                        <table class="table table-bordered table-sm">
+                            <thead><tr><th colspan="3">Table: Order</th></tr></thead>
+                            <tr><td>OrderID</td><td>CustomerID</td><td>OrderDate</td></tr>
+                        </table>
+                    </div>
+                     <div class="table-responsive" style="margin-top: 0.5rem;">
+                        <table class="table table-bordered table-sm">
+                            <thead><tr><th colspan="3">Table: ItemsOrdered</th></tr></thead>
+                            <tr><td>OrderID</td><td>ItemID</td><td>Quantity</td></tr>
+                        </table>
+                    </div>
+                     <div class="table-responsive" style="margin-top: 0.5rem;">
+                        <table class="table table-bordered table-sm">
+                            <thead><tr><th colspan="3">Table: Items</th></tr></thead>
+                            <tr><td>ItemID</td><td>Description</td><td>Price</td></tr>
+                        </table>
+                    </div>
+
+                    <h2 id="basics">Basic things to know</h2>
+                    <ul>
+                        <li><strong>Fields:</strong> fields contains a piece of information of an entry in database. A database field is a set of data values, of the same data type, in a table. It is also referred to as a column or an attribute.</li>
+                        <li><strong>Records:</strong> one full set of fields i.e. all the related information above one person or objects is called the record. A record in a database is an object that can contain one or more values.</li>
+                        <li><strong>Table:</strong> A computer collection of record is called a table. A table contains rows and columns. Tables are database objects that contain all the data in a database. In tables, data is logically organized in a row-and-column format similar to a spreadsheet. Each row represents a unique record, and each column represents a field in the record.</li>
+                    </ul>
+
+                    <h3>Concepts for relational database system</h3>
+                    <p><strong>Entity:</strong> An entity is a class of a persons, places, objects, events or concepts in the real world. i.e. different from object. An entity is an object that exists. In database administration, an entity can be a single thing, person, place, or object. Data can be stored about such entities. A design tool that allows database administrators to view the relationships between several entities is called the entity relationship diagram (ERD). Entity is also called entity type or entity class. Following are the different entities:</p>
+                    <ul>
+                        <li><strong>Person:</strong> contractor, Teacher, Employee, students, parents etc.</li>
+                        <li><strong>Place:</strong> zone, Region, country, branch etc.</li>
+                        <li><strong>Object:</strong> Tool, Machine, buildings, products etc.</li>
+                        <li><strong>Event:</strong> Application, sales, award, Registration, renewal etc.</li>
+                        <li><strong>Concept:</strong> qualification, Account, work center etc.</li>
+                    </ul>
+                    <p><strong>Attributes:</strong> Attributes are properties possessed by each member of element, property or field.</p>
+                    <p><strong>Identification:</strong> A primary key is that candidate key which uniquely identifies each record in a table.</p>
+
+                    <h2 id="normalization">Normalization</h2>
+                    <p>Normalization is the process of structuring a database to reduce data redundancy and improve data integrity. It organizes tables and columns to eliminate duplicate data and ensure that data dependencies make logical sense. The primary goal is to break down a large table into smaller, more manageable tables and establish relationships between them.</p>
+
+                    <h3>Unnormalized Table Example</h3>
+                    <p>Let's start with an unnormalized table named Student Course Enrollment that contains information about students, their courses, and their instructors.</p>
+                    <div class="note-box">
+                    <strong>UNNORMALIZED TABLE (UNF)</strong><br>
+                    Example: Student course Enrollment
+                    <div class="table-responsive">
+                    <table class="table table-bordered table-sm">
+                        <tr><th>StudentID</th><th>StudentName</th><th>Courses</th><th>Instructor</th></tr>
+                        <tr><td>1</td><td>Alice</td><td>Math, Physics</td><td>Smith, Johnson</td></tr>
+                        <tr><td>2</td><td>Bob</td><td>Chemistry</td><td>Williams</td></tr>
+                        <tr><td>3</td><td>Alice</td><td>Chemistry</td><td>Williams</td></tr>
+                    </table>
+                    </div>
+                    <strong>Problems:</strong>
+                    <ul>
+                        <li>Multiple values in Courses and Instructor columns (bad for searching, updating)</li>
+                        <li>Redundancy: "Alice" appears twice</li>
+                    </ul>
+                    </div>
+
+                    <h3>First Normal Form (1NF)</h3>
+                    <p>A table is in 1NF if it eliminates repeating groups and ensures that all data values are atomic, meaning they are indivisible. This means a single cell in a table should not contain multiple values, like a comma-separated list of items or an array. To achieve this, you break up a table with repeating information into separate rows.</p>
+                    <p><strong>Rule:</strong> A table is in 1NF if it meets the following criteria:</p>
+                    <ol>
+                        <li>Atomicity: Each column contains atomic (indivisible) values.</li>
+                        <li>No Repeating Groups: There are no repeating groups of columns.</li>
+                    </ol>
+                    <p><strong>Convert to 1NF:</strong></p>
+                    <div class="table-responsive">
+                    <table class="table table-bordered table-sm">
+                        <tr><th>StudentID</th><th>StudentName</th><th>Course</th><th>Instructor</th></tr>
+                        <tr><td>1</td><td>Alice</td><td>Math</td><td>Smith</td></tr>
+                        <tr><td>1</td><td>Alice</td><td>Physics</td><td>Johnson</td></tr>
+                        <tr><td>2</td><td>Bob</td><td>Chemistry</td><td>Williams</td></tr>
+                        <tr><td>3</td><td>Alice</td><td>Chemistry</td><td>Williams</td></tr>
+                    </table>
+                    </div>
+
+                    <h3>Second Normal Form (2NF)</h3>
+                    <p>A table is in 2NF if it's already in 1NF and all its non-key attributes are fully dependent on the entire primary key. This rule primarily applies to tables with a composite primary key (a key made up of two or more columns). If a non-key column depends on only part of the primary key, it creates a partial dependency. To fix this, you split the table. The columns with the partial dependency are moved to a new table with the partial key as its primary key.</p>
+                    <p><strong>Rule:</strong></p>
+                    <ul>
+                        <li>Must be in 1NF.</li>
+                        <li>A table is in 2NF if it is in 1NF and all non-key attributes are fully functionally dependent on the entire primary key.</li>
+                    </ul>
+                    <p><strong>Convert to 2NF by splitting the table:</strong></p>
+                    
                     <div class="grid-2">
-                         <div class="card">
-                            <h4 class="card-title">Relational Model</h4>
-                            <p class="card-text">Data is organized in tables (relations) with rows and columns. This is the most popular model.</p>
+                        <div>
+                        <h6>Students Table</h6>
+                        <table class="table table-bordered table-sm">
+                            <tr><th>StudentID</th><th>StudentName</th></tr>
+                            <tr><td>1</td><td>Alice</td></tr>
+                            <tr><td>2</td><td>Bob</td></tr>
+                            <tr><td>3</td><td>Alice</td></tr>
+                        </table>
+                        </div>
+                        <div>
+                        <h6>Enrollment Table</h6>
+                        <table class="table table-bordered table-sm">
+                            <tr><th>StudentID</th><th>Course</th><th>Instructor</th></tr>
+                            <tr><td>1</td><td>Math</td><td>Smith</td></tr>
+                            <tr><td>1</td><td>Physics</td><td>Johnson</td></tr>
+                            <tr><td>2</td><td>Chemistry</td><td>Williams</td></tr>
+                            <tr><td>3</td><td>Chemistry</td><td>Williams</td></tr>
+                        </table>
+                        </div>
+                    </div>
+
+                    <h3>Third Normal Form (3NF)</h3>
+                    <p>A table is in 3NF if it's in 2NF and all non-key attributes have no transitive dependency. A transitive dependency occurs when a non-key attribute is dependent on another non-key attribute, which in turn is dependent on the primary key. In simpler terms, a non-key field must depend on "the key, the whole key, and nothing but the key".</p>
+                    <p><strong>Rule:</strong> Must be in 2NF. A table is in 3NF if it is in 2NF and all non-key attributes are not transitively dependent on the primary key.</p>
+                    <p><strong>Convert to 3NF by splitting again:</strong></p>
+                    
+                    <div class="grid-2">
+                         <div>
+                            <h6>Student Table</h6>
+                            <table class="table table-bordered table-sm">
+                                <tr><th>StudentID</th><th>StudentName</th></tr>
+                                <tr><td>1</td><td>Alice</td></tr>
+                                <tr><td>2</td><td>Bob</td></tr>
+                                <tr><td>3</td><td>Alice</td></tr>
+                            </table>
                          </div>
-                         <div class="card">
-                            <h4 class="card-title">Hierarchical Model</h4>
-                            <p class="card-text">Data is organized into a tree-like structure. Each record has a single parent.</p>
+                         <div>
+                            <h6>Enrollment Table</h6>
+                            <table class="table table-bordered table-sm">
+                                <tr><th>StudentID</th><th>Course</th></tr>
+                                <tr><td>1</td><td>Math</td></tr>
+                                <tr><td>1</td><td>Physics</td></tr>
+                                <tr><td>2</td><td>Chemistry</td></tr>
+                                <tr><td>3</td><td>Chemistry</td></tr>
+                            </table>
                          </div>
                     </div>
+                    <div style="margin-top: 1rem; width: 50%;">
+                        <h6>Course Table</h6>
+                        <table class="table table-bordered table-sm">
+                            <tr><th>Course</th><th>Instructor</th></tr>
+                            <tr><td>Math</td><td>Smith</td></tr>
+                            <tr><td>Physics</td><td>Johnson</td></tr>
+                            <tr><td>Chemistry</td><td>Williams</td></tr>
+                        </table>
+                    </div>
+
+                    <h2 id="languages">Database Language</h2>
+                    <p>Database languages are specialized languages used to communicate with and manage database systems. They are typically used to define the structure of a database, manipulate the data within it, control user access, and manage transactions. The most well-known of these is SQL (Structured Query Language), which is a comprehensive language that incorporates different types of commands to handle all these functions.</p>
+                    <p>The four main types of database languages are:</p>
+
+                    <h3>Data Definition Language (DDL)</h3>
+                    <p>DDL commands are used to define and manage the structure of a database. They deal with the database's schema, which is the skeleton that holds the data. You use DDL to create, alter, and delete database objects like tables, views, indexes, and schemas. Once a DDL command is executed, the changes are permanent and cannot be rolled back.</p>
+                    <p><strong>Common DDL Commands:</strong></p>
+                    <ul>
+                        <li><strong>CREATE:</strong> Creates a new database object (e.g., CREATE TABLE Students).</li>
+                        <li><strong>ALTER:</strong> Modifies the structure of an existing database object (e.g., ALTER TABLE Students ADD Email VARCHAR(255)).</li>
+                        <li><strong>DROP:</strong> Deletes a database object and all its data (e.g., DROP TABLE Students).</li>
+                        <li><strong>TRUNCATE:</strong> Deletes all data from a table while keeping its structure intact.</li>
+                        <li><strong>RENAME:</strong> Changes the name of a database object.</li>
+                    </ul>
+
+                    <h3>Data Manipulation Language (DML)</h3>
+                    <p>DML commands are used to manipulate the data stored within the database objects. These are the most frequently used commands as they allow you to insert, retrieve, update, and delete the actual information. DML commands are not automatically saved, so their changes can be undone.</p>
+                    <p><strong>Common DML Commands:</strong></p>
+                    <ul>
+                        <li><strong>SELECT:</strong> Retrieves data from a database (e.g., SELECT * FROM Students WHERE StudentID = 101). This is often considered a subcategory called Data Query Language (DQL).</li>
+                        <li><strong>INSERT:</strong> Adds new rows of data to a table (e.g., INSERT INTO Students (StudentID, StudentName) VALUES (104, 'Dave')).</li>
+                        <li><strong>UPDATE:</strong> Modifies existing data within a table (e.g., UPDATE Students SET StudentMajor = 'Biology' WHERE StudentID = 101).</li>
+                        <li><strong>DELETE:</strong> Removes rows of data from a table (e.g., DELETE FROM Students WHERE StudentID = 102).</li>
+                    </ul>
+
+                    <h2 id="arch">Centralized Database</h2>
+                    <p>A centralized database stores all its data and related processing on a single, central server. All users access this one physical location over a network to retrieve and manage information. This model is straightforward and is commonly used by smaller organizations or for applications where data doesn't need to be globally distributed. The primary advantage is simplicity: it's easy to manage, secure, and maintain because all of the data resides in one place. If the central server fails, the entire system becomes unavailable, which can cause significant downtime. As the number of users and the amount of data grow, a centralized database can also suffer from performance bottlenecks, as all traffic is directed to a single server. This makes it less scalable and less suitable for large, geographically diverse organizations that require high availability and local data access.</p>
+                    
+                    <h3>Advantages:</h3>
+                    <ol>
+                        <li><strong>Simplified Management:</strong> It's much easier to manage, maintain, and secure since all data is in one place. Tasks like backups and administration are straightforward.</li>
+                        <li><strong>Strong Data Integrity:</strong> With all data consolidated in a single location, it's easier to enforce data consistency and integrity, as there are no synchronization issues between different data copies.</li>
+                        <li><strong>Lower Cost:</strong> The initial setup and operational costs are generally lower. You only need to invest in one powerful server and the necessary software licenses.</li>
+                        <li><strong>Security Control:</strong> Security is more manageable as you only need to protect a single point of entry with firewalls, access controls, and other security measures.</li>
+                        <li><strong>Simplified Development:</strong> Application development is simpler because there's no need to consider data fragmentation or complex distributed transaction protocols.</li>
+                    </ol>
+
+                    <h3>Disadvantages:</h3>
+                    <ol>
+                        <li><strong>Single Point of Failure:</strong> If the central server goes down, the entire database becomes inaccessible, leading to a complete service outage.</li>
+                        <li><strong>Performance Bottleneck:</strong> All user queries and requests are routed to a single server. As the number of users grows, the server can become overloaded, leading to slow response times.</li>
+                        <li><strong>Scalability Issues:</strong> Scaling a centralized database is difficult and often requires expensive hardware upgrades (vertical scaling) to handle increased load.</li>
+                        <li><strong>Reduced Availability:</strong> The database is only available if the central server is running. Any downtime, planned or unplanned, affects all users.</li>
+                        <li><strong>High Latency:</strong> For geographically distant users, network latency can be a significant issue, as all data requests must travel to and from the central server.</li>
+                    </ol>
+
+                    <h2 id="distributed">Distributed Database</h2>
+                    <p>A distributed database is a database in which data is stored across multiple computers, also known as nodes, that are interconnected by a network. It differs from a centralized database where all data is on a single machine. The system is designed to appear as a single, logical database to the user, who doesn't need to know where the data is physically located. This architecture is crucial for handling large volumes of data and high user traffic, as it can distribute the workload and data across multiple servers.</p>
+                    <p>Distributed databases use two main strategies to manage data across nodes:</p>
+                    <ul>
+                        <li><strong>Fragmentation:</strong> The database is broken into smaller logical units or fragments, and each fragment is stored on a different node. For example, a global company might store customer data for a specific region on a server located within that region.</li>
+                        <li><strong>Replication:</strong> Copies of the same data are stored on multiple nodes. This ensures that if one node fails, the data is still available from a replica on another node, increasing reliability and fault tolerance.</li>
+                    </ul>
+                    <p>A Distributed Database Management System (DDBMS) is the software that manages this complex environment, handling tasks like data fragmentation, replication, and query processing to ensure consistency and transparency for the user.</p>
+
+                    <h3>Advantages:</h3>
+                    <ol>
+                        <li><strong>High Availability:</strong> There is no single point of failure. If one server goes down, the rest of the network can continue to operate, ensuring uninterrupted service.</li>
+                        <li><strong>Scalability:</strong> Distributed databases can be easily scaled horizontally by adding more nodes, which is often more cost-effective than upgrading a single, powerful server.</li>
+                        <li><strong>Improved Performance:</strong> Data can be stored closer to the users who access it most frequently, reducing network latency and improving response times.</li>
+                        <li><strong>Fault Tolerance:</strong> Data is often replicated across multiple nodes. If a node fails, its data can still be accessed from a healthy replica, making the system resilient to failures.</li>
+                        <li><strong>Modular Growth:</strong> New nodes can be added to the network incrementally to handle growth in data or user traffic without impacting the rest of the system.</li>
+                    </ol>
+
+                    <h3>Disadvantages:</h3>
+                    <ol>
+                        <li><strong>Complexity:</strong> They are significantly more complex to design, implement, and manage than centralized databases. Ensuring data consistency across all nodes is a major challenge.</li>
+                        <li><strong>Higher Cost:</strong> The initial setup and ongoing management can be more expensive due to the need for multiple servers, complex networking, and specialized administrative skills.</li>
+                        <li><strong>Data Consistency Issues:</strong> Keeping all replicated data consistent in real-time is difficult. Network delays or failures can lead to temporary data inconsistencies.</li>
+                        <li><strong>Security Risks:</strong> A distributed system has multiple access points, increasing the overall security risk and making it more challenging to protect the data.</li>
+                        <li><strong>Lack of Standardization:</strong> There is a lack of universal standards for distributed database systems, which can make it challenging to integrate different systems or migrate data between them.</li>
+                    </ol>
+
+                    <h2 id="security">Data Security</h2>
+                    <p>Data security in a Database Management System (DBMS) is the set of measures and controls designed to protect the confidentiality, integrity, and availability of data. This involves not only safeguarding the data itself but also the DBMS software, the physical infrastructure, and any applications that access the data. Key components of database security include robust access control, which uses authentication to verify a user's identity and authorization to define what they are allowed to do. Encryption, both for data at rest (on disk) and in transit (over a network), serves as a final line of defense against unauthorized access. Additionally, constant auditing and monitoring of database activity is essential for detecting suspicious behavior, investigating security incidents, and ensuring compliance with regulations. Common threats that database security aims to mitigate include SQL injection attacks, insider threats, and a lack of proper configuration, all of which can lead to data breaches or corruption. By implementing a multi-layered security strategy, organizations can significantly reduce the risk of data loss and maintain the trustworthiness of their information.</p>
+
+                    <h3>Key Security Measures</h3>
+                    <ul>
+                        <li><strong>Access Control:</strong> This is the most fundamental layer. It ensures only the right people can access the database. This includes:
+                            <ul>
+                                <li><em>Authentication:</em> verifying a user's identity, usually with a username and password. Multi-factor authentication adds an extra layer of security.</li>
+                                <li><em>Authorization:</em> defining what an authenticated user is allowed to do. The principle of least privilege is key here—users are given only the minimum permissions needed for their job.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Data Encryption:</strong> This is a vital last line of defense that makes data unreadable to anyone who doesn't have the decryption key. It's used in two main ways:
+                            <ul>
+                                <li><em>Encryption at Rest:</em> Encrypting data while it's stored on a disk. Even if a server is stolen, the data is useless.</li>
+                                <li><em>Encryption in Transit:</em> Encrypting data as it travels over a network between the user and the database, preventing interception.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Auditing and Monitoring:</strong> This involves continuously tracking and logging all database activity to detect suspicious behavior. Auditing creates a record of who did what and when, which is crucial for investigations and compliance. Real-time monitoring systems can alert administrators to unusual activity, such as multiple failed login attempts.</li>
+                    </ul>
+
+                    <h3>Common Threats</h3>
+                    <p>Database security must address a range of threats, including SQL injection attacks, where malicious code is inserted into an application's input fields, and insider threats, which are risks posed by employees or contractors with authorized access. Other threats include privilege abuse by a legitimate user and vulnerabilities caused by weak passwords or system misconfigurations.</p>
+
+                    <h2 id="dba">Database Administrator (DBA)</h2>
+                    <p>A Database Administrator (DBA) is a specialized IT professional who manages, maintains, and secures a database system. They ensure that data is correctly stored, organized, and available to users when needed. The role is critical in any organization that relies on data for its operations, as the DBA is the primary person responsible for the performance, integrity, and security of the database.</p>
+                    <ul>
+                        <li><strong>Installation and Configuration:</strong> DBAs install and configure the database management system (DBMS) software and related tools, customizing them to meet an organization's specific requirements.</li>
+                        <li><strong>Backup and Recovery:</strong> They create and implement comprehensive backup strategies to prevent data loss. This includes scheduling regular backups and testing recovery procedures to ensure data can be restored quickly and accurately after a system failure.</li>
+                        <li><strong>Security Management:</strong> DBAs are the gatekeepers of the database. They manage user accounts, roles, and permissions to ensure only authorized individuals can access and modify sensitive data. They also monitor for security breaches.</li>
+                        <li><strong>Performance Tuning:</strong> They constantly monitor database performance, analyze query efficiency, and fine-tune system parameters to ensure fast data retrieval and a smooth user experience.</li>
+                        <li><strong>Data Integrity:</strong> DBAs enforce data integrity rules to ensure data is consistent and accurate. They often implement checks and constraints to prevent bad data from entering the database.</li>
+                        <li><strong>Troubleshooting:</strong> When issues arise, such as a slow query, a system crash, or data corruption, the DBA is responsible for diagnosing the root cause and implementing a solution to fix it.</li>
+                        <li><strong>Maintenance:</strong> This includes routine tasks like applying software patches and updates, managing storage space, and archiving old data to maintain a healthy database environment.</li>
+                        <li><strong>Database Design:</strong> DBAs collaborate with developers and architects to design the database schema, including tables, relationships, and indexes, to ensure it is logical and efficient.</li>
+                        <li><strong>Capacity Planning:</strong> They monitor database growth and usage trends to predict future resource needs, such as storage and memory, and plan for upgrades or new hardware.</li>
+                        <li><strong>Data Migration:</strong> When an organization needs to move data, whether between different servers, from on-premises to the cloud, or to a new database system, the DBA is responsible for planning and executing the migration smoothly and without data loss.</li>
+                    </ul>
+
+                    <h2 id="er-diagram">ER- Diagram</h2>
+                    <p>An Entity-Relationship (ER) diagram is a visual tool used to model the logical structure of a database. It acts as a blueprint, showing how different pieces of information, or entities, relate to each other. By using standardized symbols, it helps developers and analysts understand the relationships, attributes, and constraints of a database before it's actually built.</p>
+
+                    <h3>Key Figures and Their Workings</h3>
+                    <p>ER diagrams are built using three core components: entities, attributes, and relationships.</p>
+                    <ul>
+                        <li><strong>Entities:</strong> Represented by a rectangle, an entity is a real-world object or concept that you want to store data about. Think of entities as the nouns in your database. <em>Example: Student, Course, Instructor.</em></li>
+                        <li><strong>Attributes:</strong> Represented by an oval or listed within the entity rectangle, attributes are the properties or characteristics of an entity. <em>Example: A Student entity might have attributes like StudentID, StudentName, and StudentMajor.</em></li>
+                        <li><strong>Relationships:</strong> Represented by a diamond, a relationship is how two or more entities are associated with each other. It's the verb that connects the nouns. <em>Example: A Student enrolls in a Course. The diamond would be labeled "Enrolls In."</em></li>
+                    </ul>
+                    <p>The lines connecting these figures also show cardinality, which defines the number of instances of one entity that can be related to instances of another.</p>
+                    <ul>
+                        <li><strong>One-to-One (1:1):</strong> Each entity instance relates to exactly one instance of another entity. (e.g., a person has one social security card).</li>
+                        <li><strong>One-to-Many (1:N):</strong> One entity instance can relate to many instances of another. (e.g., an instructor teaches many courses).</li>
+                        <li><strong>Many-to-Many (M:N):</strong> Many instances of one entity can relate to many instances of another. (e.g., many students enroll in many courses).</li>
+                    </ul>
+
+                    <h3>Key Advantages of ER Diagrams</h3>
+                    <ol>
+                        <li><strong>Clarity and Simplicity:</strong> ER diagrams provide a simple, graphical representation of a complex database structure. This visual format is much easier to understand than a detailed textual description.</li>
+                        <li><strong>Effective Communication:</strong> By acting as a universal blueprint, ER diagrams facilitate communication among various teams.</li>
+                        <li><strong>Better Database Design:</strong> ER diagrams are a crucial step in the design process. They help designers identify and correct flaws like redundancy, missing relationships, or inconsistent data before any code is written.</li>
+                        <li><strong>Reduced Redundancy:</strong> The process of creating an ER diagram naturally encourages normalization.</li>
+                        <li><strong>Blueprint for Implementation:</strong> The ER diagram serves as a direct blueprint for building the database. Once the diagram is finalized, developers can easily translate entities into tables, attributes into columns, and relationships into foreign key constraints.</li>
+                    </ol>
+
+                    <h3>What is an Entity?</h3>
+                    <p>An Entity represents a real-world object, concept or thing about which data is stored in a database. It act as a building block of a database. Tables in relational database represent these entities.</p>
+                    <p><strong>Example of entities:</strong></p>
+                    <ul>
+                        <li>Real-World Objects: Person, Car, Employee etc.</li>
+                        <li>Concepts: Course, Event, Reservation etc.</li>
+                        <li>Things: Product, Document, Device etc.</li>
+                    </ul>
+                    
+                    <h3>Types of Entity</h3>
+                    <ul>
+                        <li><strong>Strong Entity:</strong> A strong entity is an independent entity that can exist on its own and has a primary key to uniquely identify its instances. It does not rely on any other entity for its existence. For example, in a university database, Student is a strong entity because a student can exist independently of a course. Their primary key, StudentID, is sufficient to identify them.</li>
+                        <li><strong>Weak Entity:</strong> A weak entity is an entity that cannot exist without its related strong entity. It does not have a primary key of its own; instead, it relies on the primary key of its parent strong entity to form its own unique identifier. For example, a Dependent entity (a child of an employee) is a weak entity because a dependent cannot exist in the database unless they are associated with a specific Employee (the strong entity).</li>
+                    </ul>
+
+                    <h2 id="integrity">Data Integrity</h2>
+                    <p>Data integrity refers to the overall accuracy, completeness, and consistency of data throughout its entire lifecycle. It's about ensuring that data is reliable and trustworthy. Maintaining data integrity is crucial for making sound business decisions and for meeting legal and regulatory compliance requirements.</p>
+                    <p>There are two main types of data integrity:</p>
+                    <ul>
+                        <li><strong>Entity Integrity:</strong> This type of integrity ensures that each row in a table is uniquely identified. It is enforced by the primary key, which must contain unique values and cannot be NULL. This prevents duplicate rows and guarantees that every entity instance is distinct.</li>
+                        <li><strong>Referential Integrity:</strong> This ensures that relationships between tables remain consistent. It is enforced using foreign keys. A foreign key in one table must either point to a valid, existing record in another table or be NULL. For example, a student record with a foreign key referencing a course ID must refer to a course that actually exists in the courses table. This prevents "orphan" records.</li>
+                    </ul>
+                    <p>Data integrity is protected through various constraints and rules defined within the database schema, such as UNIQUE, NOT NULL, CHECK, and FOREIGN KEY constraints. These measures prevent the entry of incorrect, incomplete, or duplicate data.</p>
+
                 </article>
 
-                <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; justify-content: flex-end;">
+                <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+                    <a href="c12_computer_syllabus.html" class="btn btn-outline">&larr; Back to Syllabus</a>
                     <a href="c12_computer_chapter_2.html" class="btn btn-primary">Next: Network & Comm. &rarr;</a>
                 </div>
             </div>
