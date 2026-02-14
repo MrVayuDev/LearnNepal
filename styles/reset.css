@@ -35,8 +35,11 @@ input, button, textarea, select {
     font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+/* Robust word wrapping */
+p, h1, h2, h3, h4, h5, h6, li, span, div, a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 a {
@@ -46,4 +49,9 @@ a {
 
 ul, ol {
     list-style: none;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-all;
 }
