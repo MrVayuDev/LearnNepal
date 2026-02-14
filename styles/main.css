@@ -6,6 +6,7 @@
 @import "ads.css";
 @import "animations.css";
 @import "loader.css";
+@import "offline.css";
 
 /* Global Styles */
 .container {

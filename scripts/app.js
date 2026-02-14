@@ -11,7 +11,54 @@ document.addEventListener('DOMContentLoaded', () => {
     initSidebarAccordion();
     initProgressBar();
     initBackToTop();
+    initOfflineDetection();
 });
+
+function initOfflineDetection() {
+    // Check if overlay already exists
+    if (document.getElementById('offline-overlay')) return;
+
+    // Create Overlay HTML
+    const overlay = document.createElement('div');
+    overlay.id = 'offline-overlay';
+    overlay.innerHTML = `
+        <div class="offline-content">
+            <div class="wifi-symbol">
+                <div class="wifi-circle first"></div>
+                <div class="wifi-circle second"></div>
+                <div class="wifi-circle third"></div>
+                <div class="wifi-dot"></div>
+            </div>
+            <h2 class="offline-title">No Internet Connection</h2>
+            <p class="offline-message">It looks like you're offline. Please check your connection and try again.</p>
+            <button class="offline-retry-btn" onclick="window.location.reload()">Retry</button>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    // Event Listeners
+    function updateOnlineStatus() {
+        if (navigator.onLine) {
+            overlay.classList.remove('active');
+            setTimeout(() => {
+                overlay.style.visibility = 'hidden';
+            }, 300);
+        } else {
+            overlay.style.visibility = 'visible';
+            setTimeout(() => {
+                overlay.classList.add('active');
+            }, 10);
+        }
+    }
+
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+
+    // Initial check (in case loaded while offline)
+    if (!navigator.onLine) {
+        updateOnlineStatus();
+    }
+}
 
 function initProgressBar() {
     // Create Progress Bar Elements
