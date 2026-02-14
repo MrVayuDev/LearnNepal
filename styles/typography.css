@@ -21,9 +21,21 @@ h1 {
     letter-spacing: -0.02em;
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.25rem; /* Reduced for mobile */
+    }
+}
+
 h2 {
     font-size: 2.5rem;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.75rem; /* Reduced for mobile */
+    }
 }
 
 h3 {
@@ -34,6 +46,13 @@ h3 {
 p {
     margin-bottom: var(--spacing-lg);
     color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 0.95rem; /* Slightly smaller body text */
+        line-height: 1.6;
+    }
 }
 
 .text-lead {
