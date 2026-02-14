@@ -100,7 +100,13 @@
     gap: var(--spacing-lg);
 }
 
-@media (max-width: 768px) {
+/* Prevent grid items from blowing out width */
+.grid-2 > *, .grid-3 > * {
+    min-width: 0;
+}
+
+/* Stack grids earlier (tablets/small laptops) to allow wide content like tables */
+@media (max-width: 1024px) {
     .grid-2,
     .grid-3 {
         grid-template-columns: 1fr;

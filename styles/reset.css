@@ -36,11 +36,16 @@ input, button, textarea, select {
 }
 
 /* Robust word wrapping for text content only */
-/* Robust word wrapping globally */
-p, h1, h2, h3, h4, h5, h6, li, span, div, a {
+/* Robust word wrapping for text content only */
+p, h1, h2, h3, h4, h5, h6, li {
     overflow-wrap: anywhere;
     word-break: break-word;
-    /* Removed hyphens: auto to prevent visual glitches */
+}
+
+/* Ensure documentation content specifically handles overflow safely */
+.docs-content {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 a {
