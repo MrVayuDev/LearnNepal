@@ -40,21 +40,23 @@ input, button, textarea, select {
 /* Robust word wrapping for text content only */
 p, h1, h2, h3, h4, h5, h6, li, td, th, blockquote, code, pre {
     overflow-wrap: anywhere;
-    word-break: normal; 
+    word-break: break-word; /* Deprecated but essential for some Android browsers */
+    word-wrap: break-word; /* Legacy support */
 }
 
 /* Ensure documentation content specifically handles overflow safely */
 .docs-content {
     width: 100%;
     overflow-wrap: anywhere;
-    word-break: normal;
+    word-break: break-word;
 }
 
 /* Aggressively handle all children within docs-content to prevent any overflow */
 .docs-content * {
-    max-width: 100%; /* Force all children to respect container width */
-    overflow-wrap: anywhere;
-    word-break: normal;
+    max-width: 100% !important; /* Force all children to respect container width */
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important; 
 }
 
 a {
