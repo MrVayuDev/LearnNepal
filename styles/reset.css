@@ -37,23 +37,24 @@ input, button, textarea, select {
 
 /* Robust word wrapping for text content only */
 /* Robust word wrapping for text content only */
-p, h1, h2, h3, h4, h5, h6, li {
+/* Robust word wrapping for text content only */
+p, h1, h2, h3, h4, h5, h6, li, td, th, blockquote, code, pre {
     overflow-wrap: anywhere;
-    word-break: break-word;
+    word-break: normal; 
 }
 
 /* Ensure documentation content specifically handles overflow safely */
 .docs-content {
     width: 100%;
     overflow-wrap: anywhere;
-    word-break: break-word;
+    word-break: normal;
 }
 
 /* Aggressively handle all children within docs-content to prevent any overflow */
 .docs-content * {
     max-width: 100%; /* Force all children to respect container width */
     overflow-wrap: anywhere;
-    word-break: break-word;
+    word-break: normal;
 }
 
 a {
