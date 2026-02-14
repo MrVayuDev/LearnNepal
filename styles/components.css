@@ -1,5 +1,17 @@
 /* Components */
 
+/* --- Graph & Chart Containers --- */
+.network-graph-container,
+.relational-graph-container,
+.tree-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+    display: block; /* Ensure it behaves as a block for scrolling */
+}
+
 /* --- Cards --- */
 .card {
     background: var(--color-bg-card);
@@ -214,9 +226,16 @@
 }
 
 /* Tree Diagram Component */
+.tree-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
 .tree {
     display: flex;
     justify-content: center;
+    min-width: max-content; /* Ensure tree doesn't wrap weirdly if scrolled */
 }
 .tree ul {
     padding-top: 20px; 

@@ -22,6 +22,13 @@ body {
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
+    height: auto; /* Ensure aspect ratio is preserved */
+}
+
+/* Prevent horizontal scroll globally */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 input, button, textarea, select {
