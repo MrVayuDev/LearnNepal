@@ -500,6 +500,7 @@
     background-color: var(--color-bg-alt);
     font-weight: 600;
     text-align: left;
+    color: #000;
 }
 
 .table-bordered {
