@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initProgressBar();
     initBackToTop();
     initOfflineDetection();
+    initPageTransitions();
 });
 
 function initOfflineDetection() {
@@ -216,4 +217,11 @@ function initMobileSidebar() {
             });
         });
     }
+}
+
+function initPageTransitions() {
+    // Transitions are handled by transitions.js (loaded separately)
+    // Remove any stale svg-transition-overlay from previous versions
+    const old = document.querySelector('.svg-transition-overlay');
+    if (old) old.remove();
 }

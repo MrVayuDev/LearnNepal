@@ -63,3 +63,71 @@
 .stagger-grid > *:nth-child(4) { animation-delay: 400ms; }
 .stagger-grid > *:nth-child(5) { animation-delay: 500ms; }
 .stagger-grid > *:nth-child(6) { animation-delay: 600ms; }
+
+/* ─── Page Transition Curtain ───────────────────── */
+.ln-curtain {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    z-index: 99999;
+    pointer-events: none; /* JS toggles this */
+    will-change: transform;
+}
+
+.ln-strip {
+    flex: 1;
+    transform-origin: top center;
+    transform: scaleY(1); /* start fully covering — GSAP opens it */
+    will-change: transform;
+}
+
+/* ─── Custom Cursor ─────────────────────────────── */
+@media (hover: hover) {
+    /* Hide native cursor sitewide (JS sets this on <html>) */
+    * { cursor: none !important; }
+}
+
+.ln-cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    pointer-events: none;
+    z-index: 100000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease,
+                background 0.2s ease;
+    mix-blend-mode: difference;
+}
+
+.ln-cursor-dot--active {
+    width: 5px; height: 5px;
+    background: var(--color-accent-hover);
+}
+
+.ln-cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-primary);
+    pointer-events: none;
+    z-index: 99999;
+    /* GSAP drives x/y directly — no CSS transform here */
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease,
+                opacity 0.3s ease;
+    opacity: 0.6;
+}
+
+.ln-cursor-ring--active {
+    width: 56px; height: 56px;
+    border-color: var(--color-accent);
+    opacity: 1;
+}
+
+.ln-cursor-ring--click {
+    width: 28px; height: 28px;
+    opacity: 1;
+}
+
