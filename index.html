@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LearnNepal | Premium NEB Class 11 & 12 Notes</title>
+    <title>LearnNepal | Premium NEB Class 11 &amp; 12 Notes</title>
     <meta
       name="description"
-      content="Premium notes for NEB Class 11 & 12. English, Nepali, and Computer Science notes designed for academic excellence."
+      content="Premium notes for NEB Class 11 &amp; 12. English, Nepali, and Computer Science notes designed for academic excellence."
     />
 
     <!-- CSS -->
@@ -15,6 +15,172 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+    <!-- Feature Card Animations -->
+    <style>
+      /* ===== Shared icon wrapper (replaces card-icon for animated cards) ===== */
+      .feat-icon {
+        width: 80px;
+        height: 60px;
+        background: transparent;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: var(--spacing-md);
+      }
+      .card:hover .feat-icon { background: transparent; color: inherit; }
+
+      /* ===================================================
+         1. LIGHTNING FAST — horizontal speed bars (gold)
+         =================================================== */
+      .lf-container {
+        position: relative;
+        width: 80px;
+        height: 54px;
+      }
+      .lf-bar {
+        position: absolute;
+        left: 50%;
+        border-radius: 4px;
+        animation: lf-bar1 5s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+      }
+      .lf-bar:nth-child(1) {
+        width: 70px; height: 14px;
+        margin-left: -35px; top: 4px;
+        background: #0f2a4a;
+      }
+      .lf-bar:nth-child(2) {
+        width: 50px; height: 10px;
+        margin-left: -25px; top: 23px;
+        background: #3c517d;
+        animation-name: lf-bar2;
+      }
+      .lf-bar:nth-child(3) {
+        width: 28px; height: 6px;
+        margin-left: -14px; top: 38px;
+        background: #c5a059;
+        animation-name: lf-bar3;
+      }
+
+      @keyframes lf-bar1 {
+        3%,  97% { width: 70px; margin-left: -35px; }
+        30%, 36% { width: 20px; margin-left: -10px; }
+        63%, 69% { width: 60px; margin-left: -30px; }
+      }
+      @keyframes lf-bar2 {
+        3%,  97% { width: 50px; margin-left: -25px; }
+        30%, 36% { width: 68px; margin-left: -34px; }
+        63%, 69% { width: 30px; margin-left: -15px; }
+      }
+      @keyframes lf-bar3 {
+        3%,  97% { width: 28px; margin-left: -14px; }
+        30%, 36% { width: 50px; margin-left: -25px; }
+        63%, 69% { width: 70px; margin-left: -35px; }
+      }
+
+      /* ===================================================
+         2. CURRICULUM FOCUSED — concentric morphing rings
+         =================================================== */
+      .cf-container {
+        position: relative;
+        width: 60px;
+        height: 60px;
+      }
+      .cf-ring {
+        position: absolute;
+        top: 50%; left: 50%;
+        border-radius: 50%;
+        background: transparent;
+        animation: cf-ring1 5s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+      }
+      .cf-ring:nth-child(1) {
+        width: 56px; height: 56px;
+        margin-left: -28px; margin-top: -28px;
+        border: 3px solid #1e3f57;
+      }
+      .cf-ring:nth-child(2) {
+        width: 36px; height: 36px;
+        margin-left: -18px; margin-top: -18px;
+        border: 3px solid #3c517d;
+        animation-name: cf-ring2;
+      }
+      .cf-ring:nth-child(3) {
+        width: 14px; height: 14px;
+        margin-left: -7px; margin-top: -7px;
+        background: #6bb2cd;
+        border: none;
+        animation-name: cf-ring3;
+      }
+
+      @keyframes cf-ring1 {
+        3%,  97% { width: 56px; height: 56px; margin-left: -28px; margin-top: -28px; border-radius: 50%; }
+        30%, 36% { width: 38px; height: 54px; margin-left: -19px; margin-top: -27px; border-radius: 5px; }
+        63%, 69% { width: 54px; height: 18px; margin-left: -27px; margin-top: -9px;  border-radius: 5px; }
+      }
+      @keyframes cf-ring2 {
+        3%,  97% { width: 36px; height: 36px; margin-left: -18px; margin-top: -18px; border-radius: 50%; }
+        30%, 36% { width: 22px; height: 38px; margin-left: -11px; margin-top: -19px; border-radius: 3px; }
+        63%, 69% { width: 38px; height: 10px; margin-left: -19px; margin-top: -5px;  border-radius: 3px; }
+      }
+      @keyframes cf-ring3 {
+        3%,  97% { width: 14px; height: 14px; margin-left: -7px;  margin-top: -7px;  border-radius: 50%; }
+        30%, 36% { width: 8px;  height: 20px; margin-left: -4px;  margin-top: -10px; border-radius: 2px; }
+        63%, 69% { width: 22px; height: 4px;  margin-left: -11px; margin-top: -2px;  border-radius: 2px; }
+      }
+
+      /* ===================================================
+         3. MOBILE FIRST — morphing phone shape (slowed)
+         =================================================== */
+      .mf-container {
+        position: relative;
+        width: 80px;
+        height: 60px;
+      }
+      .mf-loader {
+        position: absolute;
+        top: 50%; left: 50%;
+        z-index: 10;
+        width: 80px; height: 50px;
+        margin-left: -40px; margin-top: -25px;
+        border-radius: 5px;
+        background: #1e3f57;
+        animation: mf-dot1 5s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+      }
+      .mf-loader:nth-child(2) {
+        z-index: 11;
+        width: 75px; height: 45px;
+        margin-top: -22px; margin-left: -37px;
+        border-radius: 3px;
+        background: #3c517d;
+        animation-name: mf-dot2;
+      }
+      .mf-loader:nth-child(3) {
+        z-index: 12;
+        width: 20px; height: 10px;
+        margin-top: 25px; margin-left: -10px;
+        border-radius: 0 0 5px 5px;
+        background: #6bb2cd;
+        animation-name: mf-dot3;
+      }
+
+      @keyframes mf-dot1 {
+        3%,  97% { width: 80px; height: 50px; margin-top: -25px; margin-left: -40px; }
+        30%, 36% { width: 40px; height: 60px; margin-top: -30px; margin-left: -20px; }
+        63%, 69% { width: 20px; height: 40px; margin-top: -20px; margin-left: -10px; }
+      }
+      @keyframes mf-dot2 {
+        3%,  97% { height: 45px; width: 75px; margin-left: -37px; margin-top: -22px; }
+        30%, 36% { width: 35px; height: 48px; margin-left: -17px; margin-top: -24px; }
+        63%, 69% { width: 16px; height: 30px; margin-left: -8px;  margin-top: -15px; }
+      }
+      @keyframes mf-dot3 {
+        3%,  97% { height: 10px; width: 20px; margin-left: -10px; margin-top: 25px; }
+        30%, 36% { width: 4px;  height: 4px;  margin-left: -2px;  margin-top: 24px;  border-radius: 8px; }
+        63%, 69% { width: 8px;  height: 2px;  margin-left: -4px;  margin-top: -18px; border-radius: 10px; }
+      }
+    </style>
   </head>
 
 
@@ -83,7 +249,7 @@
       <section class="hero">
         <div class="container" style="position: relative; z-index: 1;">
           <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-            <span class="badge animate-fade-up" data-editable="home.hero.badge">NEB Class 11 & 12</span>
+            <span class="badge animate-fade-up" data-editable="home.hero.badge">NEB Class 11 &amp; 12</span>
             <h1 id="home-heading" class="animate-fade-up delay-100" style="margin-top: var(--spacing-sm);" data-editable="home.hero.title">
               Loading...
             </h1>
@@ -151,23 +317,40 @@
             <h2>Premium Quality Education</h2>
           </div>
           <div class="grid-3 stagger-grid">
+            <!-- Lightning Fast -->
             <div class="card">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <div class="feat-icon">
+                <div class="lf-container">
+                  <div class="lf-bar"></div>
+                  <div class="lf-bar"></div>
+                  <div class="lf-bar"></div>
+                </div>
               </div>
               <h4 class="card-title" data-editable="home.features.feature1Title">Lightning Fast</h4>
               <p class="card-text" data-editable="home.features.feature1Desc">Optimized for speed. No lag, no bloat. Just pure knowledge delivered instantly.</p>
             </div>
+
+            <!-- Curriculum Focused -->
             <div class="card">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              <div class="feat-icon">
+                <div class="cf-container">
+                  <div class="cf-ring"></div>
+                  <div class="cf-ring"></div>
+                  <div class="cf-ring"></div>
+                </div>
               </div>
               <h4 class="card-title" data-editable="home.features.feature2Title">Curriculum Focused</h4>
               <p class="card-text" data-editable="home.features.feature2Desc">Strictly based on the latest NEB syllabus for Class 11 and 12.</p>
             </div>
+
+            <!-- Mobile First — morphing phone animation -->
             <div class="card">
-              <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              <div class="feat-icon">
+                <div class="mf-container">
+                  <div class="mf-loader"></div>
+                  <div class="mf-loader"></div>
+                  <div class="mf-loader"></div>
+                </div>
               </div>
               <h4 class="card-title" data-editable="home.features.feature3Title">Mobile First</h4>
               <p class="card-text" data-editable="home.features.feature3Desc">Study anywhere, anytime. Perfectly adapted for all device sizes.</p>
