@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,134 +49,174 @@
         </div>
     </header>
 
-    <!-- Syllabus Content -->
+    <!-- Syllabus Hero -->
+    <section class="syllabus-hero">
+        <div class="container" style="position:relative;z-index:1;">
+            <nav class="breadcrumb animate-fade-up" aria-label="breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span aria-hidden="true">›</span>
+                <a href="#">Class 12</a>
+                <span aria-hidden="true">›</span>
+                <span>Nepali</span>
+            </nav>
+            <span class="badge animate-fade-up delay-100">कक्षा १२ &bull; अनिवार्य</span>
+            <h1 class="animate-fade-up delay-200">नेपाली पाठ्यक्रम</h1>
+            <p class="text-lead animate-fade-up delay-300">कक्षा १२ को अनिवार्य नेपाली विषयको विषय सूची। प्रत्येक पाठका बटनहरूमा क्लिक गरी विस्तृत नोट तथा अभ्यासका समाधानहरू अध्ययन गर्न सक्नुहुन्छ।</p>
+            <div class="syllabus-stats animate-fade-up delay-400">
+                <div class="stat-chip"><span class="stat-num">१२</span><span class="stat-label">पाठहरू</span></div>
+                <div class="stat-chip"><span class="stat-num">२</span><span class="stat-label">कविता</span></div>
+                <div class="stat-chip"><span class="stat-num">३</span><span class="stat-label">कथा</span></div>
+                <div class="stat-chip"><span class="stat-num">२</span><span class="stat-label">निबन्ध</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter Grid -->
     <main class="section">
-        <div class="container" style="max-width: 800px;">
-            <div class="animate-fade-up">
-                <span class="badge">Class 12 &bull; Compulsory</span>
-                <h1 style="margin-bottom: var(--spacing-lg);">नेपाली पाठ्यक्रम</h1>
-                <p class="text-lead" style="margin-bottom: var(--spacing-xl);">
-                    Complete chapter list for NEB Class 12 Nepali (नेपाली). Click on any section to read detailed notes.
-                </p>
+        <div class="container">
+            <div class="chapter-grid stagger-grid">
+
+                <!-- Chapter 1: Poem -->
+                <a href="nepali/c12_nepali_chapter_1.html" class="chapter-card genre-verse">
+                    <div class="chapter-card-num">१</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">आमाको सपना</h3>
+                        <p class="chapter-card-sub">Gopal Parsad Rimal</p>
+                        <span class="genre-pill">कविता · Poem</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 2: Story -->
+                <a href="../chapter_view.html?id=c12_nep_02&title=Birahini%20Damyanti&subject=nepali&genre=Story" class="chapter-card genre-prose">
+                    <div class="chapter-card-num">२</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">विरहिणी दमयन्ती</h3>
+                        <p class="chapter-card-sub">Birahini Damyanti</p>
+                        <span class="genre-pill">कथा · Story</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 3: Travelogue -->
+                <a href="../chapter_view.html?id=c12_nep_03&title=Ghanaghasyako%20Ukalo%20Katda&subject=nepali&genre=Travelogue" class="chapter-card genre-nonfiction">
+                    <div class="chapter-card-num">३</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">घनघस्याको उकालो काट्दा</h3>
+                        <p class="chapter-card-sub">Ghanaghasyako Ukalo Katda</p>
+                        <span class="genre-pill">नियात्रा · Travelogue</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 4: Practical -->
+                <a href="../chapter_view.html?id=c12_nep_04&title=Byabasayik%20Patra&subject=nepali&genre=Practical%20Writing" class="chapter-card genre-practical">
+                    <div class="chapter-card-num">४</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">व्यावसायिक पत्र</h3>
+                        <p class="chapter-card-sub">Byabasayik Patra</p>
+                        <span class="genre-pill">व्यावहारिक · Practical</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 5: Novel -->
+                <a href="../chapter_view.html?id=c12_nep_05&title=Ek%20Chihan&subject=nepali&genre=Novel" class="chapter-card genre-prose">
+                    <div class="chapter-card-num">५</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">एक चिहान</h3>
+                        <p class="chapter-card-sub">Ek Chihan</p>
+                        <span class="genre-pill">उपन्यास · Novel</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 6: Biography -->
+                <a href="../chapter_view.html?id=c12_nep_06&title=Stephen%20Hawking&subject=nepali&genre=Biography" class="chapter-card genre-nonfiction">
+                    <div class="chapter-card-num">६</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">स्टिफन विलियम हकिङ</h3>
+                        <p class="chapter-card-sub">Stephen William Hawking</p>
+                        <span class="genre-pill">जीवनी · Biography</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 7: Poem -->
+                <a href="../chapter_view.html?id=c12_nep_07&title=Hamilai%20Bolauxan%20Himchuli&subject=nepali&genre=Poem" class="chapter-card genre-verse">
+                    <div class="chapter-card-num">७</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">हामीलाई बोलाउँछन् हिमचुली</h3>
+                        <p class="chapter-card-sub">Hamilai Bolauxan Himchuli</p>
+                        <span class="genre-pill">कविता · Poem</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 8: Story -->
+                <a href="../chapter_view.html?id=c12_nep_08&title=Matritva&subject=nepali&genre=Story" class="chapter-card genre-prose">
+                    <div class="chapter-card-num">८</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">मातृत्व</h3>
+                        <p class="chapter-card-sub">Matritva</p>
+                        <span class="genre-pill">कथा · Story</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 9: Story -->
+                <a href="nepali/c12_nepali_chapter_9.html" class="chapter-card genre-prose">
+                    <div class="chapter-card-num">९</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">गोर्खे</h3>
+                        <p class="chapter-card-sub">Gorkhe</p>
+                        <span class="genre-pill">कथा · Story</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 10: Dialogue -->
+                <a href="../chapter_view.html?id=c12_nep_10&title=Nepali%20Pahichan&subject=nepali&genre=Dialogue" class="chapter-card genre-practical">
+                    <div class="chapter-card-num">१०</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">नेपाली पहिचान</h3>
+                        <p class="chapter-card-sub">Nepali Pahichan</p>
+                        <span class="genre-pill">संवाद · Dialogue</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 11: Objective Essay -->
+                <a href="../chapter_view.html?id=c12_nep_11&title=Sahakari&subject=nepali&genre=Essay" class="chapter-card genre-nonfiction">
+                    <div class="chapter-card-num">११</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">सहकारी</h3>
+                        <p class="chapter-card-sub">Sahakari</p>
+                        <span class="genre-pill">निबन्ध · Essay</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
+                <!-- Chapter 12: Reportage -->
+                <a href="../chapter_view.html?id=c12_nep_12&title=Jiwan%20Marg&subject=nepali&genre=Reportage" class="chapter-card genre-prose">
+                    <div class="chapter-card-num">१२</div>
+                    <div class="chapter-card-body">
+                        <h3 class="chapter-card-title">जीवन मार्ग</h3>
+                        <p class="chapter-card-sub">Jiwan Marg</p>
+                        <span class="genre-pill">रिपोर्ताज · Reportage</span>
+                    </div>
+                    <span class="chapter-card-arrow">→</span>
+                </a>
+
             </div>
 
-            <div class="grid-subjects stagger-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
-                
-                <!-- Chapter 1 -->
-                <a href="nepali/c12_nepali_chapter_1.html" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">१</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">आमाको सपना (Aama ko Sapana)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">कविता (Poem)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 2 -->
-                <a href="../chapter_view.html?id=c12_nep_02&title=Birahini%20Damyanti&subject=nepali&genre=Epic%20Poem" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">२</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">विरहिणी दमयन्ती (Birahini Damyanti)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">कथा (Story)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 3 -->
-                <a href="../chapter_view.html?id=c12_nep_03&title=Ghanaghasyako%20Ukalo%20Katda&subject=nepali&genre=Travelogue" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">३</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">घनघस्याको उकालो काट्दा</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">नियात्रा (Travelogue)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 4 -->
-                <a href="../chapter_view.html?id=c12_nep_04&title=Byabasayik%20Patra&subject=nepali&genre=Business%20Letter" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">४</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">व्यावसायिक पत्र</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">व्यावहारिक लेखन (Practical Writing)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 5 -->
-                <a href="../chapter_view.html?id=c12_nep_05&title=Ek%20Chihan&subject=nepali&genre=Novel" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">५</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">एक चिहान (Ek Chihan)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">सामाजिक उपन्यास (Social Novel)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 6 -->
-                <a href="../chapter_view.html?id=c12_nep_06&title=Stephen%20Hawking&subject=nepali&genre=Biography" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">६</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">स्टिफन विलियम हकिङ</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">जीवनी (Biography)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 7 -->
-                <a href="../chapter_view.html?id=c12_nep_07&title=Hamilai%20Bolauxan%20Himchuli&subject=nepali&genre=Essay" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">७</div>
-                    <div>
-                        <h3 style="font-size: 1rem; margin: 0;">हामीलाई बोलाउँछन् हिमचुली</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">कविता (Poem)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 8 -->
-                <a href="../chapter_view.html?id=c12_nep_08&title=Matritva&subject=nepali&genre=Story" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">८</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">मातृत्व (Matritva)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">कथा (Story)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 9 -->
-                <a href="nepali/c12_nepali_chapter_9.html" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">९</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">गोर्खे (Gorkhe)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">कथा (Story)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 10 -->
-                <a href="../chapter_view.html?id=c12_nep_10&title=Nepali%20Pahichan&subject=nepali&genre=Essay" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">१०</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">नेपाली पहिचान (Nepali Pahichan)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">संवाद (Dialogue)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 11 -->
-                <a href="../chapter_view.html?id=c12_nep_11&title=Sahakari&subject=nepali&genre=Objective%20Essay" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">११</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">सहकारी (Sahakari)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">वस्तुपरक निबन्ध (Objective Essay)</p>
-                    </div>
-                </a>
-
-                <!-- Chapter 12 -->
-                <a href="../chapter_view.html?id=c12_nep_12&title=Jiwan%20Marg&subject=nepali&genre=Play" class="card hover-lift" style="flex-direction: row; align-items: center; gap: 1rem; text-decoration: none;">
-                    <div class="card-icon" style="margin: 0; width: 40px; height: 40px; font-size: 1rem;">१२</div>
-                    <div>
-                        <h3 style="font-size: 1.1rem; margin: 0;">जीवन मार्ग (Jiwan Marg)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">रिपोर्ताजमूलक रचना (Reportage)</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="ad-container ad-sidebar">
-                <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" style="text-decoration: none; display: block; text-align: center;">
-                    <div style="font-size: 0.9rem; font-weight: 600; color: #FF0000; margin-bottom: 0.5rem;">SUBSCRIBE NOW</div>
-                    <div style="color: var(--color-text-main); font-size: 0.85rem; margin-bottom: 1rem;">Get the latest video lessons for Class 12 Nepali.</div>
-                    <button class="btn btn-sm" style="background: #FF0000; color: white; width: 100%; justify-content: center; border:none;">Subscribe &rarr;</button>
-                </a>
+            <!-- YouTube CTA -->
+            <div class="yt-cta-banner animate-fade-up">
+                <div class="yt-cta-text">
+                    <h4>&#9654; Watch Video Lessons</h4>
+                    <p>Get detailed video explanations for every chapter on our YouTube channel.</p>
+                </div>
+                <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" class="btn-yt">Subscribe Now &rarr;</a>
             </div>
         </div>
     </main>

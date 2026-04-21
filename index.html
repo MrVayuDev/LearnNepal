@@ -1,488 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnNepal | Premium NEB Class 11 &amp; 12 Notes</title>
-    <meta
-      name="description"
-      content="Premium notes for NEB Class 11 &amp; 12. English, Nepali, and Computer Science notes designed for academic excellence."
-    />
+    <meta name="description" content="Premium structured notes for NEB Class 11 &amp; 12. English, Nepali, and Computer Science — designed for academic excellence." />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 
-    <!-- Feature Card Animations -->
+    <!-- Animated Feature Icons -->
     <style>
-      /* ===== Shared icon wrapper (replaces card-icon for animated cards) ===== */
-      .feat-icon {
-        width: 80px;
-        height: 60px;
-        background: transparent;
-        border-radius: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-bottom: var(--spacing-md);
+      /* ── Shared wrapper ───────────────────────────────────── */
+      .anim-icon {
+          width: 56px; height: 56px;
+          border-radius: var(--radius-md);
+          display: flex; align-items: center; justify-content: center;
+          position: relative;
+          margin-bottom: 1.25rem;
+          overflow: hidden;
+          background: var(--color-accent-light);
+          transition: background var(--transition-spring);
       }
-      .card:hover .feat-icon { background: transparent; color: inherit; }
+      .feature-card:hover .anim-icon { background: var(--color-primary); }
 
-      /* ===================================================
-         1. LIGHTNING FAST — horizontal speed bars (gold)
-         =================================================== */
-      .lf-container {
-        position: relative;
-        width: 80px;
-        height: 54px;
+      /* ── 1. LIGHTNING — horizontal speed bars ─────────────── */
+      .icon-speed { position: relative; width: 36px; height: 30px; }
+      .icon-speed span {
+          position: absolute; left: 50%; border-radius: 3px;
+          animation: speedBar1 5s cubic-bezier(.55,.3,.24,.99) infinite;
       }
-      .lf-bar {
-        position: absolute;
-        left: 50%;
-        border-radius: 4px;
-        animation: lf-bar1 5s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+      .icon-speed span:nth-child(1) {
+          width: 34px; height: 8px; margin-left: -17px; top: 2px;
+          background: var(--color-primary);
       }
-      .lf-bar:nth-child(1) {
-        width: 70px; height: 14px;
-        margin-left: -35px; top: 4px;
-        background: #0f2a4a;
+      .icon-speed span:nth-child(2) {
+          width: 24px; height: 6px; margin-left: -12px; top: 13px;
+          background: var(--color-primary-light);
+          animation-name: speedBar2;
       }
-      .lf-bar:nth-child(2) {
-        width: 50px; height: 10px;
-        margin-left: -25px; top: 23px;
-        background: #3c517d;
-        animation-name: lf-bar2;
+      .icon-speed span:nth-child(3) {
+          width: 14px; height: 4px; margin-left: -7px; top: 22px;
+          background: var(--color-accent);
+          animation-name: speedBar3;
       }
-      .lf-bar:nth-child(3) {
-        width: 28px; height: 6px;
-        margin-left: -14px; top: 38px;
-        background: #c5a059;
-        animation-name: lf-bar3;
-      }
+      .feature-card:hover .icon-speed span { background: white; }
 
-      @keyframes lf-bar1 {
-        3%,  97% { width: 70px; margin-left: -35px; }
-        30%, 36% { width: 20px; margin-left: -10px; }
-        63%, 69% { width: 60px; margin-left: -30px; }
+      @keyframes speedBar1 {
+          3%,97%{width:34px;margin-left:-17px}
+          30%,36%{width:12px;margin-left:-6px}
+          63%,69%{width:28px;margin-left:-14px}
       }
-      @keyframes lf-bar2 {
-        3%,  97% { width: 50px; margin-left: -25px; }
-        30%, 36% { width: 68px; margin-left: -34px; }
-        63%, 69% { width: 30px; margin-left: -15px; }
+      @keyframes speedBar2 {
+          3%,97%{width:24px;margin-left:-12px}
+          30%,36%{width:32px;margin-left:-16px}
+          63%,69%{width:14px;margin-left:-7px}
       }
-      @keyframes lf-bar3 {
-        3%,  97% { width: 28px; margin-left: -14px; }
-        30%, 36% { width: 50px; margin-left: -25px; }
-        63%, 69% { width: 70px; margin-left: -35px; }
+      @keyframes speedBar3 {
+          3%,97%{width:14px;margin-left:-7px}
+          30%,36%{width:26px;margin-left:-13px}
+          63%,69%{width:34px;margin-left:-17px}
       }
 
-      /* ===================================================
-         2. CURRICULUM FOCUSED — concentric morphing rings
-         =================================================== */
-      .cf-container {
-        position: relative;
-        width: 60px;
-        height: 60px;
+      /* ── 2. CURRICULUM — morphing concentric rings ────────── */
+      .icon-rings { position: relative; width: 36px; height: 36px; }
+      .icon-rings span {
+          position: absolute; top: 50%; left: 50%;
+          border-radius: 50%; background: transparent;
+          animation: ring1 5s cubic-bezier(.55,.3,.24,.99) infinite;
       }
-      .cf-ring {
-        position: absolute;
-        top: 50%; left: 50%;
-        border-radius: 50%;
-        background: transparent;
-        animation: cf-ring1 5s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+      .icon-rings span:nth-child(1) {
+          width: 32px; height: 32px; margin: -16px 0 0 -16px;
+          border: 2.5px solid var(--color-primary);
       }
-      .cf-ring:nth-child(1) {
-        width: 56px; height: 56px;
-        margin-left: -28px; margin-top: -28px;
-        border: 3px solid #1e3f57;
+      .icon-rings span:nth-child(2) {
+          width: 18px; height: 18px; margin: -9px 0 0 -9px;
+          border: 2.5px solid var(--color-primary-light);
+          animation-name: ring2;
       }
-      .cf-ring:nth-child(2) {
-        width: 36px; height: 36px;
-        margin-left: -18px; margin-top: -18px;
-        border: 3px solid #3c517d;
-        animation-name: cf-ring2;
+      .icon-rings span:nth-child(3) {
+          width: 8px; height: 8px; margin: -4px 0 0 -4px;
+          background: var(--color-accent); border: none;
+          animation-name: ring3;
       }
-      .cf-ring:nth-child(3) {
-        width: 14px; height: 14px;
-        margin-left: -7px; margin-top: -7px;
-        background: #6bb2cd;
-        border: none;
-        animation-name: cf-ring3;
+      .feature-card:hover .icon-rings span { border-color: rgba(255,255,255,0.7); }
+      .feature-card:hover .icon-rings span:nth-child(3) { background: white; }
+
+      @keyframes ring1 {
+          3%,97%{width:32px;height:32px;margin:-16px 0 0 -16px;border-radius:50%}
+          30%,36%{width:20px;height:30px;margin:-15px 0 0 -10px;border-radius:4px}
+          63%,69%{width:30px;height:12px;margin:-6px 0 0 -15px;border-radius:4px}
+      }
+      @keyframes ring2 {
+          3%,97%{width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%}
+          30%,36%{width:12px;height:20px;margin:-10px 0 0 -6px;border-radius:3px}
+          63%,69%{width:20px;height:6px;margin:-3px 0 0 -10px;border-radius:3px}
+      }
+      @keyframes ring3 {
+          3%,97%{width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%}
+          30%,36%{width:4px;height:12px;margin:-6px 0 0 -2px;border-radius:2px}
+          63%,69%{width:12px;height:3px;margin:-1.5px 0 0 -6px;border-radius:2px}
       }
 
-      @keyframes cf-ring1 {
-        3%,  97% { width: 56px; height: 56px; margin-left: -28px; margin-top: -28px; border-radius: 50%; }
-        30%, 36% { width: 38px; height: 54px; margin-left: -19px; margin-top: -27px; border-radius: 5px; }
-        63%, 69% { width: 54px; height: 18px; margin-left: -27px; margin-top: -9px;  border-radius: 5px; }
+      /* ── 3. MOBILE — morphing device shape ────────────────── */
+      .icon-device { position: relative; width: 40px; height: 34px; }
+      .icon-device span {
+          position: absolute; top: 50%; left: 50%; z-index: 1;
+          border-radius: 4px;
+          animation: dev1 5s cubic-bezier(.55,.3,.24,.99) infinite;
       }
-      @keyframes cf-ring2 {
-        3%,  97% { width: 36px; height: 36px; margin-left: -18px; margin-top: -18px; border-radius: 50%; }
-        30%, 36% { width: 22px; height: 38px; margin-left: -11px; margin-top: -19px; border-radius: 3px; }
-        63%, 69% { width: 38px; height: 10px; margin-left: -19px; margin-top: -5px;  border-radius: 3px; }
+      .icon-device span:nth-child(1) {
+          width: 38px; height: 26px; margin: -13px 0 0 -19px;
+          background: var(--color-primary);
       }
-      @keyframes cf-ring3 {
-        3%,  97% { width: 14px; height: 14px; margin-left: -7px;  margin-top: -7px;  border-radius: 50%; }
-        30%, 36% { width: 8px;  height: 20px; margin-left: -4px;  margin-top: -10px; border-radius: 2px; }
-        63%, 69% { width: 22px; height: 4px;  margin-left: -11px; margin-top: -2px;  border-radius: 2px; }
+      .icon-device span:nth-child(2) {
+          width: 34px; height: 22px; margin: -11px 0 0 -17px;
+          background: var(--color-primary-light); z-index: 2;
+          animation-name: dev2;
+      }
+      .icon-device span:nth-child(3) {
+          width: 12px; height: 6px; margin: 13px 0 0 -6px;
+          border-radius: 0 0 3px 3px;
+          background: var(--color-accent); z-index: 3;
+          animation-name: dev3;
+      }
+      .feature-card:hover .icon-device span { background: rgba(255,255,255,0.75); }
+      .feature-card:hover .icon-device span:nth-child(3) { background: white; }
+
+      @keyframes dev1 {
+          3%,97%{width:38px;height:26px;margin:-13px 0 0 -19px}
+          30%,36%{width:20px;height:32px;margin:-16px 0 0 -10px}
+          63%,69%{width:12px;height:24px;margin:-12px 0 0 -6px}
+      }
+      @keyframes dev2 {
+          3%,97%{width:34px;height:22px;margin:-11px 0 0 -17px}
+          30%,36%{width:16px;height:26px;margin:-13px 0 0 -8px}
+          63%,69%{width:8px;height:18px;margin:-9px 0 0 -4px}
+      }
+      @keyframes dev3 {
+          3%,97%{height:6px;width:12px;margin:13px 0 0 -6px}
+          30%,36%{width:3px;height:3px;margin:12px 0 0 -1.5px;border-radius:50%}
+          63%,69%{width:5px;height:2px;margin:-10px 0 0 -2.5px;border-radius:6px}
       }
 
-      /* ===================================================
-         3. MOBILE FIRST — morphing phone shape (slowed)
-         =================================================== */
-      .mf-container {
-        position: relative;
-        width: 80px;
-        height: 60px;
+      /* ── 4. SOLUTIONS — bouncing check/pen ────────────────── */
+      .icon-solve { position: relative; width: 34px; height: 34px; }
+      .icon-solve span {
+          position: absolute;
+          animation: solve1 4s ease-in-out infinite;
       }
-      .mf-loader {
-        position: absolute;
-        top: 50%; left: 50%;
-        z-index: 10;
-        width: 80px; height: 50px;
-        margin-left: -40px; margin-top: -25px;
-        border-radius: 5px;
-        background: #1e3f57;
-        animation: mf-dot1 5s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+      .icon-solve span:nth-child(1) {
+          /* Page */
+          width: 22px; height: 28px; top: 3px; left: 6px;
+          background: var(--color-primary);
+          border-radius: 2px;
       }
-      .mf-loader:nth-child(2) {
-        z-index: 11;
-        width: 75px; height: 45px;
-        margin-top: -22px; margin-left: -37px;
-        border-radius: 3px;
-        background: #3c517d;
-        animation-name: mf-dot2;
+      .icon-solve span:nth-child(2) {
+          /* Check mark line 1 */
+          width: 8px; height: 2.5px; top: 16px; left: 12px;
+          background: var(--color-accent);
+          border-radius: 2px;
+          transform: rotate(40deg);
+          animation-name: solve2;
       }
-      .mf-loader:nth-child(3) {
-        z-index: 12;
-        width: 20px; height: 10px;
-        margin-top: 25px; margin-left: -10px;
-        border-radius: 0 0 5px 5px;
-        background: #6bb2cd;
-        animation-name: mf-dot3;
+      .icon-solve span:nth-child(3) {
+          /* Check mark line 2 */
+          width: 14px; height: 2.5px; top: 14px; left: 14px;
+          background: var(--color-accent);
+          border-radius: 2px;
+          transform: rotate(-40deg);
+          animation-name: solve3;
+      }
+      .feature-card:hover .icon-solve span:nth-child(1) { background: rgba(255,255,255,0.8); }
+      .feature-card:hover .icon-solve span:nth-child(2),
+      .feature-card:hover .icon-solve span:nth-child(3) { background: white; }
+
+      @keyframes solve1 {
+          0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)}
+      }
+      @keyframes solve2 {
+          0%,40%{opacity:0;transform:rotate(40deg) scaleX(0)}
+          50%,100%{opacity:1;transform:rotate(40deg) scaleX(1)}
+      }
+      @keyframes solve3 {
+          0%,45%{opacity:0;transform:rotate(-40deg) scaleX(0)}
+          55%,100%{opacity:1;transform:rotate(-40deg) scaleX(1)}
       }
 
-      @keyframes mf-dot1 {
-        3%,  97% { width: 80px; height: 50px; margin-top: -25px; margin-left: -40px; }
-        30%, 36% { width: 40px; height: 60px; margin-top: -30px; margin-left: -20px; }
-        63%, 69% { width: 20px; height: 40px; margin-top: -20px; margin-left: -10px; }
+      /* ── 5. BILINGUAL — dual text blocks ──────────────────── */
+      .icon-bilingual { position: relative; width: 36px; height: 30px; }
+      .icon-bilingual span {
+          position: absolute; border-radius: 3px;
+          animation: bi1 4.5s ease-in-out infinite;
       }
-      @keyframes mf-dot2 {
-        3%,  97% { height: 45px; width: 75px; margin-left: -37px; margin-top: -22px; }
-        30%, 36% { width: 35px; height: 48px; margin-left: -17px; margin-top: -24px; }
-        63%, 69% { width: 16px; height: 30px; margin-left: -8px;  margin-top: -15px; }
+      .icon-bilingual span:nth-child(1) {
+          width: 24px; height: 12px; top: 0; left: 0;
+          background: var(--color-primary);
       }
-      @keyframes mf-dot3 {
-        3%,  97% { height: 10px; width: 20px; margin-left: -10px; margin-top: 25px; }
-        30%, 36% { width: 4px;  height: 4px;  margin-left: -2px;  margin-top: 24px;  border-radius: 8px; }
-        63%, 69% { width: 8px;  height: 2px;  margin-left: -4px;  margin-top: -18px; border-radius: 10px; }
+      .icon-bilingual span:nth-child(2) {
+          width: 24px; height: 12px; bottom: 0; right: 0;
+          background: var(--color-accent);
+          animation-name: bi2;
+      }
+      .icon-bilingual span:nth-child(3) {
+          /* Connecting arrow */
+          width: 2px; height: 10px; top: 10px; left: 17px;
+          background: var(--color-primary-light);
+          animation-name: bi3;
+      }
+      .feature-card:hover .icon-bilingual span { background: rgba(255,255,255,0.7); }
+      .feature-card:hover .icon-bilingual span:nth-child(2) { background: white; }
+
+      @keyframes bi1 {
+          0%,100%{transform:translateX(0)} 50%{transform:translateX(6px)}
+      }
+      @keyframes bi2 {
+          0%,100%{transform:translateX(0)} 50%{transform:translateX(-6px)}
+      }
+      @keyframes bi3 {
+          0%,100%{height:10px;opacity:0.6} 50%{height:6px;opacity:1}
+      }
+
+      /* ── 6. UPDATES — rotating refresh cycle ─────────────── */
+      .icon-refresh { position: relative; width: 32px; height: 32px; }
+      .icon-refresh span {
+          position: absolute; top: 50%; left: 50%;
+      }
+      .icon-refresh span:nth-child(1) {
+          width: 26px; height: 26px; margin: -13px 0 0 -13px;
+          border: 2.5px solid var(--color-primary);
+          border-top-color: transparent;
+          border-radius: 50%;
+          animation: refresh1 3s linear infinite;
+      }
+      .icon-refresh span:nth-child(2) {
+          width: 0; height: 0;
+          margin: -17px 0 0 5px;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 6px solid var(--color-primary);
+          animation: refresh1 3s linear infinite;
+      }
+      .icon-refresh span:nth-child(3) {
+          width: 6px; height: 6px; margin: -3px 0 0 -3px;
+          background: var(--color-accent);
+          border-radius: 50%;
+          animation: refreshDot 3s ease-in-out infinite;
+      }
+      .feature-card:hover .icon-refresh span:nth-child(1) { border-color: rgba(255,255,255,0.7); border-top-color: transparent; }
+      .feature-card:hover .icon-refresh span:nth-child(2) { border-bottom-color: rgba(255,255,255,0.7); }
+      .feature-card:hover .icon-refresh span:nth-child(3) { background: white; }
+
+      @keyframes refresh1 { to { transform: rotate(360deg); } }
+      @keyframes refreshDot {
+          0%,100%{transform:scale(1)} 50%{transform:scale(1.4)}
+      }
+
+      /* ── Reduced motion guard ─────────────────────────────── */
+      @media (prefers-reduced-motion: reduce) {
+          .icon-speed span, .icon-rings span, .icon-device span,
+          .icon-solve span, .icon-bilingual span, .icon-refresh span {
+              animation: none !important;
+          }
       }
     </style>
-  </head>
+</head>
+<body>
 
+    <div id="reading-progress"></div>
 
-  <body>
-    <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-    <!-- Loading Screen -->
     <div id="loader-overlay">
-      <div class="loader-spinner"></div>
-      <div class="loader-text">LearnNepal</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text">LearnNepal</div>
     </div>
 
     <!-- Header -->
     <header class="header">
-      <div class="container header-container">
-        <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="LearnNepal" style="height: 40px; width: auto;">
-            LearnNepal<span>.</span>
-        </a>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="LearnNepal" style="height:40px;width:auto;">
+                LearnNepal<span>.</span>
+            </a>
 
-        <button class="mobile-toggle" aria-label="Toggle Navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-        <nav class="nav-menu">
-          <a href="index.html" class="nav-link">Home</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="pages/courses.html" class="nav-link">Courses</a>
 
-          <div class="dropdown">
-            <a href="#" class="nav-link">Class 11</a>
-            <div class="dropdown-menu">
-              <a href="pages/class-11/english.html" class="dropdown-item">English</a>
-              <a href="pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
-              <a href="pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-            </div>
-          </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Class 11</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/class-11/english.html" class="dropdown-item">English</a>
+                        <a href="pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
+                        <a href="pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
+                    </div>
+                </div>
 
-          <div class="dropdown">
-            <a href="#" class="nav-link">Class 12</a>
-            <div class="dropdown-menu">
-              <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
-              <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
-              <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-            </div>
-          </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Class 12</a>
+                    <div class="dropdown-menu">
+                        <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
+                        <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
+                        <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
+                    </div>
+                </div>
 
-          <a href="about.html" class="nav-link">About</a>
-          <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </nav>
-      </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="container" style="position: relative; z-index: 1;">
-          <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-            <span class="badge animate-fade-up" data-editable="home.hero.badge">NEB Class 11 &amp; 12</span>
-            <h1 id="home-heading" class="animate-fade-up delay-100" style="margin-top: var(--spacing-sm);" data-editable="home.hero.title">
-              Loading...
-            </h1>
-            <p id="home-description" class="text-lead animate-fade-up delay-200" data-editable="home.hero.subtitle">
-              Loading...
-            </p>
-            <div class="hero-actions animate-fade-up delay-300" style="display:flex; gap:1rem; justify-content:center; margin-top: 2rem;">
-              <a href="#classes" class="btn btn-primary">Browse Classes</a>
-              <a href="pages/class-12/computer/c12_computer_syllabus.html" class="btn btn-outline">Read Syllabus</a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Subject Selection -->
-      <section id="classes" class="section">
-        <div class="container">
-          <div class="section-title">
-            <span class="section-subtitle">Select Your Class</span>
-            <h2>Structured Learning Content</h2>
-            <p>Meticulously organized notes covering the complete NEB syllabus.</p>
-          </div>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-orb hero-orb-4"></div>
 
-          <div class="grid-2">
-            <!-- Class 11 -->
-            <div class="card hover-lift">
-              <div class="card-body" style="padding: 0;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
-                  <h3 style="margin: 0; font-size: 1.5rem;">Class 11</h3>
-                  <span style="font-size: 3rem; color: rgba(0,0,0,0.05); font-weight: 700;">XI</span>
-                </div>
-                <p class="card-text">Comprehensive guide and notes for freshers.</p>
-                <div class="grid-3" style="gap: 10px; margin-top: 1rem;">
-                  <a href="pages/class-11/english.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem;">English</a>
-                  <a href="pages/class-11/nepali.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem;">Nepali</a>
-                  <a href="pages/class-11/computer/c11_computer_syllabus.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem;">Computer</a>
-                </div>
-              </div>
-            </div>
+            <div class="container" style="position:relative;z-index:1;">
+                <span class="badge animate-fade-up">NEB Class 11 &amp; 12</span>
 
-            <!-- Class 12 -->
-            <div class="card hover-lift">
-              <div class="card-body" style="padding: 0;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
-                  <h3 style="margin: 0; font-size: 1.5rem;">Class 12</h3>
-                  <span style="font-size: 3rem; color: rgba(0,0,0,0.05); font-weight: 700;">XII</span>
-                </div>
-                <p class="card-text">Advanced notes for board exam preparation.</p>
-                <div class="grid-3" style="gap: 10px; margin-top: 1rem;">
-                  <a href="pages/class-12/english/c12_english_syllabus.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem;">English</a>
-                  <a href="pages/class-12/nepali.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem;">Nepali</a>
-                  <a href="pages/class-12/computer/c12_computer_syllabus.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem;">Computer</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                <h1 id="home-heading" class="animate-fade-up delay-100">
+                    Your Academic<br><em style="color:var(--color-accent);font-style:normal;">Excellence</em> Starts Here
+                </h1>
 
-      <!-- Featured / Why Us -->
-      <section class="section bg-alt" id="about">
-        <div class="container">
-          <div class="section-title">
-            <span class="section-subtitle">Why LearnNepal?</span>
-            <h2>Premium Quality Education</h2>
-          </div>
-          <div class="grid-3 stagger-grid">
-            <!-- Lightning Fast -->
-            <div class="card">
-              <div class="feat-icon">
-                <div class="lf-container">
-                  <div class="lf-bar"></div>
-                  <div class="lf-bar"></div>
-                  <div class="lf-bar"></div>
-                </div>
-              </div>
-              <h4 class="card-title" data-editable="home.features.feature1Title">Lightning Fast</h4>
-              <p class="card-text" data-editable="home.features.feature1Desc">Optimized for speed. No lag, no bloat. Just pure knowledge delivered instantly.</p>
-            </div>
+                <p id="home-description" class="text-lead animate-fade-up delay-200">
+                    Premium structured notes covering the complete NEB syllabus — crafted for clarity, depth, and exam success.
+                </p>
 
-            <!-- Curriculum Focused -->
-            <div class="card">
-              <div class="feat-icon">
-                <div class="cf-container">
-                  <div class="cf-ring"></div>
-                  <div class="cf-ring"></div>
-                  <div class="cf-ring"></div>
+                <div class="animate-fade-up delay-300" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="pages/courses.html" class="btn btn-gold btn-lg">Explore Courses &darr;</a>
+                    <a href="pages/class-12/nepali.html" class="btn btn-ghost btn-lg">Nepali Notes &rarr;</a>
                 </div>
-              </div>
-              <h4 class="card-title" data-editable="home.features.feature2Title">Curriculum Focused</h4>
-              <p class="card-text" data-editable="home.features.feature2Desc">Strictly based on the latest NEB syllabus for Class 11 and 12.</p>
-            </div>
 
-            <!-- Mobile First — morphing phone animation -->
-            <div class="card">
-              <div class="feat-icon">
-                <div class="mf-container">
-                  <div class="mf-loader"></div>
-                  <div class="mf-loader"></div>
-                  <div class="mf-loader"></div>
+                <div class="animate-fade-up delay-400" style="margin-top:3.5rem;display:flex;flex-direction:column;align-items:center;gap:0.4rem;opacity:0.5;">
+                    <span style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Scroll to explore</span>
+                    <div style="width:1px;height:32px;background:linear-gradient(to bottom,rgba(255,255,255,0.4),transparent);"></div>
                 </div>
-              </div>
-              <h4 class="card-title" data-editable="home.features.feature3Title">Mobile First</h4>
-              <p class="card-text" data-editable="home.features.feature3Desc">Study anywhere, anytime. Perfectly adapted for all device sizes.</p>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Contact Section -->
-      <section class="section" id="contact">
-        <div class="container">
-          <div class="section-title">
-            <span class="section-subtitle">Get in Touch</span>
-            <h2>Contact Us</h2>
-          </div>
-          <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-            <p class="text-lead" style="margin-bottom: 2rem;">Have questions or suggestions? We'd love to hear from you.</p>
-            <a href="mailto:hello@learnnepal.com" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">hello@learnnepal.com</a>
-            <div style="margin-top: 2rem; color: var(--color-text-muted);">
-              <p>Kathmandu, Nepal</p>
+        <!-- Stats Strip -->
+        <section class="stats-strip">
+            <div class="container">
+                <div class="stats-strip-inner">
+                    <div class="stat-block animate-fade-up">
+                        <span class="stat-block-num" data-count="5000">0<span>+</span></span>
+                        <span class="stat-block-label">Students Helped</span>
+                    </div>
+                    <div class="stat-block animate-fade-up delay-100">
+                        <span class="stat-block-num" data-count="6">0<span> Subjects</span></span>
+                        <span class="stat-block-label">Covered</span>
+                    </div>
+                    <div class="stat-block animate-fade-up delay-200">
+                        <span class="stat-block-num" data-count="24">0<span>+</span></span>
+                        <span class="stat-block-label">Chapter Guides</span>
+                    </div>
+                    <div class="stat-block animate-fade-up delay-300">
+                        <span class="stat-block-num">Free<span>!</span></span>
+                        <span class="stat-block-label">Always Free Access</span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- Subject Selection -->
+        <section id="classes" class="section">
+            <div class="container">
+                <div class="section-title animate-fade-up">
+                    <span class="section-subtitle">Choose Your Level</span>
+                    <h2>Structured Learning Content</h2>
+                    <p style="max-width:520px;margin:0.75rem auto 0;color:var(--color-text-muted);">
+                        Meticulously organized notes covering the complete NEB syllabus — separated by grade and subject.
+                    </p>
+                </div>
+
+                <div class="grid-2 stagger-grid">
+                    <!-- Class 11 -->
+                    <div class="class-card animate-fade-up">
+                        <div class="class-card-grade">11</div>
+                        <div style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--color-accent-light);border-radius:var(--radius-full);padding:0.3rem 0.8rem;margin-bottom:1rem;">
+                            <span style="width:8px;height:8px;border-radius:50%;background:var(--color-accent);display:inline-block;"></span>
+                            <span style="font-size:0.75rem;font-weight:700;color:var(--color-accent);letter-spacing:0.06em;text-transform:uppercase;">Grade 11</span>
+                        </div>
+                        <h3>Class 11</h3>
+                        <p>Complete notes for freshers entering higher secondary. Build a strong conceptual foundation.</p>
+                        <div class="class-card-subjects">
+                            <a href="pages/class-11/english.html" class="subject-pill subject-pill-english">English</a>
+                            <a href="pages/class-11/nepali.html" class="subject-pill subject-pill-nepali">Nepali</a>
+                            <a href="pages/class-11/computer/c11_computer_syllabus.html" class="subject-pill subject-pill-computer">Computer</a>
+                        </div>
+                    </div>
+
+                    <!-- Class 12 -->
+                    <div class="class-card animate-fade-up delay-100">
+                        <div class="class-card-grade">12</div>
+                        <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(15,42,74,0.06);border-radius:var(--radius-full);padding:0.3rem 0.8rem;margin-bottom:1rem;">
+                            <span style="width:8px;height:8px;border-radius:50%;background:var(--color-primary);display:inline-block;"></span>
+                            <span style="font-size:0.75rem;font-weight:700;color:var(--color-primary);letter-spacing:0.06em;text-transform:uppercase;">Grade 12</span>
+                        </div>
+                        <h3>Class 12</h3>
+                        <p>Advanced board exam preparation with detailed exercise solutions and in-depth analysis.</p>
+                        <div class="class-card-subjects">
+                            <a href="pages/class-12/english/c12_english_syllabus.html" class="subject-pill subject-pill-english">English</a>
+                            <a href="pages/class-12/nepali.html" class="subject-pill subject-pill-nepali">Nepali</a>
+                            <a href="pages/class-12/computer/c12_computer_syllabus.html" class="subject-pill subject-pill-computer">Computer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why LearnNepal — with animated icons -->
+        <section class="section bg-alt" id="about">
+            <div class="container">
+                <div class="section-title animate-fade-up">
+                    <span class="section-subtitle">Why Choose Us</span>
+                    <h2>Premium Quality Education</h2>
+                </div>
+
+                <div class="grid-3 stagger-grid">
+
+                    <div class="feature-card">
+                        <div class="anim-icon">
+                            <div class="icon-speed"><span></span><span></span><span></span></div>
+                        </div>
+                        <h4>Lightning Fast</h4>
+                        <p>Optimized for speed &amp; instant access. No sign-up, no paywalls — just pure knowledge at your fingertips.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="anim-icon">
+                            <div class="icon-rings"><span></span><span></span><span></span></div>
+                        </div>
+                        <h4>Curriculum Focused</h4>
+                        <p>Every note strictly follows the latest NEB syllabus for Class 11 and 12 — no irrelevant content.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="anim-icon">
+                            <div class="icon-device"><span></span><span></span><span></span></div>
+                        </div>
+                        <h4>Mobile First</h4>
+                        <p>Study anywhere, anytime. Perfectly adapted for all screen sizes with a smooth reading experience.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="anim-icon">
+                            <div class="icon-solve"><span></span><span></span><span></span></div>
+                        </div>
+                        <h4>Exercise Solutions</h4>
+                        <p>Detailed, step-by-step answers to every textbook exercise — not just summaries, but full solutions.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="anim-icon">
+                            <div class="icon-bilingual"><span></span><span></span><span></span></div>
+                        </div>
+                        <h4>Bilingual Support</h4>
+                        <p>All Nepali-medium content uses Devanagari script with romanized transliterations for easy reading.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="anim-icon">
+                            <div class="icon-refresh"><span></span><span></span><span></span></div>
+                        </div>
+                        <h4>Regularly Updated</h4>
+                        <p>Content is continuously reviewed and updated to match the latest NEB curriculum changes.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube CTA -->
+        <section class="yt-section">
+            <div class="container" style="position:relative;z-index:1;">
+                <div style="font-size:3rem;margin-bottom:1rem;">&#9654;</div>
+                <h2 class="animate-fade-up">Watch Video Lessons</h2>
+                <p class="animate-fade-up delay-100">
+                    Complement your reading with detailed video explanations for every chapter — available free on YouTube.
+                </p>
+                <div class="animate-fade-up delay-200" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" class="btn-yt" style="font-size:1rem;padding:0.85rem 2rem;">
+                        Subscribe on YouTube
+                    </a>
+                    <a href="pages/courses.html" class="btn btn-ghost">
+                        Browse All Courses &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote -->
+        <section class="section">
+            <div class="container">
+                <div style="max-width:680px;margin:0 auto;text-align:center;" class="animate-fade-up">
+                    <div style="font-size:4rem;color:var(--color-accent);font-family:var(--font-heading);line-height:1;margin-bottom:1rem;">&ldquo;</div>
+                    <blockquote style="font-family:var(--font-heading);font-size:1.5rem;font-style:italic;color:var(--color-primary);line-height:1.5;margin:0 0 1.5rem;border:none;background:none;padding:0;">
+                        The beautiful thing about learning is that no one can take it away from you.
+                    </blockquote>
+                    <cite style="font-size:0.85rem;color:var(--color-text-muted);font-style:normal;letter-spacing:0.06em;text-transform:uppercase;">
+                        &mdash; B.B. King
+                    </cite>
+                    <div style="width:60px;height:3px;background:var(--grad-gold);border-radius:var(--radius-full);margin:1.5rem auto 0;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section bg-alt" id="contact">
+            <div class="container">
+                <div class="section-title animate-fade-up">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2>We&rsquo;re Here to Help</h2>
+                </div>
+                <div style="max-width:540px;margin:0 auto;text-align:center;" class="animate-fade-up delay-100">
+                    <p class="text-lead" style="margin-bottom:2rem;">
+                        Have questions, suggestions, or need help with a chapter? We&rsquo;d love to hear from you.
+                    </p>
+                    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                        <a href="mailto:hello@learnnepal.com" class="btn btn-primary btn-lg">hello@learnnepal.com</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Contact Page</a>
+                    </div>
+                    <p style="margin-top:1.5rem;font-size:0.85rem;color:var(--color-text-muted);">Kathmandu, Nepal</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="#" class="logo"><img src="assets/images/logo.png" alt="LearnNepal" style="height: 32px; width: auto;"></a>
-            <p>
-              Empowering NEB students with high-quality, structured, and
-              accessible digital notes.
-            </p>
-          </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="LearnNepal" style="height:32px;width:auto;">
+                        LearnNepal<span>.</span>
+                    </a>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes.</p>
+                </div>
 
-          <div class="footer-col">
-            <h4 class="footer-heading">Class 11</h4>
-            <ul class="footer-links">
-              <li><a href="pages/class-11/english.html">English</a></li>
-              <li><a href="pages/class-11/nepali.html">Nepali</a></li>
-              <li><a href="pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
-            </ul>
-          </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Class 11</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/class-11/english.html">English</a></li>
+                        <li><a href="pages/class-11/nepali.html">Nepali</a></li>
+                        <li><a href="pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
+                    </ul>
+                </div>
 
-          <div class="footer-col">
-            <h4 class="footer-heading">Class 12</h4>
-            <ul class="footer-links">
-              <li><a href="pages/class-12/english/c12_english_syllabus.html">English</a></li>
-              <li><a href="pages/class-12/nepali.html">Nepali</a></li>
-              <li><a href="pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
-            </ul>
-          </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Class 12</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/class-12/english/c12_english_syllabus.html">English</a></li>
+                        <li><a href="pages/class-12/nepali.html">Nepali</a></li>
+                        <li><a href="pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
+                    </ul>
+                </div>
 
-          <div class="footer-col">
-            <h4 class="footer-heading">Company</h4>
-            <ul class="footer-links">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank">YouTube Channel</a></li>
-              <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-          </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pages/courses.html">All Courses</a></li>
+                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal.</p>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026 LearnNepal. All rights reserved.</p>
-        </div>
-      </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="scripts/app.js"></script>
     <script src="scripts/transitions.js"></script>
     <script src="scripts/content-loader-v2.js"></script>
 
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-       if (window.netlifyIdentity) {
-         window.netlifyIdentity.on("init", user => {
-           if (!user) {
-             window.netlifyIdentity.on("login", () => {
-               document.location.href = "/admin/";
-             });
-           }
-         });
-       }
+    (function () {
+        var bar = document.getElementById('reading-progress');
+        if (bar) {
+            window.addEventListener('scroll', function() {
+                var el = document.documentElement;
+                var scrolled = el.scrollTop / (el.scrollHeight - el.clientHeight) * 100;
+                bar.style.width = Math.min(scrolled, 100) + '%';
+            }, { passive: true });
+        }
 
-      fetch('content/pages/home.md')
-        .then(response => response.text())
-        .then(text => {
-          // 1. Separate the Frontmatter (YAML) from the Content (Markdown)
-          const parts = text.split('---');
-          // parts[0] is empty, parts[1] is frontmatter, parts[2...] is body
-          const frontmatter = jsyaml.load(parts[1]);
-          // Rejoin body in case "---" appears in the text
-          const markdownBody = parts.slice(2).join('---');
+        function animateCount(el) {
+            var target = parseInt(el.dataset.count, 10);
+            if (!target) return;
+            var suffix = el.querySelector('span') ? el.querySelector('span').outerHTML : '';
+            var current = 0;
+            var step = Math.ceil(target / 60);
+            var timer = setInterval(function() {
+                current = Math.min(current + step, target);
+                el.innerHTML = current.toLocaleString() + suffix;
+                if (current >= target) clearInterval(timer);
+            }, 20);
+        }
 
-          // 2. Inject Content
-          if (document.getElementById('home-heading')) {
-            document.getElementById('home-heading').innerHTML = frontmatter.heading || frontmatter.title; // Fallback
-          }
-           if (document.getElementById('home-description')) {
-            document.getElementById('home-description').innerText = frontmatter.description;
-          }
-          
-          // Optional: If you had a body container
-          if (document.getElementById('home-body')) {
-             document.getElementById('home-body').innerHTML = marked.parse(markdownBody);
-          }
+        var counters = document.querySelectorAll('[data-count]');
+        if (counters.length) {
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                    if (e.isIntersecting) {
+                        animateCount(e.target);
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(function(c) { io.observe(c); });
+        }
 
-
-           // Hide Loader
-           const loader = document.getElementById('loader-overlay');
-           if (loader) {
-             loader.classList.add('hidden');
-             setTimeout(() => {
-               loader.style.display = 'none';
-             }, 500);
-           }
-        })
-        .catch(err => {
-            console.error("Error loading CMS content:", err);
-            // Ensure loader is hidden even on error
-            const loader = document.getElementById('loader-overlay');
-            if (loader) {
-                loader.classList.add('hidden');
-            }
+        document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                var id = a.getAttribute('href').slice(1);
+                var target = document.getElementById(id);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
         });
+
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on('init', function(user) {
+                if (!user) {
+                    window.netlifyIdentity.on('login', function() {
+                        document.location.href = '/admin/';
+                    });
+                }
+            });
+        }
+
+        fetch('content/pages/home.md')
+            .then(function(r) { return r.text(); })
+            .then(function(text) {
+                try {
+                    var parts = text.split('---');
+                    var fm = jsyaml.load(parts[1]);
+                    var heading = document.getElementById('home-heading');
+                    var desc    = document.getElementById('home-description');
+                    if (heading && fm.heading) heading.innerHTML = fm.heading;
+                    if (desc    && fm.description) desc.textContent = fm.description;
+                } catch(e) {}
+            })
+            .catch(function() {})
+            .finally(function() {
+                var loader = document.getElementById('loader-overlay');
+                if (loader) {
+                    loader.classList.add('hidden');
+                    setTimeout(function() { loader.style.display = 'none'; }, 500);
+                }
+            });
+    })();
     </script>
-  </body>
+</body>
 </html>

@@ -8,19 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initDropdownsForMobile();
     initSidebarAccordion();
-    initSidebarAccordion();
-    initMobileSidebar(); // Add Sidebar Logic
-    initProgressBar();
-    initBackToTop();
+    initMobileSidebar();
     initOfflineDetection();
     initPageTransitions();
 });
 
 function initOfflineDetection() {
-    // Check if overlay already exists
     if (document.getElementById('offline-overlay')) return;
 
-    // Create Overlay HTML
     const overlay = document.createElement('div');
     overlay.id = 'offline-overlay';
     overlay.innerHTML = `
@@ -38,7 +33,6 @@ function initOfflineDetection() {
     `;
     document.body.appendChild(overlay);
 
-    // Event Listeners
     function updateOnlineStatus() {
         if (navigator.onLine) {
             overlay.classList.remove('active');
@@ -56,58 +50,15 @@ function initOfflineDetection() {
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
 
-    // Initial check (in case loaded while offline)
     if (!navigator.onLine) {
         updateOnlineStatus();
     }
 }
 
-function initProgressBar() {
-    // Create Progress Bar Elements
-    const progressContainer = document.createElement('div');
-    progressContainer.className = 'progress-container';
-    
-    const progressBar = document.createElement('div');
-    progressBar.className = 'progress-bar';
-    progressContainer.appendChild(progressBar);
-    
-    document.body.prepend(progressContainer);
-    
-    // Update on Scroll
-    window.addEventListener('scroll', () => {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / scrollHeight) * 100;
-        progressBar.style.width = scrollPercent + '%';
-    });
-}
-
-function initBackToTop() {
-    // Create Back to Top Button
-    const btn = document.createElement('button');
-    btn.className = 'back-to-top';
-    btn.ariaLabel = "Back to Top";
-    btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
-    
-    document.body.appendChild(btn);
-    
-    // Show/Hide Logic
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            btn.classList.add('visible');
-        } else {
-            btn.classList.remove('visible');
-        }
-    });
-    
-    // Click to Scroll Top
-    btn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
+/* NOTE: initProgressBar() and initBackToTop() REMOVED.
+ * Progress bar is now handled by #reading-progress in the HTML + inline JS.
+ * Back-to-top button is now created by transitions.js → initBackToTop().
+ * Having duplicates caused two progress bars and two back-to-top buttons. */
 
 function initSidebarAccordion() {
     const sidebarGroups = document.querySelectorAll('.sidebar-group');
@@ -125,7 +76,11 @@ function initSidebarAccordion() {
 
 function initStickyHeader() {
     const header = document.querySelector('.header');
+    if (!header) return;
     
+    /* NOTE: The full scroll logic (adding/removing .scrolled class including
+     * shadow + gold border) is now handled by transitions.js → initHeaderScroll().
+     * This function is kept as a fast fallback in case transitions.js loads late. */
     window.addEventListener('scroll', () => {
         if (window.scrollY > 20) {
             header.classList.add('scrolled');
@@ -138,12 +93,13 @@ function initStickyHeader() {
 function initMobileMenu() {
     const toggle = document.querySelector('.mobile-toggle');
     const nav = document.querySelector('.nav-menu');
+    if (!toggle || !nav) return;
+
     const bars = document.querySelectorAll('.bar');
 
     toggle.addEventListener('click', () => {
         nav.classList.toggle('active');
         
-        // Animate hamburger to X
         if (nav.classList.contains('active')) {
             bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             bars[1].style.opacity = '0';
@@ -155,27 +111,32 @@ function initMobileMenu() {
         }
     });
 
-    // Close menu when clicking a link
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-             // Only close if it's not a dropdown toggle
              if (!link.parentElement.classList.contains('dropdown')) {
                  nav.classList.remove('active');
+                 bars[0].style.transform = 'none';
+                 bars[1].style.opacity = '1';
+                 bars[2].style.transform = 'none';
              }
         });
     });
 }
 
 function initDropdownsForMobile() {
-    // Remove early return so listeners attach even if loaded on desktop then resized
     const dropdowns = document.querySelectorAll('.dropdown > .nav-link');
     
     dropdowns.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
-            // Check width at the moment of click
             if (window.innerWidth <= 768) {
                 e.preventDefault();
                 const parent = trigger.parentElement;
+
+                /* Close other open dropdowns */
+                document.querySelectorAll('.dropdown.active').forEach(d => {
+                    if (d !== parent) d.classList.remove('active');
+                });
+
                 parent.classList.toggle('active');
             }
         });
@@ -183,11 +144,9 @@ function initDropdownsForMobile() {
 }
 
 function initMobileSidebar() {
-    // Only init if toggle exists on page
     const toggle = document.querySelector('.mobile-sidebar-toggle');
     const sidebar = document.querySelector('.sidebar');
     
-    // Create Overlay if it doesn't exist
     let overlay = document.querySelector('.sidebar-overlay');
     if (!overlay) {
         overlay = document.createElement('div');
@@ -201,13 +160,11 @@ function initMobileSidebar() {
             overlay.classList.toggle('active');
         });
         
-        // Close on overlay click
         overlay.addEventListener('click', () => {
             sidebar.classList.remove('active');
             overlay.classList.remove('active');
         });
         
-        // Close on link click
         sidebar.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 if (link.getAttribute('href') !== '#' && !link.classList.contains('sidebar-group-title')) {
@@ -220,8 +177,6 @@ function initMobileSidebar() {
 }
 
 function initPageTransitions() {
-    // Transitions are handled by transitions.js (loaded separately)
-    // Remove any stale svg-transition-overlay from previous versions
     const old = document.querySelector('.svg-transition-overlay');
     if (old) old.remove();
 }

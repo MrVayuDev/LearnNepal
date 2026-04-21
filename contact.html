@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/components.css">
 </head>
 <body>
+
+    <div id="reading-progress"></div>
 
     <!-- Header -->
     <header class="header">
@@ -29,6 +31,7 @@
 
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="pages/courses.html" class="nav-link">Courses</a>
                 
                 <div class="dropdown">
                     <a href="#" class="nav-link">Class 11</a>
@@ -65,7 +68,7 @@
                         We'd Love to <span style="color: var(--color-accent);">Hear From You</span>
                     </h1>
                     <p class="text-lead animate-fade-up delay-200" style="margin-top: 1.5rem;">
-                        Have a question about a topic? Spotted an error in our notes? Or just want to say hi? clearDrop us a message below.
+                        Have a question about a topic? Spotted an error in our notes? Or just want to say hi? Drop us a message below.
                     </p>
                 </div>
             </div>
@@ -184,7 +187,8 @@
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank">YouTube Channel</a></li>
+                        <li><a href="pages/courses.html">All Courses</a></li>
+                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener">YouTube</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -199,5 +203,16 @@
     <!-- Scripts -->
     <script src="scripts/app.js"></script>
     <script src="scripts/transitions.js"></script>
+    <script>
+    (function() {
+        var bar = document.getElementById('reading-progress');
+        if (bar) {
+            window.addEventListener('scroll', function() {
+                var el = document.documentElement;
+                bar.style.width = Math.min(el.scrollTop / (el.scrollHeight - el.clientHeight) * 100, 100) + '%';
+            }, { passive: true });
+        }
+    })();
+    </script>
 </body>
 </html>

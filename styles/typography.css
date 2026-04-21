@@ -1,87 +1,11 @@
-/* Typography System */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+/* ═══════════════════════════════════════════════════════════
+   LearnNepal — Typography System  v2
+   ═══════════════════════════════════════════════════════════ */
 
-body {
-    font-family: var(--font-body);
-    font-size: 1rem; /* 16px base */
-    color: var(--color-text-main);
-    background-color: var(--color-bg-body);
-}
+/* Google Fonts — Inter (UI) + Playfair Display (headings) + Mukta (Devanagari) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@300;400;500;600;700&family=Mukta:wght@300;400;600;700&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    color: var(--color-primary);
-    line-height: 1.2;
-    margin-bottom: var(--spacing-md);
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.25rem; /* Reduced for mobile */
-    }
-}
-
-h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-}
-
-@media (max-width: 768px) {
-    h2 {
-        font-size: 1.75rem; /* Reduced for mobile */
-    }
-}
-
-h3 {
-    font-size: 1.75rem;
-    font-weight: 600;
-}
-
-p {
-    margin-bottom: var(--spacing-lg);
-    color: var(--color-text-muted);
-}
-
-@media (max-width: 768px) {
-    p {
-        font-size: 0.95rem; /* Slightly smaller body text */
-        line-height: 1.6;
-    }
-}
-
-.text-lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-.section-title {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto var(--spacing-xl);
-}
-
-.section-title h2 {
-    margin-bottom: var(--spacing-xs);
-}
-
-.section-subtitle {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-accent);
-    font-weight: 600;
-    display: block;
-    margin-bottom: var(--spacing-xs);
-}
-
-/* Nepali Fonts */
+/* ── Local Rozha One (Nepali Display) ─────────────────────── */
 @font-face {
     font-family: 'Rozha One';
     src: url('../assets/fonts/RozhaOne-Regular.ttf') format('truetype');
@@ -90,6 +14,200 @@ p {
     font-display: swap;
 }
 
+/* ── Base ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: var(--line-height-body);
+    color: var(--color-text-main);
+    background-color: var(--color-bg-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium subtle grain texture */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Headings — fluid scale with clamp() ───────────────────── */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: var(--line-height-heading);
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2rem,   5.5vw, 3.5rem);  }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem);  }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.85rem); }
+h4 { font-size: clamp(1.1rem, 2vw,   1.35rem); }
+h5 { font-size: clamp(0.95rem,1.5vw,  1.1rem); }
+h6 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* ── Body copy ─────────────────────────────────────────────── */
+p {
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-muted);
+    line-height: 1.78;
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+a:hover { color: var(--color-accent); }
+
+/* ── Lead text ─────────────────────────────────────────────── */
+.text-lead {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+}
+
+/* ── Section labels ────────────────────────────────────────── */
+.section-title {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto var(--spacing-xxl);
+}
+
+.section-title h2 { margin-bottom: var(--spacing-xs); }
+
+.section-subtitle {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding: 0.28rem 0.8rem;
+    background: var(--color-accent-light);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-accent-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ── Inline elements ───────────────────────────────────────── */
+strong, b { font-weight: 700; color: var(--color-text-main); }
+em, i     { font-style: italic; }
+
+code, kbd {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    padding: 0.12em 0.4em;
+    background: rgba(15,42,74,0.06);
+    border-radius: var(--radius-xs);
+    color: var(--color-primary);
+    border: 1px solid rgba(15,42,74,0.08);
+}
+
+pre {
+    background: var(--color-primary);
+    color: #e8eed4;
+    padding: 1.4rem 1.6rem;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: var(--spacing-lg);
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+blockquote {
+    border-left: 4px solid var(--color-accent);
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    background: var(--color-accent-light);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-style: italic;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-style: normal;
+    color: var(--color-text-muted);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: var(--spacing-xl) 0;
+}
+
+/* ── Devanagari / Nepali text ──────────────────────────────── */
+.deva, :lang(ne), [lang="ne"] {
+    font-family: var(--font-devanagari);
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+h1.deva, h2.deva, h3.deva {
+    font-family: 'Rozha One', var(--font-devanagari), serif;
+}
+
+/* Class applied to Nepali chapter pages */
+.nepali-text {
+    font-family: var(--font-devanagari);
+    line-height: 1.9;
+}
+
 .nepali-text .chapter-title {
-    font-family: 'Rozha One', serif;
+    font-family: 'Rozha One', var(--font-devanagari), serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+.nepali-text p,
+.nepali-text li {
+    font-family: var(--font-devanagari);
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+/* ── Lists ─────────────────────────────────────────────────── */
+ul, ol {
+    padding-left: 1.4rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+li { margin-bottom: 0.35rem; line-height: 1.7; }
+
+/* ── Hero accent em ────────────────────────────────────────── */
+.hero h1 em {
+    font-style: normal;
+    color: var(--color-accent);
 }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,11 @@
     <title>About Us | LearnNepal</title>
     <meta name="description" content="Learn more about LearnNepal, our mission to provide premium educational content for NEB students.">
     
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/components.css">
 </head>
 <body>
+
+    <div id="reading-progress"></div>
 
     <!-- Header -->
     <header class="header">
@@ -29,6 +28,7 @@
 
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="pages/courses.html" class="nav-link">Courses</a>
                 
                 <div class="dropdown">
                     <a href="#" class="nav-link">Class 11</a>
@@ -48,13 +48,12 @@
                     </div>
                 </div>
 
-                <a href="about.html" class="nav-link active" style="color: var(--color-primary); font-weight: 600;">About</a>
+                <a href="about.html" class="nav-link" style="color: var(--color-accent); font-weight: 600;">About</a>
                 <a href="contact.html" class="btn btn-primary">Contact Us</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
         <!-- Hero Section -->
         <section class="section" style="padding-top: 8rem; padding-bottom: 4rem;">
@@ -65,13 +64,13 @@
                         Empowering Students with <span style="color: var(--color-accent);">Premium Education</span>
                     </h1>
                     <p class="text-lead animate-fade-up delay-200" style="margin-top: 1.5rem;">
-                        LearnNepal is dedicated to providing high-quality, structured, and accessible digital notes for NEB Class 11 & 12 students across Nepal.
+                        LearnNepal is dedicated to providing high-quality, structured, and accessible digital notes for NEB Class 11 &amp; 12 students across Nepal.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Our Story / Content -->
+        <!-- Our Story -->
         <section class="section bg-alt">
             <div class="container">
                 <div class="grid-2 stagger-grid" style="align-items: center; gap: 4rem;">
@@ -85,47 +84,50 @@
                         </p>
                         <div style="margin-top: 2rem;">
                             <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-                                <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; flex-shrink:0;">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 </div>
                                 <div><strong>Quality Content</strong>: Verified by subject experts.</div>
                             </div>
                             <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-                                <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; flex-shrink:0;">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 </div>
                                 <div><strong>Zero Ads Clutter</strong>: Focus on reading, not closing popups.</div>
                             </div>
                             <div style="display: flex; gap: 1rem; align-items: center;">
-                                <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; flex-shrink:0;">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 </div>
                                 <div><strong>Always Free</strong>: Education helps everyone.</div>
                             </div>
                         </div>
                     </div>
-                     <!-- Placeholder for an "About" image or graphic -->
                     <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center;">
                          <div style="display: flex; justify-content: center; margin-bottom: 1rem; color: #FF0000;">
                             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
                          </div>
                          <h3>Join Our Community</h3>
                          <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">Subscribe for video lessons and updates</p>
-                         <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center; background: #FF0000; color: white; border: none;">Subscribe to LearnNepal</a>
+                         <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" class="btn-yt" style="display:block;text-align:center;padding:0.85rem 1.5rem;font-size:1rem;">Subscribe to LearnNepal</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Team / Vision -->
+        <!-- Vision -->
         <section class="section">
             <div class="container">
                 <div class="section-title">
                      <span class="section-subtitle">Our Vision</span>
                      <h2>Future of Learning</h2>
                 </div>
-                <div class="text-lead" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    "To bridge the gap between traditional classroom learning and modern digital accessibility, ensuring every student has the tools they need to succeed."
+                <div style="max-width:680px;margin:0 auto;text-align:center;">
+                    <div style="font-size:4rem;color:var(--color-accent);font-family:var(--font-heading);line-height:1;margin-bottom:1rem;">&ldquo;</div>
+                    <blockquote style="font-family:var(--font-heading);font-size:1.35rem;font-style:italic;color:var(--color-primary);line-height:1.5;margin:0 0 1.5rem;border:none;background:none;padding:0;">
+                        To bridge the gap between traditional classroom learning and modern digital accessibility, ensuring every student has the tools they need to succeed.
+                    </blockquote>
+                    <div style="width:60px;height:3px;background:var(--grad-gold);border-radius:var(--radius-full);margin:1.5rem auto 0;"></div>
                 </div>
             </div>
         </section>
@@ -137,10 +139,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><img src="assets/images/logo.png" alt="LearnNepal" style="height: 32px; width: auto;"></a>
-                    <p>
-                        Empowering NEB students with high-quality, structured, and accessible digital notes.
-                    </p>
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="LearnNepal" style="height:32px;width:auto;">
+                        LearnNepal<span>.</span>
+                    </a>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes.</p>
                 </div>
 
                 <div class="footer-col">
@@ -166,20 +169,33 @@
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank">YouTube Channel</a></li>
+                        <li><a href="pages/courses.html">All Courses</a></li>
+                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener">YouTube</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 LearnNepal. All rights reserved.</p>
+                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="scripts/app.js"></script>
     <script src="scripts/transitions.js"></script>
+
+    <!-- Reading progress -->
+    <script>
+    (function() {
+        var bar = document.getElementById('reading-progress');
+        if (bar) {
+            window.addEventListener('scroll', function() {
+                var el = document.documentElement;
+                bar.style.width = Math.min(el.scrollTop / (el.scrollHeight - el.clientHeight) * 100, 100) + '%';
+            }, { passive: true });
+        }
+    })();
+    </script>
 </body>
 </html>

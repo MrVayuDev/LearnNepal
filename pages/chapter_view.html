@@ -3,59 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter Reader | LearnNepal</title>
+    <title id="page-title">Chapter Reader | LearnNepal</title>
+    <meta name="description" content="Read structured chapter notes for NEB Class 11 and Class 12 on LearnNepal.">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/layout.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <style>
-        .reader-header {
-            background: var(--color-bg-alt);
-            padding: var(--spacing-xxl) 0;
-            text-align: center;
-            border-bottom: 1px solid var(--color-border);
-        }
-        .reader-meta {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .reader-content {
-            font-family: 'Georgia', serif; /* Optimize for reading */
-            font-size: 1.15rem;
-            line-height: 1.8;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: var(--spacing-xxl) 0;
-            color: var(--color-text-main);
-        }
-        .reader-content p {
-            margin-bottom: 1.5rem;
-        }
-        .reader-content h2 {
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-family: var(--font-heading);
-            color: var(--color-primary);
-        }
-        .chapter-nav {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--color-border);
-        }
-    </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header class="header">
         <div class="container header-container">
             <a href="../index.html" class="logo">
-                <img src="../assets/images/logo.png" alt="LearnNepal" style="height: 40px; width: auto;">
+                <img src="../assets/images/logo.png" alt="LearnNepal" style="height:40px;width:auto;">
                 LearnNepal<span>.</span>
             </a>
 
@@ -67,7 +27,7 @@
 
             <nav class="nav-menu">
                 <a href="../index.html" class="nav-link">Home</a>
-                
+
                 <div class="dropdown">
                     <a href="#" class="nav-link">Class 11</a>
                     <div class="dropdown-menu">
@@ -92,39 +52,69 @@
         </div>
     </header>
 
-    <main id="main-content">
-        <div class="reader-header">
-            <div class="container">
-                <div class="animate-fade-up">
-                    <span class="badge" id="chapter-subject">Subject</span>
-                    <h1 id="chapter-title" style="margin-top: 0.5rem;">Loading Chapter...</h1>
-                    <div class="reader-meta">
-                        <span id="chapter-grade">Class 11</span> &bull; 
-                        <span id="chapter-genre">Genre</span>
-                    </div>
-                </div>
+    <!-- Reader Hero  -->
+    <div class="reader-hero animate-fade-in">
+        <div class="container">
+            <span class="badge" id="chapter-subject">Subject</span>
+            <h1 id="chapter-title">Loading Chapter&hellip;</h1>
+            <div class="reader-meta-bar">
+                <span id="chapter-grade">Class</span>
+                <span class="meta-sep" aria-hidden="true"></span>
+                <span id="chapter-genre">Genre</span>
             </div>
         </div>
+    </div>
 
-        <div class="section">
-            <div class="container">
-                <article class="reader-content animate-fade-up delay-100" id="chapter-body">
-                    <p>Loading content...</p>
-                </article>
+    <!-- Docs Layout -->
+    <div class="docs-layout">
 
-                <div class="chapter-nav">
-                    <a href="#" class="btn btn-outline" id="prev-chapter">&larr; Previous</a>
-                    <a href="#" class="btn btn-primary" id="next-chapter">Next &rarr;</a>
-                </div>
+        <!-- TOC Sidebar -->
+        <aside class="sidebar" id="chapter-sidebar">
+
+            <div class="sidebar-chapter-info">
+                <span class="badge" id="cv-badge" style="font-size:0.7rem;">Subject</span>
+                <div class="sidebar-meta-item" id="cv-meta-grade">Class</div>
+                <div class="sidebar-meta-item" id="cv-meta-genre" style="font-style:italic;"></div>
             </div>
-        </div>
-    </main>
 
+            <div class="sidebar-title">Contents</div>
+
+            <button class="mobile-sidebar-toggle">
+                &#9776; Contents
+                <span style="margin-left:auto;font-size:0.8em;opacity:0.7;">&#9660;</span>
+            </button>
+
+            <nav class="sidebar-nav" id="cv-toc">
+                <p class="sidebar-loading">Loading sections&hellip;</p>
+            </nav>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="#" class="sidebar-back-link" id="cv-back">&larr; Back to Syllabus</a>
+
+        </aside>
+
+        <!-- Chapter Content -->
+        <main class="docs-content" id="main-content">
+            <article id="chapter-body" class="content-block">
+                <p>Loading content&hellip;</p>
+            </article>
+
+            <div style="display:flex;justify-content:space-between;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--color-border);">
+                <a href="#" class="btn btn-outline" id="prev-chapter">&larr; Previous</a>
+                <a href="#" class="btn btn-primary" id="next-chapter">Next &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><img src="../assets/images/logo.png" alt="LearnNepal" style="height: 32px; width: auto;"></a>
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/images/logo.png" alt="LearnNepal" style="height:32px;width:auto;">
+                    </a>
                     <p>Empowering NEB students with high-quality, structured, and accessible digital notes.</p>
                 </div>
 
@@ -151,7 +141,7 @@
                     <ul class="footer-links">
                         <li><a href="../about.html">About Us</a></li>
                         <li><a href="../contact.html">Contact</a></li>
-                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank">YouTube Channel</a></li>
+                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener">YouTube Channel</a></li>
                         <li><a href="../privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
@@ -163,54 +153,156 @@
         </div>
     </footer>
 
+    <!-- Inline script: reads URL params, loads content, builds TOC -->
     <script>
-        // Inline script for zero-dependency loading (frontend-only CMS)
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const contentId = params.get('id'); // e.g. "c11_english_unit1"
-            const subject = params.get('subject');
-            const genre = params.get('genre');
-            const title = params.get('title');
-            
-            // UI References
-            const titleEl = document.getElementById('chapter-title');
-            const bodyEl = document.getElementById('chapter-body');
-            const subjectEl = document.getElementById('chapter-subject');
-            const genreEl = document.getElementById('chapter-genre');
+    (function () {
+        'use strict';
 
-            // Set basic info from params if available (instant feedback)
-            if (title) titleEl.textContent = decodeURIComponent(title);
-            if (subject) subjectEl.textContent = subject.charAt(0).toUpperCase() + subject.slice(1);
-            if (genre) genreEl.textContent = decodeURIComponent(genre);
+        const params    = new URLSearchParams(window.location.search);
+        const contentId = params.get('id')      || '';
+        const subject   = params.get('subject') || '';
+        const genre     = params.get('genre')   || '';
+        const title     = params.get('title')   || '';
 
-            // Fetch Content Strategy:
-            // 1. Try LocalStorage (User/Admin Edits)
-            // 2. Try Default JSON
-            // 3. Fallback to Placeholder
+        // ── UI element refs ───────────────────────────────────────
+        const $  = (id) => document.getElementById(id);
+        const titleEl  = $('chapter-title');
+        const bodyEl   = $('chapter-body');
+        const subjectEl= $('chapter-subject');
+        const genreEl  = $('chapter-genre');
+        const gradeEl  = $('chapter-grade');
+        const cvBadge  = $('cv-badge');
+        const cvGrade  = $('cv-meta-grade');
+        const cvGenre  = $('cv-meta-genre');
+        const backLink = $('cv-back');
+        const tocEl    = $('cv-toc');
 
-            const loadContent = () => {
-                const lsContent = localStorage.getItem('learnnepal_content');
-                let data = lsContent ? JSON.parse(lsContent) : null;
+        // ── Populate metadata from URL params ─────────────────────
+        if (title && titleEl) {
+            const decoded = decodeURIComponent(title);
+            titleEl.textContent = decoded;
+            document.getElementById('page-title').textContent = decoded + ' | LearnNepal';
+        }
 
-                // If content key exists in our data structure
+        if (subject) {
+            const fmt = subject.charAt(0).toUpperCase() + subject.slice(1);
+            if (subjectEl) subjectEl.textContent = fmt;
+            if (cvBadge)   cvBadge.textContent   = fmt;
+        }
+
+        if (genre) {
+            const g = decodeURIComponent(genre);
+            if (genreEl) genreEl.textContent = g;
+            if (cvGenre) cvGenre.textContent = g;
+        }
+
+        if (contentId) {
+            const is12  = contentId.startsWith('c12');
+            const grade = is12 ? 'Class 12' : 'Class 11';
+            if (gradeEl) gradeEl.textContent = grade;
+            if (cvGrade) cvGrade.textContent = grade;
+
+            // Back-to-syllabus URL (relative to /pages/)
+            if (backLink && subject) {
+                const gradeNum = is12 ? '12' : '11';
+                const sub      = subject.toLowerCase();
+                let url = '../index.html';
+                if (sub === 'nepali')
+                    url = `class-${gradeNum}/nepali.html`;
+                else if (sub === 'english')
+                    url = is12
+                        ? `class-12/english/c12_english_syllabus.html`
+                        : `class-11/english.html`;
+                else if (sub === 'computer')
+                    url = `class-${gradeNum}/computer/c${gradeNum}_computer_syllabus.html`;
+                backLink.href = url;
+            }
+        }
+
+        // ── Load chapter content from localStorage ────────────────
+        function loadContent() {
+            try {
+                const raw  = localStorage.getItem('learnnepal_content');
+                const data = raw ? JSON.parse(raw) : null;
+
                 if (data && data.chapters && data.chapters[contentId]) {
                     const chapter = data.chapters[contentId];
-                    bodyEl.innerHTML = chapter.content || '<p><em>Content coming soon...</em></p>';
-                    // Update metadata if stored data is richer
-                    if(chapter.title) titleEl.textContent = chapter.title;
+                    if (bodyEl) bodyEl.innerHTML = chapter.content || '<p><em>Content coming soon&hellip;</em></p>';
+                    if (chapter.title && titleEl) {
+                        titleEl.textContent = chapter.title;
+                        document.getElementById('page-title').textContent = chapter.title + ' | LearnNepal';
+                    }
                 } else {
-                    // Placeholder if no content found
-                    bodyEl.innerHTML = `
-                        <div style="background: var(--color-bg-alt); padding: 2rem; border-radius: 8px; text-align: center;">
-                            <p>Content for this chapter is coming soon.</p>
-                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Please check back later.</p>
-                        </div>
-                    `;
+                    if (bodyEl) bodyEl.innerHTML = `
+                        <div class="note-box" style="text-align:center;padding:3rem 2rem;">
+                            <p style="font-size:1.1rem;font-weight:600;color:var(--color-primary);margin-bottom:0.5rem;">Content Coming Soon</p>
+                            <p style="color:var(--color-text-muted);">This chapter is being prepared. Please check back later.</p>
+                        </div>`;
                 }
-            };
+            } catch (e) {
+                if (bodyEl) bodyEl.innerHTML = '<p class="sidebar-empty">Could not load content.</p>';
+            }
 
+            // Build TOC after content injection
+            buildTOC();
+        }
+
+        // ── Dynamic TOC builder ───────────────────────────────────
+        function buildTOC() {
+            if (!tocEl) return;
+
+            const headings = document.querySelectorAll('#chapter-body h2');
+
+            if (!headings.length) {
+                tocEl.innerHTML = '<p class="sidebar-empty">No sections found.</p>';
+                return;
+            }
+
+            tocEl.innerHTML = '';
+
+            // IntersectionObserver highlights the active section
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        tocEl.querySelectorAll('.sidebar-link')
+                             .forEach((l) => l.classList.remove('toc-active'));
+                        const active = tocEl.querySelector(`[data-target="${id}"]`);
+                        if (active) active.classList.add('toc-active');
+                    }
+                });
+            }, { rootMargin: '-20% 0px -70% 0px' });
+
+            headings.forEach((h, i) => {
+                const id = h.id || ('toc-section-' + i);
+                h.id = id;
+
+                const a = document.createElement('a');
+                a.href          = '#' + id;
+                a.className     = 'sidebar-link';
+                a.textContent   = h.textContent.trim();
+                a.dataset.target = id;
+
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+
+                tocEl.appendChild(a);
+                obs.observe(h);
+            });
+        }
+
+        // Run on DOMContentLoaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadContent);
+        } else {
             loadContent();
-        });
+        }
+    })();
     </script>
+
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/transitions.js"></script>
 </body>
 </html>
