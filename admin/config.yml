@@ -89,16 +89,6 @@ collections:
       - label: "Chapter Content"
         name: "body"
         widget: "markdown"
-        buttons:
-          - bold
-          - italic
-          - heading-two
-          - heading-three
-          - quote
-          - bulleted-list
-          - numbered-list
-          - link
-          - image
 
       - label: "Published"
         name: "published"
