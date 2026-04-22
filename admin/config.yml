@@ -1,16 +1,439 @@
+# ─────────────────────────────────────────────────────────────
+# LearnNepal — Decap CMS Configuration
+# Manages chapters, syllabus pages, and site settings
+# via Netlify's git-gateway + Netlify Identity.
+# ─────────────────────────────────────────────────────────────
+
 backend:
   name: git-gateway
-  branch: main # or master
+  branch: main
+  commit_messages:
+    create: "content: create {{collection}} "{{slug}}""
+    update: "content: update {{collection}} "{{slug}}""
+    delete: "content: delete {{collection}} "{{slug}}""
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+# Optional: enable editorial workflow for draft → review → publish
+# Uncomment the line below to use it:
+# publish_mode: editorial_workflow
+
+# Where uploaded images/media go
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Slug sanitization
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# ─── Collections ──────────────────────────────────────────────
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "content/pages" # This matches the folder you created
+
+  # ═══════════════════════════════════════════════════════════
+  # CLASS 12 — NEPALI CHAPTERS
+  # ═══════════════════════════════════════════════════════════
+  - name: "c12-nepali"
+    label: "📕 Class 12 — Nepali"
+    label_singular: "Nepali Chapter"
+    folder: "content/chapters/class-12/nepali"
     create: true
+    slug: "{{slug}}"
+    summary: "Ch {{fields.chapter_number}} — {{title}}"
+    sortable_fields: ["chapter_number", "title"]
+    view_groups:
+      - label: "Genre"
+        field: genre
+
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Chapter Title"
+        name: "title"
+        widget: "string"
+        hint: "e.g. आमाको सपना"
+
+      - label: "Chapter Number"
+        name: "chapter_number"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        required: false
+        hint: "e.g. लक्ष्मीप्रसाद देवकोटा"
+
+      - label: "Genre"
+        name: "genre"
+        widget: "select"
+        options: ["कविता", "कथा", "निबन्ध", "नाटक", "पत्र", "जीवनी", "एकाङ्की", "व्याकरण"]
+        default: "कथा"
+
+      - label: "Grade"
+        name: "grade"
+        widget: "hidden"
+        default: "12"
+
+      - label: "Subject"
+        name: "subject"
+        widget: "hidden"
+        default: "nepali"
+
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+        required: false
+        hint: "Brief summary shown in syllabus card (2-3 sentences)"
+
+      - label: "Chapter Content"
+        name: "body"
+        widget: "markdown"
+        buttons:
+          - bold
+          - italic
+          - heading-two
+          - heading-three
+          - quote
+          - bulleted-list
+          - numbered-list
+          - link
+          - image
+
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ═══════════════════════════════════════════════════════════
+  # CLASS 12 — ENGLISH CHAPTERS
+  # ═══════════════════════════════════════════════════════════
+  - name: "c12-english"
+    label: "📗 Class 12 — English"
+    label_singular: "English Chapter"
+    folder: "content/chapters/class-12/english"
+    create: true
+    slug: "{{slug}}"
+    summary: "Unit {{fields.chapter_number}} — {{title}}"
+    sortable_fields: ["chapter_number", "title"]
+    view_groups:
+      - label: "Genre"
+        field: genre
+
+    fields:
+      - label: "Chapter Title"
+        name: "title"
+        widget: "string"
+        hint: "e.g. Sharing Tradition"
+
+      - label: "Unit/Chapter Number"
+        name: "chapter_number"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        required: false
+
+      - label: "Genre"
+        name: "genre"
+        widget: "select"
+        options: ["Short Story", "Poem", "Essay", "One Act Play", "Drama", "Biography", "Letter Writing", "Grammar"]
+        default: "Short Story"
+
+      - label: "Grade"
+        name: "grade"
+        widget: "hidden"
+        default: "12"
+
+      - label: "Subject"
+        name: "subject"
+        widget: "hidden"
+        default: "english"
+
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+        required: false
+
+      - label: "Chapter Content"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ═══════════════════════════════════════════════════════════
+  # CLASS 12 — COMPUTER SCIENCE CHAPTERS
+  # ═══════════════════════════════════════════════════════════
+  - name: "c12-computer"
+    label: "📘 Class 12 — Computer"
+    label_singular: "Computer Chapter"
+    folder: "content/chapters/class-12/computer"
+    create: true
+    slug: "{{slug}}"
+    summary: "Ch {{fields.chapter_number}} — {{title}}"
+    sortable_fields: ["chapter_number", "title"]
+
+    fields:
+      - label: "Chapter Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Chapter Number"
+        name: "chapter_number"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Topic Area"
+        name: "genre"
+        widget: "select"
+        options: ["Database", "Networking", "Web Technology", "Programming", "OOP", "SEE Model Questions"]
+        default: "Programming"
+
+      - label: "Grade"
+        name: "grade"
+        widget: "hidden"
+        default: "12"
+
+      - label: "Subject"
+        name: "subject"
+        widget: "hidden"
+        default: "computer"
+
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+        required: false
+
+      - label: "Chapter Content"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ═══════════════════════════════════════════════════════════
+  # CLASS 11 — NEPALI CHAPTERS
+  # ═══════════════════════════════════════════════════════════
+  - name: "c11-nepali"
+    label: "📕 Class 11 — Nepali"
+    label_singular: "Nepali Chapter"
+    folder: "content/chapters/class-11/nepali"
+    create: true
+    slug: "{{slug}}"
+    summary: "Ch {{fields.chapter_number}} — {{title}}"
+    sortable_fields: ["chapter_number", "title"]
+
+    fields:
+      - label: "Chapter Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Chapter Number"
+        name: "chapter_number"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        required: false
+
+      - label: "Genre"
+        name: "genre"
+        widget: "select"
+        options: ["कविता", "कथा", "निबन्ध", "नाटक", "पत्र", "जीवनी", "एकाङ्की", "व्याकरण"]
+        default: "कथा"
+
+      - label: "Grade"
+        name: "grade"
+        widget: "hidden"
+        default: "11"
+
+      - label: "Subject"
+        name: "subject"
+        widget: "hidden"
+        default: "nepali"
+
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+        required: false
+
+      - label: "Chapter Content"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ═══════════════════════════════════════════════════════════
+  # CLASS 11 — ENGLISH CHAPTERS
+  # ═══════════════════════════════════════════════════════════
+  - name: "c11-english"
+    label: "📗 Class 11 — English"
+    label_singular: "English Chapter"
+    folder: "content/chapters/class-11/english"
+    create: true
+    slug: "{{slug}}"
+    summary: "Unit {{fields.chapter_number}} — {{title}}"
+    sortable_fields: ["chapter_number", "title"]
+
+    fields:
+      - label: "Chapter Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Unit/Chapter Number"
+        name: "chapter_number"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        required: false
+
+      - label: "Genre"
+        name: "genre"
+        widget: "select"
+        options: ["Short Story", "Poem", "Essay", "One Act Play", "Drama", "Biography", "Letter Writing", "Grammar"]
+        default: "Short Story"
+
+      - label: "Grade"
+        name: "grade"
+        widget: "hidden"
+        default: "11"
+
+      - label: "Subject"
+        name: "subject"
+        widget: "hidden"
+        default: "english"
+
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+        required: false
+
+      - label: "Chapter Content"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ═══════════════════════════════════════════════════════════
+  # CLASS 11 — COMPUTER SCIENCE CHAPTERS
+  # ═══════════════════════════════════════════════════════════
+  - name: "c11-computer"
+    label: "📘 Class 11 — Computer"
+    label_singular: "Computer Chapter"
+    folder: "content/chapters/class-11/computer"
+    create: true
+    slug: "{{slug}}"
+    summary: "Ch {{fields.chapter_number}} — {{title}}"
+    sortable_fields: ["chapter_number", "title"]
+
+    fields:
+      - label: "Chapter Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Chapter Number"
+        name: "chapter_number"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Topic Area"
+        name: "genre"
+        widget: "select"
+        options: ["Computer Fundamentals", "Number System", "Logic Gates", "Web Technology", "Programming in C", "MS Office"]
+        default: "Programming in C"
+
+      - label: "Grade"
+        name: "grade"
+        widget: "hidden"
+        default: "11"
+
+      - label: "Subject"
+        name: "subject"
+        widget: "hidden"
+        default: "computer"
+
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+        required: false
+
+      - label: "Chapter Content"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+  # ═══════════════════════════════════════════════════════════
+  # SITE SETTINGS (single file)
+  # ═══════════════════════════════════════════════════════════
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "data/settings.json"
+        fields:
+          - label: "Site Name"
+            name: "siteName"
+            widget: "string"
+            default: "LearnNepal"
+
+          - label: "Site Description"
+            name: "description"
+            widget: "text"
+            default: "Premium NEB Class 11 & 12 Notes"
+
+          - label: "Footer Text"
+            name: "footerText"
+            widget: "text"
+            default: "Empowering NEB students with high-quality, structured, and accessible digital notes."
+
+          - label: "Contact Email"
+            name: "contactEmail"
+            widget: "string"
+            default: "hello@learnnepal.com"
+
+          - label: "YouTube Channel URL"
+            name: "youtubeUrl"
+            widget: "string"
+            default: "https://www.youtube.com/@OfficialLearnNepal"
+
+          - label: "Announcement Banner"
+            name: "announcement"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: false }
+              - { label: "Message", name: "message", widget: "string", required: false }
+              - { label: "Link", name: "link", widget: "string", required: false }

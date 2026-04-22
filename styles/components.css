@@ -636,3 +636,26 @@
     .yt-cta-banner { flex-direction: column; text-align: center; padding: 1.25rem 1.5rem; }
 }
 
+/* --- Form Inputs --- */
+.input-field {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: var(--color-bg-alt);
+    color: var(--color-text-main);
+    transition: all var(--transition-fast);
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+    background: #fff;
+}
+
+.input-field::placeholder {
+    color: var(--color-text-muted);
+}
