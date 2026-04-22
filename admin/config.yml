@@ -8,9 +8,9 @@ backend:
   name: git-gateway
   branch: main
   commit_messages:
-    create: "content: create {{collection}} "{{slug}}""
-    update: "content: update {{collection}} "{{slug}}""
-    delete: "content: delete {{collection}} "{{slug}}""
+    create: 'content: create {{collection}} — {{slug}}'
+    update: 'content: update {{collection}} — {{slug}}'
+    delete: 'content: delete {{collection}} — {{slug}}'
 
 # Optional: enable editorial workflow for draft → review → publish
 # Uncomment the line below to use it:
