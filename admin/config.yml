@@ -12,6 +12,10 @@ backend:
     update: 'content: update {{collection}} — {{slug}}'
     delete: 'content: delete {{collection}} — {{slug}}'
 
+# Local development: uncomment line below + run `npx decap-server`
+# (requires Node.js installed)
+# local_backend: true
+
 # Optional: enable editorial workflow for draft → review → publish
 # Uncomment the line below to use it:
 # publish_mode: editorial_workflow
