@@ -8,9 +8,7 @@
 
     <link rel="stylesheet" href="styles/main.css" />
 
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
 
     <!-- Animated Feature Icons -->
     <style>
@@ -591,7 +589,6 @@
 
     <script src="scripts/app.js"></script>
     <script src="scripts/transitions.js"></script>
-    <script src="scripts/content-loader-v2.js"></script>
 
     <script>
     (function () {
@@ -641,50 +638,13 @@
             });
         });
 
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on('init', function(user) {
-                if (!user) {
-                    window.netlifyIdentity.on('login', function() {
-                        document.location.href = '/admin/';
-                    });
-                }
-            });
+        // Dismiss loader overlay
+        var loader = document.getElementById('loader-overlay');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(function() { loader.style.display = 'none'; }, 500);
         }
-
-        fetch('content/pages/home.md')
-            .then(function(r) { return r.text(); })
-            .then(function(text) {
-                try {
-                    var parts = text.split('---');
-                    var fm = jsyaml.load(parts[1]);
-                    var heading = document.getElementById('home-heading');
-                    var desc    = document.getElementById('home-description');
-                    if (heading && fm.heading) heading.innerHTML = fm.heading;
-                    if (desc    && fm.description) desc.textContent = fm.description;
-                } catch(e) {}
-            })
-            .catch(function() {})
-            .finally(function() {
-                var loader = document.getElementById('loader-overlay');
-                if (loader) {
-                    loader.classList.add('hidden');
-                    setTimeout(function() { loader.style.display = 'none'; }, 500);
-                }
-            });
     })();
-    </script>
-
-    <!-- Netlify Identity redirect (required for Decap CMS login) -->
-    <script>
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', function(user) {
-            if (!user) {
-                window.netlifyIdentity.on('login', function() {
-                    document.location.href = '/admin/';
-                });
-            }
-        });
-    }
     </script>
 </body>
 </html>
