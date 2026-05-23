@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <meta name="description" content="Learn more about LearnNepal, our mission to provide premium educational content for NEB students.">
     
     <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/theme.js"></script>
 </head>
 <body>
 
@@ -16,8 +17,8 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="LearnNepal" style="height: 40px; width: auto;">
-                LearnNepal<span>.</span>
+                <img src="assets/images/logo.png" alt="LearnNepal">
+                LearnNepal<span></span>
             </a>
 
             <button class="mobile-toggle" aria-label="Toggle Navigation">
@@ -45,11 +46,21 @@
                         <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
                         <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
+                        <a href="pages/class-12/question-bank/index.html" class="dropdown-item qb-link" style="border-top:1px solid var(--border);margin-top:0.25rem;padding-top:0.65rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
                     </div>
                 </div>
 
-                <a href="about.html" class="nav-link" style="color: var(--color-accent); font-weight: 600;">About</a>
-                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <a href="about.html" class="nav-link" style="color: var(--accent); font-weight: 600;">About</a>
+                <button class="search-trigger btn-search" aria-label="Search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <span>Search</span>
+                    <kbd>Ctrl K</kbd>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -103,12 +114,12 @@
                             </div>
                         </div>
                     </div>
-                    <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center;">
+                    <div style="background: var(--bg-secondary); border: 1px solid var(--border); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); text-align: center; backdrop-filter: blur(10px);">
                          <div style="display: flex; justify-content: center; margin-bottom: 1rem; color: #FF0000;">
                             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
                          </div>
                          <h3>Join Our Community</h3>
-                         <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">Subscribe for video lessons and updates</p>
+                         <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Subscribe for video lessons and updates</p>
                          <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" class="btn-yt" style="display:block;text-align:center;padding:0.85rem 1.5rem;font-size:1rem;">Subscribe to LearnNepal</a>
                     </div>
                 </div>
@@ -140,8 +151,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="LearnNepal" style="height:32px;width:auto;">
-                        LearnNepal<span>.</span>
+                        <img src="assets/images/logo.png" alt="LearnNepal">
+                        LearnNepal<span></span>
                     </a>
                     <p>Empowering NEB students with high-quality, structured, and accessible digital study notes.</p>
                 </div>
@@ -183,6 +194,7 @@
     </footer>
 
     <script src="scripts/app.js"></script>
+    <script src="scripts/search.js"></script>
     <script src="scripts/transitions.js"></script>
 
     <!-- Reading progress -->

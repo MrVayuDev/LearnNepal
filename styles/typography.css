@@ -1,9 +1,9 @@
 /* ═══════════════════════════════════════════════════════════
-   LearnNepal — Typography System  v2
+   LearnNepal — Typography System v3 "Obsidian Academy"
    ═══════════════════════════════════════════════════════════ */
 
-/* Google Fonts — Inter (UI) + Playfair Display (headings) + Mukta (Devanagari) */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@300;400;500;600;700&family=Mukta:wght@300;400;600;700&display=swap');
+/* Google Fonts — Plus Jakarta Sans (headings) + Inter (body) + Mukta (Devanagari) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Mukta:wght@300;400;600;700&display=swap');
 
 /* ── Local Rozha One (Nepali Display) ─────────────────────── */
 @font-face {
@@ -26,113 +26,81 @@ html {
 body {
     font-family: var(--font-body);
     font-size: 1rem;
-    line-height: var(--line-height-body);
-    color: var(--color-text-main);
-    background-color: var(--color-bg-body);
+    line-height: var(--leading-normal);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-/* Premium subtle grain texture */
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    pointer-events: none;
-    opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    transition: background-color var(--transition), color var(--transition);
 }
 
 /* ── Headings — fluid scale with clamp() ───────────────────── */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--color-primary);
-    line-height: var(--line-height-heading);
+    color: var(--text-primary);
+    line-height: var(--leading-tight);
     margin-top: 0;
-    margin-bottom: var(--spacing-md);
-    font-weight: 700;
-    letter-spacing: -0.01em;
+    margin-bottom: var(--space-md);
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2rem,   5.5vw, 3.5rem);  }
-h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem);  }
-h3 { font-size: clamp(1.3rem, 2.5vw, 1.85rem); }
-h4 { font-size: clamp(1.1rem, 2vw,   1.35rem); }
-h5 { font-size: clamp(0.95rem,1.5vw,  1.1rem); }
-h6 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; }
+h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.8rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.85rem); font-weight: 700; }
+h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 700; }
+h5 { font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-weight: 700; }
+h6 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
 
 /* ── Body copy ─────────────────────────────────────────────── */
 p {
     margin-top: 0;
-    margin-bottom: var(--spacing-lg);
-    color: var(--color-text-muted);
-    line-height: 1.78;
+    margin-bottom: var(--space-lg);
+    color: var(--text-secondary);
+    line-height: 1.75;
 }
 
 /* ── Links ─────────────────────────────────────────────────── */
 a {
-    color: var(--color-primary);
+    color: var(--accent);
     text-decoration: none;
-    transition: color var(--transition-fast);
+    transition: color var(--duration-fast) var(--ease-out);
 }
-a:hover { color: var(--color-accent); }
+a:hover { color: var(--accent-hover); }
 
-/* ── Lead text ─────────────────────────────────────────────── */
-.text-lead {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    font-weight: 400;
-    line-height: 1.8;
-    color: var(--color-text-muted);
-}
-
-/* ── Section labels ────────────────────────────────────────── */
-.section-title {
-    text-align: center;
-    max-width: 680px;
-    margin: 0 auto var(--spacing-xxl);
-}
-
-.section-title h2 { margin-bottom: var(--spacing-xs); }
-
-.section-subtitle {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    padding: 0.28rem 0.8rem;
-    background: var(--color-accent-light);
-    border-radius: var(--radius-full);
-    border: 1px solid var(--color-accent-muted);
-    margin-bottom: var(--spacing-sm);
+/* ── Gradient Text Utility ────────────────────────────────── */
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* ── Inline elements ───────────────────────────────────────── */
-strong, b { font-weight: 700; color: var(--color-text-main); }
+strong, b { font-weight: 700; color: var(--text-primary); }
 em, i     { font-style: italic; }
 
 code, kbd {
     font-family: var(--font-mono);
     font-size: 0.88em;
-    padding: 0.12em 0.4em;
-    background: rgba(15,42,74,0.06);
+    padding: 0.15em 0.45em;
+    background: var(--bg-tertiary);
     border-radius: var(--radius-xs);
-    color: var(--color-primary);
-    border: 1px solid rgba(15,42,74,0.08);
+    color: var(--accent);
+    border: 1px solid var(--border);
 }
 
 pre {
-    background: var(--color-primary);
-    color: #e8eed4;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
     padding: 1.4rem 1.6rem;
     border-radius: var(--radius-md);
+    border: 1px solid var(--border);
     overflow-x: auto;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     line-height: 1.65;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--space-lg);
 }
 
 pre code {
@@ -144,15 +112,14 @@ pre code {
 }
 
 blockquote {
-    border-left: 4px solid var(--color-accent);
-    margin: 2rem 0;
-    padding: 1rem 1.5rem;
-    background: var(--color-accent-light);
+    border-left: 3px solid var(--accent);
+    margin: var(--space-xl) 0;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--accent-muted);
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
     font-style: italic;
-    font-family: var(--font-heading);
-    color: var(--color-primary);
-    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-size: 1.05rem;
 }
 
 blockquote cite {
@@ -160,27 +127,26 @@ blockquote cite {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     font-style: normal;
-    color: var(--color-text-muted);
+    color: var(--text-tertiary);
 }
 
 hr {
     border: none;
-    border-top: 1px solid var(--color-border);
-    margin: var(--spacing-xl) 0;
+    border-top: 1px solid var(--border);
+    margin: var(--space-xl) 0;
 }
 
 /* ── Devanagari / Nepali text ──────────────────────────────── */
 .deva, :lang(ne), [lang="ne"] {
     font-family: var(--font-devanagari);
     font-weight: 400;
-    line-height: 1.85;
+    line-height: var(--leading-relaxed);
 }
 
 h1.deva, h2.deva, h3.deva {
     font-family: 'Rozha One', var(--font-devanagari), serif;
 }
 
-/* Class applied to Nepali chapter pages */
 .nepali-text {
     font-family: var(--font-devanagari);
     line-height: 1.9;
@@ -201,13 +167,7 @@ h1.deva, h2.deva, h3.deva {
 /* ── Lists ─────────────────────────────────────────────────── */
 ul, ol {
     padding-left: 1.4rem;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--space-lg);
 }
 
 li { margin-bottom: 0.35rem; line-height: 1.7; }
-
-/* ── Hero accent em ────────────────────────────────────────── */
-.hero h1 em {
-    font-style: normal;
-    color: var(--color-accent);
-}

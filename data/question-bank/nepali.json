@@ -1,0 +1,175 @@
+{
+  "subject": "Nepali",
+  "subjectNp": "नेपाली",
+  "grade": 12,
+  "lastUpdated": "2082-01-17",
+  "structureType": "section",
+  "sections": [
+    {
+      "sectionId": "A",
+      "sectionName": "पद्य भाग (Verse / Poetry)",
+      "marks": 20,
+      "color": "#e05c8b",
+      "questions": [
+        {
+          "id": "NEP-2081-R-1a",
+          "questionText": "'त्यो' र 'तिमी' भनेका को को हुन्? स्पष्ट पार्नुहोस्।",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "1(क)",
+          "marks": 2,
+          "section": "A",
+          "subCategory": "कविता — आमाको सपना",
+          "literatureWork": "आमाको सपना"
+        },
+        {
+          "id": "NEP-2081-R-3b",
+          "questionText": "आमाको सपना के थियो र त्यो कसरी साकार हुन्छ? कवितामा आधारित भएर लेख्नुहोस्।",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "3(ख)",
+          "marks": 5,
+          "section": "A",
+          "subCategory": "कविता — आमाको सपना",
+          "literatureWork": "आमाको सपना"
+        },
+        {
+          "id": "NEP-2080-R-1a",
+          "questionText": "'आमाको सपना' कविताको मूल भाव लेख्नुहोस्।",
+          "year": 2080,
+          "yearBS": "२०८०",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "1(क)",
+          "marks": 5,
+          "section": "A",
+          "subCategory": "कविता — आमाको सपना",
+          "literatureWork": "आमाको सपना"
+        },
+        {
+          "id": "NEP-2079-R-1a",
+          "questionText": "'आमा' र 'छोरा' कसका प्रतीक हुन्? विवेचना गर्नुहोस्।",
+          "year": 2079,
+          "yearBS": "२०७९",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "1(क)",
+          "marks": 5,
+          "section": "A",
+          "subCategory": "कविता — आमाको सपना",
+          "literatureWork": "आमाको सपना"
+        }
+      ]
+    },
+    {
+      "sectionId": "B",
+      "sectionName": "गद्य भाग (Prose)",
+      "marks": 20,
+      "color": "#5b8cff",
+      "questions": [
+        {
+          "id": "NEP-2081-R-4a",
+          "questionText": "'विरहिणी दमयन्ती' कथाको सारांश लेख्नुहोस्।",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "4(क)",
+          "marks": 5,
+          "section": "B",
+          "subCategory": "कथा — विरहिणी दमयन्ती",
+          "literatureWork": "विरहिणी दमयन्ती"
+        },
+        {
+          "id": "NEP-2080-R-2b",
+          "questionText": "दमयन्तीको चरित्र चित्रण गर्नुहोस्।",
+          "year": 2080,
+          "yearBS": "२०८०",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "2(ख)",
+          "marks": 5,
+          "section": "B",
+          "subCategory": "कथा — विरहिणी दमयन्ती",
+          "literatureWork": "विरहिणी दमयन्ती"
+        },
+        {
+          "id": "NEP-2080-P-2a",
+          "questionText": "कवितामा 'त्यो हिउँभन्दा पनि चिसो छोइनेर आउँछ' भन्नुको तात्पर्य के हो?",
+          "year": 2080,
+          "yearBS": "२०८०",
+          "examType": "partial",
+          "questionType": "short",
+          "questionNo": "2(क)",
+          "marks": 3,
+          "section": "B",
+          "subCategory": "गद्य",
+          "literatureWork": ""
+        }
+      ]
+    },
+    {
+      "sectionId": "C",
+      "sectionName": "व्यावहारिक लेखन (Applied Writing)",
+      "marks": 20,
+      "color": "#22c55e",
+      "questions": [
+        {
+          "id": "NEP-2081-R-7",
+          "questionText": "तलका मध्ये कुनै एक विषयमा व्यावसायिक पत्र लेख्नुहोस्:\n(क) सामान खरिदको लागि अनुरोध पत्र\n(ख) गुनासो पत्र",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "7",
+          "marks": 5,
+          "section": "C",
+          "subCategory": "पत्र लेखन"
+        },
+        {
+          "id": "NEP-2080-R-7",
+          "questionText": "विद्यालयको प्रधानाध्यापकलाई बिदाको लागि निवेदन पत्र लेख्नुहोस्।",
+          "year": 2080,
+          "yearBS": "२०८०",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "7",
+          "marks": 5,
+          "section": "C",
+          "subCategory": "निवेदन पत्र"
+        }
+      ]
+    },
+    {
+      "sectionId": "D",
+      "sectionName": "व्याकरण (Grammar)",
+      "marks": 10,
+      "color": "#f97316",
+      "questions": [
+        {
+          "id": "NEP-2078-R-1b",
+          "questionText": "कवितामा प्रयोग भएका दुईवटा अलंकार उल्लेख गर्नुहोस्।",
+          "year": 2078,
+          "yearBS": "२०७८",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "1(ख)",
+          "marks": 2,
+          "section": "D",
+          "subCategory": "अलंकार"
+        }
+      ]
+    },
+    {
+      "sectionId": "E",
+      "sectionName": "अपठित बोध (Unseen Comprehension)",
+      "marks": 5,
+      "color": "#8b5cf6",
+      "questions": []
+    }
+  ]
+}

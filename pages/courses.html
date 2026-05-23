@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,195 +7,9 @@
     <meta name="description" content="Browse all available NEB courses on LearnNepal. Class 11 and Class 12 — English, Nepali, and Computer Science notes and solutions." />
 
     <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/layout.css" />
-    <link rel="stylesheet" href="../styles/components.css" />
+    <script src="../scripts/theme.js"></script>
 
-    <style>
-      /* ── Course Card ──────────────────────────────────────── */
-      .course-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.5rem;
-          margin-bottom: 2rem;
-      }
-      @media (max-width: 900px) { .course-grid { grid-template-columns: repeat(2,1fr); } }
-      @media (max-width: 580px) { .course-grid { grid-template-columns: 1fr; } }
 
-      .course-card {
-          background: white;
-          border-radius: var(--radius-lg);
-          border: 1.5px solid var(--color-border);
-          overflow: hidden;
-          transition: all var(--transition-normal);
-          text-decoration: none;
-          color: inherit;
-          display: flex;
-          flex-direction: column;
-          position: relative;
-      }
-
-      .course-card::before {
-          content: '';
-          position: absolute;
-          top: 0; left: 0; right: 0;
-          height: 4px;
-          background: var(--grad-gold);
-          opacity: 0;
-          transition: opacity var(--transition-fast);
-      }
-
-      .course-card:hover {
-          transform: translateY(-6px);
-          box-shadow: var(--shadow-xl);
-          border-color: var(--color-accent-muted);
-      }
-      .course-card:hover::before { opacity: 1; }
-
-      /* Card header strip with subject color */
-      .course-card-header {
-          padding: 2rem 1.75rem 1.5rem;
-          position: relative;
-      }
-
-      .course-card-header .grade-chip {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.4rem;
-          padding: 0.25rem 0.7rem;
-          border-radius: var(--radius-full);
-          font-size: 0.7rem;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          margin-bottom: 0.75rem;
-      }
-
-      .course-card-header .grade-chip .dot {
-          width: 7px; height: 7px;
-          border-radius: 50%;
-          display: inline-block;
-      }
-
-      .course-card-header h3 {
-          font-size: 1.4rem;
-          font-weight: 700;
-          color: var(--color-primary);
-          margin-bottom: 0.35rem;
-          line-height: 1.25;
-      }
-
-      .course-card-header p {
-          font-size: 0.88rem;
-          color: var(--color-text-muted);
-          line-height: 1.5;
-          margin: 0;
-      }
-
-      /* Animated icon float in top-right */
-      .course-card-icon {
-          position: absolute;
-          top: 1.5rem; right: 1.5rem;
-          width: 48px; height: 48px;
-          border-radius: var(--radius-md);
-          display: flex; align-items: center; justify-content: center;
-          overflow: hidden;
-          transition: all var(--transition-spring);
-      }
-
-      .course-card:hover .course-card-icon {
-          transform: scale(1.1) rotate(-5deg);
-      }
-
-      /* Subject-specific icon backgrounds */
-      .course-card.subj-english .course-card-icon  { background: #f0f4fe; }
-      .course-card.subj-nepali .course-card-icon   { background: #fef0f4; }
-      .course-card.subj-computer .course-card-icon { background: #f0fdf4; }
-
-      .course-card:hover.subj-english .course-card-icon  { background: #5b8cff; }
-      .course-card:hover.subj-nepali .course-card-icon   { background: #e05c8b; }
-      .course-card:hover.subj-computer .course-card-icon { background: #22c55e; }
-
-      /* Animated mini-icons inside course-card-icon */
-      .ci-bars { position: relative; width: 24px; height: 22px; }
-      .ci-bars span {
-          position: absolute; left: 0; border-radius: 2px; height: 3px;
-          transition: background var(--transition-fast);
-      }
-      .ci-bars span:nth-child(1) { width: 20px; top: 2px;  background: #1a3a9b; }
-      .ci-bars span:nth-child(2) { width: 14px; top: 9px;  background: #5b8cff; }
-      .ci-bars span:nth-child(3) { width: 18px; top: 16px; background: #1a3a9b; }
-      .course-card:hover .ci-bars span { background: white; }
-
-      .ci-deva { font-family: var(--font-devanagari); font-size: 1.4rem; font-weight: 700; color: #8b1a40; line-height: 1; transition: color var(--transition-fast); }
-      .course-card:hover .ci-deva { color: white; }
-
-      .ci-code { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: #15612d; line-height: 1; transition: color var(--transition-fast); }
-      .course-card:hover .ci-code { color: white; }
-
-      /* Card footer */
-      .course-card-footer {
-          padding: 1rem 1.75rem 1.5rem;
-          border-top: 1px solid var(--color-border);
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-top: auto;
-      }
-
-      .course-card-footer .chapters-count {
-          font-size: 0.8rem;
-          color: var(--color-text-muted);
-          font-weight: 500;
-      }
-
-      .course-card-footer .go-arrow {
-          width: 32px; height: 32px;
-          border-radius: 50%;
-          background: var(--color-accent-light);
-          display: flex; align-items: center; justify-content: center;
-          font-size: 0.9rem; color: var(--color-accent);
-          transition: all var(--transition-fast);
-      }
-
-      .course-card:hover .go-arrow {
-          background: var(--color-accent);
-          color: white;
-          transform: translateX(3px);
-      }
-
-      /* Tab pills */
-      .tab-bar {
-          display: flex;
-          justify-content: center;
-          gap: 0.5rem;
-          margin-bottom: 2.5rem;
-          flex-wrap: wrap;
-      }
-
-      .tab-pill {
-          padding: 0.5rem 1.2rem;
-          border-radius: var(--radius-full);
-          font-size: 0.85rem;
-          font-weight: 600;
-          border: 1.5px solid var(--color-border);
-          background: transparent;
-          color: var(--color-text-muted);
-          cursor: pointer;
-          transition: all var(--transition-fast);
-          text-decoration: none;
-      }
-
-      .tab-pill:hover {
-          border-color: var(--color-accent);
-          color: var(--color-primary);
-      }
-
-      .tab-pill.active {
-          background: var(--color-primary);
-          border-color: var(--color-primary);
-          color: white;
-      }
-    </style>
 </head>
 <body>
 
@@ -205,8 +19,8 @@
     <header class="header">
         <div class="container header-container">
             <a href="../index.html" class="logo">
-                <img src="../assets/images/logo.png" alt="LearnNepal" style="height:40px;width:auto;">
-                LearnNepal<span>.</span>
+                <img src="../assets/images/logo.png" alt="LearnNepal">
+                LearnNepal<span></span>
             </a>
 
             <button class="mobile-toggle" aria-label="Toggle Navigation">
@@ -234,11 +48,21 @@
                         <a href="class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
                         <a href="class-12/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
+                        <a href="class-12/question-bank/index.html" class="dropdown-item qb-link" style="border-top:1px solid var(--border);margin-top:0.25rem;padding-top:0.65rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
                     </div>
                 </div>
 
                 <a href="../about.html" class="nav-link">About</a>
-                <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+                <button class="search-trigger btn-search" aria-label="Search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <span>Search</span>
+                    <kbd>Ctrl K</kbd>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <a href="../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -327,7 +151,7 @@
                             <p>Comprehensive guide with summaries, exercises, and grammar for NEB Class 12 English.</p>
                         </div>
                         <div class="course-card-footer">
-                            <span class="chapters-count">Coming Soon</span>
+                            <span class="chapters-count">Complete Syllabus</span>
                             <span class="go-arrow">&rarr;</span>
                         </div>
                     </a>
@@ -363,7 +187,7 @@
                             <p>Foundation-level English notes with summaries, grammar lessons, and exercise answers.</p>
                         </div>
                         <div class="course-card-footer">
-                            <span class="chapters-count">Coming Soon</span>
+                            <span class="chapters-count">Complete Syllabus</span>
                             <span class="go-arrow">&rarr;</span>
                         </div>
                     </a>
@@ -381,7 +205,7 @@
                             <p>Class 11 Nepali notes with detailed vocabulary,  summaries, and textbook solutions.</p>
                         </div>
                         <div class="course-card-footer">
-                            <span class="chapters-count">Coming Soon</span>
+                            <span class="chapters-count">Complete Syllabus</span>
                             <span class="go-arrow">&rarr;</span>
                         </div>
                     </a>
@@ -400,6 +224,24 @@
                         </div>
                         <div class="course-card-footer">
                             <span class="chapters-count">10 Chapters</span>
+                            <span class="go-arrow">&rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Question Bank -->
+                    <a href="class-12/question-bank/index.html" class="course-card subj-nepali" data-grade="12" data-subject="qbank" style="border-image:var(--grad-gold) 1;border-top:3px solid;">
+                        <div class="course-card-header">
+                            <div class="grade-chip" style="background:rgba(197,160,89,0.15);color:#7a5820;">
+                                <span class="dot" style="background:var(--color-accent);"></span> Class 12
+                            </div>
+                            <div class="course-card-icon" style="background:rgba(197,160,89,0.1);">
+                                <svg width="20" height="20" fill="none" stroke="var(--subject-qbank)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>
+                            </div>
+                            <h3 style="color:var(--color-accent);">Question Bank</h3>
+                            <p>Year-wise past exam questions with MCQ, Short &amp; Long answer filters, formulae, key points, and exam-pattern ordering.</p>
+                        </div>
+                        <div class="course-card-footer">
+                            <span class="chapters-count">3 Subjects · 300+ Qs</span>
                             <span class="go-arrow">&rarr;</span>
                         </div>
                     </a>
@@ -430,7 +272,7 @@
                 <div class="footer-brand">
                     <a href="../index.html" class="logo">
                         <img src="../assets/images/logo.png" alt="LearnNepal" style="height:32px;width:auto;">
-                        LearnNepal<span>.</span>
+                        LearnNepal<span></span>
                     </a>
                     <p>Empowering NEB students with high-quality, structured, and accessible digital study notes.</p>
                 </div>
@@ -471,6 +313,7 @@
     </footer>
 
     <script src="../scripts/app.js"></script>
+    <script src="../scripts/search.js"></script>
     <script src="../scripts/transitions.js"></script>
 
     <!-- Tab filter + reading progress -->

@@ -1,0 +1,180 @@
+{
+  "subject": "Computer Science",
+  "grade": 12,
+  "lastUpdated": "2083-01-17",
+  "structureType": "chapter",
+  "toc": [
+    { "id": "CS-CH1-1", "qno": "Ch.1", "title": "Database Management System (DBMS)", "keywords": "Normalization, DDL, DML, SQL, Primary Key" },
+    { "id": "CS-CH2-1", "qno": "Ch.2", "title": "Network & Data Communication", "keywords": "Topologies, Client-Server, Peer-to-Peer, OSI Model" },
+    { "id": "CS-CH3-1", "qno": "Ch.3", "title": "Web Technology II", "keywords": "CSS, JavaScript, PHP, client-side, server-side" },
+    { "id": "CS-CH4-1", "qno": "Ch.4", "title": "Programming in C", "keywords": "Structures, File Handling, Recursion, Pointers" },
+    { "id": "CS-CH5-1", "qno": "Ch.5", "title": "OOP Concepts", "keywords": "Classes, Objects, Inheritance, Polymorphism" },
+    { "id": "CS-CH6-1", "qno": "Ch.6", "title": "Software Process Model", "keywords": "SDLC, Waterfall, Agile, Spiral Model" },
+    { "id": "CS-CH7-1", "qno": "Ch.7", "title": "Recent Trends in ICT", "keywords": "Cloud Computing, AI, IoT, Big Data" }
+  ],
+  "chapters": [
+    {
+      "chapterId": "1",
+      "chapterName": "Database Management System (DBMS)",
+      "questions": [
+        {
+          "id": "CS-2081-R-1A",
+          "questionText": "Define normalization. Explain 1NF, 2NF, and 3NF with a suitable example.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "1",
+          "marks": 8,
+          "answer": "<p><strong>Normalization</strong> is a systematic database design process used to organize tables and minimize data redundancy (duplication) and dependency anomalies (insertion, deletion, and update anomalies).</p><p><strong>1. First Normal Form (1NF):</strong> A table is in 1NF if all attributes contain only atomic (indivisible) values. There must be no repeating groups or multi-valued fields.</p><p><strong>2. Second Normal Form (2NF):</strong> A table is in 2NF if it is in 1NF and all non-key attributes are fully functionally dependent on the primary key (no partial dependency, where a non-key attribute depends on only a part of a composite primary key).</p><p><strong>3. Third Normal Form (3NF):</strong> A table is in 3NF if it is in 2NF and there are no transitive dependencies (no non-key attribute depends on another non-key attribute; non-key fields must depend only on the primary key).</p><p><strong>Example:</strong> Let's take an unnormalized table of student courses:<br><code>StudentID | CourseID | CourseName | TeacherName | TeacherRoom</code><br>If CourseID and StudentID are primary keys, and TeacherRoom depends on TeacherName (transitive dependency), separating them into three tables (<code>Students</code>, <code>Courses</code>, and <code>Teachers</code>) satisfies 3NF.</p>"
+        },
+        {
+          "id": "CS-2081-R-1B",
+          "questionText": "What is the difference between DDL and DML in SQL? Give examples of each.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "2",
+          "marks": 5,
+          "answer": "<p><strong>Data Definition Language (DDL)</strong> and <strong>Data Manipulation Language (DML)</strong> are the two primary subsets of SQL commands:</p><ul><li><strong>DDL (Data Definition Language):</strong> Used to define and modify the database structure (schema). These commands are auto-committed and cannot be rolled back. Examples: <code>CREATE</code> (to create tables/databases), <code>ALTER</code> (to modify structure), <code>DROP</code> (to delete structures).</li><li><strong>DML (Data Manipulation Language):</strong> Used to manipulate the data stored inside the database tables. These commands are not auto-committed and can be rolled back. Examples: <code>INSERT</code> (to add records), <code>UPDATE</code> (to modify existing records), <code>DELETE</code> (to remove records).</li></ul>"
+        },
+        {
+          "id": "CS-2080-R-1M",
+          "questionText": "Which of the following is a DDL command?\na. SELECT\nb. CREATE\nc. INSERT\nd. UPDATE",
+          "year": 2080,
+          "yearBS": "२०८०",
+          "examType": "regular",
+          "questionType": "mcq",
+          "questionNo": "1",
+          "marks": 1,
+          "answer": "Answer: <strong>b. CREATE</strong><br><small>Explanation: CREATE is a DDL command because it defines database structures (tables, indexes, views), while SELECT is DQL, and INSERT/UPDATE are DML commands.</small>"
+        }
+      ]
+    },
+    {
+      "chapterId": "2",
+      "chapterName": "Network & Data Communication",
+      "questions": [
+        {
+          "id": "CS-2081-R-2A",
+          "questionText": "Explain Bus, Star, and Ring topologies with their respective advantages and disadvantages.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "3",
+          "marks": 8,
+          "answer": "<p><strong>Network Topology</strong> is the structural arrangement of cables, computers, and other devices on a network.</p><p><strong>1. Bus Topology:</strong> All devices are connected to a single central cable called the backbone.</p><ul><li><em>Advantage:</em> Easy to set up, cheap, and requires less cabling.</li><li><em>Disadvantage:</em> If the backbone cable breaks, the entire network fails.</li></ul><p><strong>2. Star Topology:</strong> All devices are connected directly to a central hub, switch, or router.</p><ul><li><em>Advantage:</em> Extremely reliable; if one cable fails, only that device is disconnected.</li><li><em>Disadvantage:</em> Expensive due to cabling, and if the central hub fails, the whole network goes down.</li></ul><p><strong>3. Ring Topology:</strong> Devices are connected in a circular loop, with data traveling in one direction.</p><ul><li><em>Advantage:</em> Easy to troubleshoot, and no collision since data flows sequentially.</li><li><em>Disadvantage:</em> Failure of a single workstation halts the entire ring network.</li></ul>"
+        },
+        {
+          "id": "CS-2080-R-2B",
+          "questionText": "Differentiate between Client-Server and Peer-to-Peer network architectures.",
+          "year": 2080,
+          "yearBS": "२०८०",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "4",
+          "marks": 5,
+          "answer": "<p><strong>Client-Server Architecture:</strong></p><ul><li>Features a dedicated, centralized server that manages resources and handles requests from client computers.</li><li>Offers high security, centralized backups, and excellent scalability, but is expensive and has a single point of failure (the server).</li></ul><p><strong>Peer-to-Peer (P2P) Architecture:</strong></p><ul><li>All computers (peers) have equal status and share resources directly with each other without a central server.</li><li>Very cheap, easy to set up, and highly resilient (no single point of failure), but suffers from poor centralized security and complex backups.</li></ul>"
+        }
+      ]
+    },
+    {
+      "chapterId": "3",
+      "chapterName": "Web Technology II",
+      "questions": [
+        {
+          "id": "CS-2081-R-3A",
+          "questionText": "Explain the difference between client-side scripting and server-side scripting.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "5",
+          "marks": 5,
+          "answer": "<p><strong>Client-Side Scripting:</strong> Scripts are executed directly on the user's web browser. It is used for UI/UX interactions, validation, and micro-animations. Example technologies: <em>HTML, CSS, JavaScript</em>.</p><p><strong>Server-Side Scripting:</strong> Scripts are executed on the web server, which processes data, interacts with databases, and returns plain HTML to the browser. It handles login verification, database operations, and user records. Example technologies: <em>PHP, Node.js, Python, ASP.NET</em>.</p>"
+        }
+      ]
+    },
+    {
+      "chapterId": "4",
+      "chapterName": "Programming in C",
+      "questions": [
+        {
+          "id": "CS-2081-R-4A",
+          "questionText": "Write a program in C to create a structure named Student with members roll, name, and marks. Read details of 10 students and write them to a binary file named student.bin.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "long",
+          "questionNo": "6",
+          "marks": 8,
+          "answer": "<pre style='background:var(--bg-primary); padding:1rem; border-radius:8px; overflow-x:auto; border:1px solid var(--border); color:#a78bfa;'><code style='font-family:monospace;'>#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n\nstruct Student {\n    int roll;\n    char name[50];\n    float marks;\n};\n\nint main() {\n    struct Student s[10];\n    FILE *fp = fopen(\"student.bin\", \"wb\");\n    if (fp == NULL) {\n        printf(\"Error opening file!\\n\");\n        return 1;\n    }\n\n    printf(\"Enter details for 10 students:\\n\");\n    for (int i = 0; i &lt; 10; i++) {\n        printf(\"Student %d Roll: \", i+1);\n        scanf(\"%d\", &s[i].roll);\n        printf(\"Name: \");\n        scanf(\"%s\", s[i].name);\n        printf(\"Marks: \");\n        scanf(\"%f\", &s[i].marks);\n    }\n\n    fwrite(s, sizeof(struct Student), 10, fp);\n    fclose(fp);\n    printf(\"Data written to student.bin successfully!\\n\");\n    return 0;\n}</code></pre>"
+        },
+        {
+          "id": "CS-2080-R-4B",
+          "questionText": "Write a C program to find the factorial of a number using a recursive function.",
+          "year": 2080,
+          "yearBS": "२०८०",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "7",
+          "marks": 5,
+          "answer": "<pre style='background:var(--bg-primary); padding:1rem; border-radius:8px; overflow-x:auto; border:1px solid var(--border); color:#a78bfa;'><code style='font-family:monospace;'>#include &lt;stdio.h&gt;\n\nlong int factorial(int n) {\n    if (n &lt;= 1)\n        return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int num;\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &num);\n    if (num &lt; 0) {\n        printf(\"Factorial of a negative number is undefined.\\n\");\n    } else {\n        printf(\"Factorial of %d = %ld\\n\", num, factorial(num));\n    }\n    return 0;\n}</code></pre>"
+        }
+      ]
+    },
+    {
+      "chapterId": "5",
+      "chapterName": "OOP Concepts",
+      "questions": [
+        {
+          "id": "CS-2081-R-5A",
+          "questionText": "Explain the four pillars of Object-Oriented Programming (OOP) with real-world analogies.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "8",
+          "marks": 5,
+          "answer": "<p>The four primary pillars of OOP are:</p><ol><li><strong>Encapsulation:</strong> Wrapping variables and code into a single unit (class) to protect it from outside interference. <em>Analogy:</em> A capsule enclosing medicinal ingredients.</li><li><strong>Inheritance:</strong> Allowing a new class (child) to inherit properties and behaviors of an existing class (parent). <em>Analogy:</em> A child inheriting physical traits and property from their parents.</li><li><strong>Polymorphism:</strong> The ability of a single interface or function to take on multiple forms depending on execution. <em>Analogy:</em> A person acting as a customer, employee, or spouse in different settings.</li><li><strong>Abstraction:</strong> Hiding internal complexities and showing only the essential features of an object. <em>Analogy:</em> Driving a car using only the accelerator and steering wheel, without knowing how the internal combustion engine works.</li></ol>"
+        }
+      ]
+    },
+    {
+      "chapterId": "6",
+      "chapterName": "Software Process Model",
+      "questions": [
+        {
+          "id": "CS-2081-R-6A",
+          "questionText": "What are the phases of the Software Development Life Cycle (SDLC)? Explain briefly.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "9",
+          "marks": 5,
+          "answer": "<p>The <strong>Software Development Life Cycle (SDLC)</strong> consists of the following standard phases:</p><ol><li><strong>Requirement Analysis & Planning:</strong> Gathering client feedback and outlining scope, timelines, and budgets.</li><li><strong>Defining Requirements:</strong> Creating the Software Requirement Specification (SRS) document defining all software features.</li><li><strong>System Design:</strong> Architectural modeling, UI/UX framing, and database schema creation.</li><li><strong>Implementation (Coding):</strong> The actual code production by software engineering teams.</li><li><strong>Testing:</strong> Verifying code against anomalies, bugs, security leaks, and client specifications.</li><li><strong>Deployment & Maintenance:</strong> Launching the software in production and updating it to solve bugs and client requests.</li></ol>"
+        }
+      ]
+    },
+    {
+      "chapterId": "7",
+      "chapterName": "Recent Trends in ICT",
+      "questions": [
+        {
+          "id": "CS-2081-R-7A",
+          "questionText": "What is Cloud Computing? State its benefits and security concerns in modern times.",
+          "year": 2081,
+          "yearBS": "२०८१",
+          "examType": "regular",
+          "questionType": "short",
+          "questionNo": "10",
+          "marks": 5,
+          "answer": "<p><strong>Cloud Computing</strong> is the on-demand delivery of computing services—including servers, storage, databases, networking, software, and analytics—over the internet (\"the cloud\") on a pay-as-you-go pricing model.</p><p><strong>Benefits:</strong></p><ul><li><em>Cost Efficiency:</em> Eliminates the capital expense of buying hardware and setting up physical data centers.</li><li><em>Scalability:</em> Resources can be dynamically scaled up or down instantly based on server loads.</li><li><em>Global Reach:</em> Deploy applications worldwide with minimal latency in a single click.</li></ul><p><strong>Security Concerns:</strong></p><ul><li>Data breach risks, shared vulnerability risks in public cloud networks, lack of direct server control, and strict compliance issues with localized data laws.</li></ul>"
+        }
+      ]
+    }
+  ]
+}

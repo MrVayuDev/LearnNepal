@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="np">
 <head>
     <meta charset="UTF-8">
@@ -14,16 +14,34 @@
         .match-table td { padding: 1rem 1.25rem; border-bottom: 1px solid var(--color-border); background: #fff; transition: background var(--transition-fast); }
         .match-table tr:hover td { background-color: var(--color-bg-body); }
         .match-table tr:last-child td { border-bottom: none; }
-        .question-box { background: #fff; padding: 1.75rem; border-radius: var(--radius-md); margin-bottom: 2rem; border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); box-shadow: var(--shadow-sm); transition: all var(--transition-normal); }
-        .question-box:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-        .question-box p { margin-bottom: 0.75rem; }
-        .question-box p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
-        .q-tag { display: inline-block; font-weight: 700; color: var(--color-primary); margin-right: 0.5rem; background: rgba(15, 42, 74, 0.05); padding: 0.15rem 0.6rem; border-radius: var(--radius-sm); font-size: 0.9em; }
+        .question-box { margin-bottom: 2rem; }
+        .question-box p { margin-bottom: 0.75rem; color: var(--color-text); line-height: 1.8; }
+        .question-box p:last-child { margin-bottom: 0; }
+        .q-tag { display: inline-block; font-weight: 700; color: var(--color-primary); margin-right: 0.5rem; font-size: 1.05em; }
         dt { font-weight: 700; margin-top: 1.5rem; color: var(--color-primary); display: inline-block; border-bottom: 2px solid rgba(197, 160, 89, 0.3); }
         dd { margin-left: 1rem; margin-bottom: 1rem; margin-top: 0.5rem; color: var(--color-text-muted); position: relative; }
         dd::before { content: "•"; color: var(--color-accent); position: absolute; left: -1rem; }
+        
+        /* Author Profile Box */
+        .author-profile-box { float: right; margin: 0 0 1rem 1.5rem; padding: 1rem; background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-sm); width: 140px; cursor: pointer; transition: transform var(--transition-fast), box-shadow var(--transition-fast); }
+        .author-profile-box:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-primary); }
+        .author-profile-img { width: 100px; height: 100px; border-radius: var(--radius-sm); object-fit: cover; margin-bottom: 0.75rem; border: 2px solid rgba(15, 42, 74, 0.1); }
+        .author-profile-name { font-weight: 700; color: var(--color-primary); font-size: 0.95rem; line-height: 1.2; font-family: 'Mukta', sans-serif; }
+        
+        /* Author Modal */
+        .author-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 42, 74, 0.6); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .author-modal-overlay.active { opacity: 1; visibility: visible; }
+        .author-modal-content { background: #fff; padding: 2.5rem; border-radius: var(--radius-lg); width: 90%; max-width: 450px; position: relative; transform: translateY(20px) scale(0.95); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: var(--shadow-lg); text-align: center; }
+        .author-modal-overlay.active .author-modal-content { transform: translateY(0) scale(1); }
+        .author-modal-close { position: absolute; top: 1rem; right: 1.25rem; background: none; border: none; font-size: 1.75rem; cursor: pointer; color: var(--color-text-muted); transition: color var(--transition-fast); line-height: 1; }
+        .author-modal-close:hover { color: var(--color-primary); }
+        .modal-author-image { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; display: block; border: 4px solid var(--color-accent); box-shadow: var(--shadow-md); }
+        .modal-author-title { font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem; font-family: 'Mukta', sans-serif; font-weight: 700; }
+        .modal-author-lifespan { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1rem; font-family: 'Mukta', sans-serif; }
+        .modal-author-desc { color: var(--color-text); line-height: 1.7; font-family: 'Mukta', sans-serif; }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="../../../scripts/theme.js"></script>
 </head>
 <body>
 
@@ -60,6 +78,7 @@
                         <a href="../../class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
                         <a href="../../class-12/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="../../class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
+                        <a href="../../class-12/question-bank/index.html" class="dropdown-item qb-link" style="border-top:1px solid var(--border);margin-top:0.25rem;padding-top:0.65rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
                     </div>
                 </div>
 
@@ -129,6 +148,50 @@
                 </div>
 
                 <article class="content-block">
+
+                    <div class="author-profile-box" onclick="openAuthorModal()">
+                        <img src="../../../assets/images/author_gopal.png" alt="Gopal Prasad Rimal" class="author-profile-img">
+                        <div class="author-profile-name">Gopal Prasad<br>Rimal</div>
+                    </div>
+
+                    <h2 id="explanation">कविताको व्याख्या (Poem Explanation)</h2>
+
+                    <div class="question-box" style="border-left-color: var(--color-primary);">
+                        <p><strong>कवि परिचय:</strong></p>
+                        <p>'आमाको सपना' कविता साहित्यकार गोपालप्रसाद रिमालद्वारा लिखित एक सुन्दर रचना हो । गोपालप्रसाद रिमाल (वि.सं. १९७५-२०३०) नेपाली साहित्य आकाशका एक उज्ज्वल नक्षत्र हुन् । उनी प्रगतिवादी कविका रूपमा परिचित छन् । रिमाललाई क्रान्तिकारी साहित्यकारका रूपमा पनि चिन्न सकिन्छ । उनका रचनामा नेपाली माटो र नेपाली जातिको सुगन्धलाई अनुभव गर्न सकिन्छ । रिमाल कविताका साथै नाटक लेखन कार्यमा पनि उत्तिकै सफल देखिन्छन् । 'मसान' तथा 'यो प्रेम' नाटकलाई यसको जिउँदोजाग्दो उदाहरण मान्न सकिन्छ ।</p>
+                        <p>प्रस्तुत 'आमाको सपना' ले प्रजातन्त्रको आगमन निश्चित छ भन्ने मनसाय व्यक्त गरेको छ। यस अर्थमा यो कविता २००७ सालको क्रान्तिसँग सम्बन्धित देखिन्छ ।</p>
+                    </div>
+
+                    <div class="question-box">
+                        <p><strong>कविताको सारांश:</strong></p>
+                        <p>प्रस्तुत कविता आमा-छोराको संवादमा आधारित रहेको छ । कवितामा प्रस्तुत भएकी आमाद्वारा कविको भावनालाई पस्किएको पाइन्छ। यहाँ "आमा, त्यो आउँछ र ?" भनेर प्रश्न गर्ने छोराले प्रजातन्त्रप्रेमी नागरिकको प्रतिनिधित्व गरेको छ । त्यसैगरी उत्तर दिने आमाले सम्पूर्ण राष्ट्रको प्रतिनिधित्व गरेकी छन् । यिनलाई हामी 'नेपाल आमा' भनेर पनि चिन्न सक्छौं ।</p>
+                        <p>२००७ साल फागुन ७ गतेभन्दा अगाडि देशमा निरङ्कुश राणाशासनको दबदबा रहेको थियो । त्यसताका नेपाली जनतालाई कुनै किसिमको मौलिक हक र मानव अधिकारको स्वतन्त्रता थिएन । देशको कानुन राणाशासकको मुखमा सीमित रहेको थियो । नेपाली जनताहरू सम्पूर्ण रूपमा अधिकारविहीन थिए । २००७ साल कात्तिक २१ गतेदेखि राणाशासनका विरुद्ध सशस्त्र क्रान्ति सुरु भयो । क्रान्तिकारी युवाहरू शीत जस्तै टल्कने खुकुरी कम्मरमा झुन्ड्याएर युद्धमैदानमा होमिए । त्यो क्रान्ति अन्याय, अत्याचार र अधर्मका विरुद्धमा थियो । त्यो क्रान्ति सत्य, न्याय र मानव अधिकारका पक्षमा थियो ।</p>
+                    </div>
+
+                    <div class="question-box">
+                        <p><strong>व्याख्या (भाग १):</strong></p>
+                        <p>यसै सन्दर्भमा नेपाल आमा आफ्ना सन्तानलाई सान्त्वना दिँदै भन्छिन्, "त्यो प्रजातन्त्रको बिहानी सूर्यको न्यायो किरण बनेर आउँछ । अन्धकाररूपी हाम्रो समाजमा उज्यालो छर्दै आउँछ । त्यो जोसिलो प्रजातन्त्र हिउँभन्दा पनि चिसो र आगोभन्दा पनि तातो जोस बोकेर आउँछ ।"</p>
+                    </div>
+
+                    <div class="question-box">
+                        <p><strong>व्याख्या (भाग २):</strong></p>
+                        <p>नेपाल आमाले २००७ सालभन्दा १४ वर्षअगाडि नै प्रजातन्त्र आउने सपना देखेकी थिइन् । शुक्रराज शास्त्री, धर्मभक्त मथेमा, ग‌ङ्गालाल श्रेष्ठ, दशरथ चन्द जस्ता योद्धाले दिएको बलिदानसँगै प्रजातन्त्रको आगमन हुन्छ भन्ने कल्पना सजाएकी थिइन् । तर त्यो क्रान्तिले निरङ्कुश कालरात्रिमा मूर्च्छा परेका जनतालाई जगाउन सकेन । प्रजातन्त्रको मधुर ध्वनिले आफ्ना सन्तानलाई बाँसुरी बनाउन सकेन ।</p>
+                        <p>राणाशासनका विरुद्ध लखन थापाले पहिलो विद्रोह गरेका थिए । लाइब्रेरी पर्व, पचण्ड गोरखा, जयन्तु संस्कृतम् जस्ता आन्दोलनले प्रजातन्त्रको गीत गाएका थिए । तर शिक्षा र चेतनाको अभावमा पिल्सिएका नेपाली जनताले ती प्रजातान्त्रिक गीतमा सङ्गीत भर्न सकेनन् । त्यसैले यहाँ नेपाल आमाले आफ्ना सन्तानलाई प्रजातान्त्रिक गीतमा बाँसुरीको धुन भर्न नसकेको भनी गुनासो गरेकी छन् ।</p>
+                    </div>
+
+                    <div class="question-box">
+                        <p><strong>व्याख्या (भाग ३):</strong></p>
+                        <p>तैपनि नेपाल आमा कति पनि निराश छैनन् । २००७ सालको क्रान्ति सुरु भइसकेको छ, त्यसैले प्रजातन्त्रको सुनौलो बिहानी अवश्य नै उदाउँछ । जसरी रातपछि दिन आउँछ, त्यसरी नै निरङ्कुश शासनको पराकाष्ठा नाघेपछि स्वतन्त्रता छाउँछ ।</p>
+                        <p>यसै सन्दर्भमा नेपाल आमा भन्छिन्, "हे मेरा सन्तान ! अब तिमीले मेरो काखमा घोप्टिएर रुनु पर्दैन । सत्य कुरालाई तिमीले आफै अनुभव गर्ने छौ । त्यसपछि तिमीले सत्य कथा सुन्न कसैको सामु चुम्बकले फलाम तानिएझै तनिनु पर्दैन । जब यो क्रान्ति हाम्रो नजिक आइपुग्छ, त्यसपछि तिमी पनि यही आन्दोलनमा सहभागी बन्ने छौं । मैले युद्धमा नजाऊ भने पनि तिमीले मलाई उल्टै सान्त्वना दिने छौ। त्यसपछि त मैले निरङ्कुश शासनले रोगी बनाइएका सन्तानको कपाल मुसार्नुपर्ने छैन।"</p>
+                    </div>
+
+                    <div class="question-box" style="border-left-color: var(--color-primary);">
+                        <p><strong>निष्कर्ष:</strong></p>
+                        <p>नेपाल आमाको विचारमा प्रजातन्त्रका लागि सुरु भएको क्रान्ति हावाहुरीझै विशाल रूप लिएर आउँछ । त्यसैलाई सम्पूर्ण प्रजातन्त्रप्रेमी सन्तानले पछ्‌याउने छन् । १९९७ सालको सहिद काण्डमै प्रजातन्त्रको चन्द्रमाले चाँदनी पोखेको थियो । त्यसै बेला जडरूपी मूर्ख शासकहरू डगमगाएका थिए । त्यसैले यो २००७ सालको क्रान्तिले प्रजातन्त्रको प्रकाश बोकेर आउँछ । यही क्रान्ति सफल भएपछि मात्र नेपाल आमाको सपना साकार बन्छ ।</p>
+                        <p>'आमाको सपना' कविताको निष्कर्षमा क्रान्ति सफल हुने विश्वास देखिन्छ । नेपाल आमाको आड, भरोसा र विश्वास दरिलो ऊर्जामा परिणत हुन्छ । प्रजातन्त्रको आश मारेका रोगी सन्तानलाई पनि आमाको भरोसाले जगाउँछ । २००७ सालको क्रान्ति सफल भएर प्रजातन्त्रको बिहानी सूर्यका सुनौला किरणझै उदाउँछ । यसरी कविताका प्रत्येक पक्तिले प्रजातन्त्रप्रतिको आशा र विश्वासलाई चन्द्रसूर्यकै उचाइमा पुऱ्याएको देखिन्छ ।</p>
+                    </div>
+
+                    <hr style="margin: 3rem 0;">
 
                     <h2 id="vocab">&#2358;&#2348;&#2381;&#2342;&#2349;&#2339;&#2381;&#2337;&#2366;&#2352; (Vocabulary)</h2>
 
@@ -291,9 +354,38 @@
         </div>
     </footer>
 
+    <!-- Author Modal -->
+    <div class="author-modal-overlay" id="authorModal">
+        <div class="author-modal-content">
+            <button class="author-modal-close" onclick="closeAuthorModal()">&times;</button>
+            <img src="../../../assets/images/author_gopal.png" alt="Gopal Prasad Rimal" class="modal-author-image">
+            <h3 class="modal-author-title">Gopal Prasad Rimal</h3>
+            <div class="modal-author-lifespan">1918 – 1973 (वि.सं. १९७५ - २०३०)</div>
+            <p class="modal-author-desc">
+                गोपालप्रसाद रिमाल नेपाली साहित्यका एक उज्ज्वल नक्षत्र र प्रगतिवादी कवि हुन्। उनी क्रान्तिकारी साहित्यकारका रूपमा परिचित छन्। उनका रचनामा नेपाली माटो र जातिको सुगन्ध पाइन्छ। उनले 'मसान' र 'यो प्रेम' जस्ता सशक्त नाटकहरू पनि लेखेका छन्।
+            </p>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="../../../scripts/app.js"></script>
     <script src="../../../scripts/transitions.js"></script>
+    <script>
+        function openAuthorModal() {
+            document.getElementById('authorModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeAuthorModal() {
+            document.getElementById('authorModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        document.getElementById('authorModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeAuthorModal();
+            }
+        });
+    </script>
 </body>
 </html>
 
