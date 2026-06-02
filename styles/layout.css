@@ -271,7 +271,7 @@ body { padding-top: var(--header-height); }
 
 .docs-content {
   padding: 2.5rem 3rem; max-width: 850px; margin: 0 auto;
-  width: 100%; overflow-wrap: break-word;
+  width: 100%; overflow-wrap: break-word; min-width: 0;
 }
 @media (max-width: 768px) { .docs-content { padding: 1.5rem 1.25rem; } }
 
