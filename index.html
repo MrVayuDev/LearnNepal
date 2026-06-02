@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8" />
@@ -34,35 +34,46 @@
     <div id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page reading progress"></div>
 
     <!-- ═══ HEADER ═══ -->
-    <header class="header" id="site-header">
+        <header class="header" id="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.png" alt="LearnNepal">
                 LearnNepal<span></span>
             </a>
+
             <button class="mobile-toggle" aria-label="Toggle Navigation">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
-            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
-                <a href="index.html" class="nav-link" aria-current="page">Home</a>
+
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="index.html" class="nav-link active">Home</a>
                 <a href="pages/courses.html" class="nav-link">Courses</a>
+
                 <div class="dropdown">
-                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Class 11</a>
-                    <div class="dropdown-menu" role="menu">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Classes</a>
+                    <div class="dropdown-menu" role="menu" style="min-width: 220px;">
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 10</div>
+                        <a href="pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
+
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 11</div>
                         <a href="pages/class-11/english.html" class="dropdown-item">English</a>
                         <a href="pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Class 12</a>
-                    <div class="dropdown-menu" role="menu">
+
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 12</div>
                         <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
                         <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
                         <a href="pages/class-12/question-bank/index.html" class="dropdown-item qb-link" style="border-top:1px solid var(--border);margin-top:0.25rem;padding-top:0.65rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
                     </div>
                 </div>
+
                 <a href="about.html" class="nav-link">About</a>
                 <button class="search-trigger btn-search" aria-label="Search">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -211,6 +222,21 @@
                         <span class="bento-action">Explore Class 11 &rarr;</span>
                     </a>
 
+                    <!-- Small: Class 10 -->
+                    <a href="pages/class-10/opt-math/index.html" class="bento-item bento-sm" id="bento-c10">
+                        <div class="bento-glow"></div>
+                        <div class="bento-top">
+                            <span class="bento-grade">10</span>
+                            <span class="badge">Grade X</span>
+                        </div>
+                        <h3>Class 10</h3>
+                        <p>Master key concepts with detailed guides.</p>
+                        <div class="bento-pills">
+                            <span class="bp bp-optmath">Opt. Math</span>
+                        </div>
+                        <span class="bento-action">Explore Class 10 &rarr;</span>
+                    </a>
+
                     <!-- Small: Question Bank -->
                     <a href="pages/class-12/question-bank/index.html" class="bento-item bento-sm" id="bento-qb">
                         <div class="bento-glow"></div>
@@ -229,7 +255,7 @@
                     </a>
 
                     <!-- Wide: YouTube -->
-                    <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" class="bento-item bento-wide" id="bento-yt">
+                    <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" class="bento-item bento-md" id="bento-yt">
                         <div class="bento-glow"></div>
                         <div class="bento-yt-inner">
                             <div class="bento-yt-play">&#9654;</div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -255,7 +255,7 @@
     <div id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page reading progress"></div>
 
     <!-- Header -->
-    <header class="header" id="site-header">
+        <header class="header" id="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.png" alt="LearnNepal">
@@ -268,22 +268,26 @@
                 <span class="bar"></span>
             </button>
 
-            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+            <nav class="nav-menu" aria-label="Main navigation">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="pages/courses.html" class="nav-link">Courses</a>
-                
+
                 <div class="dropdown">
-                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Class 11</a>
-                    <div class="dropdown-menu" role="menu">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Classes</a>
+                    <div class="dropdown-menu" role="menu" style="min-width: 220px;">
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 10</div>
+                        <a href="pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
+
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 11</div>
                         <a href="pages/class-11/english.html" class="dropdown-item">English</a>
                         <a href="pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-                    </div>
-                </div>
 
-                <div class="dropdown">
-                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Class 12</a>
-                    <div class="dropdown-menu" role="menu">
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 12</div>
                         <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
                         <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
@@ -291,7 +295,7 @@
                     </div>
                 </div>
 
-                <a href="about.html" class="nav-link active" aria-current="page">About</a>
+                <a href="about.html" class="nav-link active">About</a>
                 <button class="search-trigger btn-search" aria-label="Search">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                     <span>Search</span>

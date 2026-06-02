@@ -10,6 +10,9 @@
         { name: "About Us", desc: "Our mission, value statement, and story", url: "about.html", cat: "Navigation", icon: "📖" },
         { name: "Contact Us", desc: "Get in touch or subscribe to our channel", url: "contact.html", cat: "Navigation", icon: "✉️" },
         
+        // Grade 10
+        { name: "Class 10 Optional Mathematics", desc: "Functions, Trigonometry, Coordinate Geometry, Vectors, and Matrices solutions", url: "pages/class-10/opt-math/index.html", cat: "Class 10", icon: "📐" },
+
         // Grade 11
         { name: "Class 11 English", desc: "Vocabulary, summaries, and exercise guides", url: "pages/class-11/english.html", cat: "Class 11", icon: "📘" },
         { name: "Class 11 Nepali", desc: " Devangari notes, grammar (ब्याकरण), and stories", url: "pages/class-11/nepali.html", cat: "Class 11", icon: "📕" },
@@ -193,6 +196,8 @@
                 svgMarkup = `<svg width="16" height="16" fill="none" stroke="var(--subject-computer)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>`;
             } else if (item.icon === "📝") {
                 svgMarkup = `<svg width="16" height="16" fill="none" stroke="var(--subject-qbank)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>`;
+            } else if (item.icon === "📐") {
+                svgMarkup = `<svg width="16" height="16" fill="none" stroke="var(--subject-optmath)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 21H3V3L21 21Z"/><path d="M18 18H7V7L18 18Z"/></svg>`;
             } else {
                 // Default Navigation icons
                 svgMarkup = `<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`;

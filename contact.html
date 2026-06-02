@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -283,7 +283,7 @@
     <div id="reading-progress"></div>
 
     <!-- Header -->
-    <header class="header" id="site-header">
+        <header class="header" id="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.png" alt="LearnNepal">
@@ -299,19 +299,23 @@
             <nav class="nav-menu" aria-label="Main navigation">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="pages/courses.html" class="nav-link">Courses</a>
-                
+
                 <div class="dropdown">
-                    <a href="#" class="nav-link">Class 11</a>
-                    <div class="dropdown-menu">
+                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Classes</a>
+                    <div class="dropdown-menu" role="menu" style="min-width: 220px;">
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 10</div>
+                        <a href="pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
+
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 11</div>
                         <a href="pages/class-11/english.html" class="dropdown-item">English</a>
                         <a href="pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-                    </div>
-                </div>
 
-                <div class="dropdown">
-                    <a href="#" class="nav-link">Class 12</a>
-                    <div class="dropdown-menu">
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 12</div>
                         <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
                         <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
@@ -329,7 +333,7 @@
                     <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
                     <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
-                <a href="contact.html" class="btn btn-primary btn-sm active" aria-current="page">Contact Us</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>

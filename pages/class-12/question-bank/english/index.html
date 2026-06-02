@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
 
@@ -45,18 +45,60 @@
 </head>
 <body>
 <div id="reading-progress"></div>
-<header class="header"><div class="container header-container">
-    <a href="../../../../index.html" class="logo"><img src="../../../../assets/images/logo.png" alt="LearnNepal" style="height:40px;width:auto"> LearnNepal<span>.</span></a>
-    <button class="mobile-toggle" aria-label="Toggle Navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-    <nav class="nav-menu">
-        <a href="../../../../index.html" class="nav-link">Home</a>
-        <a href="../../../courses.html" class="nav-link">Courses</a>
-        <div class="dropdown"><a href="#" class="nav-link">Class 11</a><div class="dropdown-menu"><a href="../../../class-11/english.html" class="dropdown-item">English</a><a href="../../../class-11/nepali.html" class="dropdown-item">Nepali</a><a href="../../../class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a></div></div>
-        <div class="dropdown"><a href="#" class="nav-link">Class 12</a><div class="dropdown-menu"><a href="../../../class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a><a href="../../../class-12/nepali.html" class="dropdown-item">Nepali</a><a href="../../../class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a><a href="../index.html" class="dropdown-item" style="border-top:1px solid rgba(255,255,255,.1);margin-top:.25rem;padding-top:.6rem;color:var(--color-accent)"><span class="qi qi-16"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span> Question Bank</a></div></div>
-        <a href="../../../../about.html" class="nav-link">About</a>
-        <a href="../../../../contact.html" class="btn btn-primary">Contact Us</a>
-    </nav>
-</div></header>
+    <header class="header" id="site-header">
+        <div class="container header-container">
+            <a href="../../../../index.html" class="logo">
+                <img src="../../../../assets/images/logo.png" alt="LearnNepal">
+                LearnNepal<span></span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="../../../../index.html" class="nav-link">Home</a>
+                <a href="../../../../pages/courses.html" class="nav-link">Courses</a>
+
+                <div class="dropdown">
+                    <a href="#" class="nav-link active" aria-haspopup="true" aria-expanded="false">Classes</a>
+                    <div class="dropdown-menu" role="menu" style="min-width: 220px;">
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 10</div>
+                        <a href="../../../../pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
+
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 11</div>
+                        <a href="../../../../pages/class-11/english.html" class="dropdown-item">English</a>
+                        <a href="../../../../pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
+                        <a href="../../../../pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
+
+                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+
+                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 12</div>
+                        <a href="../../../../pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
+                        <a href="../../../../pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
+                        <a href="../../../../pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
+                        <a href="../../../../pages/class-12/question-bank/index.html" class="dropdown-item qb-link" style="border-top:1px solid var(--border);margin-top:0.25rem;padding-top:0.65rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
+                    </div>
+                </div>
+
+                <a href="../../../../about.html" class="nav-link">About</a>
+                <button class="search-trigger btn-search" aria-label="Search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <span>Search</span>
+                    <kbd>Ctrl K</kbd>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <a href="../../../../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+            </nav>
+        </div>
+    </header>
 
 <main>
 <section class="qb-hero section" style="padding:3.5rem 0 2rem">
@@ -160,6 +202,7 @@
 </div><div class="footer-bottom"><p>&copy; 2026 LearnNepal. All rights reserved.</p></div></div></footer>
 
 <script src="../../../../scripts/app.js"></script>
+    <script src="../../../../scripts/search.js"></script>
 <script src="../../../../scripts/transitions.js"></script>
 <script src="../../../../scripts/question-bank.js"></script>
 <script>

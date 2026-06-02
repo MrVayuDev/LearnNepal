@@ -33,11 +33,13 @@
   --subject-nepali:     #EC4899;
   --subject-computer:   #10B981;
   --subject-qbank:      #F59E0B;
+  --subject-optmath:    #8B5CF6;
 
   --subject-english-bg:   rgba(59, 130, 246, 0.12);
   --subject-nepali-bg:    rgba(236, 72, 153, 0.12);
   --subject-computer-bg:  rgba(16, 185, 129, 0.12);
   --subject-qbank-bg:     rgba(245, 158, 11, 0.12);
+  --subject-optmath-bg:   rgba(139, 92, 246, 0.12);
 
   /* ─── Shadows ──────────────────────────────────────────── */
   --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.2);

@@ -1,0 +1,527 @@
+/* ═══════════════════════════════════════════════════════════
+   LearnNepal — PDF Viewer Layout
+   Used by pages/class-10/opt-math/viewer.html
+   Built on top of the main site's CSS variables (variables.css)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Viewer overrides for full-height layout ─────────────── */
+body.viewer-mode {
+    overflow: hidden;
+    padding-top: 0; /* Override the main site's body padding for fixed header */
+}
+
+body.viewer-mode .header {
+    position: relative;
+}
+
+/* ── Workspace Container ─────────────────────────────────── */
+.viewer-workspace {
+    display: flex;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Sidebar Toggle Button ───────────────────────────────── */
+.sidebar-toggle-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-toggle-btn:hover {
+    background: var(--accent-muted);
+    border-color: var(--accent-border);
+    color: var(--accent);
+}
+
+.sidebar-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+.viewer-sidebar {
+    width: 320px;
+    min-width: 320px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.4s var(--ease-out), opacity 0.3s var(--ease-out);
+    z-index: 90;
+    overflow: hidden;
+}
+
+.viewer-sidebar.collapsed {
+    margin-left: -320px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header-info h2 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 2px;
+}
+
+.sidebar-header-info p {
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+.sidebar-close-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-tertiary);
+    transition: all var(--duration-fast);
+    background: none;
+    border: 1px solid transparent;
+}
+
+.sidebar-close-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+/* Sidebar Navigation */
+.sidebar-lessons-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 0.75rem;
+}
+
+.sidebar-lessons-nav::-webkit-scrollbar { width: 4px; }
+.sidebar-lessons-nav::-webkit-scrollbar-track { background: transparent; }
+.sidebar-lessons-nav::-webkit-scrollbar-thumb { background: var(--accent-muted); border-radius: var(--radius-full); }
+.sidebar-lessons-nav::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* Chapter accordion */
+.viewer-chapter-group {
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    transition: border-color var(--duration-fast);
+}
+
+.viewer-chapter-group.has-active {
+    border-color: var(--accent-border);
+    background: rgba(99, 102, 241, 0.03);
+}
+
+.viewer-chapter-summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--duration-fast);
+    user-select: none;
+}
+
+.viewer-chapter-summary:hover {
+    background: var(--bg-tertiary);
+}
+
+.viewer-chapter-summary::-webkit-details-marker { display: none; }
+.viewer-chapter-summary::marker { content: ''; }
+
+.viewer-chapter-chevron {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    color: var(--text-tertiary);
+}
+
+.viewer-chapter-group[open] .viewer-chapter-chevron {
+    transform: rotate(180deg);
+}
+
+.viewer-exercise-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    gap: 2px;
+}
+
+.viewer-exercise-btn {
+    text-align: left;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: none;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.viewer-exercise-btn::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--border-strong);
+    flex-shrink: 0;
+    transition: all var(--duration-fast);
+}
+
+.viewer-exercise-btn:hover {
+    color: var(--accent);
+    background: var(--accent-muted);
+    border-color: var(--accent-border);
+}
+
+.viewer-exercise-btn.is-active {
+    color: var(--accent);
+    background: var(--accent-muted);
+    border-color: var(--accent-border);
+    font-weight: 600;
+}
+
+.viewer-exercise-btn.is-active::before {
+    background: var(--accent);
+    box-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* ── Main PDF Stage ──────────────────────────────────────── */
+.viewer-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ribbon showing active exercise title */
+.viewer-title-ribbon {
+    padding: 0.85rem 1.5rem 0.85rem 4.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-secondary);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 52px;
+}
+
+.viewer-title-ribbon h1 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.viewer-title-ribbon p {
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.viewer-sidebar:not(.collapsed) ~ .viewer-main .viewer-title-ribbon {
+    padding-left: 1.5rem;
+}
+
+.viewer-sidebar:not(.collapsed) ~ .viewer-main .sidebar-toggle-btn {
+    display: none;
+}
+
+/* PDF Canvas Container */
+.pdf-stage {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: radial-gradient(ellipse at top center, var(--bg-secondary) 0%, var(--bg-primary) 60%);
+}
+
+.pdf-stage::-webkit-scrollbar { width: 6px; }
+.pdf-stage::-webkit-scrollbar-track { background: var(--bg-secondary); }
+.pdf-stage::-webkit-scrollbar-thumb { background: var(--accent-muted); border-radius: var(--radius-full); }
+.pdf-stage::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* Rendered PDF page canvas */
+.pdf-page-canvas {
+    background: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-sm);
+    max-width: 900px;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
+/* Fallback hero (no exercise selected) */
+.viewer-fallback {
+    text-align: center;
+    margin: auto;
+    max-width: 420px;
+    padding: 3rem 1rem;
+}
+
+.viewer-fallback-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-xl);
+    background: var(--accent-muted);
+    border: 1px solid var(--accent-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { transform: scale(0.97); box-shadow: 0 0 20px var(--accent-glow); }
+    50% { transform: scale(1.03); box-shadow: 0 0 40px var(--accent-glow); }
+}
+
+.viewer-fallback h2 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.viewer-fallback p {
+    font-size: 0.88rem;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+}
+
+/* Loading spinner */
+.viewer-loading {
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    animation: pulse-loader 2s infinite ease-in-out;
+    margin: auto;
+    padding: 3rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.viewer-loading-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--accent-muted);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse-loader { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+/* Error state */
+.viewer-error {
+    text-align: center;
+    margin: auto;
+    padding: 3rem 1rem;
+    max-width: 400px;
+}
+
+.viewer-error h3 {
+    font-family: var(--font-heading);
+    color: #E05252;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.viewer-error p {
+    color: var(--text-tertiary);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+/* ── Zoom Toolbar ────────────────────────────────────────── */
+.zoom-toolbar {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: var(--bg-glass-heavy);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 0.35rem;
+    box-shadow: var(--shadow-lg);
+    z-index: 50;
+}
+
+.zoom-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all var(--duration-fast);
+    background: none;
+    border: none;
+    font-family: inherit;
+}
+
+.zoom-btn:hover {
+    background: var(--accent-muted);
+    color: var(--accent);
+}
+
+.zoom-btn:active {
+    transform: scale(0.92);
+}
+
+.zoom-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.zoom-level {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    min-width: 48px;
+    text-align: center;
+    user-select: none;
+    letter-spacing: 0.02em;
+}
+
+.zoom-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+}
+
+/* ── Mobile Sidebar Overlay ──────────────────────────────── */
+.viewer-sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 85;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.viewer-sidebar-open .viewer-sidebar-overlay {
+    display: block;
+    opacity: 1;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .viewer-sidebar {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        bottom: 0;
+        z-index: 95;
+        box-shadow: var(--shadow-xl);
+        margin-left: 0;
+        transform: translateX(-100%);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .viewer-sidebar.collapsed {
+        margin-left: 0;
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    body.viewer-sidebar-open .viewer-sidebar {
+        transform: translateX(0);
+    }
+
+    .viewer-sidebar:not(.collapsed) ~ .viewer-main .sidebar-toggle-btn {
+        display: flex;
+    }
+
+    .viewer-sidebar:not(.collapsed) ~ .viewer-main .viewer-title-ribbon {
+        padding-left: 4.5rem;
+    }
+
+    .viewer-title-ribbon h1 { font-size: 0.9rem; }
+
+    .pdf-stage { padding: 1rem; gap: 1rem; }
+
+    .zoom-toolbar { bottom: 1rem; }
+}
+
+@media (max-width: 600px) {
+    .viewer-sidebar { width: 100%; min-width: 100%; }
+    .viewer-title-ribbon { padding: 0.75rem 1rem 0.75rem 4rem; }
+}

@@ -146,6 +146,13 @@
   --course-glow: rgba(16, 185, 129, 0.2);
 }
 
+.course-card.subj-optmath {
+  --course-accent: var(--subject-optmath);
+  --course-hover-border: rgba(139, 92, 246, 0.4);
+  --course-glow: rgba(139, 92, 246, 0.2);
+  border-top: 3px solid var(--subject-optmath);
+}
+
 /* Specialized Question Bank Card styling */
 .course-card.subj-qbank {
   --course-accent: var(--subject-qbank);
@@ -241,8 +248,8 @@
   border-radius: var(--radius-full);
   margin: 0 auto var(--space-3xl);
   display: flex;
-  width: max-content;
-  max-width: 100%;
+  width: 100%;
+  max-width: max-content;
   flex-wrap: wrap;
 }
 
