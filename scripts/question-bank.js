@@ -114,7 +114,7 @@ function renderSec(d,el){
       ord.forEach(function(cid){
         if(!g[cid]||!g[cid].length)return;
         var ch=d.chapters.find(function(c){return c.chapterId===cid});if(!ch)return;
-        h+='<div class="qb-sh"><span class="qb-sl" style="background:var(--color-primary,#6366F1)">Ch.'+ch.chapterId+'</span>';
+        h+='<div class="qb-sh"><span class="qb-sl" style="background:var(--accent,#6366F1)">Ch.'+ch.chapterId+'</span>';
         h+='<h2>'+ch.chapterName+'</h2></div>';
         var by={};g[cid].forEach(function(q){if(!by[q.year])by[q.year]=[];by[q.year].push(q)});
         Object.keys(by).sort(function(a,b){return b-a}).forEach(function(yr){

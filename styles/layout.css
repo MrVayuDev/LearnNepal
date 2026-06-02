@@ -49,6 +49,8 @@ body { padding-top: var(--header-height); }
   background: var(--accent-gradient); border-radius: 1px; transition: width var(--transition);
 }
 .nav-link:hover { color: var(--text-primary); }
+.nav-link.active { color: var(--accent) !important; font-weight: 600; }
+.nav-link.active::after { width: 100% !important; }
 @media (min-width: 769px) { .nav-link:hover::after { width: 100%; } }
 
 /* Dropdown */
@@ -83,6 +85,7 @@ body { padding-top: var(--header-height); }
 .bar {
   width: 22px; height: 2px; background-color: var(--text-primary);
   transition: all var(--transition); border-radius: 1px;
+}
 /* Search Trigger Navbar Button */
 .btn-search {
   background: var(--bg-tertiary);
@@ -181,21 +184,6 @@ body { padding-top: var(--header-height); }
 .footer-brand p {
   font-size: 0.88rem; max-width: 300px;
   margin-top: var(--space-sm); color: var(--text-tertiary); line-height: 1.6;
-}
-.footer-heading {
-  font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700;
-  margin-bottom: var(--space-md); color: var(--text-primary);
-  text-transform: uppercase; letter-spacing: 0.08em;
-}
-.footer-links li { margin-bottom: 0.5rem; }
-.footer-links a {
-  font-size: 0.88rem; color: var(--text-tertiary);
-  transition: color var(--transition); text-decoration: none;
-}
-.footer-links a:hover { color: var(--accent); }
-.footer-bottom {
-  border-top: 1px solid var(--border); padding: var(--space-lg) 0;
-  text-align: center; font-size: 0.82rem; color: var(--text-tertiary);
 }
 
 /* ─── Mobile Responsive ──────────────────────────────────── */

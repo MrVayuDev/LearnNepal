@@ -3,21 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | LearnNepal</title>
-    <meta name="description" content="Privacy Policy for LearnNepal. We strive to be transparent about how we collect and use your data.">
+    <title>Privacy Policy | LearnNepal — Your Trust Matters</title>
     
-    <!-- CSS -->
+    <!-- SEO & Open Graph Metadata -->
+    <meta name="description" content="Privacy Policy for LearnNepal. Learn how we respect your privacy, keep our platform ad-free, and safeguard your trust.">
+    <meta property="og:title" content="Privacy Policy | LearnNepal">
+    <meta property="og:description" content="Read our transparent, user-first privacy policy. No trackers, no ad-clutter, just pure learning.">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+    <!-- Fonts preconnect and preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/components.css">
     <script src="scripts/theme.js"></script>
+
+    <!-- Page Specific Premium Styling -->
+    <style>
+        .legal-hero {
+            position: relative;
+            padding: 9.5rem 0 3.5rem;
+            overflow: hidden;
+            background: var(--grad-hero);
+            text-align: center;
+        }
+        .legal-hero .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .legal-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.75rem);
+            line-height: var(--leading-tight);
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .legal-content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-primary);
+        }
+        .legal-content-container h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        .legal-content-container p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-lg);
+        }
+        .legal-content-container a {
+            color: var(--accent);
+            text-decoration: underline;
+            transition: color var(--transition);
+        }
+        .legal-content-container a:hover {
+            color: var(--accent-hover);
+        }
+    </style>
 </head>
 <body>
 
     <div id="reading-progress"></div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.png" alt="LearnNepal">
@@ -30,7 +103,7 @@
                 <span class="bar"></span>
             </button>
 
-            <nav class="nav-menu">
+            <nav class="nav-menu" aria-label="Main navigation">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="pages/courses.html" class="nav-link">Courses</a>
                 
@@ -68,54 +141,60 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <section class="section" style="padding-top: 8rem; padding-bottom: 4rem;">
-            <div class="container">
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <span class="badge">Legal</span>
-                    <h1 style="margin-top: var(--spacing-sm); font-size: 3rem;">Privacy Policy</h1>
-                    <p class="text-lead" style="margin-top: 1.5rem; color: var(--color-text-muted);">
-                        Last Updated: January 2026
-                    </p>
-                </div>
+        <!-- Premium Legal Page Hero -->
+        <section class="legal-hero">
+            <div class="hero-bg">
+                <div class="hero-orb hero-orb-1"></div>
+                <div class="hero-orb hero-orb-2"></div>
+                <div class="hero-orb hero-orb-3"></div>
+                <div class="hero-grid-bg"></div>
+            </div>
+            
+            <div class="container legal-hero-inner">
+                <span class="badge">Legal</span>
+                <h1>Privacy Policy</h1>
+                <p class="text-lead" style="color: var(--text-tertiary); margin-top: 1rem;">
+                    Last Updated: January 2026
+                </p>
             </div>
         </section>
 
-        <section class="section">
+        <!-- Privacy Content Section -->
+        <section class="section bg-alt">
             <div class="container">
-                <div style="max-width: 800px; margin: 0 auto; color: var(--color-text-main);">
+                <div class="legal-content-container">
                     
-                    <h2 style="margin-bottom: 1rem;">1. Introduction</h2>
-                    <p style="margin-bottom: 2rem; line-height: 1.7;">
-                        Welcome to LearnNepal. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you.
+                    <h2>1. Introduction</h2>
+                    <p>
+                        Welcome to LearnNepal. We respect your privacy and are committed to protecting any personal data you share. This privacy policy informs you about how we handle any basic visitor metrics when you access our platform, and details your privacy rights under relevant digital accessibility acts.
                     </p>
 
-                    <h2 style="margin-bottom: 1rem;">2. Information We Collect</h2>
-                    <p style="margin-bottom: 2rem; line-height: 1.7;">
-                        Currently, LearnNepal is a static, informational website. We do not require you to create an account, nor do we collect personal information such as names, email addresses, or phone numbers.
+                    <h2>2. Information We Collect</h2>
+                    <p>
+                        Currently, LearnNepal is a completely static, informational website. We do not require you to create an account, register, or provide personal information such as names, phone numbers, or addresses.
                         <br><br>
-                        However, we may use basic analytics tools to understand how visitors interact with our content (e.g., page views, time spent on site) to improve our educational resources.
+                        However, we may use basic, anonymized web analytics to understand general visitor metrics (e.g., page views, length of visit, device categories) to enhance our educational notes and summaries.
                     </p>
 
-                    <h2 style="margin-bottom: 1rem;">3. Cookies</h2>
-                    <p style="margin-bottom: 2rem; line-height: 1.7;">
-                        We may use cookies to improve your experience. You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly.
+                    <h2>3. Cookies</h2>
+                    <p>
+                        We may use cookies to customize theme preferences (e.g., remembering your Dark Mode selection) and to cache search indexes for Ctrl+K palette search query speed. You can configure your browser to reject all or some browser cookies. Disabling cookies will only prevent theme memory, and will not break notes reading.
                     </p>
 
-                    <h2 style="margin-bottom: 1rem;">4. Third-Party Links</h2>
-                    <p style="margin-bottom: 2rem; line-height: 1.7;">
-                        This website may include links to third-party websites, plug-ins, and applications (such as YouTube for video lessons). Clicking on those links or enabling those connections may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy statements.
+                    <h2>4. Third-Party Links</h2>
+                    <p>
+                        This platform links to external media and assets (e.g., Google Web Fonts, FontAwesome vectors, and YouTube for embedded video tutorials). Clicking on those links or playing embedded videos may allow third parties to compile standard usage telemetry. We do not control these third-party platforms and strongly advise reviewing their respective privacy outlines.
                     </p>
 
-                    <h2 style="margin-bottom: 1rem;">5. Changes to This Policy</h2>
-                    <p style="margin-bottom: 2rem; line-height: 1.7;">
-                        We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.
+                    <h2>5. Changes to This Policy</h2>
+                    <p>
+                        We may update this privacy statement occasionally to match regulatory changes or new educational feature rolls. We will indicate revisions by updating the "Last Updated" timestamp at the top of this page.
                     </p>
 
-                    <h2 style="margin-bottom: 1rem;">Contact Us</h2>
-                    <p style="margin-bottom: 2rem; line-height: 1.7;">
-                        If you have any questions about this Privacy Policy, please contact us via our <a href="contact.html" style="color: var(--color-primary); text-decoration: underline;">Contact Page</a>.
+                    <h2>Contact Us</h2>
+                    <p>
+                        If you have questions regarding this Privacy Policy, or suggestions for improving data transparency on LearnNepal, please reach out via our dedicated <a href="contact.html">Contact Page</a>.
                     </p>
 
                 </div>
@@ -123,19 +202,30 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- ═══ FOOTER — Premium Mega-Footer ═══ -->
+    <footer class="footer mega-footer">
+        <div class="footer-separator" aria-hidden="true"></div>
         <div class="container">
-            <div class="footer-grid">
+            <!-- Top row -->
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="LearnNepal" style="height: 32px; width: auto;"></a>
-                    <p>
-                        Empowering NEB students with high-quality, structured, and accessible digital notes.
-                    </p>
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="LearnNepal">
+                        LearnNepal<span></span>
+                    </a>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes — completely free.</p>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-heading">Class 11</h4>
+                    <h5 class="footer-heading">Class 11</h5>
                     <ul class="footer-links">
                         <li><a href="pages/class-11/english.html">English</a></li>
                         <li><a href="pages/class-11/nepali.html">Nepali</a></li>
@@ -144,28 +234,35 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-heading">Class 12</h4>
+                    <h5 class="footer-heading">Class 12</h5>
                     <ul class="footer-links">
                         <li><a href="pages/class-12/english/c12_english_syllabus.html">English</a></li>
                         <li><a href="pages/class-12/nepali.html">Nepali</a></li>
                         <li><a href="pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
+                        <li><a href="pages/class-12/question-bank/index.html" class="qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-heading">Company</h4>
+                    <h5 class="footer-heading">Resources</h5>
                     <ul class="footer-links">
+                        <li><a href="pages/courses.html">All Courses</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="pages/courses.html">All Courses</a></li>
-                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener">YouTube</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 LearnNepal. All rights reserved.</p>
+                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy</a>
+                    <span>&bull;</span>
+                    <a href="contact.html">Contact</a>
+                    <span>&bull;</span>
+                    <a href="about.html">About</a>
+                </div>
             </div>
         </div>
     </footer>

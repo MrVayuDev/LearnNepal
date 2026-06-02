@@ -4,7 +4,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initStickyHeader();
     initMobileMenu();
     initDropdownsForMobile();
     initSidebarAccordion();
@@ -74,22 +73,6 @@ function initSidebarAccordion() {
     });
 }
 
-function initStickyHeader() {
-    const header = document.querySelector('.header');
-    if (!header) return;
-    
-    /* NOTE: The full scroll logic (adding/removing .scrolled class including
-     * shadow + gold border) is now handled by transitions.js → initHeaderScroll().
-     * This function is kept as a fast fallback in case transitions.js loads late. */
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-}
-
 function initMobileMenu() {
     const toggle = document.querySelector('.mobile-toggle');
     const nav = document.querySelector('.nav-menu');
@@ -104,10 +87,12 @@ function initMobileMenu() {
             bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             bars[1].style.opacity = '0';
             bars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            document.body.style.overflow = 'hidden';
         } else {
             bars[0].style.transform = 'none';
             bars[1].style.opacity = '1';
             bars[2].style.transform = 'none';
+            document.body.style.overflow = '';
         }
     });
 
@@ -118,6 +103,7 @@ function initMobileMenu() {
                  bars[0].style.transform = 'none';
                  bars[1].style.opacity = '1';
                  bars[2].style.transform = 'none';
+                 document.body.style.overflow = '';
              }
         });
     });

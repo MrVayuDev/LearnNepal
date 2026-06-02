@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--color-bg);
+    background-color: var(--bg-primary);
     z-index: 9999;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
 .offline-icon {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: var(--color-text-muted);
+    color: var(--text-tertiary);
     animation: offline-bounce 2s infinite ease-in-out;
 }
 
@@ -38,17 +38,17 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--color-text-main);
+    color: var(--text-primary);
 }
 
 .offline-message {
-    color: var(--color-text-muted);
+    color: var(--text-tertiary);
     margin-bottom: 1.5rem;
 }
 
 .offline-retry-btn {
     padding: 0.75rem 1.5rem;
-    background-color: var(--color-primary);
+    background-color: var(--accent);
     color: white;
     border: none;
     border-radius: var(--radius-sm);
@@ -90,7 +90,7 @@
     left: 50%;
     transform: translateX(-50%);
     border: 4px solid transparent;
-    border-top-color: var(--color-text-muted);
+    border-top-color: var(--text-tertiary);
     border-radius: 50%;
     opacity: 0;
     animation: wifi-signal 2s infinite;
@@ -122,7 +122,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--color-text-muted);
+    background-color: var(--text-tertiary);
 }
 
 @keyframes wifi-signal {

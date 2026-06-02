@@ -269,13 +269,4 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* ─── Staggered Entrance Animations ──────────────────────── */
-.stagger-grid .course-card {
-  opacity: 0;
-  transform: translateY(20px);
-}
 
-.stagger-grid.loaded .course-card {
-  opacity: 1;
-  transform: translateY(0);
-}

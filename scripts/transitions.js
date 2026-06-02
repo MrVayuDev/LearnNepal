@@ -35,9 +35,10 @@ function init() {
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  buildDualCursor();
+
   initHeaderScroll();
   initBackToTop();
+  initBentoGlow();
 
   if (!reducedMotion && typeof gsap !== 'undefined') {
     initSmoothScroll();
@@ -45,65 +46,7 @@ function init() {
   }
 }
 
-/* ════════════════════════════════════════════════════════════
-   DUAL CURSOR  — ring trails, dot snaps
-   ════════════════════════════════════════════════════════════ */
-function buildDualCursor() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  if (typeof gsap === 'undefined') return;
 
-  const ring = document.createElement('div');
-  ring.className = 'ln-cursor-ring';
-  const dot = document.createElement('div');
-  dot.className = 'ln-cursor-dot';
-  document.body.append(ring, dot);
-
-  gsap.set(ring, { xPercent: -50, yPercent: -50 });
-  gsap.set(dot,  { xPercent: -50, yPercent: -50 });
-
-  let mX = window.innerWidth / 2;
-  let mY = window.innerHeight / 2;
-
-  window.addEventListener('mousemove', (e) => {
-    mX = e.clientX;
-    mY = e.clientY;
-    gsap.to(dot,  { x: mX, y: mY, duration: 0.05, ease: 'none' });
-    gsap.to(ring, { x: mX, y: mY, duration: 0.18, ease: 'expo.out' });
-  });
-
-  const HOVER_TARGETS = 'a, button, .btn, .card, .chapter-card, .class-card, .feature-card, .sidebar-link, .nav-link, .subject-pill, .back-to-top, input, textarea, select, label, [role="button"]';
-
-  document.addEventListener('mouseover', (e) => {
-    if (e.target.closest(HOVER_TARGETS)) {
-      ring.classList.add('is-hovering');
-      dot.classList.add('is-hovering');
-    }
-  });
-
-  document.addEventListener('mouseout', (e) => {
-    if (e.target.closest(HOVER_TARGETS)) {
-      ring.classList.remove('is-hovering');
-      dot.classList.remove('is-hovering');
-    }
-  });
-
-  document.addEventListener('mousedown', () => {
-    ring.classList.add('is-clicking');
-    dot.classList.add('is-clicking');
-  });
-
-  document.addEventListener('mouseup', () => {
-    ring.classList.remove('is-clicking');
-    dot.classList.remove('is-clicking');
-  });
-
-  document.addEventListener('mouseleave', () => {
-    gsap.to([ring, dot], { opacity: 0, duration: 0.25 });
-  });
-  document.addEventListener('mouseenter', () => {
-    gsap.to([ring, dot], { opacity: 1, duration: 0.25 });
-  });
-}
 
 /* ════════════════════════════════════════════════════════════
    HEADER SCROLL STATE — shrink + gold border on scroll
@@ -273,5 +216,24 @@ function initScrollReveal() {
         },
       }
     );
+  });
+}
+
+/* ════════════════════════════════════════════════════════════
+   BENTO GRID MOUSE TRACKING (Glow Effect)
+   ════════════════════════════════════════════════════════════ */
+function initBentoGlow() {
+  const bentoGrid = document.querySelector('.bento-grid');
+  if (!bentoGrid) return;
+
+  const items = bentoGrid.querySelectorAll('.bento-item');
+  items.forEach((item) => {
+    item.addEventListener('mousemove', (e) => {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      item.style.setProperty('--mouse-x', `${x}px`);
+      item.style.setProperty('--mouse-y', `${y}px`);
+    });
   });
 }

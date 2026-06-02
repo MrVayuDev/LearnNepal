@@ -91,6 +91,26 @@
   --duration-normal: 0.3s;
   --duration-smooth: 0.5s;
   --transition:      0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ─── Custom Cursor ────────────────────────────────────── */
+  --cursor-ring-size: 34px;
+  --cursor-dot-size: 6px;
+  --cursor-color: var(--accent);
+
+  /* ─── Backward Compatibility ───────────────────────────── */
+  --grad-gold: var(--accent-gradient);
+  --color-primary: var(--accent);
+  --color-accent: var(--accent);
+  --color-text-main: var(--text-primary);
+  --color-text-muted: var(--text-tertiary);
+  --color-bg: var(--bg-primary);
+  --color-bg-body: var(--bg-primary);
+  --color-border: var(--border);
+  --spacing-xs: var(--space-xs);
+  --spacing-sm: var(--space-sm);
+  --spacing-md: var(--space-md);
+  --spacing-lg: var(--space-lg);
+  --spacing-xl: var(--space-xl);
 }
 
 /* ─── Light Mode Override ────────────────────────────────── */

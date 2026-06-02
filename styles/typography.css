@@ -2,8 +2,8 @@
    LearnNepal — Typography System v3 "Obsidian Academy"
    ═══════════════════════════════════════════════════════════ */
 
-/* Google Fonts — Plus Jakarta Sans (headings) + Inter (body) + Mukta (Devanagari) */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Mukta:wght@300;400;600;700&display=swap');
+/* Google Fonts — loaded via HTML <link> tags for performance.
+   Plus Jakarta Sans (headings) + Inter (body) + Mukta (Devanagari) + JetBrains Mono (code) */
 
 /* ── Local Rozha One (Nepali Display) ─────────────────────── */
 @font-face {
@@ -15,12 +15,8 @@
 }
 
 /* ── Base ──────────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; }
-
 html {
     font-size: 16px;
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
 }
 
 body {

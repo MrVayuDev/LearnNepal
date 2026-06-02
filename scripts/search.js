@@ -110,13 +110,54 @@
         overlay.addEventListener('click', closePalette);
     }
 
+    function escapeHtml(str) {
+        return str.replace(/&/g, "&amp;")
+                  .replace(/</g, "&lt;")
+                  .replace(/>/g, "&gt;")
+                  .replace(/"/g, "&quot;")
+                  .replace(/'/g, "&#039;");
+    }
+
+    function highlightText(text, query) {
+        if (!query) return text;
+        const escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        const reg = new RegExp(`(${escapedQuery})`, 'gi');
+        return text.replace(reg, '<mark class="search-highlight">$1</mark>');
+    }
+
+    function getRecentSearches() {
+        try {
+            return JSON.parse(localStorage.getItem('ln_recent_searches')) || [];
+        } catch(e) {
+            return [];
+        }
+    }
+
+    function saveRecentSearch(item) {
+        let list = getRecentSearches();
+        list = list.filter(x => x.url !== item.url);
+        list.unshift(item);
+        list = list.slice(0, 4);
+        localStorage.setItem('ln_recent_searches', JSON.stringify(list));
+    }
+
     // Render logic
     function renderResults(query) {
         resultsContainer.innerHTML = "";
         query = query.toLowerCase().trim();
 
+        let isRecentMode = false;
         if (query === "") {
-            filteredItems = [...searchDb];
+            const recents = getRecentSearches();
+            if (recents.length > 0) {
+                recents.forEach(item => {
+                    item.resolvedUrl = prefix + item.url;
+                });
+                filteredItems = [...recents];
+                isRecentMode = true;
+            } else {
+                filteredItems = [...searchDb];
+            }
         } else {
             filteredItems = searchDb.filter(item => {
                 return item.name.toLowerCase().includes(query) || 
@@ -126,7 +167,8 @@
         }
 
         if (filteredItems.length === 0) {
-            resultsContainer.innerHTML = `<div class="cmd-no-results">No results found for "${query}"</div>`;
+            const safeQuery = escapeHtml(query);
+            resultsContainer.innerHTML = `<div class="cmd-no-results">No results found for "${safeQuery}"</div>`;
             return;
         }
 
@@ -135,8 +177,9 @@
         let html = "";
 
         filteredItems.forEach((item, idx) => {
-            if (item.cat !== currentGroup) {
-                currentGroup = item.cat;
+            let itemCat = isRecentMode ? "Recent Searches" : item.cat;
+            if (itemCat !== currentGroup) {
+                currentGroup = itemCat;
                 html += `<div class="cmd-group-title">${currentGroup}</div>`;
             }
 
@@ -155,15 +198,18 @@
                 svgMarkup = `<svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`;
             }
 
+            const displayName = isRecentMode ? item.name : highlightText(item.name, query);
+            const displayDesc = isRecentMode ? item.desc : highlightText(item.desc, query);
+
             html += `
                 <a href="${item.resolvedUrl}" class="cmd-item ${idx === activeIndex ? 'selected' : ''}" data-index="${idx}">
-                    <div class="cmd-item-icon">
-                        ${svgMarkup}
-                    </div>
-                    <div class="cmd-item-body">
-                        <span class="cmd-item-name">${item.name}</span>
-                        <span class="cmd-item-desc">${item.desc}</span>
-                    </div>
+                     <div class="cmd-item-icon">
+                         ${svgMarkup}
+                     </div>
+                     <div class="cmd-item-body">
+                         <span class="cmd-item-name">${displayName}</span>
+                         <span class="cmd-item-desc">${displayDesc}</span>
+                     </div>
                 </a>
             `;
         });
@@ -173,6 +219,11 @@
         // Bind clicks
         document.querySelectorAll('.cmd-item').forEach(el => {
             el.addEventListener('click', function(e) {
+                const idx = parseInt(el.dataset.index);
+                const selectedItem = filteredItems[idx];
+                if (selectedItem) {
+                    saveRecentSearch({ name: selectedItem.name, desc: selectedItem.desc, url: selectedItem.url, cat: selectedItem.cat, icon: selectedItem.icon });
+                }
                 closePalette();
             });
         });
@@ -196,6 +247,7 @@
             e.preventDefault();
             const selectedItem = filteredItems[activeIndex];
             if (selectedItem) {
+                saveRecentSearch({ name: selectedItem.name, desc: selectedItem.desc, url: selectedItem.url, cat: selectedItem.cat, icon: selectedItem.icon });
                 window.location.href = selectedItem.resolvedUrl;
                 closePalette();
             }

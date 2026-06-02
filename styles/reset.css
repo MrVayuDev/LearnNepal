@@ -36,8 +36,6 @@ input, button, textarea, select {
 }
 
 /* Robust word wrapping for text content only */
-/* Robust word wrapping for text content only */
-/* Robust word wrapping for text content only */
 p, h1, h2, h3, h4, h5, h6, li, td, th, blockquote, code, pre {
     overflow-wrap: anywhere;
     word-break: break-word; /* Deprecated but essential for some Android browsers */
@@ -51,17 +49,12 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, blockquote, code, pre {
     word-break: break-word;
 }
 
-/* Aggressively handle all children within docs-content to prevent any overflow */
-.docs-content * {
-    max-width: 100% !important; /* Force all children to respect container width */
-    box-sizing: border-box !important;
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important; 
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+/* Scope overflow handling to specific text block elements in docs-content */
+.docs-content p, .docs-content li, .docs-content blockquote, .docs-content h1, .docs-content h2, .docs-content h3, .docs-content h4, .docs-content h5, .docs-content h6 {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    word-break: break-word; 
 }
 
 ul, ol {

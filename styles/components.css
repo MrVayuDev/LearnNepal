@@ -313,3 +313,16 @@
     font-size: 0.72rem;
     box-shadow: 0 1px 0 var(--border);
 }
+
+/* --- Search Palette Highlights --- */
+.search-highlight {
+    background: rgba(129, 140, 248, 0.25);
+    color: var(--accent);
+    border-radius: 2px;
+    padding: 0 2px;
+    font-weight: 600;
+}
+[data-theme="light"] .search-highlight {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent);
+}
