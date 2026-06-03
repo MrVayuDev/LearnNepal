@@ -11,7 +11,7 @@
         { name: "Contact Us", desc: "Get in touch or subscribe to our channel", url: "contact.html", cat: "Navigation", icon: "✉️" },
         
         // Grade 10
-        { name: "Class 10 Optional Mathematics", desc: "Functions, Trigonometry, Coordinate Geometry, Vectors, and Matrices solutions", url: "pages/class-10/opt-math/index.html", cat: "Class 10", icon: "📐" },
+        { name: "Class 10 Optional Mathematics", desc: "Functions, Polynomials, Linear Programming, Quadratic Equations, Surds, Matrices, Trigonometry, Coordinate Geometry, Vectors, Transformations, Statistics, and Continuity solutions", url: "pages/class-10/opt-math/index.html", cat: "Class 10", icon: "📐" },
 
         // Grade 11
         { name: "Class 11 English", desc: "Vocabulary, summaries, and exercise guides", url: "pages/class-11/english.html", cat: "Class 11", icon: "📘" },
