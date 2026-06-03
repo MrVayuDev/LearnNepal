@@ -78,34 +78,41 @@ function initMobileMenu() {
     const nav = document.querySelector('.nav-menu');
     if (!toggle || !nav) return;
 
-    const bars = document.querySelectorAll('.bar');
+    // Dynamically create backdrop overlay if not present
+    let backdrop = document.querySelector('.nav-backdrop');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+    }
 
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        
-        if (nav.classList.contains('active')) {
-            bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            bars[1].style.opacity = '0';
-            bars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-            document.body.style.overflow = 'hidden';
-        } else {
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
-            document.body.style.overflow = '';
+    function toggleMenu() {
+        const isOpen = document.body.classList.toggle('nav-open');
+        nav.classList.toggle('active', isOpen);
+    }
+
+    function closeMenu() {
+        document.body.classList.remove('nav-open');
+        nav.classList.remove('active');
+    }
+
+    toggle.addEventListener('click', toggleMenu);
+    backdrop.addEventListener('click', closeMenu);
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.body.classList.contains('nav-open')) {
+            closeMenu();
         }
     });
 
+    // Close menu when clicking links (except dropdown parents)
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
              if (!link.parentElement.classList.contains('dropdown')) {
-                 nav.classList.remove('active');
-                 bars[0].style.transform = 'none';
-                 bars[1].style.opacity = '1';
-                 bars[2].style.transform = 'none';
-                 document.body.style.overflow = '';
+                 closeMenu();
              }
-        });
+         });
     });
 }
 

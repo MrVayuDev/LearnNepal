@@ -1,0 +1,1526 @@
+/* ═══════════════════════════════════════════════════════════
+   LearnNepal — Responsive System v1
+   Centralized breakpoint management for all pages/components
+   
+   Breakpoints:
+     Mobile:      320px – 480px
+     Tablet:      481px – 768px
+     Laptop:      769px – 1024px
+     Desktop:     1025px+ (baseline, no overrides)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Mobile Nav Overlay Backdrop ────────────────────────── */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-smooth) var(--ease-out),
+              visibility var(--duration-smooth);
+  pointer-events: none;
+}
+
+body.nav-open .nav-backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LAPTOP / SMALL DESKTOP  —  769px – 1024px
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+  /* ── Spacing token adjustments ──────────────────────────── */
+  :root {
+    --space-section: 3.5rem;
+    --space-3xl: 3.5rem;
+  }
+
+  /* ── Container ─────────────────────────────────────────── */
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  /* ── Hero — single column ──────────────────────────────── */
+  .hero-split-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
+  }
+
+  .hero-copy {
+    align-items: center;
+  }
+
+  .hero-copy p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    height: 340px;
+  }
+
+  /* ── Bento Grid ────────────────────────────────────────── */
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-wide {
+    grid-column: span 2;
+  }
+
+  /* ── Steps — vertical ──────────────────────────────────── */
+  .steps-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .step-line {
+    top: 42px;
+    left: 20px;
+    bottom: -20px;
+    right: auto;
+    width: 2px;
+    height: calc(100% + var(--space-xl) - 42px);
+  }
+
+  .steps-progress-line {
+    display: none;
+  }
+
+  /* ── Feature rows — single column ──────────────────────── */
+  .feat-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .feat-row-reverse .feat-visual {
+    grid-column: 1;
+  }
+
+  .feat-row-reverse .feat-content {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .feat-visual {
+    height: 200px;
+  }
+
+  /* ── CTA ────────────────────────────────────────────────── */
+  .cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-actions {
+    justify-content: center;
+  }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  .footer-top {
+    grid-template-columns: 1fr repeat(2, 1fr);
+    gap: var(--space-2xl);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  /* ── Course grid ───────────────────────────────────────── */
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── Chapter grid ──────────────────────────────────────── */
+  .chapter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── About story ───────────────────────────────────────── */
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* ── Contact grid ──────────────────────────────────────── */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  /* ── Question bank grids ───────────────────────────────── */
+  .qb-sgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qb-fgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── Performance: reduce hero orb blur ─────────────────── */
+  .hero-orb {
+    filter: blur(80px);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   TABLET  —  481px – 768px
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Spacing token adjustments ──────────────────────────── */
+  :root {
+    --space-section: 3rem;
+    --space-3xl: 3rem;
+    --space-2xl: 2rem;
+    --header-height: 64px;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  /* ── Mobile Navigation Drawer ──────────────────────────── */
+  .mobile-toggle {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 1002;
+  }
+
+  .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: transform var(--duration-smooth) var(--ease-out),
+                opacity var(--duration-fast);
+    transform-origin: center;
+  }
+
+  /* Hamburger → X animation via body.nav-open */
+  body.nav-open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  body.nav-open .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  body.nav-open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(320px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    background: var(--bg-primary);
+    border-left: 1px solid var(--border);
+    flex-direction: column;
+    align-items: stretch;
+    padding: calc(var(--header-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1001;
+    gap: 0;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform var(--duration-smooth) var(--ease-out);
+    will-change: transform;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .nav-link {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.875rem var(--space-sm);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  /* Search button — full width in mobile drawer */
+  .btn-search {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    margin: var(--space-sm) 0;
+    border-radius: var(--radius-sm);
+    order: -1;
+  }
+
+  .btn-search kbd {
+    display: none;
+  }
+
+  /* Theme toggle — larger touch target */
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Contact CTA button in nav */
+  .nav-menu .btn.btn-primary.btn-sm {
+    width: 100%;
+    min-height: 48px;
+    margin-top: var(--space-md);
+    justify-content: center;
+    border-radius: var(--radius-sm);
+  }
+
+  /* ── Dropdown (mobile) ─────────────────────────────────── */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: var(--bg-secondary);
+    padding: var(--space-xs) 0 var(--space-xs) var(--space-md);
+    min-width: 100%;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    margin: var(--space-xs) 0;
+    backdrop-filter: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.65rem var(--space-md);
+  }
+
+  /* ── Hero (homepage) ───────────────────────────────────── */
+  .hero-split {
+    min-height: auto;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+
+  .hero-copy p {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  /* Hero mini stats — compact */
+  .hero-mini-stats {
+    gap: var(--space-md);
+    padding: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hms-sep {
+    display: none;
+  }
+
+  .hms {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Hero visual — disable 3D, make scrollable strip */
+  .hero-visual {
+    height: auto;
+    perspective: none;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .hero-visual::-webkit-scrollbar {
+    display: none;
+  }
+
+  .floating-stack {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md);
+    width: max-content;
+    height: auto;
+    transform: none;
+    transform-style: flat;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .float-card {
+    position: relative;
+    width: 240px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    transform: none !important;
+    animation: none !important;
+    --float-y: 0px !important;
+    --base-tx: 0px;
+    --base-ty: 0px;
+    --base-tz: 0px;
+  }
+
+  .float-card:hover {
+    transform: translateY(-4px) !important;
+  }
+
+  /* ── Bento Grid ────────────────────────────────────────── */
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-lg,
+  .bento-md,
+  .bento-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .bento-item {
+    padding: 1.75rem;
+  }
+
+  .bento-grade {
+    font-size: 2rem;
+  }
+
+  .bento-yt-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-md);
+  }
+
+  /* ── Section titles ────────────────────────────────────── */
+  .section-title {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section {
+    padding: var(--space-section) 0;
+  }
+
+  .section-sm {
+    padding: var(--space-lg) 0;
+  }
+
+  /* ── Feature rows ──────────────────────────────────────── */
+  .feat-content h3 {
+    font-size: 1.45rem;
+  }
+
+  .feat-visual {
+    height: 160px;
+  }
+
+  .feat-icon-lg {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* ── Quote ─────────────────────────────────────────────── */
+  .quote-block blockquote {
+    font-size: 1.25rem;
+  }
+
+  .quote-mark {
+    font-size: 3.5rem;
+  }
+
+  /* ── CTA ────────────────────────────────────────────────── */
+  .cta-copy h2 {
+    font-size: 1.65rem;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cta-actions .btn,
+  .cta-actions .btn-yt {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    text-align: center;
+  }
+
+  /* ── Course grid ───────────────────────────────────────── */
+  .course-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* ── Tab bar — horizontal scroll ───────────────────────── */
+  .tab-bar {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0.35rem;
+    gap: 0.25rem;
+  }
+
+  .tab-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-pill {
+    flex-shrink: 0;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .footer-brand {
+    grid-column: 1;
+  }
+
+  .footer-brand p {
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 100%;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* ── Docs layout ───────────────────────────────────────── */
+  .docs-layout {
+    grid-template-columns: 1fr;
+    padding: 0 var(--space-sm);
+    gap: 0;
+  }
+
+  .docs-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .chapter-title {
+    font-size: 1.5rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.35rem;
+    margin-top: 2rem;
+  }
+
+  .content-block h3 {
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+  }
+
+  .content-block p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  /* Sidebar — polished slide-out */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: min(300px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    z-index: 1001;
+    padding-top: calc(var(--header-height) + var(--space-md));
+    transition: left var(--duration-smooth) var(--ease-out);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+    border-right: 1px solid var(--border);
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-smooth), visibility var(--duration-smooth);
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-sidebar-toggle {
+    display: flex;
+    min-height: 48px;
+  }
+
+  .sidebar-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.65rem 0.9rem;
+  }
+
+  /* ── Syllabus hero ─────────────────────────────────────── */
+  .syllabus-hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .syllabus-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .syllabus-stats {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-chip {
+    padding: 0.5rem 0.9rem;
+  }
+
+  /* ── Reader hero ───────────────────────────────────────── */
+  .reader-hero {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .reader-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  /* ── Stats strip ───────────────────────────────────────── */
+  .stats-strip-inner {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.25rem;
+  }
+
+  /* ── Chapter cards ─────────────────────────────────────── */
+  .chapter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-card-title {
+    white-space: normal;
+  }
+
+  .chapter-card-arrow {
+    display: none;
+  }
+
+  /* ── Note box ──────────────────────────────────────────── */
+  .note-box {
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  /* ── Chapter meta ──────────────────────────────────────── */
+  .chapter-meta {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* ── Question bank ─────────────────────────────────────── */
+  .qb-page {
+    padding: 0 1rem;
+  }
+
+  .qb-sgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .qb-fgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .qb-toc {
+    padding: 0.85rem 1rem;
+  }
+
+  .qb-sh h2 {
+    font-size: 0.92rem;
+  }
+
+  .qb-ftoggle {
+    font-size: 0.82rem;
+  }
+
+  .qb-hero h1 {
+    font-size: 1.65rem;
+  }
+
+  /* ── YouTube CTA section ───────────────────────────────── */
+  .yt-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  /* ── YouTube CTA banner ────────────────────────────────── */
+  .yt-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+    gap: var(--space-md);
+  }
+
+  .yt-cta-banner .btn-yt {
+    min-height: 48px;
+  }
+
+  /* ── Breadcrumb ────────────────────────────────────────── */
+  .breadcrumb {
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+  }
+
+  /* ── Grids utility ─────────────────────────────────────── */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* ── Command Palette — full-width ──────────────────────── */
+  .cmd-palette {
+    padding: 5vh 1rem 1rem;
+  }
+
+  .cmd-palette-modal {
+    max-width: 100%;
+  }
+
+  /* ── Cards ─────────────────────────────────────────────── */
+  .card {
+    padding: var(--space-md);
+  }
+
+  /* ── About page specifics ──────────────────────────────── */
+  .about-hero {
+    padding: 7rem 0 3.5rem;
+  }
+
+  .glass-youtube-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .team-card-inner {
+    padding: 2rem 1.5rem;
+  }
+
+  .team-avatar-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* ── Contact page specifics ────────────────────────────── */
+  .contact-hero {
+    padding: 7rem 0 2.5rem;
+  }
+
+  .contact-form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  /* ── Performance: reduce GPU workload ──────────────────── */
+  .hero-orb {
+    filter: blur(60px);
+    opacity: 0.18;
+  }
+
+  .floating-stack {
+    transform-style: flat;
+  }
+
+  /* Disable heavy backdrop-filter on mobile for smooth scroll */
+  .header.scrolled {
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE  —  320px – 480px
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  /* ── Spacing tokens ────────────────────────────────────── */
+  :root {
+    --space-section: 2.5rem;
+    --space-3xl: 2.5rem;
+    --space-2xl: 1.5rem;
+    --space-xl: 1.25rem;
+  }
+
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  /* ── Typography adjustments ────────────────────────────── */
+  h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  h2 { font-size: clamp(1.35rem, 5vw, 1.8rem); }
+  h3 { font-size: clamp(1.1rem, 3.5vw, 1.4rem); }
+
+  /* ── Hero ──────────────────────────────────────────────── */
+  .hero-split {
+    padding: 1.5rem 0 1rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(1.5rem, 6.5vw, 2.2rem);
+  }
+
+  .hero-copy p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .hero-mini-stats {
+    padding: var(--space-sm);
+    gap: var(--space-sm);
+    border-radius: var(--radius-sm);
+  }
+
+  .hms strong {
+    font-size: 1.05rem;
+  }
+
+  .hms span {
+    font-size: 0.65rem;
+  }
+
+  /* Floating cards — narrower */
+  .float-card {
+    width: 210px;
+    padding: 0.9rem 1rem;
+  }
+
+  .fc-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .fc-label {
+    font-size: 0.88rem;
+  }
+
+  .fc-sub {
+    font-size: 0.7rem;
+  }
+
+  /* ── Bento items ───────────────────────────────────────── */
+  .bento-item {
+    padding: 1.5rem;
+  }
+
+  .bento-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .bento-item p {
+    font-size: 0.85rem;
+  }
+
+  .bento-grade {
+    font-size: 1.8rem;
+  }
+
+  .bento-yt-play {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* ── Steps ─────────────────────────────────────────────── */
+  .step-num {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  .step-item h4 {
+    font-size: 1rem;
+  }
+
+  .step-item p {
+    font-size: 0.85rem;
+  }
+
+  /* ── Feature rows ──────────────────────────────────────── */
+  .feat-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .feat-content p {
+    font-size: 0.95rem;
+  }
+
+  .feat-visual {
+    height: 140px;
+  }
+
+  .feat-icon-lg {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .feat-checks li {
+    font-size: 0.88rem;
+  }
+
+  /* ── Quote ─────────────────────────────────────────────── */
+  .quote-block blockquote {
+    font-size: 1.1rem;
+  }
+
+  .quote-mark {
+    font-size: 3rem;
+    top: -1rem;
+  }
+
+  /* ── CTA ────────────────────────────────────────────────── */
+  .cta-banner {
+    padding: var(--space-2xl) 0;
+  }
+
+  .cta-copy h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-copy p {
+    font-size: 0.92rem;
+  }
+
+  /* ── Course cards ──────────────────────────────────────── */
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .course-card-header {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+
+  .course-card-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .course-card-footer {
+    padding: 0.85rem 1.25rem;
+  }
+
+  .course-card-icon {
+    width: 42px;
+    height: 42px;
+    top: 1.5rem;
+    right: 1.25rem;
+  }
+
+  .grade-chip {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  /* ── Tab pills ─────────────────────────────────────────── */
+  .tab-pill {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.85rem;
+    min-height: 40px;
+  }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  .footer-heading {
+    font-size: 0.78rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom-links a {
+    font-size: 0.75rem;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ── Docs content ──────────────────────────────────────── */
+  .docs-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .chapter-title {
+    font-size: 1.35rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.2rem;
+  }
+
+  .content-block p {
+    font-size: 0.92rem;
+  }
+
+  .content-block ul,
+  .content-block ol {
+    font-size: 0.92rem;
+    padding-left: 1.2rem;
+  }
+
+  /* ── Question bank — compact pills ─────────────────────── */
+  .qb-pill {
+    padding: 0.22rem 0.55rem;
+    font-size: 0.7rem;
+    min-height: 32px;
+  }
+
+  .qb-sgrid {
+    gap: 1rem;
+  }
+
+  .qb-scard {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .qb-fcard {
+    padding: 1.25rem;
+  }
+
+  .qb-mcq {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── About page ────────────────────────────────────────── */
+  .about-hero {
+    padding: 6rem 0 2.5rem;
+  }
+
+  .about-story-title {
+    font-size: 1.65rem;
+  }
+
+  .team-card-inner {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .team-avatar-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .founder-name {
+    font-size: 1.25rem;
+  }
+
+  .pillar-item {
+    gap: var(--space-sm);
+  }
+
+  .pillar-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* ── Contact page ──────────────────────────────────────── */
+  .contact-hero {
+    padding: 6rem 0 2rem;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .form-title {
+    font-size: 1.35rem;
+  }
+
+  .contact-info-title {
+    font-size: 1.5rem;
+  }
+
+  .info-card-horizontal {
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+
+  .info-card-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .info-card-body h4 {
+    font-size: 1rem;
+  }
+
+  .info-card-body p {
+    font-size: 0.85rem;
+  }
+
+  /* ── Toast notification ────────────────────────────────── */
+  .toast-notification {
+    left: var(--space-md);
+    right: var(--space-md);
+    transform: translateY(100px);
+    width: auto;
+  }
+
+  .toast-notification.active {
+    transform: translateY(0);
+  }
+
+  /* ── Back-to-top — repositioned ────────────────────────── */
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* ── Reading progress bar ──────────────────────────────── */
+  #reading-progress {
+    height: 2px;
+  }
+
+  /* ── Offline overlay ───────────────────────────────────── */
+  .offline-content {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .offline-title {
+    font-size: 1.25rem;
+  }
+
+  .offline-retry-btn {
+    min-height: 48px;
+    min-width: 140px;
+  }
+
+  /* ── Performance: aggressively reduce GPU work ─────────── */
+  .hero-orb {
+    filter: blur(40px);
+    opacity: 0.12;
+  }
+
+  .hero-orb-3,
+  .hero-orb-4 {
+    display: none;
+  }
+
+  .hero-grid-bg {
+    opacity: 0.2;
+  }
+
+  .hero-grain {
+    display: none;
+  }
+
+  /* Disable hero particles on very small screens */
+  #hero-particles {
+    display: none;
+  }
+
+  #cta-stars {
+    display: none;
+  }
+
+  /* Reduce backdrop-filter blur */
+  .header.scrolled {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .bento-item::before {
+    display: none;
+  }
+
+  .bento-glow {
+    display: none;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   TOUCH TARGET ENFORCEMENT
+   Applied at ≤768px for all interactive elements
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Buttons ───────────────────────────────────────────── */
+  .btn {
+    min-height: 48px;
+    padding: 0.75rem 1.4rem;
+  }
+
+  .btn-sm {
+    min-height: 44px;
+    padding: 0.55rem 1rem;
+  }
+
+  .btn-lg {
+    min-height: 52px;
+  }
+
+  .btn-yt {
+    min-height: 48px;
+    padding: 0.65rem 1.3rem;
+  }
+
+  /* ── Subject pills ─────────────────────────────────────── */
+  .subject-pill {
+    min-height: 36px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.75rem;
+  }
+
+  .bp {
+    min-height: 28px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* ── Badge ─────────────────────────────────────────────── */
+  .badge {
+    padding: 0.35rem 0.85rem;
+  }
+
+  /* ── Sidebar links ─────────────────────────────────────── */
+  .sidebar-link {
+    min-height: 44px;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .sidebar-back-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar-group-title {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ── Feature card ──────────────────────────────────────── */
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  /* ── Class card ────────────────────────────────────────── */
+  .class-card {
+    padding: 2rem 1.5rem;
+  }
+
+  /* ── Chapter card ──────────────────────────────────────── */
+  .chapter-card {
+    min-height: 48px;
+    padding: 0.875rem;
+  }
+
+  /* ── Form inputs ───────────────────────────────────────── */
+  .input-field {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  textarea.input-field {
+    min-height: 120px;
+  }
+
+  /* ── Table cells ───────────────────────────────────────── */
+  .table th,
+  .table td {
+    padding: 0.5rem;
+    font-size: 0.82rem;
+  }
+
+  /* ── Search trigger ────────────────────────────────────── */
+  .search-trigger {
+    min-height: 44px;
+  }
+
+  /* ── Question bank interaction targets ─────────────────── */
+  .qb-chip {
+    min-height: 36px;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .qb-pill {
+    min-height: 36px;
+    padding: 0.35rem 0.72rem;
+  }
+
+  .qb-achip {
+    min-height: 32px;
+    padding: 0.3rem 0.55rem;
+  }
+
+  .qb-ans-toggle {
+    min-height: 44px;
+  }
+
+  .qb-ftoggle {
+    min-height: 48px;
+  }
+
+  .qb-toc li a {
+    min-height: 44px;
+    padding: 0.5rem;
+  }
+
+  /* ── Command palette items ─────────────────────────────── */
+  .cmd-item {
+    min-height: 48px;
+    padding: 0.75rem var(--space-md);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   EXTRA-SMALL  —  below 360px  (narrow phones)
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 360px) {
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 1.4rem;
+  }
+
+  .bento-item {
+    padding: 1.25rem;
+  }
+
+  .bento-item h3 {
+    font-size: 1.05rem;
+  }
+
+  .float-card {
+    width: 190px;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .nav-menu {
+    width: 100vw;
+  }
+
+  .course-card-header {
+    padding: 1.25rem 1rem 0.85rem;
+  }
+
+  .course-card-footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .docs-content {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .contact-form-container,
+  .glass-youtube-box {
+    padding: 1.25rem 1rem;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   ULTRA-WIDE  —  above 1600px
+   Ensure content doesn't stretch too far
+   ═══════════════════════════════════════════════════════════ */
+@media (min-width: 1600px) {
+
+  .container {
+    max-width: 1280px;
+  }
+
+  .hero-split-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   LANDSCAPE MOBILE  —  short+wide viewports
+   ═══════════════════════════════════════════════════════════ */
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .hero-split {
+    min-height: auto;
+    padding: 1.5rem 0;
+  }
+
+  .hero-visual {
+    height: auto;
+  }
+
+  .nav-menu {
+    padding-top: calc(var(--header-height) + var(--space-sm));
+  }
+
+  .nav-link {
+    padding: 0.65rem var(--space-sm);
+    min-height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .about-hero,
+  .contact-hero {
+    padding: 5rem 0 2rem;
+  }
+
+  .syllabus-hero,
+  .reader-hero {
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════════════════════ */
+@media print {
+
+  .header,
+  .mobile-toggle,
+  .nav-backdrop,
+  .sidebar,
+  .sidebar-overlay,
+  .mobile-sidebar-toggle,
+  .back-to-top,
+  .btn-search,
+  .theme-toggle,
+  #reading-progress,
+  .hero-bg,
+  .hero-orb,
+  .hero-grid-bg,
+  .hero-grain,
+  #hero-particles,
+  #cta-stars,
+  .footer-separator,
+  .bento-glow,
+  .cmd-palette,
+  #offline-overlay {
+    display: none !important;
+  }
+
+  body {
+    padding-top: 0 !important;
+    color: #000;
+    background: #fff;
+  }
+
+  .docs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
