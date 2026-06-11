@@ -322,6 +322,220 @@
   color: var(--text-primary);
 }
 
+/* ─── High-Fidelity App Mockup ───────────────────────────── */
+.app-mockup {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(10, 10, 15, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  text-align: left;
+  transform: rotateY(-10deg) rotateX(6deg) translateZ(0);
+  transition: transform var(--duration-smooth) var(--ease-out), box-shadow var(--duration-smooth), border-color var(--duration-normal);
+  will-change: transform;
+}
+
+.app-mockup:hover {
+  transform: rotateY(-4deg) rotateX(3deg) translateY(-4px) translateZ(0);
+  box-shadow: 0 40px 80px rgba(99, 102, 241, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.mockup-header {
+  height: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-md);
+  position: relative;
+}
+
+.mockup-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.control-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.control-dot.close { background: #ff5f56; }
+.control-dot.minimize { background: #ffbd2e; }
+.control-dot.maximize { background: #27c93f; }
+
+.mockup-address {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.address-lock {
+  width: 9px;
+  height: 9px;
+  color: #27c93f;
+}
+
+.mockup-container {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100% - 40px);
+}
+
+.mockup-sidebar {
+  background: rgba(255, 255, 255, 0.01);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  padding: var(--space-md) var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ms-brand {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ms-logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+}
+
+.ms-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ms-nav-section {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+  padding-left: var(--space-xs);
+}
+
+.ms-nav-item {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition);
+}
+
+.ms-nav-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.ms-nav-item.active {
+  background: var(--accent-muted);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.mockup-body {
+  padding: var(--space-md) var(--space-lg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mb-meta {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.mb-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.mb-text {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.mb-code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.mb-code-header span {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.code-badge {
+  background: var(--accent-muted);
+  color: var(--accent);
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  font-size: 0.58rem !important;
+  font-weight: 600;
+}
+
+.mb-code {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: #a78bfa;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.mb-code .keyword { color: #f472b6; }
+.mb-code .string { color: #34d399; }
+
 /* ─── Bento Grid Layout ──────────────────────────────────── */
 .bento-grid {
   display: grid;
@@ -507,7 +721,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #ff2626;
+  background: var(--color-yt-red);
   color: white;
   display: flex;
   align-items: center;
@@ -848,7 +1062,7 @@
 .social-icon:hover {
   background: var(--accent);
   border-color: transparent;
-  color: white;
+  color: var(--text-inverse);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px var(--accent-glow);
 }

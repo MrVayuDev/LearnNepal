@@ -26,12 +26,28 @@ var S={data:null,all:[],f:{year:'all',exam:'all',qtype:'all',sec:'all',q:''}};
 function $(s,c){return(c||document).querySelector(s)}
 function $$(s,c){return Array.from((c||document).querySelectorAll(s))}
 
-function load(subj,cb){
+function load(subj,cb,errCb){
   var b=basePath();
   fetch(b+'data/question-bank/'+subj+'.json')
     .then(function(r){if(!r.ok)throw new Error('fail');return r.json()})
     .then(function(d){S.data=d;cb(d)})
-    .catch(function(e){console.error('QB:',e)});
+    .catch(function(e){
+      console.error('QB:',e);
+      if(errCb)errCb(e);
+    });
+}
+function renderError(el){
+  if(!el)return;
+  el.innerHTML='<div class="qb-error-card">'+
+    '<div class="qb-error-icon">'+
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>'+
+    '</div>'+
+    '<h3>Unable to Load Questions</h3>'+
+    '<p>We encountered an error while fetching the question bank. Please verify your connection or try again.</p>'+
+    '<button class="qb-retry-btn" onclick="window.location.reload()">'+
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:6px;display:inline-block;vertical-align:middle;"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>Retry Now'+
+    '</button>'+
+  '</div>';
 }
 function basePath(){
   var p=window.location.pathname;
@@ -239,19 +255,25 @@ window.QB={
     }
   },
   initSection:function(subj){
+    var el=$('#qb-qc');
     load(subj,function(d){
-      S.all=collect(d);var el=$('#qb-qc');if(!el)return;
+      S.all=collect(d);if(!el)return;
       _r=function(){renderSec(d,el)};_r();initF(_r);
       var toc=$('#qb-toc');if(toc)renderTOC(d,toc);
       var tn=$('#s-total');if(tn)animNum(tn,S.all.length);
       var yr=$('#s-years');if(yr){var y={};S.all.forEach(function(q){y[q.year]=true});animNum(yr,Object.keys(y).length)}
+    },function(err){
+      renderError(el);
     });
   },
   initChapter:function(subj,cid){
+    var el=$('#qb-qc');
     load(subj,function(d){
       var ch=d.chapters.find(function(c){return c.chapterId===cid});if(!ch)return;
-      S.all=ch.questions;var el=$('#qb-qc');if(!el)return;
+      S.all=ch.questions;if(!el)return;
       _r=function(){renderFlat(d,el)};_r();initF(_r);
+    },function(err){
+      renderError(el);
     });
   }
 };

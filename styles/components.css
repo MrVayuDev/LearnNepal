@@ -20,7 +20,7 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 1.5rem; margin-bottom: var(--space-md); transition: all var(--transition);
 }
-.card:hover .card-icon { background: var(--accent); color: white; }
+.card:hover .card-icon { background: var(--accent); color: var(--text-inverse); }
 
 .card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: var(--space-sm); color: var(--text-primary); }
 .card-text { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: var(--space-lg); flex-grow: 1; }
@@ -78,7 +78,7 @@
     font-family: var(--font-heading);
     transition: background var(--transition), color var(--transition);
 }
-.chapter-card:hover .chapter-card-num { background: var(--accent); color: #fff; }
+.chapter-card:hover .chapter-card-num { background: var(--accent); color: var(--text-inverse); }
 .chapter-card.genre-verse:hover .chapter-card-num { background: var(--subject-qbank); }
 .chapter-card.genre-nonfiction:hover .chapter-card-num { background: var(--subject-computer); }
 .chapter-card.genre-practical:hover .chapter-card-num { background: var(--subject-nepali); }
@@ -128,7 +128,7 @@
     border-radius: var(--radius-md); padding: 1.5rem 2rem; margin-top: 1rem;
     color: white; box-shadow: 0 8px 24px rgba(229, 45, 39, 0.22);
 }
-.yt-cta-text h4 { color: white; font-size: 1rem; margin: 0 0 0.2rem; font-family: var(--font-heading); }
+.yt-cta-text h4 { color: var(--text-inverse); font-size: 1rem; margin: 0 0 0.2rem; font-family: var(--font-heading); }
 .yt-cta-text p { color: rgba(255,255,255,0.82); font-size: 0.87rem; margin: 0; }
 @media (max-width: 600px) { .yt-cta-banner { flex-direction: column; text-align: center; padding: 1.25rem 1.5rem; } }
 
@@ -156,7 +156,7 @@
 .cmd-palette {
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: var(--z-modal);
     display: none;
     align-items: flex-start;
     justify-content: center;
@@ -168,7 +168,7 @@
 .cmd-palette-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(11, 15, 25, 0.6);
+    background: var(--overlay-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: opacity var(--transition);
@@ -325,4 +325,19 @@
 [data-theme="light"] .search-highlight {
     background: rgba(99, 102, 241, 0.15);
     color: var(--accent);
+}
+
+/* --- Dropdown Helper Classes (extracted from inline styles) --- */
+.dropdown-group-header {
+    padding: 0.4rem 1.25rem 0.25rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+}
+.dropdown-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0.4rem 1rem;
 }

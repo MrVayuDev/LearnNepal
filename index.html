@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,9 +25,10 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
 
+    <script src="scripts/theme.js"></script>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/homepage.css" />
-    <script src="scripts/theme.js"></script>
+    <link rel="stylesheet" href="styles/popup.css" />
 </head>
 <body>
 
@@ -53,24 +54,24 @@
 
                 <div class="dropdown">
                     <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Classes</a>
-                    <div class="dropdown-menu" role="menu" style="min-width: 220px;">
-                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 10</div>
+                    <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-header">Class 10</div>
                         <a href="pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
 
-                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+                        <div class="dropdown-divider"></div>
 
-                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 11</div>
+                        <div class="dropdown-header">Class 11</div>
                         <a href="pages/class-11/english.html" class="dropdown-item">English</a>
                         <a href="pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
 
-                        <div style="height: 1px; background: var(--border); margin: 0.4rem 1rem;"></div>
+                        <div class="dropdown-divider"></div>
 
-                        <div style="padding: 0.4rem 1.25rem 0.25rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary);">Class 12</div>
+                        <div class="dropdown-header">Class 12</div>
                         <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
                         <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
                         <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-                        <a href="pages/class-12/question-bank/index.html" class="dropdown-item qb-link" style="border-top:1px solid var(--border);margin-top:0.25rem;padding-top:0.65rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
+                        <a href="pages/class-12/question-bank/index.html" class="dropdown-item qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
                     </div>
                 </div>
 
@@ -130,49 +131,58 @@
                     </div>
                 </div>
 
-                <!-- Right: Floating subject cards stack -->
-                <div class="hero-visual animate-fade-up delay-200">
-                    <div class="floating-stack">
-                        <a href="pages/class-12/english/c12_english_syllabus.html" class="float-card fc-english fc-float" aria-label="English — Literature and Grammar">
-                            <div class="fc-icon">
-                                <svg width="18" height="18" fill="none" stroke="var(--subject-english)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+                <!-- Right: High-Fidelity App Mockup -->
+                <div class="hero-visual">
+                    <div class="app-mockup animate-fade-up delay-300">
+                        <div class="mockup-header">
+                            <div class="mockup-controls">
+                                <span class="control-dot close"></span>
+                                <span class="control-dot minimize"></span>
+                                <span class="control-dot maximize"></span>
                             </div>
-                            <div class="fc-body">
-                                <span class="fc-label">English</span>
-                                <span class="fc-sub">Literature &amp; Grammar</span>
+                            <div class="mockup-address">
+                                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="address-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                learnnepal.com/courses
                             </div>
-                            <span class="fc-arrow" aria-hidden="true">&rarr;</span>
-                        </a>
-                        <a href="pages/class-12/nepali.html" class="float-card fc-nepali fc-float" aria-label="Nepali — Poetry, Prose and Grammar">
-                            <div class="fc-icon">
-                                <svg width="18" height="18" fill="none" stroke="var(--subject-nepali)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <div class="mockup-container">
+                            <!-- Mockup Sidebar -->
+                            <aside class="mockup-sidebar">
+                                <div class="ms-brand">
+                                    <span class="ms-logo-dot"></span>
+                                    LearnNepal
+                                </div>
+                                <nav class="ms-nav">
+                                    <div class="ms-nav-section">Class 12</div>
+                                    <a href="pages/class-12/computer/c12_computer_syllabus.html" class="ms-nav-item active">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                                        Computer
+                                    </a>
+                                    <a href="pages/class-12/english/c12_english_syllabus.html" class="ms-nav-item">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+                                        English
+                                    </a>
+                                    <a href="pages/class-12/nepali.html" class="ms-nav-item">
+                                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                        Nepali
+                                    </a>
+                                </nav>
+                            </aside>
+                            <!-- Mockup Content -->
+                            <div class="mockup-body">
+                                <div class="mb-meta">Chapter 1 &bull; Class 12</div>
+                                <h3 class="mb-title">Database Management (DBMS)</h3>
+                                <p class="mb-text">
+                                    A Database Management System (DBMS) is software designed to store, retrieve, and manage data efficiently while enforcing constraints.
+                                </p>
+                                <div class="mb-code-header">
+                                    <span>SQL Query</span>
+                                    <span class="code-badge">Practice Online</span>
+                                </div>
+                                <pre class="mb-code"><code><span class="keyword">SELECT</span> name, score <span class="keyword">FROM</span> students
+<span class="keyword">WHERE</span> score &gt; <span class="string">90</span>;</code></pre>
                             </div>
-                            <div class="fc-body">
-                                <span class="fc-label">Nepali</span>
-                                <span class="fc-sub" lang="ne">पद्य, गद्य &amp; व्याकरण</span>
-                            </div>
-                            <span class="fc-arrow" aria-hidden="true">&rarr;</span>
-                        </a>
-                        <a href="pages/class-12/computer/c12_computer_syllabus.html" class="float-card fc-computer fc-float" aria-label="Computer Science — Database, Web and C">
-                            <div class="fc-icon">
-                                <svg width="18" height="18" fill="none" stroke="var(--subject-computer)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
-                            </div>
-                            <div class="fc-body">
-                                <span class="fc-label">Computer Science</span>
-                                <span class="fc-sub">Database, Web &amp; C</span>
-                            </div>
-                            <span class="fc-arrow" aria-hidden="true">&rarr;</span>
-                        </a>
-                        <a href="pages/class-12/question-bank/index.html" class="float-card fc-qbank fc-float" aria-label="Question Bank — Past papers and filters">
-                            <div class="fc-icon">
-                                <svg width="18" height="18" fill="none" stroke="var(--subject-qbank)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>
-                            </div>
-                            <div class="fc-body">
-                                <span class="fc-label">Question Bank</span>
-                                <span class="fc-sub">Past papers &amp; filters</span>
-                            </div>
-                            <span class="fc-arrow" aria-hidden="true">&rarr;</span>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -267,6 +277,13 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <!-- ═══ LATEST YOUTUBE VIDEO ═══ -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div id="latest-video-section"></div>
             </div>
         </section>
 
@@ -465,6 +482,8 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/search.js"></script>
     <script src="scripts/transitions.js"></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/latest-video-section.js" defer></script>
     <script>
     (function () {
         var bar = document.getElementById('reading-progress');
@@ -488,12 +507,15 @@
 
         /* ── Hero Subtle Particle Canvas ─────────────────────── */
         (function initHeroParticles() {
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
             var canvas = document.getElementById('hero-particles');
             if (!canvas) return;
             var ctx = canvas.getContext('2d');
             var dpr = window.devicePixelRatio || 1;
             var particles = [];
             var PARTICLE_COUNT = 45;
+            var isVisible = false;
+            var animFrameId = null;
 
             function resize() {
                 var rect = canvas.parentElement.getBoundingClientRect();
@@ -524,6 +546,7 @@
             }
 
             function draw() {
+                if (!isVisible) return;
                 var rect = canvas.parentElement.getBoundingClientRect();
                 var w = rect.width, h = rect.height;
                 ctx.clearRect(0, 0, w, h);
@@ -542,22 +565,37 @@
                     ctx.fillStyle = 'rgba(129,140,248,' + a + ')';
                     ctx.fill();
                 }
-                requestAnimationFrame(draw);
+                animFrameId = requestAnimationFrame(draw);
             }
 
             init();
-            draw();
             window.addEventListener('resize', init);
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    isVisible = entry.isIntersecting;
+                    if (isVisible) {
+                        cancelAnimationFrame(animFrameId);
+                        draw();
+                    } else {
+                        cancelAnimationFrame(animFrameId);
+                    }
+                });
+            }, { threshold: 0.05 });
+            observer.observe(canvas);
         })();
 
         /* ── CTA Star Canvas ─────────────────────────────────── */
         (function initCTAStars() {
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
             var canvas = document.getElementById('cta-stars');
             if (!canvas) return;
             var ctx = canvas.getContext('2d');
             var dpr = window.devicePixelRatio || 1;
             var stars = [];
             var STAR_COUNT = 30;
+            var isVisible = false;
+            var animFrameId = null;
 
             function resize() {
                 var rect = canvas.parentElement.getBoundingClientRect();
@@ -587,6 +625,7 @@
             }
 
             function draw() {
+                if (!isVisible) return;
                 var rect = canvas.parentElement.getBoundingClientRect();
                 var w = rect.width, h = rect.height;
                 ctx.clearRect(0, 0, w, h);
@@ -599,12 +638,24 @@
                     ctx.fillStyle = 'rgba(167,139,250,' + a + ')';
                     ctx.fill();
                 }
-                requestAnimationFrame(draw);
+                animFrameId = requestAnimationFrame(draw);
             }
 
             init();
-            draw();
             window.addEventListener('resize', init);
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    isVisible = entry.isIntersecting;
+                    if (isVisible) {
+                        cancelAnimationFrame(animFrameId);
+                        draw();
+                    } else {
+                        cancelAnimationFrame(animFrameId);
+                    }
+                });
+            }, { threshold: 0.05 });
+            observer.observe(canvas);
         })();
 
         /* ── Animated Timeline Progress Line ─────────────────── */

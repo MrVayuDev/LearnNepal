@@ -49,7 +49,7 @@
 
 .btn-primary {
   background: var(--accent-gradient);
-  color: #fff;
+  color: var(--text-inverse);
   border-color: transparent;
   box-shadow: var(--shadow-accent);
 }
@@ -99,8 +99,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #ff2626;
-  color: #fff;
+  background: var(--color-yt-red);
+  color: var(--text-inverse);
   padding: 0.65rem 1.3rem;
   border-radius: var(--radius-sm);
   font-weight: 700;
@@ -111,10 +111,10 @@
   box-shadow: 0 4px 12px rgba(229, 45, 39, 0.35);
 }
 .btn-yt:hover {
-  background: #d41e1e;
+  background: var(--color-yt-red-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(229, 45, 39, 0.45);
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 /* Sizes */

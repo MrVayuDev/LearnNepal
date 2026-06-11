@@ -15,6 +15,7 @@ The site is built using plain HTML, CSS, and JavaScript. It is designed to be li
 - **Secure Document Viewer:** Custom PDF viewer using canvas rendering (PDF.js) backed by a service worker proxy to prevent direct URL downloads.
 - **Bilingual Support & Access:** Full support for Devanagari script typography and a dark mode toggle.
 - **Offline Reliability:** Network connection detection with custom status alerts.
+- **Automated YouTube Notifications:** A zero-cost GitHub Action automatically polls the YouTube RSS feed hourly and updates the site via a static JSON file, triggering a frontend popup for new videos without any backend server.
 
 ## Project Structure
 

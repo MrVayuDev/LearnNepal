@@ -122,7 +122,7 @@
 .course-card:hover .course-card-icon {
   transform: scale(1.1) rotate(-5deg);
   background: var(--course-accent);
-  color: white;
+  color: var(--text-inverse);
   border-color: transparent;
   box-shadow: 0 4px 12px var(--course-glow);
 }
@@ -204,7 +204,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--bg-tertiary);
 }
 
 .course-card-footer .chapters-count {
@@ -230,7 +230,7 @@
 
 .course-card:hover .go-arrow {
   background: var(--course-accent);
-  color: white;
+  color: var(--text-inverse);
   border-color: transparent;
   transform: translateX(4px);
   box-shadow: 0 4px 10px var(--course-glow);

@@ -77,3 +77,27 @@ table {
 iframe, object, embed {
     max-width: 100%;
 }
+
+/* ── Global theme transitions for smooth dark/light switching ── */
+*,
+*::before,
+*::after {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Disable ALL transitions during page load to prevent FOUC */
+.preload-transitions,
+.preload-transitions *,
+.preload-transitions *::before,
+.preload-transitions *::after {
+    transition: none !important;
+}
+
+/* Helper class to disable transitions dynamically */
+.no-transition,
+.no-transition *,
+.no-transition *::before,
+.no-transition *::after {
+    transition: none !important;
+}
+

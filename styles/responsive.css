@@ -13,7 +13,7 @@
 .nav-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: var(--z-drawer-backdrop);
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -68,7 +68,13 @@ body.nav-open {
   }
 
   .hero-visual {
-    height: 340px;
+    height: auto;
+    perspective: none;
+  }
+
+  .app-mockup {
+    transform: none !important;
+    margin: 0 auto;
   }
 
   /* ── Bento Grid ────────────────────────────────────────── */
@@ -76,8 +82,15 @@ body.nav-open {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .bento-wide {
+  .bento-wide,
+  .bento-md,
+  .bento-lg,
+  #bento-qb {
     grid-column: span 2;
+  }
+
+  .bento-lg {
+    grid-row: span 1;
   }
 
   /* ── Steps — vertical ──────────────────────────────────── */
@@ -173,6 +186,86 @@ body.nav-open {
   .hero-orb {
     filter: blur(80px);
   }
+
+  /* ── Docs layout ───────────────────────────────────────── */
+  .docs-layout {
+    grid-template-columns: 1fr;
+    padding: 0 var(--space-sm);
+    gap: 0;
+  }
+
+  .docs-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .chapter-title {
+    font-size: 1.5rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.35rem;
+    margin-top: 2rem;
+  }
+
+  .content-block h3 {
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+  }
+
+  .content-block p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  /* Sidebar — polished slide-out */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: min(300px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    z-index: var(--z-drawer);
+    padding-top: calc(var(--header-height) + var(--space-md));
+    transition: left var(--duration-smooth) var(--ease-out);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+    border-right: 1px solid var(--border);
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: var(--z-drawer-backdrop);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-smooth), visibility var(--duration-smooth);
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-sidebar-toggle {
+    display: flex;
+    min-height: 48px;
+  }
+
+  .sidebar-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.65rem 0.9rem;
+  }
 }
 
 
@@ -201,7 +294,7 @@ body.nav-open {
     align-items: center;
     justify-content: center;
     padding: 0;
-    z-index: 1002;
+    z-index: var(--z-drawer-toggle);
   }
 
   .bar {
@@ -243,7 +336,7 @@ body.nav-open {
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    z-index: 1001;
+    z-index: var(--z-drawer);
     gap: 0;
     box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3);
     transform: translateX(100%);
@@ -375,48 +468,32 @@ body.nav-open {
     text-align: center;
   }
 
-  /* Hero visual — disable 3D, make scrollable strip */
+  /* Hero visual — disable 3D app mockup on mobile */
   .hero-visual {
     height: auto;
     perspective: none;
-    padding: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+    padding: var(--space-sm) 0;
   }
 
-  .hero-visual::-webkit-scrollbar {
-    display: none;
-  }
-
-  .floating-stack {
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-md);
-    width: max-content;
-    height: auto;
-    transform: none;
-    transform-style: flat;
-    padding: var(--space-sm) var(--space-md);
-  }
-
-  .float-card {
-    position: relative;
-    width: 240px;
-    flex-shrink: 0;
-    scroll-snap-align: center;
+  .app-mockup {
     transform: none !important;
-    animation: none !important;
-    --float-y: 0px !important;
-    --base-tx: 0px;
-    --base-ty: 0px;
-    --base-tz: 0px;
+    max-width: 100%;
+    height: 310px;
+    margin: 0 auto;
+    background: rgba(10, 10, 15, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   }
 
-  .float-card:hover {
-    transform: translateY(-4px) !important;
+  .mockup-container {
+    grid-template-columns: 1fr;
+  }
+
+  .mockup-sidebar {
+    display: none; /* Hide sidebar on mobile/tablet to fit content */
+  }
+
+  .mockup-body {
+    padding: var(--space-md);
   }
 
   /* ── Bento Grid ────────────────────────────────────────── */
@@ -570,85 +647,7 @@ body.nav-open {
     text-align: center;
   }
 
-  /* ── Docs layout ───────────────────────────────────────── */
-  .docs-layout {
-    grid-template-columns: 1fr;
-    padding: 0 var(--space-sm);
-    gap: 0;
-  }
 
-  .docs-content {
-    padding: 1.25rem 1rem;
-  }
-
-  .chapter-title {
-    font-size: 1.5rem;
-  }
-
-  .content-block h2 {
-    font-size: 1.35rem;
-    margin-top: 2rem;
-  }
-
-  .content-block h3 {
-    font-size: 1.15rem;
-    margin-top: 1.5rem;
-  }
-
-  .content-block p {
-    font-size: 0.98rem;
-    line-height: 1.75;
-  }
-
-  /* Sidebar — polished slide-out */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: min(300px, 85vw);
-    height: 100vh;
-    height: 100dvh;
-    z-index: 1001;
-    padding-top: calc(var(--header-height) + var(--space-md));
-    transition: left var(--duration-smooth) var(--ease-out);
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
-    border-right: 1px solid var(--border);
-    max-height: 100vh;
-    max-height: 100dvh;
-  }
-
-  .sidebar.active {
-    left: 0;
-  }
-
-  .sidebar-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--duration-smooth), visibility var(--duration-smooth);
-  }
-
-  .sidebar-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .mobile-sidebar-toggle {
-    display: flex;
-    min-height: 48px;
-  }
-
-  .sidebar-link {
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    padding: 0.65rem 0.9rem;
-  }
 
   /* ── Syllabus hero ─────────────────────────────────────── */
   .syllabus-hero {
@@ -1038,8 +1037,8 @@ body.nav-open {
   }
 
   .social-icon {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 
   /* ── Docs content ──────────────────────────────────────── */
@@ -1370,6 +1369,12 @@ body.nav-open {
   .cmd-item {
     min-height: 48px;
     padding: 0.75rem var(--space-md);
+  }
+
+  /* ── Social icons ──────────────────────────────────────── */
+  .social-icon {
+    width: 44px;
+    height: 44px;
   }
 }
 

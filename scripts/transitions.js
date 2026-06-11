@@ -228,12 +228,28 @@ function initBentoGlow() {
 
   const items = bentoGrid.querySelectorAll('.bento-item');
   items.forEach((item) => {
-    item.addEventListener('mousemove', (e) => {
+    function updateGlowPosition(clientX, clientY) {
       const rect = item.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
       item.style.setProperty('--mouse-x', `${x}px`);
       item.style.setProperty('--mouse-y', `${y}px`);
+    }
+
+    item.addEventListener('mousemove', (e) => {
+      updateGlowPosition(e.clientX, e.clientY);
     });
+
+    item.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches.length > 0) {
+        updateGlowPosition(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    item.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches.length > 0) {
+        updateGlowPosition(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
   });
 }
