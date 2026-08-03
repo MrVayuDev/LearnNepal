@@ -38,7 +38,7 @@ function init() {
 
   initHeaderScroll();
   initBackToTop();
-  initBentoGlow();
+  initacademicGlow();
 
   if (!reducedMotion && typeof gsap !== 'undefined') {
     initSmoothScroll();
@@ -220,13 +220,13 @@ function initScrollReveal() {
 }
 
 /* ════════════════════════════════════════════════════════════
-   BENTO GRID MOUSE TRACKING (Glow Effect)
+   academic GRID MOUSE TRACKING (Glow Effect)
    ════════════════════════════════════════════════════════════ */
-function initBentoGlow() {
-  const bentoGrid = document.querySelector('.bento-grid');
-  if (!bentoGrid) return;
+function initacademicGlow() {
+  const academicGrid = document.querySelector('.academic-grid');
+  if (!academicGrid) return;
 
-  const items = bentoGrid.querySelectorAll('.bento-item');
+  const items = academicGrid.querySelectorAll('.academic-item');
   items.forEach((item) => {
     function updateGlowPosition(clientX, clientY) {
       const rect = item.getBoundingClientRect();

@@ -17,6 +17,11 @@
 
     function applyTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
         try {
             localStorage.setItem(STORAGE_KEY, theme);
         } catch (e) {
@@ -38,8 +43,8 @@
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.theme-toggle').forEach(function(btn) {
             btn.addEventListener('click', function() {
-                var current = document.documentElement.getAttribute('data-theme') || 'dark';
-                applyTheme(current === 'dark' ? 'light' : 'dark');
+                var current = document.documentElement.getAttribute('data-theme') || 'light';
+                applyTheme(current === 'light' ? 'dark' : 'light');
             });
         });
 

@@ -3,263 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | LearnNepal — Premium NEB Study Platform</title>
+    <title>About Us | LearnNepal</title>
     
-    <!-- SEO & Open Graph Metadata -->
-    <meta name="description" content="Learn more about LearnNepal, our story, mission, and the team providing premium study resources for NEB Class 11 & 12 students.">
-    <meta property="og:title" content="About Us | LearnNepal">
-    <meta property="og:description" content="Empowering NEB students across Nepal with hand-crafted, beautiful, and completely free digital notes.">
-    <meta property="og:image" content="assets/images/logo.png">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Learn Nepal is dedicated to empowering Grade 10, 11, and 12 NEB students across Nepal with free, high-quality educational resources.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="apple-touch-icon" href="assets/images/logo.png">
-
-    <!-- Fonts preconnect and preloading -->
+    
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <script src="scripts/theme.js"></script>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
 
-    <!-- Page Specific Premium Styling -->
     <style>
-        .about-hero {
-            position: relative;
-            padding: 9.5rem 0 5.5rem;
-            overflow: hidden;
-            background: var(--grad-hero);
-            text-align: center;
-        }
-        .about-hero .hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            overflow: hidden;
-            pointer-events: none;
-        }
-        .about-hero-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .about-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.75rem);
-            line-height: var(--leading-tight);
-            margin-top: var(--space-md);
+        .hero-badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            border-radius: var(--radius-full);
+            background: var(--primary-container);
+            color: var(--on-primary-container);
+            font-weight: 600;
+            font-size: 0.875rem;
             margin-bottom: var(--space-md);
         }
         
-        .story-container {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: var(--space-3xl);
-            align-items: center;
-        }
-        @media (max-width: 900px) {
-            .story-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-xl);
-            }
-        }
-        
-        .pillars-list {
+        .pillar-card {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            text-align: center;
             display: flex;
             flex-direction: column;
-            gap: var(--space-md);
-            margin-top: var(--space-xl);
-        }
-        .pillar-item {
-            display: flex;
-            gap: var(--space-md);
             align-items: center;
+            transition: transform 0.3s var(--ease-spring), box-shadow 0.3s ease;
         }
-        .pillar-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--accent-muted);
-            border: 1px solid var(--accent-border);
-            border-radius: 50%;
+        .pillar-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-card-hover);
+        }
+        .pillar-icon-wrapper {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-xl);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent);
-            flex-shrink: 0;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .glass-youtube-box {
-            background: var(--bg-glass);
-            border: 1px solid var(--border);
-            padding: 3rem 2rem;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-card);
-            text-align: center;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            transition: border-color var(--transition), transform var(--transition);
-        }
-        .glass-youtube-box:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-        }
-        .glass-youtube-icon {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: rgba(255, 0, 0, 0.08);
-            border: 1px solid rgba(255, 0, 0, 0.15);
             margin-bottom: var(--space-lg);
-            color: #FF0000;
-            box-shadow: 0 8px 32px rgba(255, 0, 0, 0.05);
-            animation: pulse 2s infinite ease-in-out;
-        }
-        
-        .vision-container {
-            max-width: 760px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-        }
-        .vision-quote-mark {
-            font-size: 6rem;
-            color: var(--accent);
-            font-family: var(--font-heading);
-            line-height: 1;
-            margin-bottom: -1.5rem;
-            opacity: 0.25;
-            user-select: none;
-        }
-        .vision-quote {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--text-primary);
-            line-height: var(--leading-normal);
-            margin: 0 0 var(--space-xl);
-            border: none;
-            background: none;
-            padding: 0;
-        }
-        .vision-line {
-            width: 80px;
-            height: 3px;
-            background: var(--accent-gradient);
-            border-radius: var(--radius-full);
-            margin: var(--space-xl) auto 0;
-            box-shadow: var(--shadow-accent);
         }
 
-        .team-section {
-            background: var(--bg-secondary);
-        }
-        .team-card {
-            background: var(--bg-glass);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            max-width: 480px;
-            margin: 0 auto;
-            box-shadow: var(--shadow-card);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: all var(--transition);
-        }
-        .team-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-glow), var(--shadow-lg);
-        }
-        .team-card-inner {
-            padding: 3rem 2.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: var(--space-lg);
-        }
-        .team-avatar-container {
-            position: relative;
-            width: 150px;
-            height: 150px;
+        .team-avatar {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--accent);
-            box-shadow: var(--shadow-glow);
-            transition: transform var(--transition);
-        }
-        .team-card:hover .team-avatar-container {
-            transform: scale(1.05);
-        }
-        .team-avatar-container img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
+            margin: 0 auto var(--space-md);
+            border: 4px solid var(--surface-container-lowest);
+            box-shadow: var(--shadow-md);
+            transition: border-color 0.3s ease;
         }
-        .about-story-title {
-            font-size: 2.25rem;
-            margin-bottom: 1.5rem;
+        .team-member:hover .team-avatar {
+            border-color: var(--primary);
         }
-        .about-story-text {
-            margin-bottom: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-        .community-sub-text {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-        .community-btn-yt {
-            display: block;
-            text-align: center;
-        }
-        .vision-badge {
-            margin-bottom: var(--space-lg);
-        }
-        .founder-name {
-            font-size: 1.5rem;
-            margin-bottom: 0.35rem;
-            color: var(--text-primary);
-        }
-        .founder-title {
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 0.95rem;
-            margin-bottom: var(--space-md);
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-        }
-        .founder-bio {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-        .founder-social-links {
-            margin-top: 0.5rem;
-            gap: 1rem;
+
+        .quote-banner {
+            background: var(--surface-container-low);
+            border-left: 4px solid var(--secondary);
+            padding: var(--space-xl);
+            border-radius: var(--radius-xl);
+            margin-top: var(--space-xl);
         }
     </style>
 </head>
 <body>
 
-    <div id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page reading progress"></div>
-
     <!-- Header -->
-        <header class="header" id="site-header">
-        <div class="container header-container">
+    <header class="header" id="site-header">
+        <div class="header-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.png" alt="LearnNepal">
-                LearnNepal<span></span>
+                LearnNepal
             </a>
 
             <button class="mobile-toggle" aria-label="Toggle Navigation">
@@ -271,39 +101,17 @@
             <nav class="nav-menu" aria-label="Main navigation">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="pages/courses.html" class="nav-link">Courses</a>
-
-                <div class="dropdown">
-                    <a href="#" class="nav-link" aria-haspopup="true" aria-expanded="false">Classes</a>
-                    <div class="dropdown-menu" role="menu">
-                        <div class="dropdown-header">Class 10</div>
-                        <a href="pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <div class="dropdown-header">Class 11</div>
-                        <a href="pages/class-11/english.html" class="dropdown-item">English</a>
-                        <a href="pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
-                        <a href="pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <div class="dropdown-header">Class 12</div>
-                        <a href="pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
-                        <a href="pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
-                        <a href="pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-                        <a href="pages/class-12/question-bank/index.html" class="dropdown-item qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
-                    </div>
-                </div>
-
+                <a href="pages/class-12/question-bank/index.html" class="nav-link">Question Bank</a>
                 <a href="about.html" class="nav-link active">About</a>
+
                 <button class="search-trigger btn-search" aria-label="Search">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                     <span>Search</span>
                     <kbd>Ctrl K</kbd>
                 </button>
                 <button class="theme-toggle" aria-label="Toggle Theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
                 <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
             </nav>
@@ -311,200 +119,157 @@
     </header>
 
     <main>
-        <!-- Premium Hero Section -->
-        <section class="about-hero">
-            <div class="hero-bg">
-                <div class="hero-orb hero-orb-1"></div>
-                <div class="hero-orb hero-orb-2"></div>
-                <div class="hero-orb hero-orb-3"></div>
-                <div class="hero-grid-bg"></div>
-            </div>
-            
-            <div class="container about-hero-inner">
-                <span class="badge animate-fade-up">Our Mission</span>
-                <h1 class="animate-fade-up delay-100">
-                    Empowering Students with <span class="gradient-text">Premium Education</span>
+        <!-- Hero Section -->
+        <section class="section text-center" style="padding-top: var(--space-3xl);">
+            <div class="container" style="max-width: 800px;">
+                <span class="hero-badge">Education for All</span>
+                <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem); color: var(--primary); margin-bottom: var(--space-lg); line-height: 1.15;">
+                    Empowering the Next Generation of Nepali Students
                 </h1>
-                <p class="text-lead animate-fade-up delay-200">
-                    LearnNepal is dedicated to providing high-quality, structured, and accessible digital study materials for NEB Class 11 &amp; 12 students across Nepal — completely free.
+                <p style="font-size: 1.125rem; color: var(--on-surface-variant); line-height: 1.7; margin-bottom: var(--space-2xl);">
+                    We believe that quality education shouldn't be a privilege. LearnNepal provides free, high-quality NEB resources designed by experts to help Grade 10, 11, and 12 students achieve their academic dreams from any corner of the country.
                 </p>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="pages/courses.html" class="btn btn-primary btn-lg" style="border-radius: var(--radius-xl);">
+                        Start Learning Now
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Our Story Section -->
+        <section class="section" style="background: var(--surface-container-lowest);">
+            <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-3xl); align-items: center;">
+                <div style="position: relative;">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNvEgFFG8aMEKwu_EvngwCIiOUgyda-yUaPOWi3AiYH0coR_OlYP2t_MG2cVfmdh1-mmC15mvG-CjDmKj6CWJCXNHmoMRVaN5HFOgxhfqtv7XMmEcavRjWi8DUXrxZ_yaO7LfW0CtYzAjES0qCNsOTSJPt_hgj3WQ2jlIck3hVmECjx6elmsohqZSTCyNln7Zs6iG10Mb8UjKSyhStpEM27VZeZE7UDJuLCDS18_ZoENuU2DDbYdFo" 
+                         alt="Nepali Students Studying" 
+                         style="width: 100%; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl); object-fit: cover; aspect-ratio: 16/10;">
+                </div>
+                <div>
+                    <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: var(--space-lg);">Our Story</h2>
+                    <p style="color: var(--on-surface-variant); line-height: 1.7; margin-bottom: var(--space-md);">
+                        LearnNepal was born out of a simple observation: students in Nepal, especially those in Grades 10, 11, and 12, often struggle to find comprehensive, digital-first resources that align with the NEB syllabus.
+                    </p>
+                    <p style="color: var(--on-surface-variant); line-height: 1.7; margin-bottom: var(--space-lg);">
+                        Our founders—a group of passionate educators and tech enthusiasts—witnessed the digital divide first-hand. While some had access to expensive coaching, many were left behind. We set out to bridge this gap by creating a centralized, free, and interactive hub for learning.
+                    </p>
+                    <div class="quote-banner">
+                        <span class="material-symbols-outlined" style="color: var(--secondary); font-size: 2rem; display: block; margin-bottom: 0.5rem;">format_quote</span>
+                        <p style="font-family: var(--font-devanagari); font-style: italic; font-size: 1.1rem; color: var(--on-surface);">
+                            "शिक्षा भनेको एउटा दियो हो, जसले अज्ञानताको अन्धकारलाई हटाउँछ।"
+                        </p>
+                        <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-top: 0.5rem; font-weight: 600;">
+                            – Our mission is to keep this light burning for every student in Nepal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
         <section class="section">
             <div class="container">
-                <div class="story-container stagger-grid">
-                    <div>
-                        <h2 class="animate-fade-up about-story-title">The LearnNepal Story</h2>
-                        <p class="animate-fade-up delay-100 about-story-text">
-                            Education in the digital age should be beautiful, fast, and accessible. We noticed that most educational resources in Nepal were cluttered, outdated, or difficult to navigate.
-                        </p>
-                        <p class="animate-fade-up delay-200 about-story-text">
-                            We started LearnNepal with a simple goal: to create the "Apple" of educational platforms for Nepali students. A space where learning feels premium, notes are meticulously crafted, and the user experience is fluid.
-                        </p>
-                        
-                        <div class="pillars-list animate-fade-up delay-300">
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                </div>
-                                <div><strong>Quality Content</strong>: Verified by subject experts and board patterns.</div>
-                            </div>
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                </div>
-                                <div><strong>Zero Ads Clutter</strong>: Focus on reading, not closing popups.</div>
-                            </div>
-                            <div class="pillar-item">
-                                <div class="pillar-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                </div>
-                                <div><strong>Always Free</strong>: Accessible to every single student across the nation.</div>
-                            </div>
+                <div class="text-center" style="margin-bottom: var(--space-3xl);">
+                    <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: var(--space-xs);">The Pillars of LearnNepal</h2>
+                    <p style="color: var(--on-surface-variant);">We are guided by principles that prioritize the student's journey above all else.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gutter);">
+                    <!-- Accessibility -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrapper" style="background: rgba(53, 37, 205, 0.1); color: var(--primary);">
+                            <span class="material-symbols-outlined" style="font-size: 2.25rem;">universal_currency</span>
                         </div>
+                        <h3 style="font-size: 1.35rem; margin-bottom: var(--space-xs);">Accessibility</h3>
+                        <p style="color: var(--on-surface-variant); font-size: 0.95rem; line-height: 1.6;">
+                            High-speed, low-data learning resources that work even in remote areas with limited internet connectivity.
+                        </p>
                     </div>
-                    
-                    <div class="glass-youtube-box animate-fade-up delay-200">
-                         <div class="glass-youtube-icon">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                         </div>
-                         <h3>Join Our Community</h3>
-                         <p class="community-sub-text">Subscribe for video lessons, chapter walkthroughs, and instant updates.</p>
-                         <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" class="btn-yt community-btn-yt">Subscribe to LearnNepal</a>
+
+                    <!-- Quality -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrapper" style="background: rgba(0, 108, 73, 0.1); color: var(--secondary);">
+                            <span class="material-symbols-outlined" style="font-size: 2.25rem;">verified_user</span>
+                        </div>
+                        <h3 style="font-size: 1.35rem; margin-bottom: var(--space-xs);">Quality</h3>
+                        <p style="color: var(--on-surface-variant); font-size: 0.95rem; line-height: 1.6;">
+                            Content curated and verified by Nepal's top educators and subject experts to ensure syllabus accuracy.
+                        </p>
+                    </div>
+
+                    <!-- Community -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrapper" style="background: rgba(104, 64, 0, 0.1); color: var(--tertiary);">
+                            <span class="material-symbols-outlined" style="font-size: 2.25rem;">groups</span>
+                        </div>
+                        <h3 style="font-size: 1.35rem; margin-bottom: var(--space-xs);">Community-Driven</h3>
+                        <p style="color: var(--on-surface-variant); font-size: 0.95rem; line-height: 1.6;">
+                            Built for students, by students. Our platform evolves based on real feedback from our active learning community.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Vision Section -->
-        <section class="section bg-alt">
+        <!-- Team Section -->
+        <section class="section" style="background: var(--surface-container-low);">
             <div class="container">
-                <div class="vision-container reveal">
-                     <span class="badge vision-badge">Our Vision</span>
-                     <div class="vision-quote-mark">&ldquo;</div>
-                     <blockquote class="vision-quote">
-                         To bridge the gap between traditional classroom learning and modern digital accessibility, ensuring every NEB student has the beautiful, detailed, and structured tools they need to achieve academic excellence.
-                     </blockquote>
-                     <div class="vision-line"></div>
+                <div class="text-center" style="margin-bottom: var(--space-3xl);">
+                    <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: var(--space-xs);">Crafted by Experts</h2>
+                    <p style="color: var(--on-surface-variant);">Meet the educators and creators who dedicate their time to making LearnNepal the best learning resource.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gutter);">
+                    <!-- Member 1 -->
+                    <div class="team-member text-center">
+                        <img src="assets/images/author_gopal.png" alt="Gopal" class="team-avatar">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Gopal</h4>
+                        <p style="color: var(--primary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">Founder & Educator</p>
+                        <p style="font-size: 0.875rem; color: var(--on-surface-variant);">Passionate about simplifying NEB curriculum into clear digital guides.</p>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="team-member text-center">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jJEgaPX0k-lJvoyShDW22-Q-2mxtlUN28JHAMN5F3_5rse6chICbz4h69ryo2JYddfyKjwwedcw7MUHnkGzwaDzwKeqMiZTnnjn_QLpfr_SV4HOV8OT8bUyB7eL6Tbtr2U2VRM2bY3vifrqYUZY_mLuXtShzBoq24FjWQyPdWX0HIi7fMHZAmhOQEHgm2Nqh0NIXJN-Z8F55Ia3v3CX5jumgxNjI-k4EKkkSi35d0l8_vwUW8b5w" alt="Sita Sharma" class="team-avatar">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Sita Sharma</h4>
+                        <p style="color: var(--primary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">Nepali & English Lead</p>
+                        <p style="font-size: 0.875rem; color: var(--on-surface-variant);">Dedicated to creating clear prose, verse, and grammar explanations.</p>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="team-member text-center">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnitegd1D20RxoFnZIqULVWzasdrRdJnSCWLEks_GCxXHcINHX8fVjztJe-3479ym_gy49OWJ8VBrietCsB8ggN6jTCJtVmCYbpIDXZhEM0zePlSSvzkkJvtrnsKASdp1fyX2WDf30n4SN0La6dPLq75p9dGbYit_6YGsz69f4viq0lD1VgLn6UoagY6PWqSzqMEvbkydYkADLo4UeOEC5HT23PUzZsuK2lxzf9OW7H3lHRgCyk7RM" alt="Arjun Koirala" class="team-avatar">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Arjun Koirala</h4>
+                        <p style="color: var(--primary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem;">Computer Science Expert</p>
+                        <p style="font-size: 0.875rem; color: var(--on-surface-variant);">Crafting interactive programming & C-language learning material.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Founder / Team Section -->
-        <section class="section team-section">
-            <div class="container">
-                <div class="section-title reveal">
-                     <span class="section-subtitle">The Mind Behind LearnNepal</span>
-                     <h2>Our Founder</h2>
-                </div>
-                
-                <div class="team-card reveal">
-                    <div class="team-card-inner">
-                        <div class="team-avatar-container">
-                            <img src="assets/images/author_gopal.png" alt="Gopal — Founder &amp; Chief Educator">
-                        </div>
-                        <div>
-                            <h3 class="founder-name">Gopal</h3>
-                            <p class="founder-title">Founder &amp; Chief Educator</p>
-                            <p class="founder-bio">
-                                Gopal created LearnNepal to turn fragmented, hard-to-access study materials into a beautifully integrated learning hub. He works closely with educators to draft precise, syllabus-aligned guides and records digital lectures for students nationwide.
-                            </p>
-                        </div>
-                        <div class="footer-social founder-social-links">
-                            <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-                            </a>
-                            <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- CTA Section -->
+        <section class="section text-center" style="background: var(--primary); color: white; border-radius: var(--radius-2xl); margin: var(--space-3xl) var(--margin-desktop); padding: var(--space-3xl) var(--space-xl);">
+            <h2 style="color: white; font-size: 2.25rem; margin-bottom: var(--space-md);">Start Your Learning Journey Today</h2>
+            <p style="color: var(--primary-container); font-size: 1.1rem; max-width: 600px; margin: 0 auto var(--space-2xl);">
+                Join thousands of students across Nepal who are already excelling with our resources. It's free, forever.
+            </p>
+            <a href="pages/courses.html" class="btn" style="background: var(--secondary-container); color: var(--on-secondary-container); font-weight: 700; border-radius: var(--radius-xl); padding: 0.85rem 2rem;">
+                Explore Courses
+            </a>
         </section>
     </main>
 
-    <!-- ═══ FOOTER — Premium Mega-Footer ═══ -->
-    <footer class="footer mega-footer">
-        <div class="footer-separator" aria-hidden="true"></div>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <!-- Top row: brand + links -->
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="LearnNepal">
-                        LearnNepal<span></span>
-                    </a>
-                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes — completely free.</p>
-                    <div class="footer-social">
-                        <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-                        </a>
-                        <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-heading">Class 11</h5>
-                    <ul class="footer-links">
-                        <li><a href="pages/class-11/english.html">English</a></li>
-                        <li><a href="pages/class-11/nepali.html">Nepali</a></li>
-                        <li><a href="pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-heading">Class 12</h5>
-                    <ul class="footer-links">
-                        <li><a href="pages/class-12/english/c12_english_syllabus.html">English</a></li>
-                        <li><a href="pages/class-12/nepali.html">Nepali</a></li>
-                        <li><a href="pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
-                        <li><a href="pages/class-12/question-bank/index.html" class="qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-heading">Resources</h5>
-                    <ul class="footer-links">
-                        <li><a href="pages/courses.html">All Courses</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
-                <div class="footer-bottom-links">
-                    <a href="privacy.html">Privacy</a>
-                    <span>&bull;</span>
-                    <a href="contact.html">Contact</a>
-                    <span>&bull;</span>
-                    <a href="about.html">About</a>
-                </div>
+            <div class="footer-bottom" style="border: none; padding: var(--space-xl) 0;">
+                <p>&copy; 2026 LearnNepal — Empowering NEB Students Across Nepal</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="scripts/app.js"></script>
     <script src="scripts/search.js"></script>
-    <script src="scripts/transitions.js"></script>
-    <script>
-    (function() {
-        var bar = document.getElementById('reading-progress');
-        if (bar) {
-            window.addEventListener('scroll', function() {
-                var el = document.documentElement;
-                bar.style.width = Math.min(el.scrollTop / (el.scrollHeight - el.clientHeight) * 100, 100) + '%';
-            }, { passive: true });
-        }
-    })();
-    </script>
 </body>
 </html>

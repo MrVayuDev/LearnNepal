@@ -1,194 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class 10 Optional Mathematics | LearnNepal</title>
-    <meta name="description" content="Free exercise solutions for NEB Class 10 Optional Mathematics — Algebra, Trigonometry, Matrices, Coordinate Geometry, Statistics and more." />
-
-    <!-- Favicon -->
-    <link rel="icon" href="../../../assets/images/logo.png" type="image/png" />
-    <link rel="apple-touch-icon" href="../../../assets/images/logo.png" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Class 10 Optional Mathematics | LearnNepal" />
-    <meta property="og:description" content="Free exercise solutions for NEB Class 10 Optional Mathematics — Algebra, Trigonometry, Matrices, Coordinate Geometry, Statistics and more." />
-    <meta property="og:image" content="../../../assets/images/logo.png" />
-    <meta property="og:type" content="website" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Main Site Styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 - Optional Mathematics - LearnNepal</title>
+    
+    <link rel="icon" type="image/png" href="../../../assets/images/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3525cd",
+                        "secondary": "#006c49",
+                        "tertiary": "#684000",
+                        "background": "#f6fafe",
+                        "surface": "#f6fafe",
+                        "surface-container": "#eaeef2",
+                        "surface-container-low": "#f0f4f8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#dfe3e7",
+                        "on-surface": "#171c1f",
+                        "on-surface-variant": "#464555",
+                        "outline-variant": "#c7c4d8",
+                        "primary-container": "#4f46e5",
+                        "secondary-container": "#6cf8bb"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px"
+                    }
+                }
+            }
+        }
+    </script>
+    
     <script src="../../../scripts/theme.js"></script>
-    <link rel="stylesheet" href="../../../styles/main.css" />
-
+    <link rel="stylesheet" href="../../../styles/main.css">
+    
     <style>
-        /* ── Lessons Hub specific styles ─────────────────────── */
-        .lessons-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-xl);
-            margin-bottom: var(--space-3xl);
-        }
-
-        @media (max-width: 768px) {
-            .lessons-grid { grid-template-columns: 1fr; }
-        }
-
-        .lesson-card {
-            position: relative;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            transition: transform var(--duration-normal) var(--ease-out), border-color var(--duration-normal), box-shadow var(--duration-normal);
-        }
-
-        .lesson-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: var(--accent-gradient);
-            opacity: 0.2;
-            transition: opacity var(--duration-fast);
-        }
-
-        .lesson-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-md), var(--shadow-glow);
-        }
-
-        .lesson-card:hover::before { opacity: 1; }
-
-        .lesson-card-body {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .lesson-card-num {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--accent-muted);
-            color: var(--accent);
-            font-family: var(--font-heading);
-            font-weight: 800;
-            font-size: 1.1rem;
-            margin-bottom: var(--space-md);
-            transition: all var(--duration-normal);
-            border: 2px solid var(--accent-border);
-        }
-
-        .lesson-card:hover .lesson-card-num {
-            background: var(--accent-gradient);
-            color: #fff;
-            border-color: transparent;
-            box-shadow: var(--shadow-accent);
-        }
-
-        .lesson-card-body h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-xs);
-        }
-
-        .lesson-card-body p {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .lesson-card-exercises {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-xs);
-            margin-top: var(--space-md);
-        }
-
-        .exercise-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0.25rem 0.7rem;
-            font-size: 0.72rem;
-            font-weight: 600;
-            border-radius: var(--radius-full);
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            color: var(--text-secondary);
-            transition: all var(--duration-fast);
-        }
-
-        .lesson-card:hover .exercise-chip {
-            border-color: var(--accent-border);
-            color: var(--accent);
-            background: var(--accent-muted);
-        }
-
-        .lesson-card-footer {
-            padding: 1rem 2rem;
-            border-top: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(0, 0, 0, 0.03);
-        }
-
-        .lesson-card-footer .exercise-count {
-            font-size: 0.8rem;
-            color: var(--text-tertiary);
-            font-weight: 600;
-        }
-
-        .lesson-card-footer .go-arrow {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            transition: all var(--duration-fast);
-        }
-
-        .lesson-card:hover .go-arrow {
-            background: var(--accent);
-            color: white;
-            border-color: transparent;
-            transform: translateX(4px);
-            box-shadow: var(--shadow-accent);
-        }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 0.5px solid rgba(255, 255, 255, 0.2); }
+        .lift-hover { transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease; }
+        .lift-hover:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.1); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     </style>
 </head>
-<body>
+<body class="bg-surface font-body-md text-on-surface">
 
-    <div id="reading-progress"></div>
-
-    <!-- ═══ HEADER ═══ -->
+<!-- TopNavBar -->
+    <!-- â•â•â• HEADER â•â•â• -->
         <header class="header" id="site-header">
-        <div class="container header-container">
+        <div class="header-container">
             <a href="../../../index.html" class="logo">
                 <img src="../../../assets/images/logo.png" alt="LearnNepal">
-                LearnNepal<span></span>
+                LearnNepal
             </a>
 
             <button class="mobile-toggle" aria-label="Toggle Navigation">
@@ -199,312 +74,256 @@
 
             <nav class="nav-menu" aria-label="Main navigation">
                 <a href="../../../index.html" class="nav-link">Home</a>
-                <a href="../../../pages/courses.html" class="nav-link">Courses</a>
-
-                <div class="dropdown">
-                    <a href="#" class="nav-link active" aria-haspopup="true" aria-expanded="false">Classes</a>
-                    <div class="dropdown-menu" role="menu">
-                        <div class="dropdown-header">Class 10</div>
-                        <a href="../../../pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <div class="dropdown-header">Class 11</div>
-                        <a href="../../../pages/class-11/english.html" class="dropdown-item">English</a>
-                        <a href="../../../pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
-                        <a href="../../../pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <div class="dropdown-header">Class 12</div>
-                        <a href="../../../pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
-                        <a href="../../../pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
-                        <a href="../../../pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-                        <a href="../../../pages/class-12/question-bank/index.html" class="dropdown-item qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
-                    </div>
-                </div>
-
+                <a href="../../../pages/courses.html" class="nav-link active">Courses</a>
+                <a href="../../../pages/class-12/question-bank/index.html" class="nav-link">Question Bank</a>
                 <a href="../../../about.html" class="nav-link">About</a>
+
                 <button class="search-trigger btn-search" aria-label="Search">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                     <span>Search</span>
                     <kbd>Ctrl K</kbd>
                 </button>
                 <button class="theme-toggle" aria-label="Toggle Theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
                 <a href="../../../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>
 
-    <main>
-
-        <!-- ═══ HERO ═══ -->
-        <div class="syllabus-hero">
-            <div class="container">
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="../../../index.html">Home</a>
-                    <span>&rsaquo;</span>
-                    <a href="../../courses.html">Courses</a>
-                    <span>&rsaquo;</span>
-                    <span>Class 10</span>
-                    <span>&rsaquo;</span>
-                    <span>Optional Mathematics</span>
-                </nav>
-                <span class="badge" style="margin-bottom:0.75rem">NEB Class 10</span>
-                <h1>Optional Mathematics</h1>
-                <p class="text-lead">
-                    Complete exercise solutions for the NEB Class 10 Optional Mathematics curriculum — Algebra, Calculus, Matrix, Trigonometry, Coordinate Geometry, Vectors, Transformations, and Statistics.
-                </p>
-
-                <div class="syllabus-stats" style="margin-top:1.75rem;">
-                    <div class="stat-chip">
-                        <span class="stat-num">12</span>
-                        <span class="stat-label">Chapters</span>
+<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+    <!-- Subject Header Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16 items-start">
+        <div class="lg:col-span-8">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md">Grade 10</span>
+                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-md">SEE Board</span>
+            </div>
+            <h1 class="font-display-lg font-extrabold text-display-lg-mobile md:text-display-lg text-on-background mb-6 tracking-tight">Class 10 - Optional Mathematics</h1>
+            <p class="font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                Complete exercise solutions for NEB Class 10 Optional Mathematics: Functions, Polynomials, Linear Programming, Matrices, Trigonometry, Vectors, and Statistics.
+            </p>
+        </div>
+        <div class="lg:col-span-4">
+            <div class="glass-card p-6 rounded-xl shadow-lg border border-primary/10">
+                <h3 class="font-headline-sm mb-4">Subject Overview</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">menu_book</span>
+                            <span class="font-body-md">Total Units</span>
+                        </div>
+                        <span class="font-bold">6 Units</span>
                     </div>
-                    <div class="stat-chip">
-                        <span class="stat-num">26</span>
-                        <span class="stat-label">Exercises</span>
+                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">schedule</span>
+                            <span class="font-body-md">Est. Study Time</span>
+                        </div>
+                        <span class="font-bold">80 Hours</span>
                     </div>
-                    <div class="stat-chip">
-                        <span class="stat-num">PDF</span>
-                        <span class="stat-label">Format</span>
-                    </div>
-                    <div class="stat-chip">
-                        <span class="stat-num">Free</span>
-                        <span class="stat-label">Always</span>
+                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">trending_up</span>
+                            <span class="font-body-md">Difficulty</span>
+                        </div>
+                        <span class="font-bold text-tertiary">NEB Curriculum</span>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- ═══ CHAPTER GRID ═══ -->
-        <section class="section">
-            <div class="container">
-                <div class="section-title">
-                    <span class="section-subtitle">Course Content</span>
-                    <h2>All Chapters</h2>
+    <!-- Main Content Area: Curriculum Breakdown -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <div class="lg:col-span-8 space-y-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="font-headline-md text-2xl font-bold">Curriculum Breakdown</h2>
+                <button class="text-primary font-label-md flex items-center gap-1 hover:underline" onclick="document.querySelectorAll('.hidden.p-6.grid').forEach(el => el.classList.remove('hidden'))">
+                    Expand All <span class="material-symbols-outlined">expand_more</span>
+                </button>
+            </div>
+            
+        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
+            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">1</div>
+                    <div>
+                        <h3 class="font-headline-sm">Function</h3>
+                        <p class="text-on-surface-variant font-label-md">Composite & Inverse Functions</p>
+                    </div>
                 </div>
-
-                <div class="lessons-grid" id="lessons-grid">
-
-                    <!-- Ch 1: Function -->
-                    <a href="viewer.html?chapter=ch-1&exercise=ex-1-1" class="lesson-card" id="card-ch-1">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">1</div>
-                            <h3>Function</h3>
-                            <p>Composite Function and Inverse Function.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 1.1 — Composite Function</span>
-                                <span class="exercise-chip">Ex 1.2 — Inverse Function</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 2: Polynomial -->
-                    <a href="viewer.html?chapter=ch-2&exercise=ex-2-1" class="lesson-card" id="card-ch-2">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">2</div>
-                            <h3>Polynomial</h3>
-                            <p>Remainder Theorem, Factor Theorem, and Polynomial Equations.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 2.1 — Remainder &amp; Factor</span>
-                                <span class="exercise-chip">Ex 2.2 — Polynomial Equations</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 3: Linear Programming -->
-                    <a href="viewer.html?chapter=ch-3&exercise=ex-3-1" class="lesson-card" id="card-ch-3">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">3</div>
-                            <h3>Linear Programming</h3>
-                            <p>Linear Inequations and Linear Programming Problems.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 3.1 — Linear Inequalities</span>
-                                <span class="exercise-chip">Ex 3.2 — Linear Programming</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 4: Quadratic Equation -->
-                    <a href="viewer.html?chapter=ch-4&exercise=ex-4-1" class="lesson-card" id="card-ch-4">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">4</div>
-                            <h3>Quadratic Equation</h3>
-                            <p>Roots and Discriminant, and Graphs of Quadratic Functions.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 4.1 — Roots of Equation</span>
-                                <span class="exercise-chip">Ex 4.2 — Quadratic Graphs</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 5: Surd -->
-                    <a href="viewer.html?chapter=ch-5&exercise=ex-5-1" class="lesson-card" id="card-ch-5">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">5</div>
-                            <h3>Surd</h3>
-                            <p>Simplification, Rationalization, and Surd Equations.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 5.1 — Surd Equations</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">1 Exercise</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 6: Matrix and Determinant -->
-                    <a href="viewer.html?chapter=ch-6&exercise=ex-6-1" class="lesson-card" id="card-ch-6">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">6</div>
-                            <h3>Matrix &amp; Determinant</h3>
-                            <p>Determinants, Inverse Matrix, and Cramer's Rule.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 6.1 — Determinants</span>
-                                <span class="exercise-chip">Ex 6.2 — Inverse Matrix</span>
-                                <span class="exercise-chip">Ex 6.3 — Cramer's Rule</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">3 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 7: Trigonometry -->
-                    <a href="viewer.html?chapter=ch-7&exercise=ex-7-1" class="lesson-card" id="card-ch-7">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">7</div>
-                            <h3>Trigonometry</h3>
-                            <p>Multiple Angles, Sub-multiple Angles, and Trigonometric Equations.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 7.1 — Multiple Angles</span>
-                                <span class="exercise-chip">Ex 7.2 — Sub-multiple Angles</span>
-                                <span class="exercise-chip">Ex 7.3 — Trigonometric Equations</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">3 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 8: Coordinate Geometry -->
-                    <a href="viewer.html?chapter=ch-8&exercise=ex-8-1" class="lesson-card" id="card-ch-8">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">8</div>
-                            <h3>Coordinate Geometry</h3>
-                            <p>Angle Between Straight Lines and Pair of Straight Lines.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 8.1 — Angle Between Lines</span>
-                                <span class="exercise-chip">Ex 8.2 — Pair of Straight Lines</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 9: Transformation -->
-                    <a href="viewer.html?chapter=ch-9&exercise=ex-9-1" class="lesson-card" id="card-ch-9">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">9</div>
-                            <h3>Transformation</h3>
-                            <p>Combined Transformations and Inversion Mapping.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 9.1 — Combined Trans.</span>
-                                <span class="exercise-chip">Ex 9.2 — Inversion Mapping</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 10: Vector -->
-                    <a href="viewer.html?chapter=ch-10&exercise=ex-10-1" class="lesson-card" id="card-ch-10">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">10</div>
-                            <h3>Vector</h3>
-                            <p>Scalar Product and Vector Theorems.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 10.1 — Scalar Product</span>
-                                <span class="exercise-chip">Ex 10.2 — Vector Theorems</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 11: Statistics -->
-                    <a href="viewer.html?chapter=ch-11&exercise=ex-11-1" class="lesson-card" id="card-ch-11">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">11</div>
-                            <h3>Statistics</h3>
-                            <p>Quartile Deviation, Mean Deviation, and Standard Deviation.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 11.1 — Quartile Dev.</span>
-                                <span class="exercise-chip">Ex 11.2 — Mean Deviation</span>
-                                <span class="exercise-chip">Ex 11.3 — Standard Deviation</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">3 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
-                    <!-- Ch 12: Continuity -->
-                    <a href="viewer.html?chapter=ch-12&exercise=ex-12-1" class="lesson-card" id="card-ch-12">
-                        <div class="lesson-card-body">
-                            <div class="lesson-card-num">12</div>
-                            <h3>Continuity</h3>
-                            <p>Limits and Continuity of Functions.</p>
-                            <div class="lesson-card-exercises">
-                                <span class="exercise-chip">Ex 12.1 — Limits</span>
-                                <span class="exercise-chip">Ex 12.2 — Continuity</span>
-                            </div>
-                        </div>
-                        <div class="lesson-card-footer">
-                            <span class="exercise-count">2 Exercises</span>
-                            <span class="go-arrow">&rarr;</span>
-                        </div>
-                    </a>
-
+                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
+            </div>
+            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
+                    <div>
+                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Exercise 1.1 & 1.2</span>
+                        <h4 class="font-headline-sm text-lg mt-1">Composite Function & Inverse Function</h4>
+                    </div>
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                        <a href="viewer.html?pdf=alg_func_1_1.pdf" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
+                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
+            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">2</div>
+                    <div>
+                        <h3 class="font-headline-sm">Polynomial</h3>
+                        <p class="text-on-surface-variant font-label-md">Remainder & Factor Theorem, Polynomial Equations</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
+            </div>
+            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
+                    <div>
+                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Exercise 2.1 & 2.2</span>
+                        <h4 class="font-headline-sm text-lg mt-1">Polynomial Equations</h4>
+                    </div>
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                        <a href="viewer.html?pdf=alg_poly_2_1.pdf" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
+                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
+            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">3</div>
+                    <div>
+                        <h3 class="font-headline-sm">Linear Programming</h3>
+                        <p class="text-on-surface-variant font-label-md">Linear Inequalities & Optimization</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
+            </div>
+            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
+                    <div>
+                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Exercise 3.1 & 3.2</span>
+                        <h4 class="font-headline-sm text-lg mt-1">Linear Programming Problems</h4>
+                    </div>
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                        <a href="viewer.html?pdf=alg_lp_3_1.pdf" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
+                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
+            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">4</div>
+                    <div>
+                        <h3 class="font-headline-sm">Quadratic Equation</h3>
+                        <p class="text-on-surface-variant font-label-md">Roots & Graphs of Quadratic Functions</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
+            </div>
+            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
+                    <div>
+                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Exercise 4.1 & 4.2</span>
+                        <h4 class="font-headline-sm text-lg mt-1">Quadratic Equations</h4>
+                    </div>
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                        <a href="viewer.html?pdf=alg_quad_4_1.pdf" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
+                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
+            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">5</div>
+                    <div>
+                        <h3 class="font-headline-sm">Matrix & Determinants</h3>
+                        <p class="text-on-surface-variant font-label-md">Determinants, Inverse Matrix & Cramer's Rule</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
+            </div>
+            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
+                    <div>
+                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Exercise 6.1 - 6.3</span>
+                        <h4 class="font-headline-sm text-lg mt-1">Matrix Operations</h4>
+                    </div>
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                        <a href="viewer.html?pdf=mat_det_6_1.pdf" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
+                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
+            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">6</div>
+                    <div>
+                        <h3 class="font-headline-sm">Trigonometry</h3>
+                        <p class="text-on-surface-variant font-label-md">Multiple & Sub-multiple Angles</p>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
+            </div>
+            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
+                    <div>
+                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Exercise 7.1 - 7.3</span>
+                        <h4 class="font-headline-sm text-lg mt-1">Trigonometric Identities</h4>
+                    </div>
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                        <a href="viewer.html?pdf=trig_mult_7_1.pdf" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
+                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        </div>
 
-    </main>
-
-    <!-- ═══ FOOTER ═══ -->
-    <footer class="footer mega-footer">
-        <div class="footer-separator" aria-hidden="true"></div>
+        <!-- Sidebar -->
+        <div class="lg:col-span-4 space-y-gutter">
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-outline-variant relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <span class="material-symbols-outlined text-[80px] text-secondary">analytics</span>
+                </div>
+                <h3 class="font-headline-sm mb-6">Your Progress</h3>
+                <div class="flex items-center justify-between mb-2">
+                    <span class="font-label-md text-on-surface-variant">Course Completion</span>
+                    <span class="font-bold text-secondary">0%</span>
+                </div>
+                <div class="h-3 w-full bg-secondary-container/20 rounded-full mb-6">
+                    <div class="h-full bg-secondary rounded-full" style="width: 0%"></div>
+                </div>
+                <p class="font-body-md text-on-surface-variant mb-6">
+                    Start learning to track your progress across all chapters.
+                </p>
+                <button class="w-full py-3 rounded-xl bg-primary text-white font-label-md hover:bg-primary/90 transition-all shadow-md">
+                    Start Learning
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+    <!-- â•â•â• FOOTER â•â•â• -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
@@ -512,7 +331,7 @@
                         <img src="../../../assets/images/logo.png" alt="LearnNepal">
                         LearnNepal<span></span>
                     </a>
-                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes — completely free.</p>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes â€” completely free.</p>
                     <div class="footer-social">
                         <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
@@ -524,26 +343,28 @@
                 </div>
 
                 <div class="footer-col">
-                    <h5 class="footer-heading">Class 10</h5>
+                    <h5 class="footer-heading">Class 11</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Optional Mathematics</a></li>
+                        <li><a href="../../../pages/class-11/english.html">English</a></li>
+                        <li><a href="../../../pages/class-11/nepali.html">Nepali</a></li>
+                        <li><a href="../../../pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h5 class="footer-heading">Class 11 & 12</h5>
+                    <h5 class="footer-heading">Class 12</h5>
                     <ul class="footer-links">
-                        <li><a href="../../class-11/english.html">English (11)</a></li>
-                        <li><a href="../../class-11/nepali.html">Nepali (11)</a></li>
-                        <li><a href="../../class-12/nepali.html">Nepali (12)</a></li>
-                        <li><a href="../../class-12/english/c12_english_syllabus.html">English (12)</a></li>
+                        <li><a href="../../../pages/class-12/english/c12_english_syllabus.html">English</a></li>
+                        <li><a href="../../../pages/class-12/nepali.html">Nepali</a></li>
+                        <li><a href="../../../pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
+                        <li><a href="../../../pages/class-12/question-bank/index.html" class="qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h5 class="footer-heading">Resources</h5>
                     <ul class="footer-links">
-                        <li><a href="../../courses.html">All Courses</a></li>
+                        <li><a href="../../../pages/courses.html">All Courses</a></li>
                         <li><a href="../../../about.html">About Us</a></li>
                         <li><a href="../../../contact.html">Contact</a></li>
                         <li><a href="../../../privacy.html">Privacy Policy</a></li>
@@ -564,41 +385,9 @@
         </div>
     </footer>
 
-    <script src="../../../scripts/app.js"></script>
-    <script src="../../../scripts/search.js"></script>
-    <script src="../../../scripts/transitions.js"></script>
+<!-- Footer -->
 
-    <script>
-    (function() {
-        // Reading progress
-        var bar = document.getElementById('reading-progress');
-        if (bar) {
-            window.addEventListener('scroll', function() {
-                var el = document.documentElement;
-                bar.style.width = Math.min(el.scrollTop / (el.scrollHeight - el.clientHeight) * 100, 100) + '%';
-            }, { passive: true });
-        }
-
-        // Staggered card reveal
-        var cards = document.querySelectorAll('.lesson-card');
-        if (cards.length) {
-            var io = new IntersectionObserver(function(entries) {
-                entries.forEach(function(e, i) {
-                    if (e.isIntersecting) {
-                        e.target.style.opacity = '0';
-                        e.target.style.transform = 'translateY(24px)';
-                        setTimeout(function() {
-                            e.target.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                            e.target.style.opacity = '1';
-                            e.target.style.transform = 'translateY(0)';
-                        }, 80 * Array.prototype.indexOf.call(cards, e.target));
-                        io.unobserve(e.target);
-                    }
-                });
-            }, { threshold: 0.05 });
-            cards.forEach(function(c) { io.observe(c); });
-        }
-    })();
-    </script>
+<script src="../../../scripts/app.js"></script>
 </body>
 </html>
+

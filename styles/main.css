@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   LearnNepal — Main Entry v3 "Obsidian Academy"
+   LearnNepal — Main Entry v7 "Vibrant Academic Pulse"
    ═══════════════════════════════════════════════════════════ */
 
 @import "reset.css";
@@ -19,11 +19,11 @@
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding: 0 var(--margin-desktop);
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0 var(--space-md); }
+  .container { padding: 0 var(--margin-mobile); }
 }
 
 /* ── Buttons ─────────────────────────────────────────────── */
@@ -31,16 +31,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4em;
-  padding: 0.75rem 1.6rem;
-  border-radius: var(--radius-sm);
+  gap: 0.5em;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-xl);
   font-family: var(--font-body);
-  font-size: 0.92rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  transition: all var(--transition);
+  transition: all 0.3s var(--ease-spring);
   cursor: pointer;
-  border: 1.5px solid transparent;
+  border: 2px solid transparent;
   text-decoration: none;
   white-space: nowrap;
   position: relative;
@@ -48,39 +48,42 @@
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
-  color: var(--text-inverse);
+  background: var(--grad-primary);
+  background-size: 200% auto;
+  color: var(--on-primary);
   border-color: transparent;
   box-shadow: var(--shadow-accent);
 }
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
-  filter: brightness(1.05);
+  background-position: right center;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  color: var(--on-primary);
 }
-.btn-primary:active { transform: translateY(0); }
+.btn-primary:active { transform: translateY(0) scale(0.98); }
 
 .btn-outline {
   background: transparent;
-  border-color: var(--border-strong);
-  color: var(--text-primary);
+  border-color: var(--outline-variant);
+  color: var(--on-surface);
 }
 .btn-outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--primary);
+  color: var(--primary);
   background: var(--accent-muted);
   transform: translateY(-2px);
 }
 
 .btn-ghost {
   background: var(--bg-glass);
-  border-color: var(--border);
-  color: var(--text-primary);
-  backdrop-filter: blur(10px);
+  border-color: var(--outline-variant);
+  color: var(--on-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--primary);
+  color: var(--primary);
   background: var(--accent-muted);
   transform: translateY(-2px);
 }
@@ -88,7 +91,7 @@
 .btn-text {
   padding: 0;
   background: none;
-  color: var(--accent);
+  color: var(--primary);
   font-weight: 600;
   border: none;
 }
@@ -100,32 +103,65 @@
   align-items: center;
   gap: 0.5rem;
   background: var(--color-yt-red);
-  color: var(--text-inverse);
-  padding: 0.65rem 1.3rem;
-  border-radius: var(--radius-sm);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-xl);
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: all var(--transition);
+  transition: all 0.3s var(--ease-spring);
   box-shadow: 0 4px 12px rgba(229, 45, 39, 0.35);
 }
 .btn-yt:hover {
   background: var(--color-yt-red-hover);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 0 8px 24px rgba(229, 45, 39, 0.45);
-  color: var(--text-inverse);
+  color: white;
+}
+
+/* Accent button (secondary action) */
+.btn-accent {
+  background: var(--tertiary-fixed);
+  color: var(--on-tertiary-fixed);
+  border-color: transparent;
+}
+.btn-accent:hover {
+  background: var(--tertiary-fixed-dim);
+  transform: translateY(-2px);
 }
 
 /* Sizes */
-.btn-sm { padding: 0.45rem 0.9rem; font-size: 0.82rem; }
-.btn-lg { padding: 0.95rem 2rem; font-size: 1rem; }
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.82rem; }
+.btn-lg { padding: 1rem 2.25rem; font-size: 1rem; }
+
+/* ── Glass Panel Utility ─────────────────────────────────── */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Card Hover Utility ──────────────────────────────────── */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-card-hover);
+}
 
 /* ── Misc Utilities ──────────────────────────────────────── */
 .text-lead {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
 }
 
 .text-center { text-align: center; }
@@ -136,34 +172,37 @@
 }
 .section-sm { padding: var(--space-xl) 0; }
 
-.bg-alt { background: var(--bg-secondary); }
-.bg-dark { background: var(--bg-primary); color: var(--text-primary); }
+.bg-alt { background: var(--surface-container-low); }
+.bg-dark { background: var(--surface); color: var(--on-surface); }
 
 /* Section header */
 .section-title {
   text-align: center;
   margin-bottom: var(--space-3xl);
 }
-.section-title h2 { margin-top: var(--space-sm); }
+.section-title h2 {
+  margin-top: var(--space-sm);
+  color: var(--on-background);
+}
 .section-subtitle {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
-  padding: 0.35rem 0.9rem;
-  background: var(--accent-muted);
-  border: 1px solid var(--accent-border);
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  background: var(--primary-fixed);
+  border: 1px solid var(--outline-variant);
   border-radius: var(--radius-full);
 }
 
 /* Grids */
-.grid-2  { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); }
-.grid-3  { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); }
-.grid-4  { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-lg); }
+.grid-2  { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gutter); }
+.grid-3  { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
+.grid-4  { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gutter); }
 
 @media (max-width: 900px) {
   .grid-3 { grid-template-columns: 1fr 1fr; }
@@ -178,12 +217,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.3rem 0.85rem;
-  background: var(--accent-muted);
-  color: var(--accent);
-  border: 1px solid var(--accent-border);
+  padding: 0.35rem 0.9rem;
+  background: var(--primary-fixed);
+  color: var(--primary);
+  border: 1px solid var(--outline-variant);
   border-radius: var(--radius-full);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -191,12 +230,18 @@
 
 /* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-secondary); }
-::-webkit-scrollbar-thumb { background: var(--accent-muted); border-radius: var(--radius-full); }
-::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+::-webkit-scrollbar-track { background: var(--surface-container-low); }
+::-webkit-scrollbar-thumb { background: var(--outline-variant); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
 /* ── Selection ───────────────────────────────────────────── */
 ::selection {
-  background: var(--accent-muted);
-  color: var(--text-primary);
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+/* ── Material Symbols ────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
 }

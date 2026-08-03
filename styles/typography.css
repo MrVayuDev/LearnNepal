@@ -1,169 +1,186 @@
 /* ═══════════════════════════════════════════════════════════
-   LearnNepal — Typography System v3 "Obsidian Academy"
+   LearnNepal — Typography v7 "Vibrant Academic Pulse"
+   Plus Jakarta Sans + Mukta · 8pt scale · WCAG contrast
    ═══════════════════════════════════════════════════════════ */
 
-/* Google Fonts — loaded via HTML <link> tags for performance.
-   Plus Jakarta Sans (headings) + Inter (body) + Mukta (Devanagari) + JetBrains Mono (code) */
-
-/* ── Local Rozha One (Nepali Display) ─────────────────────── */
-@font-face {
-    font-family: 'Rozha One';
-    src: url('../assets/fonts/RozhaOne-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* ── Base ──────────────────────────────────────────────────── */
-html {
-    font-size: 16px;
-}
-
+/* ── Font Faces ─────────────────────────────────────────── */
 body {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: var(--leading-normal);
-    color: var(--text-primary);
-    background-color: var(--bg-primary);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transition: background-color var(--transition), color var(--transition);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: var(--leading-normal);
+  color: var(--on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* ── Headings — fluid scale with clamp() ───────────────────── */
+/* ── Headings ───────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    color: var(--text-primary);
-    line-height: var(--leading-tight);
-    margin-top: 0;
-    margin-bottom: var(--space-md);
-    font-weight: 800;
-    letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  color: var(--on-background);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  font-weight: 800;
 }
 
-h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); }
-h2 { font-size: clamp(1.7rem, 4vw, 2.8rem); }
-h3 { font-size: clamp(1.3rem, 2.5vw, 1.85rem); font-weight: 700; }
-h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 700; }
-h5 { font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-weight: 700; }
-h6 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+}
 
-/* ── Body copy ─────────────────────────────────────────────── */
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  line-height: var(--leading-snug);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-size: 1.125rem;
+  line-height: var(--leading-snug);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* ── Body Text ──────────────────────────────────────────── */
 p {
-    margin-top: 0;
-    margin-bottom: var(--space-lg);
-    color: var(--text-secondary);
-    line-height: 1.75;
+  line-height: var(--leading-normal);
+  color: var(--on-surface-variant);
 }
 
-/* ── Links ─────────────────────────────────────────────────── */
-a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color var(--duration-fast) var(--ease-out);
-}
-a:hover { color: var(--accent-hover); }
-
-/* ── Gradient Text Utility ────────────────────────────────── */
-.gradient-text {
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.text-lg {
+  font-size: 1.125rem;
+  line-height: var(--leading-normal);
 }
 
-/* ── Inline elements ───────────────────────────────────────── */
-strong, b { font-weight: 700; color: var(--text-primary); }
-em, i     { font-style: italic; }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: var(--leading-normal);
+}
 
-code, kbd {
-    font-family: var(--font-mono);
-    font-size: 0.88em;
-    padding: 0.15em 0.45em;
-    background: var(--bg-tertiary);
-    border-radius: var(--radius-xs);
-    color: var(--accent);
-    border: 1px solid var(--border);
+.text-xs {
+  font-size: 0.75rem;
+  line-height: var(--leading-snug);
+}
+
+/* ── Label Typography ───────────────────────────────────── */
+.label-md {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+/* ── Devanagari ─────────────────────────────────────────── */
+.devanagari,
+.nepali-text,
+[lang="ne"] {
+  font-family: var(--font-devanagari);
+  font-size: 1.125rem;
+  line-height: var(--leading-normal);
+}
+
+/* ── Monospace ──────────────────────────────────────────── */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+code {
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  background: var(--surface-container);
+  border-radius: var(--radius-xs);
+  color: var(--primary);
+  border: 1px solid var(--outline-variant);
 }
 
 pre {
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
-    padding: 1.4rem 1.6rem;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    overflow-x: auto;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    line-height: 1.65;
-    margin-bottom: var(--space-lg);
+  background: var(--inverse-surface);
+  color: var(--inverse-on-surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  box-shadow: var(--shadow-lg);
 }
 
 pre code {
-    background: none;
-    padding: 0;
-    border: none;
-    color: inherit;
-    font-size: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
 }
 
+/* ── Links ──────────────────────────────────────────────── */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* ── Block quotes ───────────────────────────────────────── */
 blockquote {
-    border-left: 3px solid var(--accent);
-    margin: var(--space-xl) 0;
-    padding: var(--space-md) var(--space-lg);
-    background: var(--accent-muted);
-    border-radius: 0 var(--radius-md) var(--radius-md) 0;
-    font-style: italic;
-    color: var(--text-primary);
-    font-size: 1.05rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--on-surface);
+  line-height: var(--leading-normal);
+  padding-left: var(--space-lg);
+  border-left: 4px solid var(--secondary);
 }
 
-blockquote cite {
-    display: block;
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    font-style: normal;
-    color: var(--text-tertiary);
-}
-
-hr {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: var(--space-xl) 0;
-}
-
-/* ── Devanagari / Nepali text ──────────────────────────────── */
-.deva, :lang(ne), [lang="ne"] {
-    font-family: var(--font-devanagari);
-    font-weight: 400;
-    line-height: var(--leading-relaxed);
-}
-
-h1.deva, h2.deva, h3.deva {
-    font-family: 'Rozha One', var(--font-devanagari), serif;
-}
-
-.nepali-text {
-    font-family: var(--font-devanagari);
-    line-height: 1.9;
-}
-
-.nepali-text .chapter-title {
-    font-family: 'Rozha One', var(--font-devanagari), serif;
-    font-size: clamp(1.6rem, 4vw, 2.6rem);
-}
-
-.nepali-text p,
-.nepali-text li {
-    font-family: var(--font-devanagari);
-    line-height: 1.9;
-    font-size: 1.05rem;
-}
-
-/* ── Lists ─────────────────────────────────────────────────── */
+/* ── Lists ──────────────────────────────────────────────── */
 ul, ol {
-    padding-left: 1.4rem;
-    margin-bottom: var(--space-lg);
+  padding-left: var(--space-lg);
+}
+li { margin-bottom: var(--space-xs); }
+
+/* ── Kbd ────────────────────────────────────────────────── */
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.8em;
+  padding: 0.15em 0.45em;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-xs);
+  background: var(--surface-container-low);
+  color: var(--on-surface-variant);
+  font-size: 0.72em;
+  font-weight: 600;
+  box-shadow: 0 1px 0 var(--outline-variant);
 }
 
-li { margin-bottom: 0.35rem; line-height: 1.7; }
+/* ── Mark / Highlight ───────────────────────────────────── */
+mark {
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-xs);
+}
+
+/* ── Horizontal Rule ────────────────────────────────────── */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--outline-variant);
+  margin: var(--space-2xl) 0;
+}

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   LearnNepal — Responsive System v1
+   LearnNepal — Responsive System v7 "Vibrant Academic Pulse"
    Centralized breakpoint management for all pages/components
    
    Breakpoints:
@@ -77,19 +77,19 @@ body.nav-open {
     margin: 0 auto;
   }
 
-  /* ── Bento Grid ────────────────────────────────────────── */
-  .bento-grid {
+  /* ── academic Grid ────────────────────────────────────────── */
+  .academic-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .bento-wide,
-  .bento-md,
-  .bento-lg,
-  #bento-qb {
+  .academic-wide,
+  .academic-md,
+  .academic-lg,
+  #academic-qb {
     grid-column: span 2;
   }
 
-  .bento-lg {
+  .academic-lg {
     grid-row: span 1;
   }
 
@@ -286,6 +286,11 @@ body.nav-open {
     padding: 0 var(--space-md);
   }
 
+/* ═══════════════════════════════════════════════════════════
+   LAPTOP & TABLET NAVIGATION DRAWER  —  ≤1024px
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
   /* ── Mobile Navigation Drawer ──────────────────────────── */
   .mobile-toggle {
     display: flex;
@@ -301,7 +306,7 @@ body.nav-open {
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--text-primary);
+    background: var(--on-surface);
     transition: transform var(--duration-smooth) var(--ease-out),
                 opacity var(--duration-fast);
     transform-origin: center;
@@ -328,8 +333,8 @@ body.nav-open {
     width: min(320px, 85vw);
     height: 100vh;
     height: 100dvh;
-    background: var(--bg-primary);
-    border-left: 1px solid var(--border);
+    background: var(--surface-container-lowest);
+    border-left: 1px solid var(--outline-variant);
     flex-direction: column;
     align-items: stretch;
     padding: calc(var(--header-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
@@ -357,7 +362,7 @@ body.nav-open {
     min-height: 48px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--outline-variant);
     border-radius: 0;
   }
 
@@ -393,6 +398,7 @@ body.nav-open {
     justify-content: center;
     border-radius: var(--radius-sm);
   }
+}
 
   /* ── Dropdown (mobile) ─────────────────────────────────── */
   .dropdown-menu {
@@ -402,11 +408,11 @@ body.nav-open {
     opacity: 1;
     visibility: visible;
     display: none;
-    background: var(--bg-secondary);
+    background: var(--surface-container-low);
     padding: var(--space-xs) 0 var(--space-xs) var(--space-md);
     min-width: 100%;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--outline-variant);
     margin: var(--space-xs) 0;
     backdrop-filter: none;
   }
@@ -496,27 +502,27 @@ body.nav-open {
     padding: var(--space-md);
   }
 
-  /* ── Bento Grid ────────────────────────────────────────── */
-  .bento-grid {
+  /* ── academic Grid ────────────────────────────────────────── */
+  .academic-grid {
     grid-template-columns: 1fr;
   }
 
-  .bento-lg,
-  .bento-md,
-  .bento-wide {
+  .academic-lg,
+  .academic-md,
+  .academic-wide {
     grid-column: span 1;
     grid-row: span 1;
   }
 
-  .bento-item {
+  .academic-item {
     padding: 1.75rem;
   }
 
-  .bento-grade {
+  .academic-grade {
     font-size: 2rem;
   }
 
-  .bento-yt-inner {
+  .academic-yt-inner {
     flex-direction: column;
     text-align: center;
     gap: var(--space-md);
@@ -895,24 +901,24 @@ body.nav-open {
     font-size: 0.7rem;
   }
 
-  /* ── Bento items ───────────────────────────────────────── */
-  .bento-item {
+  /* ── academic items ───────────────────────────────────────── */
+  .academic-item {
     padding: 1.5rem;
   }
 
-  .bento-item h3 {
+  .academic-item h3 {
     font-size: 1.2rem;
   }
 
-  .bento-item p {
+  .academic-item p {
     font-size: 0.85rem;
   }
 
-  .bento-grade {
+  .academic-grade {
     font-size: 1.8rem;
   }
 
-  .bento-yt-play {
+  .academic-yt-play {
     width: 42px;
     height: 42px;
   }
@@ -1227,11 +1233,11 @@ body.nav-open {
     -webkit-backdrop-filter: blur(8px);
   }
 
-  .bento-item::before {
+  .academic-item::before {
     display: none;
   }
 
-  .bento-glow {
+  .academic-glow {
     display: none;
   }
 }
@@ -1392,11 +1398,11 @@ body.nav-open {
     font-size: 1.4rem;
   }
 
-  .bento-item {
+  .academic-item {
     padding: 1.25rem;
   }
 
-  .bento-item h3 {
+  .academic-item h3 {
     font-size: 1.05rem;
   }
 
@@ -1503,7 +1509,7 @@ body.nav-open {
   #hero-particles,
   #cta-stars,
   .footer-separator,
-  .bento-glow,
+  .academic-glow,
   .cmd-palette,
   #offline-overlay {
     display: none !important;

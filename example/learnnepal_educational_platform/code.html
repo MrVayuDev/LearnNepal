@@ -1,0 +1,412 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LearnNepal - Academic Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Mukta:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-container-high": "#e4e9ed",
+                        "on-secondary-fixed": "#002113",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#dad7ff",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-container-highest": "#dfe3e7",
+                        "on-tertiary-container": "#ffd4a4",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dfe3e7",
+                        "surface-dim": "#d6dade",
+                        "on-secondary-container": "#00714d",
+                        "inverse-primary": "#c3c0ff",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#edf1f5",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "inverse-surface": "#2c3134",
+                        "tertiary": "#684000",
+                        "tertiary-container": "#885500",
+                        "surface": "#f6fafe",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-error": "#ffffff",
+                        "secondary": "#006c49",
+                        "background": "#f6fafe",
+                        "primary-container": "#4f46e5",
+                        "surface-container-low": "#f0f4f8",
+                        "outline": "#777587",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-background": "#171c1f",
+                        "surface-container": "#eaeef2",
+                        "on-surface": "#171c1f",
+                        "outline-variant": "#c7c4d8",
+                        "secondary-container": "#6cf8bb",
+                        "primary": "#3525cd",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#464555",
+                        "surface-tint": "#4d44e3",
+                        "primary-fixed": "#e2dfff",
+                        "surface-bright": "#f6fafe",
+                        "tertiary-fixed": "#ffddb8",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-secondary-fixed-variant": "#005236"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "nepali-body": ["Mukta"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "nepali-body": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(246, 250, 254, 0.9) 0%, rgba(226, 223, 255, 0.4) 100%);
+        }
+        .btn-primary-gradient {
+            background: linear-gradient(45deg, #3525cd, #4edea3);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .btn-primary-gradient:hover {
+            background-position: right center;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px -10px rgba(53, 37, 205, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-white/70 dark:bg-surface/70 backdrop-blur-lg text-primary dark:text-primary-fixed-dim font-body-md text-body-md fixed top-0 w-full z-50 border-b border-white/20 dark:border-surface-variant/20 shadow-sm transition-all duration-300" id="topNav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim" href="#">
+                LearnNepal
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Active: scale-95 transition-transform" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Courses</a>
+
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Question Bank</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button aria-label="Toggle Dark Mode" class="hidden md:flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 rounded-lg btn-primary-gradient text-on-primary font-label-md text-label-md shadow-md hover:shadow-lg transition-all transform hover:scale-105" href="#">
+                    Explore Notes
+                </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-24 pb-16">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-20 overflow-hidden hero-gradient">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#3525cd 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center z-10 relative">
+<div class="flex flex-col gap-6 md:pr-12 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 bg-surface-container-high rounded-full px-4 py-2 w-max mx-auto lg:mx-0 border border-outline-variant/30 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Vibrant Academic Pulse</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+                        Master Your Studies with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-fixed">Academic Excellence</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto lg:mx-0">
+                        The ultimate destination for NEB students. Access premium notes, interactive video lessons, and a comprehensive question bank designed to accelerate your learning journey.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl btn-primary-gradient text-on-primary font-label-md text-label-md shadow-lg hover:shadow-xl transition-all transform hover:scale-105 gap-2" href="#">
+                            Start Learning Now
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md hover:bg-tertiary-fixed-dim transition-all shadow-sm gap-2" href="#">
+                            View Syllabus
+                            <span class="material-symbols-outlined">menu_book</span>
+</a>
+</div>
+</div>
+<div class="relative hidden lg:block h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay z-10"></div>
+<img class="object-cover w-full h-full object-center z-0" data-alt="A bright, modern educational setting. A focused student studying with a sleek laptop and tablet on a clean wooden desk. Natural light pouring in through a large window, creating a warm, optimistic, and high-energy atmosphere. Subtle abstract geometric shapes floating in the background suggesting digital learning. Corporate modern aesthetic with a touch of glassmorphism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqDhj4MBB6fqu-NDuEV65OUKpNAYDl3QFj68Q7wGYiD_K3rIqzInOXhp3qp_nE14ISNND1lqvPz7lG1RP7GKbyyfaCUnUFcF1iAxZnJfwrek2tHcQ_PrZdshig3vgsIBNplQMquObOZ0Ldb28alRx2TK5meqG65no2knV05xko8m6BfSgUK9DO1AJ4BDTb74hDAEqOCpVzmBfxfFo0QOG87nQd7wfXx9nDrMmU7kJgtL3FbBxtolNd">
+<!-- Floating Stat Card -->
+<div class="absolute bottom-8 left-8 right-8 glass-panel rounded-xl p-6 z-20 flex items-center justify-between shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-background">98%</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Success Rate</div>
+</div>
+</div>
+<div class="h-12 w-px bg-outline-variant/50"></div>
+<div class="flex items-center gap-4">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-background">10k+</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Active Students</div>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">groups</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Stats Horizontal Bar -->
+<section class="border-y border-surface-variant bg-surface-container-lowest py-8">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-center gap-8 md:gap-16 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl text-primary">verified</span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">5k+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Students Enrolled</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl text-secondary">library_books</span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">1.2k+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Premium Notes</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl text-tertiary">play_circle</span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">300+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Video Lessons</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl text-primary">star</span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">4.9/5</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Average Rating</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Learning Paths (Bento Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Choose Your Path</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Tailored resources designed specifically for the NEB curriculum. Select your class to begin your journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[300px]">
+<!-- Card 1: Class 12 (Large) -->
+<div class="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden shadow-sm card-hover bg-surface-container group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract 3D rendering of floating educational objects like books, graduation caps, and geometric shapes. Vibrant indigo and teal lighting against a clean white background. High contrast, sharp details, corporate modern style with a sense of energetic forward momentum." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAySrkw-4Tp9nmMcXBjiW2gAU4FDt4PUBHeg6yca9vDoPQw6779Nl_DysmqI7cw1aTmB55lwl4l7-fctAY2mJGTf8ig5DEwK-aAXfpzML_6TMpibf0Tmx7mQ3RZs9GjDTkb2oViRDjMWS3k_MYrJgD7xSuLbpnsc3eJqlZI-OJU1eBpKjvz0_GtSgk_uRXdZAntSz3ZA7pqiebXfdx7RzE1IyZiPqTyMeHME6U-rs9cmdD9SwqmzrQx')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="inline-flex items-center gap-1 bg-primary px-3 py-1 rounded-full text-on-primary font-label-md text-label-md mb-4">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+                            Popular
+                        </div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Class 12 Masterclass</h3>
+<p class="font-body-md text-body-md text-white/80 mb-6">Complete preparation for your final board exams with structured notes and past papers.</p>
+<div class="flex items-center gap-2 text-primary-fixed-dim font-bold group-hover:gap-4 transition-all">
+                            Explore Curriculum <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Class 11 -->
+<div class="relative rounded-3xl overflow-hidden shadow-sm card-hover bg-surface-container-low p-6 flex flex-col justify-between border border-surface-variant group cursor-pointer">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">menu_book</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Class 11 Foundation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Build a strong academic base with comprehensive study materials for all subjects.</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-secondary font-bold group-hover:gap-4 transition-all">
+                        View Resources <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3: Class 10 -->
+<div class="relative rounded-3xl overflow-hidden shadow-sm card-hover bg-surface-container-low p-6 flex flex-col justify-between border border-surface-variant group cursor-pointer">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Class 10 SEE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Ace your Secondary Education Examination with targeted practice sets.</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-tertiary font-bold group-hover:gap-4 transition-all">
+                        Start Prep <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4: Question Bank (Wide) -->
+<div class="md:col-span-2 relative rounded-3xl overflow-hidden shadow-sm card-hover bg-primary-container text-on-primary-container p-8 flex flex-col justify-center group cursor-pointer overflow-hidden">
+<div class="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+<div class="relative z-10">
+<div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl text-white">quiz</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 text-white">Ultimate Question Bank</h3>
+<p class="font-body-md text-body-md text-primary-fixed-dim max-w-md mb-6">Access thousands of past NEB questions, categorized by chapter and difficulty level.</p>
+<button class="bg-white text-primary px-6 py-3 rounded-xl font-label-md text-label-md inline-flex items-center gap-2 hover:bg-surface-variant transition-colors w-max">
+                            Start Practicing
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works (Minimalist Timeline) -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">How It Works</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">A simple, friction-less process to elevate your academic performance.</p>
+</div>
+<div class="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-12 md:gap-4">
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-1/2 left-10 right-10 h-1 bg-surface-variant -translate-y-1/2 z-0">
+<div class="h-full bg-primary w-1/3 transition-all duration-1000" id="progress-line"></div>
+</div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/3 group">
+<div class="w-20 h-20 rounded-full bg-surface shadow-sm border-4 border-white flex items-center justify-center mb-6 transition-transform group-hover:scale-110 duration-300 relative">
+<div class="absolute inset-0 rounded-full bg-primary/10 animate-ping opacity-75"></div>
+<span class="material-symbols-outlined text-4xl text-primary">person_add</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">1. Create Profile</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign up and select your class and subjects to personalize your dashboard.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/3 group">
+<div class="w-20 h-20 rounded-full bg-primary text-white shadow-lg border-4 border-white flex items-center justify-center mb-6 transition-transform group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined text-4xl">auto_stories</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">2. Access Materials</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Dive into high-quality notes, video tutorials, and interactive exercises.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/3 group">
+<div class="w-20 h-20 rounded-full bg-surface shadow-sm border-4 border-white flex items-center justify-center mb-6 transition-transform group-hover:scale-110 duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">3. Track Progress</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Monitor your learning journey and conquer your exams with confidence.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim w-full py-20 mt-20 text-secondary dark:text-secondary-fixed-dim font-body-md text-body-md flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-primary">LearnNepal</div>
+<p class="text-on-surface-variant mt-2 max-w-xs">Empowering NEB Students with high-quality educational resources.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-bold text-primary mb-2">Resources</h4>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80" href="#">Class 10</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80" href="#">Class 11</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80" href="#">Class 12</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-bold text-primary mb-2">Quick Links</h4>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80" href="#">Question Bank</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80" href="#">Syllabus</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80" href="#">Video Lessons</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3">
+<h4 class="font-bold text-primary mb-2">Connect</h4>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">thumb_up</span> Facebook
+                </a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all hover:opacity-80 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">work</span> LinkedIn
+                </a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/30 text-center text-on-surface-variant text-sm">
+                © 2024 LearnNepal. Empowering NEB Students.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('topNav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Simple animation for progress line on scroll
+        const progressLine = document.getElementById('progress-line');
+        if(progressLine) {
+            window.addEventListener('scroll', () => {
+                const rect = progressLine.parentElement.getBoundingClientRect();
+                if(rect.top < window.innerHeight && rect.bottom >= 0) {
+                     progressLine.style.width = '66%';
+                     setTimeout(() => {
+                        progressLine.style.width = '100%';
+                     }, 1000);
+                }
+            });
+        }
+    </script>
+
+
+</body></html>
