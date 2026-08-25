@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════
    LearnNepal — Content Pages v7 "Vibrant Academic Pulse"
    Docs Layout · Sidebar · Breadcrumbs · Chapter Styles
    ═══════════════════════════════════════════════════════════ */
@@ -184,28 +184,37 @@
 
 @media (max-width: 1024px) {
   .sidebar {
-    position: relative;
-    top: auto;
-    max-height: none;
-    border-right: none;
-    padding: 0 var(--margin-mobile);
-    margin-bottom: var(--space-lg);
-    border-bottom: 1px solid var(--outline-variant);
-    padding-bottom: var(--space-lg);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: min(300px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    z-index: var(--z-drawer);
+    padding: calc(var(--header-height) + var(--space-md)) var(--space-lg) var(--space-lg);
+    background: var(--surface-container-lowest, #ffffff);
+    transition: left var(--duration-smooth) var(--ease-out);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+    border-right: 1px solid var(--outline-variant);
+    overflow-y: auto;
+    isolation: isolate;
+  }
+  .sidebar.active {
+    left: 0;
   }
   .mobile-sidebar-toggle {
     display: flex;
+    width: 100%;
+    margin-bottom: var(--space-md);
   }
   .sidebar-nav {
-    display: none;
-    margin-top: var(--space-sm);
-  }
-  .sidebar-nav.open {
-    display: flex;
-    animation: slideDown 0.3s ease;
+    display: flex !important;
+    flex-direction: column;
+    gap: var(--space-xs);
   }
   .ad-container.ad-sidebar {
-    display: none;
+    display: block;
+    margin-top: var(--space-lg);
   }
 }
 

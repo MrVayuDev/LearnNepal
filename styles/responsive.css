@@ -93,7 +93,7 @@ body.nav-open {
     width: min(320px, 85vw);
     height: 100vh;
     height: 100dvh;
-    background: var(--surface-container-lowest);
+    background: var(--surface-container-lowest, #ffffff);
     border-left: 1px solid var(--outline-variant);
     flex-direction: column;
     align-items: stretch;
@@ -101,18 +101,16 @@ body.nav-open {
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    z-index: var(--z-drawer); /* 1100 — above backdrop (1050) */
+    z-index: 1210; /* Above header backdrop and overlay */
     gap: 0;
     box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3);
     transform: translateX(100%);
     transition: transform var(--duration-smooth) var(--ease-out);
     will-change: transform;
-    /* Creates an isolated stacking context so no parent filter
-       (e.g. backdrop-filter on the overlay) bleeds into this drawer */
     isolation: isolate;
-    /* Ensure no residual blur on this element itself */
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    pointer-events: auto;
   }
 
   .nav-menu.active {
@@ -128,6 +126,10 @@ body.nav-open {
     align-items: center;
     border-bottom: 1px solid var(--outline-variant);
     border-radius: 0;
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
   }
 
   .nav-link::after {
@@ -203,20 +205,32 @@ body.nav-open {
     margin: 0 auto;
   }
 
-  /* ── academic Grid ────────────────────────────────────────── */
+  /* ── academic Grid (Bento) ──────────── */
   .academic-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
+    grid-auto-rows: minmax(180px, auto);
+    gap: var(--space-md);
   }
 
+  #academic-c12 {
+    grid-column: span 2;
+    grid-row: span 1;
+    min-height: 240px;
+  }
+
+  #academic-c11,
+  #academic-c10 {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 180px;
+  }
+
+  #academic-qb,
   .academic-wide,
   .academic-md,
-  .academic-lg,
-  #academic-qb {
-    grid-column: span 2;
-  }
-
   .academic-lg {
+    grid-column: span 2;
     grid-row: span 1;
   }
 
@@ -517,21 +531,37 @@ body.nav-open {
     padding: var(--space-md);
   }
 
-  /* ── academic Grid ────────────────────────────────────────── */
+  /* ── academic Grid (Mobile Flex/Stack layout — prevents squishing) ── */
   .academic-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-md) !important;
+    width: 100% !important;
   }
 
+  .academic-item,
+  #academic-c12,
+  #academic-c11,
+  #academic-c10,
+  #academic-qb,
   .academic-lg,
   .academic-md,
+  .academic-sm,
   .academic-wide {
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  #academic-c12 {
+    min-height: 260px;
   }
 
   .academic-item {
-    padding: 1.75rem;
+    padding: 1.5rem;
   }
 
   .academic-grade {

@@ -22,6 +22,11 @@ main {
   padding-top: env(safe-area-inset-top, 0px);
 }
 
+/* Lift header and nav-menu above nav-backdrop (z-index: 1050) when mobile menu is open */
+body.nav-open .header {
+  z-index: var(--z-drawer-toggle); /* 1200 */
+}
+
 .header-container {
   display: flex;
   align-items: center;
