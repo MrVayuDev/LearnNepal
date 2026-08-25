@@ -1,69 +1,15 @@
 /**
  * LearnNepal — Theme System
- * Dark/Light toggle with localStorage persistence + system preference detection
+ * Enforces Light Theme across all pages
  */
 (function() {
-    const STORAGE_KEY = 'learnnepal-theme';
-
-    function getPreferredTheme() {
-        try {
-            const stored = localStorage.getItem(STORAGE_KEY);
-            if (stored) return stored;
-        } catch (e) {
-            // localStorage access may be blocked in some iframe/privacy settings
-        }
-        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    try {
+        localStorage.removeItem('learnnepal-theme');
+    } catch (e) {
+        // localStorage access may be blocked
     }
 
-    function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-        try {
-            localStorage.setItem(STORAGE_KEY, theme);
-        } catch (e) {
-            // localStorage access may be blocked
-        }
-        // Update all toggle buttons
-        document.querySelectorAll('.theme-toggle').forEach(function(btn) {
-            btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-        });
-    }
-
-    // Add preload-transitions class immediately to disable initial transitions
-    document.documentElement.classList.add('preload-transitions');
-
-    // Apply on load (before paint)
-    applyTheme(getPreferredTheme());
-
-    // Bind toggle buttons when DOM is ready
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.theme-toggle').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                var current = document.documentElement.getAttribute('data-theme') || 'light';
-                applyTheme(current === 'light' ? 'dark' : 'light');
-            });
-        });
-
-        // Remove preload-transitions after the first layout/paint has occurred
-        requestAnimationFrame(function() {
-            requestAnimationFrame(function() {
-                document.documentElement.classList.remove('preload-transitions');
-            });
-        });
-    });
-
-    // Listen for system preference changes
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function(e) {
-        try {
-            if (!localStorage.getItem(STORAGE_KEY)) {
-                applyTheme(e.matches ? 'light' : 'dark');
-            }
-        } catch (err) {
-            applyTheme(e.matches ? 'light' : 'dark');
-        }
-    });
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.classList.remove('dark');
 })();
+

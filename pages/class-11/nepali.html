@@ -1,368 +1,213 @@
 ﻿<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 11 - Nepali - LearnNepal</title>
-    
-    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#3525cd",
-                        "secondary": "#006c49",
-                        "tertiary": "#684000",
-                        "background": "#f6fafe",
-                        "surface": "#f6fafe",
-                        "surface-container": "#eaeef2",
-                        "surface-container-low": "#f0f4f8",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-highest": "#dfe3e7",
-                        "on-surface": "#171c1f",
-                        "on-surface-variant": "#464555",
-                        "outline-variant": "#c7c4d8",
-                        "primary-container": "#4f46e5",
-                        "secondary-container": "#6cf8bb"
-                    },
-                    spacing: {
-                        "gutter": "24px",
-                        "container-max": "1280px",
-                        "margin-mobile": "16px",
-                        "margin-desktop": "48px"
-                    }
-                }
-            }
-        }
-    </script>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 11 Nepali | LearnNepal</title>
+    <meta name="description" content="NEB Class 11 Nepali notes — prose, poetry, grammar, and comprehensive summaries for NEB board exams." />
+    <link rel="icon" href="../../assets/images/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <script src="../../scripts/theme.js"></script>
-    <link rel="stylesheet" href="../../styles/main.css">
-    
-    <style>
-        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 0.5px solid rgba(255, 255, 255, 0.2); }
-        .lift-hover { transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease; }
-        .lift-hover:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.1); }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    </style>
+    <link rel="stylesheet" href="../../styles/main.css" />
 </head>
-<body class="bg-surface font-body-md text-on-surface">
+<body>
+    <div id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
-<!-- TopNavBar -->
-    <!-- â•â•â• HEADER â•â•â• -->
-        <header class="header" id="site-header">
+    <header class="header" id="site-header">
         <div class="header-container">
-            <a href="../../index.html" class="logo">
-                <img src="../../assets/images/logo.png" alt="LearnNepal">
-                LearnNepal
-            </a>
-
-            <button class="mobile-toggle" aria-label="Toggle Navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
+            <a href="../../index.html" class="logo"><img src="../../assets/images/logo.png" alt="LearnNepal"> LearnNepal</a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <nav class="nav-menu" aria-label="Main navigation">
                 <a href="../../index.html" class="nav-link">Home</a>
-                <a href="../../pages/courses.html" class="nav-link active">Courses</a>
-                <a href="../../pages/class-12/question-bank/index.html" class="nav-link">Question Bank</a>
+                <a href="../courses.html" class="nav-link">Courses</a>
+                <a href="../class-12/question-bank/index.html" class="nav-link">Question Bank</a>
                 <a href="../../about.html" class="nav-link">About</a>
-
                 <button class="search-trigger btn-search" aria-label="Search">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    <span>Search</span>
-                    <kbd>Ctrl K</kbd>
-                </button>
-                <button class="theme-toggle" aria-label="Toggle Theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <span>Search</span><kbd>Ctrl K</kbd>
                 </button>
                 <a href="../../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>
 
-<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
-    <!-- Subject Header Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16 items-start">
-        <div class="lg:col-span-8">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md">Grade 11</span>
-                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-md">Compulsory</span>
-            </div>
-            <h1 class="font-display-lg font-extrabold text-display-lg-mobile md:text-display-lg text-on-background mb-6 tracking-tight">Class 11 - Nepali</h1>
-            <p class="font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                à¤•à¤•à¥à¤·à¤¾ à¥§à¥§ à¤¨à¥‡à¤ªà¤¾à¤²à¥€ à¤µà¤¿à¤·à¤¯à¤•à¥‹ à¤¸à¤®à¥à¤ªà¥‚à¤°à¥à¤£ à¤ªà¤¾à¤ à¥à¤¯à¤¸à¤¾à¤®à¤—à¥à¤°à¥€, à¤•à¤µà¤¿à¤¤à¤¾, à¤•à¤¥à¤¾, à¤¨à¤¿à¤¬à¤¨à¥à¤§ à¤° à¤…à¤­à¥à¤¯à¤¾à¤¸ à¤‰à¤¤à¥à¤¤à¤°à¤¹à¤°à¥‚à¥¤
-            </p>
-        </div>
-        <div class="lg:col-span-4">
-            <div class="glass-card p-6 rounded-xl shadow-lg border border-primary/10">
-                <h3 class="font-headline-sm mb-4">Subject Overview</h3>
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">menu_book</span>
-                            <span class="font-body-md">Total Units</span>
-                        </div>
-                        <span class="font-bold">5 Units</span>
+    <main>
+        <div class="content-page">
+            <div class="subject-header">
+                <div>
+                    <div class="subject-badges">
+                        <span class="subject-badge primary">Grade 11</span>
+                        <span class="subject-badge secondary">Compulsory</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">schedule</span>
-                            <span class="font-body-md">Est. Study Time</span>
-                        </div>
-                        <span class="font-bold">80 Hours</span>
+                    <h1 class="subject-title">Class 11 &mdash; Nepali</h1>
+                    <p class="subject-desc">Complete NEB Class 11 Nepali notes including prose, poetry, drama, essays and grammar exercises.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>Subject Overview</h3>
+                    <div class="overview-stat">
+                        <div class="overview-stat-left"><span class="material-symbols-outlined">menu_book</span><span>Total Units</span></div>
+                        <span class="overview-stat-value">4 Units</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-tertiary">trending_up</span>
-                            <span class="font-body-md">Difficulty</span>
-                        </div>
-                        <span class="font-bold text-tertiary">NEB Curriculum</span>
+                    <div class="overview-stat">
+                        <div class="overview-stat-left"><span class="material-symbols-outlined">schedule</span><span>Est. Study Time</span></div>
+                        <span class="overview-stat-value">75 Hours</span>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="overview-stat-left"><span class="material-symbols-outlined" style="color:var(--tertiary);">trending_up</span><span>Difficulty</span></div>
+                        <span class="overview-stat-value" style="color:var(--tertiary);">NEB Standard</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Main Content Area: Curriculum Breakdown -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-        <div class="lg:col-span-8 space-y-6">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="font-headline-md text-2xl font-bold">Curriculum Breakdown</h2>
-                <button class="text-primary font-label-md flex items-center gap-1 hover:underline" onclick="document.querySelectorAll('.hidden.p-6.grid').forEach(el => el.classList.remove('hidden'))">
-                    Expand All <span class="material-symbols-outlined">expand_more</span>
-                </button>
-            </div>
-            
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">à¥§</div>
-                    <div>
-                        <h3 class="font-headline-sm">à¤µà¥€à¤° à¤ªà¥à¤°à¥à¤–à¤¾</h3>
-                        <p class="text-on-surface-variant font-label-md">à¤•à¤µà¤¿à¤¤à¤¾ - à¤°à¤¾à¤·à¥à¤Ÿà¥à¤°à¤¿à¤¯à¤¤à¤¾ à¤° à¤ªà¥à¤°à¥à¤–à¤¾à¤•à¥‹ à¤—à¥Œà¤°à¤µ</p>
+            <div class="content-grid">
+                <div>
+                    <div class="section-header-row">
+                        <h2>पाठ्यक्रम विवरण</h2>
+                        <button class="expand-all-btn" onclick="document.querySelectorAll('.curriculum-unit-body').forEach(el => el.classList.add('open'))">
+                            Expand All <span class="material-symbols-outlined">expand_more</span>
+                        </button>
                     </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">à¤ªà¤¾à¤  à¥§</span>
-                        <h4 class="font-headline-sm text-lg mt-1">à¤µà¥€à¤° à¤ªà¥à¤°à¥à¤–à¤¾ (à¤•à¤µà¤¿à¤¤à¤¾)</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">à¥¨</div>
-                    <div>
-                        <h3 class="font-headline-sm">à¤—à¤¾à¤‰à¤à¤•à¥‹ à¤®à¤¾à¤¯à¤¾</h3>
-                        <p class="text-on-surface-variant font-label-md">à¤•à¤¥à¤¾ - à¤¸à¤¾à¤®à¤¾à¤œà¤¿à¤• à¤œà¥€à¤µà¤¨ à¤° à¤ªà¤°à¤¿à¤µà¥‡à¤¶</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">à¤ªà¤¾à¤  à¥¨</span>
-                        <h4 class="font-headline-sm text-lg mt-1">à¤—à¤¾à¤‰à¤à¤•à¥‹ à¤®à¤¾à¤¯à¤¾ (à¤•à¤¥à¤¾)</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">à¥©</div>
-                    <div>
-                        <h3 class="font-headline-sm">à¤¸à¤‚à¤¸à¥à¤•à¥ƒà¤¤à¤¿à¤•à¥‹ à¤¨à¤¯à¤¾à¤ à¤¯à¤¾à¤¤à¥à¤°à¤¾</h3>
-                        <p class="text-on-surface-variant font-label-md">à¤¨à¤¿à¤¬à¤¨à¥à¤§ - à¤¸à¤‚à¤¸à¥à¤•à¥ƒà¤¤à¤¿ à¤° à¤°à¥‚à¤ªà¤¾à¤¨à¥à¤¤à¤°à¤£</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">à¤ªà¤¾à¤  à¥©</span>
-                        <h4 class="font-headline-sm text-lg mt-1">à¤¸à¤‚à¤¸à¥à¤•à¥ƒà¤¤à¤¿à¤•à¥‹ à¤¨à¤¯à¤¾à¤ à¤¯à¤¾à¤¤à¥à¤°à¤¾ (à¤¨à¤¿à¤¬à¤¨à¥à¤§)</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">à¥ª</div>
-                    <div>
-                        <h3 class="font-headline-sm">à¤¯à¥‹à¤—à¤®à¤¾à¤¯à¤¾</h3>
-                        <p class="text-on-surface-variant font-label-md">à¤à¤•à¤¾à¤™à¥à¤•à¥€ - à¤¸à¤¾à¤®à¤¾à¤œà¤¿à¤• à¤šà¥‡à¤¤à¤¨à¤¾</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">à¤ªà¤¾à¤  à¥ª</span>
-                        <h4 class="font-headline-sm text-lg mt-1">à¤¯à¥‹à¤—à¤®à¤¾à¤¯à¤¾ (à¤à¤•à¤¾à¤™à¥à¤•à¥€)</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">à¥«</div>
-                    <div>
-                        <h3 class="font-headline-sm">à¤¸à¤¾à¤¥à¥€à¤²à¤¾à¤ˆ à¤ªà¤¤à¥à¤°</h3>
-                        <p class="text-on-surface-variant font-label-md">à¤ªà¤¤à¥à¤°à¤¸à¤¾à¤¹à¤¿à¤¤à¥à¤¯ - à¤µà¥à¤¯à¤µà¤¹à¤¾à¤°à¤¿à¤• à¤²à¥‡à¤–à¤¨</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">à¤ªà¤¾à¤  à¥«</span>
-                        <h4 class="font-headline-sm text-lg mt-1">à¤¸à¤¾à¤¥à¥€à¤²à¤¾à¤ˆ à¤ªà¤¤à¥à¤° (à¤ªà¤¤à¥à¤°à¤¸à¤¾à¤¹à¤¿à¤¤à¥à¤¯)</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-            
-        </div>
 
-        <!-- Sidebar -->
-        <div class="lg:col-span-4 space-y-gutter">
-            <div class="bg-white p-8 rounded-2xl shadow-md border border-outline-variant relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10">
-                    <span class="material-symbols-outlined text-[80px] text-secondary">analytics</span>
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">1</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>गद्य (Prose)</h3>
+                                    <p>निबन्ध, कथा र संस्मरण</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--outline);margin-bottom:0.25rem;">Section I</div>
+                                    <div style="font-size:1rem;font-weight:700;">गद्य पाठहरू</div>
+                                </div>
+                                <div style="display:flex;gap:0.5rem;margin-top:var(--space-sm);">
+                                    <a href="#" class="btn btn-secondary btn-sm"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">2</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>पद्य (Poetry)</h3>
+                                    <p>कविता र गीत विश्लेषण</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--outline);margin-bottom:0.25rem;">Section II</div>
+                                    <div style="font-size:1rem;font-weight:700;">पद्य पाठहरू</div>
+                                </div>
+                                <div style="display:flex;gap:0.5rem;margin-top:var(--space-sm);">
+                                    <a href="#" class="btn btn-secondary btn-sm"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">3</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>नाटक (Drama)</h3>
+                                    <p>एकाङ्की र नाटक</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--outline);margin-bottom:0.25rem;">Section III</div>
+                                    <div style="font-size:1rem;font-weight:700;">नाटक पाठहरू</div>
+                                </div>
+                                <div style="display:flex;gap:0.5rem;margin-top:var(--space-sm);">
+                                    <a href="#" class="btn btn-secondary btn-sm"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">4</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>व्याकरण (Grammar)</h3>
+                                    <p>भाषा र व्याकरण अभ्यास</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--outline);margin-bottom:0.25rem;">Section IV</div>
+                                    <div style="font-size:1rem;font-weight:700;">व्याकरण अभ्यास</div>
+                                </div>
+                                <div style="display:flex;gap:0.5rem;margin-top:var(--space-sm);">
+                                    <a href="#" class="btn btn-secondary btn-sm"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="font-headline-sm mb-6">Your Progress</h3>
-                <div class="flex items-center justify-between mb-2">
-                    <span class="font-label-md text-on-surface-variant">Course Completion</span>
-                    <span class="font-bold text-secondary">0%</span>
+
+                <div>
+                    <div class="overview-card" style="position:relative;overflow:hidden;">
+                        <div style="position:absolute;top:var(--space-md);right:var(--space-md);opacity:0.08;"><span class="material-symbols-outlined" style="font-size:5rem;color:var(--secondary);">analytics</span></div>
+                        <h3>Your Progress</h3>
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-xs);">
+                            <span style="font-size:0.85rem;color:var(--on-surface-variant);">Course Completion</span>
+                            <span style="font-weight:700;color:var(--secondary);">0%</span>
+                        </div>
+                        <div style="height:10px;background:var(--secondary-container);border-radius:var(--radius-full);margin-bottom:var(--space-lg);overflow:hidden;">
+                            <div style="height:100%;width:0%;background:var(--secondary);border-radius:var(--radius-full);"></div>
+                        </div>
+                        <p style="font-size:0.875rem;color:var(--on-surface-variant);margin-bottom:var(--space-lg);">Start learning to track your progress.</p>
+                        <button class="btn btn-primary" style="width:100%;justify-content:center;">Start Learning</button>
+                    </div>
                 </div>
-                <div class="h-3 w-full bg-secondary-container/20 rounded-full mb-6">
-                    <div class="h-full bg-secondary rounded-full" style="width: 0%"></div>
-                </div>
-                <p class="font-body-md text-on-surface-variant mb-6">
-                    Start learning to track your progress across all chapters.
-                </p>
-                <button class="w-full py-3 rounded-xl bg-primary text-white font-label-md hover:bg-primary/90 transition-all shadow-md">
-                    Start Learning
-                </button>
             </div>
         </div>
-    </div>
-</main>
-    <!-- â•â•â• FOOTER â•â•â• -->
+    </main>
+
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="../../index.html" class="logo">
-                        <img src="../../assets/images/logo.png" alt="LearnNepal">
-                        LearnNepal<span></span>
-                    </a>
-                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes â€” completely free.</p>
-                    <div class="footer-social">
-                        <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-                        </a>
-                        <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </a>
-                    </div>
+                    <a href="../../index.html" class="logo"><img src="../../assets/images/logo.png" alt="LearnNepal"> LearnNepal</a>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes — completely free.</p>
                 </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-heading">Class 11</h5>
-                    <ul class="footer-links">
-                        <li><a href="../../pages/class-11/english.html">English</a></li>
-                        <li><a href="../../pages/class-11/nepali.html">Nepali</a></li>
-                        <li><a href="../../pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-heading">Class 12</h5>
-                    <ul class="footer-links">
-                        <li><a href="../../pages/class-12/english/c12_english_syllabus.html">English</a></li>
-                        <li><a href="../../pages/class-12/nepali.html">Nepali</a></li>
-                        <li><a href="../../pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
-                        <li><a href="../../pages/class-12/question-bank/index.html" class="qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-heading">Resources</h5>
-                    <ul class="footer-links">
-                        <li><a href="../../pages/courses.html">All Courses</a></li>
-                        <li><a href="../../about.html">About Us</a></li>
-                        <li><a href="../../contact.html">Contact</a></li>
-                        <li><a href="../../privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
+                <div class="footer-col"><h5 class="footer-heading">Class 11</h5><ul class="footer-links"><li><a href="english.html">English</a></li><li><a href="nepali.html">Nepali</a></li><li><a href="computer/c11_computer_syllabus.html">Computer Science</a></li></ul></div>
+                <div class="footer-col"><h5 class="footer-heading">Class 12</h5><ul class="footer-links"><li><a href="../class-12/nepali.html">Nepali</a></li><li><a href="../class-12/question-bank/index.html">Question Bank</a></li></ul></div>
+                <div class="footer-col"><h5 class="footer-heading">Resources</h5><ul class="footer-links"><li><a href="../courses.html">All Courses</a></li><li><a href="../../about.html">About Us</a></li><li><a href="../../contact.html">Contact</a></li></ul></div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
-                <div class="footer-bottom-links">
-                    <a href="../../privacy.html">Privacy</a>
-                    <span>&bull;</span>
-                    <a href="../../contact.html">Contact</a>
-                    <span>&bull;</span>
-                    <a href="../../about.html">About</a>
-                </div>
+                <div class="footer-bottom-links"><a href="../../privacy.html">Privacy</a><span>&bull;</span><a href="../../contact.html">Contact</a><span>&bull;</span><a href="../../about.html">About</a></div>
             </div>
         </div>
     </footer>
-
-<!-- Footer -->
-
-<script src="../../scripts/app.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/search.js"></script>
+    <script src="../../scripts/transitions.js"></script>
+    <script>(function(){var bar=document.getElementById('reading-progress');if(bar){window.addEventListener('scroll',function(){var el=document.documentElement;bar.style.width=Math.min(el.scrollTop/(el.scrollHeight-el.clientHeight)*100,100)+'%';},{passive:true});}})();</script>
 </body>
 </html>
 

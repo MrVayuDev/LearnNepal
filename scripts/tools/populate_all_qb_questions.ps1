@@ -32,14 +32,14 @@ if (Test-Path $computerPath) {
 </div>
 <span class="font-headline-sm text-primary">$marks</span>
 </div>
-<h3 class="font-headline-sm text-on-surface mb-4">$qText</h3>
+<h3 class="font-headline-sm text-on-surface mb-4" style="white-space: pre-line;">$qText</h3>
 <div class="solution-box hidden mt-4 p-4 rounded-xl bg-surface-container-low text-body-md text-on-surface border border-outline-variant">
 <p class="font-bold mb-2 text-primary">Solution:</p>
 <div>$answer</div>
 </div>
 <div class="flex items-center justify-between mt-6 pt-4 border-t border-surface-variant/50">
 <a href="computer/index.html" class="text-xs text-primary hover:underline font-label-md flex items-center gap-1">Open CS QBank &rarr;</a>
-<button class="toggle-sol-btn btn-primary py-2 px-4 text-sm flex items-center gap-1">
+<button onclick="toggleSolution(this)" class="toggle-sol-btn btn-primary py-2 px-4 text-sm flex items-center gap-1">
 <span>View Solution</span>
 <span class="material-symbols-outlined text-sm">visibility</span>
 </button>
@@ -76,14 +76,14 @@ if (Test-Path $englishPath) {
 </div>
 <span class="font-headline-sm text-primary">$marks</span>
 </div>
-<h3 class="font-headline-sm text-on-surface mb-4">$qText</h3>
+<h3 class="font-headline-sm text-on-surface mb-4" style="white-space: pre-line;">$qText</h3>
 <div class="solution-box hidden mt-4 p-4 rounded-xl bg-surface-container-low text-body-md text-on-surface border border-outline-variant">
 <p class="font-bold mb-2 text-primary">Solution:</p>
 <div>$answer</div>
 </div>
 <div class="flex items-center justify-between mt-6 pt-4 border-t border-surface-variant/50">
 <a href="english/index.html" class="text-xs text-secondary hover:underline font-label-md flex items-center gap-1">Open English QBank &rarr;</a>
-<button class="toggle-sol-btn btn-primary py-2 px-4 text-sm flex items-center gap-1">
+<button onclick="toggleSolution(this)" class="toggle-sol-btn btn-primary py-2 px-4 text-sm flex items-center gap-1">
 <span>View Solution</span>
 <span class="material-symbols-outlined text-sm">visibility</span>
 </button>
@@ -121,14 +121,14 @@ if (Test-Path $nepaliPath) {
 </div>
 <span class="font-headline-sm text-primary">$marks</span>
 </div>
-<h3 class="font-headline-sm text-on-surface mb-4">$qText</h3>
+<h3 class="font-headline-sm text-on-surface mb-4" style="white-space: pre-line;">$qText</h3>
 <div class="solution-box hidden mt-4 p-4 rounded-xl bg-surface-container-low text-body-md text-on-surface border border-outline-variant">
 <p class="font-bold mb-2 text-primary">समाधान:</p>
 <div>$answer</div>
 </div>
 <div class="flex items-center justify-between mt-6 pt-4 border-t border-surface-variant/50">
 <a href="nepali/index.html" class="text-xs text-tertiary hover:underline font-label-md flex items-center gap-1">Open Nepali QBank &rarr;</a>
-<button class="toggle-sol-btn btn-primary py-2 px-4 text-sm flex items-center gap-1">
+<button onclick="toggleSolution(this)" class="toggle-sol-btn btn-primary py-2 px-4 text-sm flex items-center gap-1">
 <span>View Solution</span>
 <span class="material-symbols-outlined text-sm">visibility</span>
 </button>

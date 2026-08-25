@@ -384,11 +384,7 @@ body.nav-open {
     display: none;
   }
 
-  /* Theme toggle — larger touch target */
-  .theme-toggle {
-    width: 44px;
-    height: 44px;
-  }
+
 
   /* Contact CTA button in nav */
   .nav-menu .btn.btn-primary.btn-sm {
@@ -972,7 +968,8 @@ body.nav-open {
   }
 
   /* ── CTA ────────────────────────────────────────────────── */
-  .cta-banner {
+  .cta-banner,
+  .home-cta-section {
     padding: var(--space-2xl) 0;
   }
 
@@ -1184,20 +1181,7 @@ body.nav-open {
     height: 2px;
   }
 
-  /* ── Offline overlay ───────────────────────────────────── */
-  .offline-content {
-    padding: 1.5rem;
-    max-width: 100%;
-  }
 
-  .offline-title {
-    font-size: 1.25rem;
-  }
-
-  .offline-retry-btn {
-    min-height: 48px;
-    min-width: 140px;
-  }
 
   /* ── Performance: aggressively reduce GPU work ─────────── */
   .hero-orb {
@@ -1500,7 +1484,6 @@ body.nav-open {
   .mobile-sidebar-toggle,
   .back-to-top,
   .btn-search,
-  .theme-toggle,
   #reading-progress,
   .hero-bg,
   .hero-orb,
@@ -1510,8 +1493,7 @@ body.nav-open {
   #cta-stars,
   .footer-separator,
   .academic-glow,
-  .cmd-palette,
-  #offline-overlay {
+  .cmd-palette {
     display: none !important;
   }
 
@@ -1535,3 +1517,4 @@ body.nav-open {
     text-decoration: underline;
   }
 }
+

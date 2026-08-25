@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    LearnNepal — Animations v7 "Vibrant Academic Pulse"
    Scroll reveals · Card lifts · Gradient shifts · Pulses
    ═══════════════════════════════════════════════════════════ */
@@ -152,3 +152,4 @@
   .stagger-grid > * { opacity: 1; transform: none; }
   .animate-fade-up { opacity: 1; transform: none; animation: none; }
 }
+

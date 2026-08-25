@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    LearnNepal — Header & Global Navigation Styles
    ═══════════════════════════════════════════════════════════ */
 
@@ -117,42 +117,7 @@ main {
   font-weight: 600;
 }
 
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--on-surface-variant);
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background 0.2s ease, color 0.2s ease;
-}
 
-.theme-toggle:hover {
-  background: var(--surface-container);
-  color: var(--primary);
-}
-
-.theme-toggle .sun-icon,
-.theme-toggle .moon-icon {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.theme-toggle .sun-icon { display: none; }
-.theme-toggle .moon-icon { display: block; }
-
-[data-theme="dark"] .theme-toggle .sun-icon { display: block; color: #fbbf24; }
-[data-theme="dark"] .theme-toggle .moon-icon { display: none; }
 
 /* Mobile Toggle Hamburger */
 .mobile-toggle {
@@ -276,3 +241,4 @@ main {
 .footer-bottom-links a:hover {
   color: var(--primary);
 }
+

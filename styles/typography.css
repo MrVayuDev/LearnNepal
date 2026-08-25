@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    LearnNepal — Typography v7 "Vibrant Academic Pulse"
    Plus Jakarta Sans + Mukta · 8pt scale · WCAG contrast
    ═══════════════════════════════════════════════════════════ */
@@ -184,3 +184,4 @@ hr {
   background: var(--outline-variant);
   margin: var(--space-2xl) 0;
 }
+

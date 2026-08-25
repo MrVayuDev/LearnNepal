@@ -1,48 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+﻿<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Class 12 Computer Science Notes - LearnNepal</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="../assets/images/logo.png" type="image/png" />
-    <link rel="apple-touch-icon" href="../assets/images/logo.png" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Chapter Reader | LearnNepal</title>
-    <meta name="description" content="Read structured chapter notes for NEB Class 11 and Class 12 on LearnNepal.">
-    
-    <!-- Fonts preconnect and preloading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
-    <script src="../scripts/theme.js"></script>
-    <link rel="stylesheet" href="../styles/main.css">
-    
-    <!-- Fonts preconnect and preloading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles/layout.css">
-    
-    <!-- Fonts preconnect and preloading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles/components.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Mukta:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Glassmorphism utilities */
+        .glass-surface {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 0.5px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass-surface {
+            background: rgba(44, 49, 52, 0.7); /* inverse-surface base */
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Ambient Shadows */
+        .shadow-ambient {
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.05); /* Soft Indigo */
+        }
+        
+        /* Reading Progress */
+        #reading-progress {
+            transform-origin: left;
+            transition: transform 0.1s ease-out;
+        }
+        
+        /* Syntax Highlighting Mock */
+        .code-bg { background-color: #1E293B; } /* Slate 800 */
+        .token-keyword { color: #C678DD; }
+        .token-function { color: #61AFEF; }
+        .token-string { color: #98C379; }
+        .token-comment { color: #5C6370; }
+        .token-punctuation { color: #ABB2BF; }
+    </style>
+
+<script src="../scripts/theme.js"></script>
+
+    <link rel="stylesheet" href="../styles/main.css" />
 </head>
-<body>
-
-    <!-- Header -->
-        <header class="header" id="site-header">
-        <div class="container header-container">
+<body class="bg-background text-on-surface antialiased">
+<!-- Reading Progress Bar -->
+<div class="fixed top-0 left-0 w-full h-1.5 z-[60] bg-primary-fixed">
+<div class="h-full bg-secondary-container w-full scale-x-0" id="reading-progress"></div>
+</div>
+<!-- TopNavBar -->
+    <!-- â•â•â• HEADER â•â•â• -->
+    <header class="header" id="site-header">
+        <div class="header-container">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/logo.png" alt="LearnNepal">
-                LearnNepal<span></span>
+                LearnNepal
             </a>
 
             <button class="mobile-toggle" aria-label="Toggle Navigation">
@@ -54,299 +71,219 @@
             <nav class="nav-menu" aria-label="Main navigation">
                 <a href="../index.html" class="nav-link">Home</a>
                 <a href="../pages/courses.html" class="nav-link">Courses</a>
-
-                <div class="dropdown">
-                    <a href="#" class="nav-link active" aria-haspopup="true" aria-expanded="false">Classes</a>
-                    <div class="dropdown-menu" role="menu">
-                        <div class="dropdown-header">Class 10</div>
-                        <a href="../pages/class-10/opt-math/index.html" class="dropdown-item">Optional Mathematics</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <div class="dropdown-header">Class 11</div>
-                        <a href="../pages/class-11/english.html" class="dropdown-item">English</a>
-                        <a href="../pages/class-11/nepali.html" class="dropdown-item">Nepali</a>
-                        <a href="../pages/class-11/computer/c11_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <div class="dropdown-header">Class 12</div>
-                        <a href="../pages/class-12/english/c12_english_syllabus.html" class="dropdown-item">English</a>
-                        <a href="../pages/class-12/nepali.html" class="dropdown-item">Nepali</a>
-                        <a href="../pages/class-12/computer/c12_computer_syllabus.html" class="dropdown-item">Computer Science</a>
-                        <a href="../pages/class-12/question-bank/index.html" class="dropdown-item qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a>
-                    </div>
-                </div>
-
+                <a href="../pages/class-12/question-bank/index.html" class="nav-link">Question Bank</a>
                 <a href="../about.html" class="nav-link">About</a>
+
                 <button class="search-trigger btn-search" aria-label="Search">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                     <span>Search</span>
                     <kbd>Ctrl K</kbd>
                 </button>
-                <button class="theme-toggle" aria-label="Toggle Theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                </button>
                 <a href="../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>
+<!-- Main Layout Container -->
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-20 flex flex-col md:flex-row gap-gutter relative">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-140px)] w-80 sticky top-32 bg-surface-container-low dark:bg-surface-container shadow-md rounded-xl p-gutter gap-4 overflow-y-auto shrink-0">
+<div class="mb-4">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">computer</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Computer Science</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Class 12</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-2 font-label-md text-label-md">
+<a class="flex items-center gap-3 p-3 bg-primary-container text-on-primary-container rounded-lg font-bold hover:bg-surface-container-highest transition-all transform hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+                    Chapter 1: DBMS
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:text-primary transition-all transform hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="router">router</span>
+                    Chapter 2: Networking
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:text-primary transition-all transform hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+                    Chapter 3: C Programming
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:text-primary transition-all transform hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="web">web</span>
+                    Chapter 4: Web Dev
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:text-primary transition-all transform hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                    Chapter 5: OOP
+                </a>
+</nav>
+<div class="mt-auto pt-4 border-t border-surface-variant">
+<button class="w-full py-3 bg-surface-container-highest text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                    Download PDF
+                </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-[800px] min-w-0">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant mb-8">
+<a class="hover:text-primary" href="../index.html">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Class 12</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-semibold">C Programming Basics</span>
+</div>
+<!-- Content Header -->
+<header class="mb-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full font-label-md text-label-md mb-4">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                    NEB Syllabus Aligned
+                </div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Introduction to C Programming</h1>
+<p class="font-nepali-body text-nepali-body text-on-surface-variant text-lg">
+                    सी प्रोग्रामिङ भाषा एक शक्तिशाली र बहुउद्देश्यीय प्रोग्रामिङ भाषा हो। यस खण्डमा हामी आधारभूत संरचना र सिन्ट्याक्स (Syntax) को बारेमा सिक्नेछौं।
+                </p>
+</header>
+<!-- Hero Image / Concept Diagram -->
+<div class="mb-12 rounded-2xl overflow-hidden shadow-ambient relative group">
+<img class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, modern flat-vector illustration showing the structural components of a C program. It features glowing syntax elements like #include, int main(), and curly braces floating against a deep dark blue background with abstract geometric shapes and lines connecting them, symbolizing compilation and logic. The lighting is soft and ambient." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Tmhnez5IO5E19SxXczaYs0Cg5YXQZp98yhh8wXswkuvv_f6imQ082MAvsCOSkz32gAv2Hjdytmzk3IiDyvF--EsYqiFXU1Y_8AieqzZ4qdkemzDn2xWUrLlctqAtxK3lDvrwCe8bSIf-yvrrumsLVYUdkKO6wyGGRXX1kMd6JMXepEtoR5jRF9cIA5u-Ljoc5MOcElSmr5iZBoYiXcnBLTKiIi-DZGqiXKe6F3eS22G1Nc8r-u9i">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<p class="text-white font-label-md text-label-md opacity-90">Structure of a basic C Program</p>
+</div>
+</div>
+<!-- Typography & Content Section -->
+<article class="prose prose-lg max-w-none text-on-surface font-body-md text-body-md mb-12 space-y-6">
+<h2 class="font-headline-md text-headline-md text-primary mt-8 mb-4">Why Learn C?</h2>
+<p class="">
+                    C is often considered the mother of all modern languages. It provides low-level memory access and a simple set of keywords. 
+                    <span class="font-nepali-body text-nepali-body text-on-surface-variant ml-2">यो भाषा अपरेटिङ सिस्टम र जटिल एप्लिकेसन बनाउन प्रयोग गरिन्छ।</span>
+</p>
+<div class="bg-surface-container-low p-6 rounded-xl border border-surface-variant my-8 shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">tips_and_updates</span>
+                        Key Features
+                    </h3>
+<ul class="list-none space-y-3 pl-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[20px] mt-0.5">check_circle</span>
+<strong>Portability:</strong> Programs written in C can be run on different machines with little or no modification.
+                        </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[20px] mt-0.5">check_circle</span>
+<strong>Efficiency:</strong> C programs are fast and efficient, directly interacting with hardware.
+                        </li>
+</ul>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mt-8 mb-4">First C Program</h2>
+<p class="">Let's look at the standard "Hello World" program to understand the basic structure.</p>
+<!-- Syntax Highlighted Code Block Mock -->
+<div class="my-6 rounded-xl overflow-hidden shadow-lg border border-surface-variant/30">
+<div class="bg-[#0F172A] px-4 py-2 border-b border-white/10 flex items-center gap-2">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-error/80"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-fixed-dim/80"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-fixed-dim/80"></div>
+</div>
+<span class="text-white/60 text-xs font-mono ml-2">hello.c</span>
+</div>
+<pre class="code-bg p-6 overflow-x-auto text-sm font-mono leading-relaxed"><code class="text-white/90"><span class="token-keyword">#include</span> <span class="token-string">&lt;stdio.h&gt;</span>
 
-    <!-- Reader Hero  -->
-    <div class="reader-hero animate-fade-in">
+<span class="token-keyword">int</span> <span class="token-function">main</span><span class="token-punctuation">(</span><span class="token-punctuation">)</span> <span class="token-punctuation">{</span>
+    <span class="token-comment">// Print statement</span>
+    <span class="token-function">printf</span><span class="token-punctuation">(</span><span class="token-string">"Hello, Nepal!\n"</span><span class="token-punctuation">)</span><span class="token-punctuation">;</span>
+    <span class="token-keyword">return</span> <span class="token-string">0</span><span class="token-punctuation">;</span>
+<span class="token-punctuation">}</span></code></pre>
+</div>
+</article>
+<!-- Navigation Buttons -->
+<div class="flex justify-between items-center pt-8 border-t border-surface-variant mt-12">
+<a class="flex items-center gap-2 px-5 py-3 rounded-full hover:bg-surface-container-high text-on-surface-variant font-label-md transition-colors" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Previous Chapter
+                </a>
+<a class="flex items-center gap-2 px-5 py-3 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-white font-label-md transition-all shadow-sm" href="#">
+                    Next Chapter
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</main>
+</div>
+<!-- Footer -->
+    <!-- â•â•â• FOOTER â•â•â• -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <span class="badge" id="chapter-subject">Subject</span>
-            <h1 id="chapter-title">Loading Chapter&hellip;</h1>
-            <div class="reader-meta-bar">
-                <span id="chapter-grade">Class</span>
-                <span class="meta-sep" aria-hidden="true"></span>
-                <span id="chapter-genre">Genre</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Docs Layout -->
-    <div class="docs-layout">
-
-        <!-- TOC Sidebar -->
-        <aside class="sidebar" id="chapter-sidebar">
-
-            <div class="sidebar-chapter-info">
-                <span class="badge" id="cv-badge" style="font-size:0.7rem;">Subject</span>
-                <div class="sidebar-meta-item" id="cv-meta-grade">Class</div>
-                <div class="sidebar-meta-item" id="cv-meta-genre" style="font-style:italic;"></div>
-            </div>
-
-            <div class="sidebar-title">Contents</div>
-
-            <button class="mobile-sidebar-toggle">
-                &#9776; Contents
-                <span style="margin-left:auto;font-size:0.8em;opacity:0.7;">&#9660;</span>
-            </button>
-
-            <nav class="sidebar-nav" id="cv-toc">
-                <p class="sidebar-loading">Loading sections&hellip;</p>
-            </nav>
-
-            <div class="sidebar-divider"></div>
-
-            <a href="#" class="sidebar-back-link" id="cv-back">&larr; Back to Syllabus</a>
-
-        </aside>
-
-        <!-- Chapter Content -->
-        <main class="docs-content" id="main-content">
-            <article id="chapter-body" class="content-block">
-                <p>Loading content&hellip;</p>
-            </article>
-
-            <div style="display:flex;justify-content:space-between;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--color-border);">
-                <a href="#" class="btn btn-outline" id="prev-chapter">&larr; Previous</a>
-                <a href="#" class="btn btn-primary" id="next-chapter">Next &rarr;</a>
-            </div>
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+            <div class="footer-top">
                 <div class="footer-brand">
                     <a href="../index.html" class="logo">
-                        <img src="../assets/images/logo.png" alt="LearnNepal" style="height:32px;width:auto;">
+                        <img src="../assets/images/logo.png" alt="LearnNepal">
+                        LearnNepal<span></span>
                     </a>
-                    <p>Empowering NEB students with high-quality, structured, and accessible digital notes.</p>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes &mdash; completely free.</p>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-heading">Class 11</h4>
+                    <h5 class="footer-heading">Class 11</h5>
                     <ul class="footer-links">
-                        <li><a href="class-11/english.html">English</a></li>
-                        <li><a href="class-11/nepali.html">Nepali</a></li>
-                        <li><a href="class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
+                        <li><a href="../pages/class-11/english.html">English</a></li>
+                        <li><a href="../pages/class-11/nepali.html">Nepali</a></li>
+                        <li><a href="../pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-heading">Class 12</h4>
+                    <h5 class="footer-heading">Class 12</h5>
                     <ul class="footer-links">
-                        <li><a href="class-12/english/c12_english_syllabus.html">English</a></li>
-                        <li><a href="class-12/nepali.html">Nepali</a></li>
-                        <li><a href="class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
+                        <li><a href="../pages/class-12/english/c12_english_syllabus.html">English</a></li>
+                        <li><a href="../pages/class-12/nepali.html">Nepali</a></li>
+                        <li><a href="../pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
+                        <li><a href="../pages/class-12/question-bank/index.html" class="qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-heading">Company</h4>
+                    <h5 class="footer-heading">Resources</h5>
                     <ul class="footer-links">
+                        <li><a href="../pages/courses.html">All Courses</a></li>
                         <li><a href="../about.html">About Us</a></li>
                         <li><a href="../contact.html">Contact</a></li>
-                        <li><a href="courses.html">All Courses</a></li>
-                        <li><a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener">YouTube Channel</a></li>
                         <li><a href="../privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 LearnNepal. All rights reserved.</p>
+                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy.html">Privacy</a>
+                    <span>&bull;</span>
+                    <a href="../contact.html">Contact</a>
+                    <span>&bull;</span>
+                    <a href="../about.html">About</a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- Inline script: reads URL params, loads content, builds TOC -->
-    <script>
-    (function () {
-        'use strict';
-
-        const params    = new URLSearchParams(window.location.search);
-        const contentId = params.get('id')      || '';
-        const subject   = params.get('subject') || '';
-        const genre     = params.get('genre')   || '';
-        const title     = params.get('title')   || '';
-
-        // ── UI element refs ───────────────────────────────────────
-        const $  = (id) => document.getElementById(id);
-        const titleEl  = $('chapter-title');
-        const bodyEl   = $('chapter-body');
-        const subjectEl= $('chapter-subject');
-        const genreEl  = $('chapter-genre');
-        const gradeEl  = $('chapter-grade');
-        const cvBadge  = $('cv-badge');
-        const cvGrade  = $('cv-meta-grade');
-        const cvGenre  = $('cv-meta-genre');
-        const backLink = $('cv-back');
-        const tocEl    = $('cv-toc');
-
-        // ── Populate metadata from URL params ─────────────────────
-        if (title && titleEl) {
-            const decoded = decodeURIComponent(title);
-            titleEl.textContent = decoded;
-            document.getElementById('page-title').textContent = decoded + ' | LearnNepal';
-        }
-
-        if (subject) {
-            const fmt = subject.charAt(0).toUpperCase() + subject.slice(1);
-            if (subjectEl) subjectEl.textContent = fmt;
-            if (cvBadge)   cvBadge.textContent   = fmt;
-        }
-
-        if (genre) {
-            const g = decodeURIComponent(genre);
-            if (genreEl) genreEl.textContent = g;
-            if (cvGenre) cvGenre.textContent = g;
-        }
-
-        if (contentId) {
-            const is12  = contentId.startsWith('c12');
-            const grade = is12 ? 'Class 12' : 'Class 11';
-            if (gradeEl) gradeEl.textContent = grade;
-            if (cvGrade) cvGrade.textContent = grade;
-
-            // Back-to-syllabus URL (relative to /pages/)
-            if (backLink && subject) {
-                const gradeNum = is12 ? '12' : '11';
-                const sub      = subject.toLowerCase();
-                let url = '../index.html';
-                if (sub === 'nepali')
-                    url = `class-${gradeNum}/nepali.html`;
-                else if (sub === 'english')
-                    url = is12
-                        ? `class-12/english/c12_english_syllabus.html`
-                        : `class-11/english.html`;
-                else if (sub === 'computer')
-                    url = `class-${gradeNum}/computer/c${gradeNum}_computer_syllabus.html`;
-                backLink.href = url;
-            }
-        }
-
-        // ── Load chapter content from localStorage ────────────────
-        function loadContent() {
-            try {
-                const raw  = localStorage.getItem('learnnepal_content');
-                const data = raw ? JSON.parse(raw) : null;
-
-                if (data && data.chapters && data.chapters[contentId]) {
-                    const chapter = data.chapters[contentId];
-                    if (bodyEl) bodyEl.innerHTML = chapter.content || '<p><em>Content coming soon&hellip;</em></p>';
-                    if (chapter.title && titleEl) {
-                        titleEl.textContent = chapter.title;
-                        document.getElementById('page-title').textContent = chapter.title + ' | LearnNepal';
-                    }
-                } else {
-                    if (bodyEl) bodyEl.innerHTML = `
-                        <div class="note-box" style="text-align:center;padding:3rem 2rem;">
-                            <p style="font-size:1.1rem;font-weight:600;color:var(--color-primary);margin-bottom:0.5rem;">Content Coming Soon</p>
-                            <p style="color:var(--color-text-muted);">This chapter is being prepared. Please check back later.</p>
-                        </div>`;
-                }
-            } catch (e) {
-                if (bodyEl) bodyEl.innerHTML = '<p class="sidebar-empty">Could not load content.</p>';
-            }
-
-            // Build TOC after content injection
-            buildTOC();
-        }
-
-        // ── Dynamic TOC builder ───────────────────────────────────
-        function buildTOC() {
-            if (!tocEl) return;
-
-            const headings = document.querySelectorAll('#chapter-body h2');
-
-            if (!headings.length) {
-                tocEl.innerHTML = '<p class="sidebar-empty">No sections found.</p>';
-                return;
-            }
-
-            tocEl.innerHTML = '';
-
-            // IntersectionObserver highlights the active section
-            const obs = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.id;
-                        tocEl.querySelectorAll('.sidebar-link')
-                             .forEach((l) => l.classList.remove('toc-active'));
-                        const active = tocEl.querySelector(`[data-target="${id}"]`);
-                        if (active) active.classList.add('toc-active');
-                    }
-                });
-            }, { rootMargin: '-20% 0px -70% 0px' });
-
-            headings.forEach((h, i) => {
-                const id = h.id || ('toc-section-' + i);
-                h.id = id;
-
-                const a = document.createElement('a');
-                a.href          = '#' + id;
-                a.className     = 'sidebar-link';
-                a.textContent   = h.textContent.trim();
-                a.dataset.target = id;
-
-                a.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    h.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-
-                tocEl.appendChild(a);
-                obs.observe(h);
-            });
-        }
-
-        // Run on DOMContentLoaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadContent);
-        } else {
-            loadContent();
-        }
-    })();
+<script>
+        // Reading Progress Bar Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height);
+            document.getElementById('reading-progress').style.transform = `scaleX(${scrolled})`;
+        });
     </script>
 
-    <script src="../scripts/app.js"></script>
-    <script src="../scripts/search.js"></script>
-    <script src="../scripts/transitions.js"></script>
-</body>
-</html>
 
+</body></html>

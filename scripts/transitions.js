@@ -84,15 +84,17 @@ function initHeaderScroll() {
    BACK-TO-TOP BUTTON
    ════════════════════════════════════════════════════════════ */
 function initBackToTop() {
-  // Create the button
-  const btn = document.createElement('button');
-  btn.className = 'back-to-top';
-  btn.setAttribute('aria-label', 'Scroll to top');
-  btn.innerHTML = '&#8593;';
-  document.body.appendChild(btn);
+  let btn = document.querySelector('.back-to-top');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Scroll to top');
+    btn.innerHTML = '&#8593;';
+    document.body.appendChild(btn);
+  }
 
   function checkVisibility() {
-    if (window.scrollY > 400) {
+    if (window.scrollY > 300) {
       btn.classList.add('visible');
     } else {
       btn.classList.remove('visible');
@@ -102,8 +104,13 @@ function initBackToTop() {
   window.addEventListener('scroll', checkVisibility, { passive: true });
   checkVisibility();
 
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (window.__lenis) {
+      window.__lenis.scrollTo(0);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
 }
 

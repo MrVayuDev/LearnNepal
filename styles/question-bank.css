@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════
    QUESTION BANK v6 — Premium Redesign & Theme System
    ═══════════════════════════════════════════════════════ */
 :root {
-  --qb-gold: #c5a059;
-  --qb-gold-l: rgba(197, 160, 89, 0.12);
+  --qb-gold: #9a742c;
+  --qb-gold-l: rgba(154, 116, 44, 0.1);
   --qb-glass: var(--bg-elevated);
   --qb-glass-b: var(--border);
   --qb-blur: 18px;
@@ -13,11 +13,6 @@
   --qb-spring: var(--ease-spring, cubic-bezier(.34, 1.56, .64, 1));
   --qb-sh: var(--shadow-md, 0 8px 32px rgba(15, 42, 74, 0.07));
   --qb-sh-h: var(--shadow-lg, 0 16px 48px rgba(15, 42, 74, 0.12));
-}
-
-[data-theme="light"] {
-  --qb-gold: #9a742c;
-  --qb-gold-l: rgba(154, 116, 44, 0.1);
 }
 
 /* Icons */
@@ -481,7 +476,7 @@
   scroll-margin-top: 80px;
   animation: qFadeUp 0.45s var(--qb-ease) both;
 }
-.qb-q-head { font-size: 0.95rem; color: var(--text-primary); line-height: 1.7; }
+.qb-q-head { font-size: 0.95rem; color: var(--text-primary); line-height: 1.7; white-space: pre-line; }
 .qb-q-head .qb-num { font-weight: 800; color: var(--accent); margin-right: 0.15rem; }
 .qb-q-head .qb-tag { font-weight: 800; color: var(--qb-gold); }
 .qb-q-body { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; white-space: pre-line; margin-top: 0.2rem; padding-left: 1.1rem; }
@@ -759,4 +754,5 @@
   box-shadow: 0 4px 14px var(--accent-muted);
   transform: translateY(-2px);
 }
+
 
