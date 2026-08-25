@@ -1,22 +1,25 @@
 /* ═══════════════════════════════════════════════════════════
    LearnNepal — Responsive System v7 "Vibrant Academic Pulse"
    Centralized breakpoint management for all pages/components
-   
+
    Breakpoints:
      Mobile:      320px – 480px
      Tablet:      481px – 768px
      Laptop:      769px – 1024px
      Desktop:     1025px+ (baseline, no overrides)
+
+   IMPORTANT: All @media blocks are TOP-LEVEL. No nesting.
    ═══════════════════════════════════════════════════════════ */
 
-/* ─── Mobile Nav Overlay Backdrop ────────────────────────── */
+/* ─── Mobile Nav Overlay Backdrop (Global — no media query) ─ */
+/* NOTE: No backdrop-filter blur here — blurring the backdrop
+   bleeds into sibling painted layers and blurs the nav drawer.
+   Use a solid semi-transparent background instead. */
 .nav-backdrop {
   position: fixed;
   inset: 0;
-  z-index: var(--z-drawer-backdrop);
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  z-index: var(--z-drawer-backdrop); /* 1050 */
+  background: rgba(15, 20, 30, 0.55);
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--duration-smooth) var(--ease-out),
@@ -33,6 +36,129 @@ body.nav-open .nav-backdrop {
 body.nav-open {
   overflow: hidden;
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   LAPTOP & TABLET NAVIGATION DRAWER  —  ≤1024px
+   This standalone block replaces the previously broken nested
+   @media that was inside the 768px block, causing the hamburger
+   to only show below 768px and the full-screen blur bug.
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+  /* ── Hamburger Toggle ───────────────────────────────────── */
+  .mobile-toggle {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: var(--z-drawer-toggle); /* 1200 — above everything */
+  }
+
+  .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--on-surface);
+    transition: transform var(--duration-smooth) var(--ease-out),
+                opacity var(--duration-fast);
+    transform-origin: center;
+  }
+
+  /* Hamburger → X animation via body.nav-open */
+  body.nav-open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  body.nav-open .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  body.nav-open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+  /* ── Navigation Drawer Panel ────────────────────────────── */
+  /* The drawer slides in from the right.
+     z-index: 1100 > backdrop z-index: 1050 → always on top.
+     isolation: isolate prevents any parent backdrop-filter from
+     bleeding into this element and making it blurry. */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(320px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    background: var(--surface-container-lowest);
+    border-left: 1px solid var(--outline-variant);
+    flex-direction: column;
+    align-items: stretch;
+    padding: calc(var(--header-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    z-index: var(--z-drawer); /* 1100 — above backdrop (1050) */
+    gap: 0;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform var(--duration-smooth) var(--ease-out);
+    will-change: transform;
+    /* Creates an isolated stacking context so no parent filter
+       (e.g. backdrop-filter on the overlay) bleeds into this drawer */
+    isolation: isolate;
+    /* Ensure no residual blur on this element itself */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.875rem var(--space-sm);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--outline-variant);
+    border-radius: 0;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  /* Search button — full width in mobile drawer */
+  .btn-search {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    margin: var(--space-sm) 0;
+    border-radius: var(--radius-sm);
+    order: -1;
+  }
+
+  .btn-search kbd {
+    display: none;
+  }
+
+  /* Contact CTA button in nav */
+  .nav-menu .btn.btn-primary.btn-sm {
+    width: 100%;
+    min-height: 48px;
+    margin-top: var(--space-md);
+    justify-content: center;
+    border-radius: var(--radius-sm);
+  }
+
+} /* end @media (max-width: 1024px) — nav drawer */
+
 
 /* ═══════════════════════════════════════════════════════════
    LAPTOP / SMALL DESKTOP  —  769px – 1024px
@@ -80,6 +206,7 @@ body.nav-open {
   /* ── academic Grid ────────────────────────────────────────── */
   .academic-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
   }
 
   .academic-wide,
@@ -232,18 +359,19 @@ body.nav-open {
     border-right: 1px solid var(--border);
     max-height: 100vh;
     max-height: 100dvh;
+    /* Isolate to prevent parent backdrop-filter bleed */
+    isolation: isolate;
   }
 
   .sidebar.active {
     left: 0;
   }
 
+  /* Sidebar overlay — no backdrop-filter to prevent blur bleed */
   .sidebar-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(15, 20, 30, 0.55);
     z-index: var(--z-drawer-backdrop);
     opacity: 0;
     visibility: hidden;
@@ -266,7 +394,8 @@ body.nav-open {
     align-items: center;
     padding: 0.65rem 0.9rem;
   }
-}
+
+} /* end @media (max-width: 1024px) — layout */
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -285,116 +414,6 @@ body.nav-open {
   .container {
     padding: 0 var(--space-md);
   }
-
-/* ═══════════════════════════════════════════════════════════
-   LAPTOP & TABLET NAVIGATION DRAWER  —  ≤1024px
-   ═══════════════════════════════════════════════════════════ */
-@media (max-width: 1024px) {
-
-  /* ── Mobile Navigation Drawer ──────────────────────────── */
-  .mobile-toggle {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    z-index: var(--z-drawer-toggle);
-  }
-
-  .bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--on-surface);
-    transition: transform var(--duration-smooth) var(--ease-out),
-                opacity var(--duration-fast);
-    transform-origin: center;
-  }
-
-  /* Hamburger → X animation via body.nav-open */
-  body.nav-open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(4px, 4px);
-  }
-
-  body.nav-open .bar:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-
-  body.nav-open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(4px, -4px);
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: min(320px, 85vw);
-    height: 100vh;
-    height: 100dvh;
-    background: var(--surface-container-lowest);
-    border-left: 1px solid var(--outline-variant);
-    flex-direction: column;
-    align-items: stretch;
-    padding: calc(var(--header-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-    z-index: var(--z-drawer);
-    gap: 0;
-    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3);
-    transform: translateX(100%);
-    transition: transform var(--duration-smooth) var(--ease-out);
-    will-change: transform;
-  }
-
-  .nav-menu.active {
-    transform: translateX(0);
-    height: 100vh;
-    height: 100dvh;
-  }
-
-  .nav-link {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.875rem var(--space-sm);
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--outline-variant);
-    border-radius: 0;
-  }
-
-  .nav-link::after {
-    display: none;
-  }
-
-  /* Search button — full width in mobile drawer */
-  .btn-search {
-    width: 100%;
-    justify-content: center;
-    min-height: 48px;
-    margin: var(--space-sm) 0;
-    border-radius: var(--radius-sm);
-    order: -1;
-  }
-
-  .btn-search kbd {
-    display: none;
-  }
-
-
-
-  /* Contact CTA button in nav */
-  .nav-menu .btn.btn-primary.btn-sm {
-    width: 100%;
-    min-height: 48px;
-    margin-top: var(--space-md);
-    justify-content: center;
-    border-radius: var(--radius-sm);
-  }
-}
 
   /* ── Dropdown (mobile) ─────────────────────────────────── */
   .dropdown-menu {
@@ -501,6 +520,7 @@ body.nav-open {
   /* ── academic Grid ────────────────────────────────────────── */
   .academic-grid {
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
 
   .academic-lg,
@@ -570,6 +590,8 @@ body.nav-open {
     align-items: stretch;
     width: 100%;
     max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .cta-actions .btn,
@@ -648,8 +670,6 @@ body.nav-open {
     grid-template-columns: 1fr;
     text-align: center;
   }
-
-
 
   /* ── Syllabus hero ─────────────────────────────────────── */
   .syllabus-hero {
@@ -820,12 +840,13 @@ body.nav-open {
     transform-style: flat;
   }
 
-  /* Disable heavy backdrop-filter on mobile for smooth scroll */
+  /* Reduce backdrop-filter on mobile for smooth scroll */
   .header.scrolled {
     backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
   }
-}
+
+} /* end @media (max-width: 768px) */
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1181,8 +1202,6 @@ body.nav-open {
     height: 2px;
   }
 
-
-
   /* ── Performance: aggressively reduce GPU work ─────────── */
   .hero-orb {
     filter: blur(40px);
@@ -1224,7 +1243,8 @@ body.nav-open {
   .academic-glow {
     display: none;
   }
-}
+
+} /* end @media (max-width: 480px) */
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1366,7 +1386,8 @@ body.nav-open {
     width: 44px;
     height: 44px;
   }
-}
+
+} /* end touch targets @media (max-width: 768px) */
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1415,7 +1436,8 @@ body.nav-open {
   .glass-youtube-box {
     padding: 1.25rem 1rem;
   }
-}
+
+} /* end @media (max-width: 360px) */
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1432,7 +1454,8 @@ body.nav-open {
     max-width: 1280px;
     margin: 0 auto;
   }
-}
+
+} /* end @media (min-width: 1600px) */
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1468,7 +1491,8 @@ body.nav-open {
   .reader-hero {
     padding: 2rem 0 1.5rem;
   }
-}
+
+} /* end landscape */
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -1516,5 +1540,5 @@ body.nav-open {
     color: #000;
     text-decoration: underline;
   }
-}
 
+} /* end print */

@@ -253,3 +253,69 @@ html.no-transitions * {
     to   { transform: rotate(360deg); }
 }
 
+/* ── iOS Safe Area Insets ────────────────────────────────────── */
+/* Prevents content from being hidden behind notches/home indicators
+   on iPhones with Face ID. Falls back to 0px on non-notched devices. */
+:root {
+  --safe-inset-top:    env(safe-area-inset-top, 0px);
+  --safe-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-inset-left:   env(safe-area-inset-left, 0px);
+  --safe-inset-right:  env(safe-area-inset-right, 0px);
+}
+
+/* ── dvh Viewport Height ────────────────────────────────────── */
+/* 100dvh = "dynamic viewport height" — accounts for mobile browser
+   address bars that resize the viewport. 100vh fallback for older browsers. */
+.hero {
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
+}
+
+/* ── Focus-Visible Keyboard Navigation ──────────────────────── */
+/* Show focus rings only when navigating via keyboard, not mouse */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+/* Elements that manage their own focus state via box-shadow */
+.input-field:focus,
+.cmd-input:focus,
+.courses-search input:focus {
+  outline: none;
+}
+
+/* ── Prefers Reduced Motion ──────────────────────────────────── */
+/* Accessibility: disable all CSS animations/transitions for users
+   who have enabled "Reduce Motion" in their OS settings */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Preserve immediate visibility of overlays (don't freeze them invisible) */
+  .nav-backdrop,
+  .sidebar-overlay {
+    transition: opacity 0.01ms, visibility 0.01ms !important;
+  }
+}
+
+/* ── Flex / Grid Child Overflow Prevention ───────────────────── */
+/* Without min-width: 0, flex/grid children can overflow their container
+   because their default min-size is their content size. */
+.header-container,
+.nav-menu,
+.footer-top,
+.hero-inner,
+.feat-row,
+.feat-row-reverse,
+.bento-card-split,
+.docs-layout {
+  min-width: 0;
+}
+
+

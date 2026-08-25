@@ -54,35 +54,48 @@ function initMobileMenu() {
     const nav = document.querySelector('.nav-menu');
     if (!toggle || !nav) return;
 
+    // Ensure toggle has proper ARIA semantics for screen readers
+    toggle.setAttribute('aria-label', 'Open navigation menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', 'site-nav-menu');
+    if (!nav.id) nav.id = 'site-nav-menu';
+
     // Dynamically create backdrop overlay if not present
     let backdrop = document.querySelector('.nav-backdrop');
     if (!backdrop) {
         backdrop = document.createElement('div');
         backdrop.className = 'nav-backdrop';
+        backdrop.setAttribute('aria-hidden', 'true');
         document.body.appendChild(backdrop);
     }
 
     function toggleMenu() {
         const isOpen = document.body.classList.toggle('nav-open');
         nav.classList.toggle('active', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     }
 
     function closeMenu() {
         document.body.classList.remove('nav-open');
         nav.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+        // Return focus to toggle so keyboard users don't get lost
+        toggle.focus();
     }
 
     toggle.addEventListener('click', toggleMenu);
     backdrop.addEventListener('click', closeMenu);
 
-    // Close on escape key
+    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && document.body.classList.contains('nav-open')) {
             closeMenu();
         }
     });
 
-    // Close menu when clicking links (except dropdown parents)
+    // Close menu when clicking nav links (except dropdown parents)
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
              if (!link.parentElement.classList.contains('dropdown')) {
