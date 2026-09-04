@@ -20,6 +20,8 @@
 
         // Grade 12
         { name: "Class 12 English", desc: "Literature chapters, free response templates, grammar rules", url: "pages/class-12/english/c12_english_syllabus.html", cat: "Class 12", icon: "📘" },
+        { name: "A Devoted Son (Class 12 English)", desc: "Anita Desai - Plot summary, character analysis, themes, NEB questions", url: "pages/class-12/english/c12_english_story_3.html", cat: "Class 12", icon: "📘" },
+        { name: "Neighbours (Class 12 English)", desc: "Tim Winton - Summary, themes, and NEB Q&A", url: "pages/class-12/english/c12_english_story_1.html", cat: "Class 12", icon: "📘" },
         { name: "Class 12 Nepali", desc: "Full chapter analyses, exercises, and vocabulary notes", url: "pages/class-12/nepali.html", cat: "Class 12", icon: "📕" },
         { name: "Class 12 Computer Science", desc: "Database Management (DBMS), Networking, Web Tech, and C language", url: "pages/class-12/computer/c12_computer_syllabus.html", cat: "Class 12", icon: "💻" },
 
