@@ -24,7 +24,13 @@
         { name: "Class 12 Computer Science", desc: "Database Management (DBMS), Networking, Web Tech, and C language", url: "pages/class-12/computer/c12_computer_syllabus.html", cat: "Class 12", icon: "💻" },
 
         // Question Bank
-        { name: "NEB Class 12 Question Bank", desc: "Past questions and exam templates with filters", url: "pages/class-12/question-bank/index.html", cat: "Question Bank", icon: "📝" }
+        { name: "Question Bank Portal", desc: "All Question Banks — Class 10 (SEE), Class 11, Class 12 (NEB)", url: "pages/question-bank/index.html", cat: "Question Bank", icon: "📚" },
+        { name: "Class 10 Science Question Bank", desc: "SEE Science past exam questions with bilingual answers", url: "pages/class-10/question-bank/science/index.html", cat: "Question Bank", icon: "🔬" },
+        { name: "Class 11 Question Bank", desc: "Class 11 NEB exam question bank portal", url: "pages/class-11/question-bank/index.html", cat: "Question Bank", icon: "📝" },
+        { name: "Class 12 Question Bank", desc: "Class 12 NEB exam question bank portal", url: "pages/class-12/question-bank/index.html", cat: "Question Bank", icon: "📝" },
+        { name: "Class 12 Computer Science Question Bank", desc: "DBMS, Networking, C Programming, OOP, Web Tech solved questions", url: "pages/class-12/question-bank/computer/index.html", cat: "Question Bank", icon: "💻" },
+        { name: "Class 12 English Question Bank", desc: "Comprehension, Literature, Grammar, and Composition solved questions", url: "pages/class-12/question-bank/english/index.html", cat: "Question Bank", icon: "📖" },
+        { name: "Class 12 Nepali Question Bank", desc: "कक्षा १२ नेपाली विगतका बोर्ड परीक्षा प्रश्नोत्तर", url: "pages/class-12/question-bank/nepali/index.html", cat: "Question Bank", icon: "🇳🇵" }
     ];
 
     let activeIndex = 0;

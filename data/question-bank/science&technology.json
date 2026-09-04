@@ -1,0 +1,918 @@
+{
+    "class": "class-10",
+    "subject": "science",
+    "year": "2080",
+    "examType": "see",
+    "groups": [
+        {
+            "id": "group-a",
+            "name": "Group A",
+            "type": "mcq",
+            "instruction": {
+                "english": "Choose the correct answer.",
+                "nepali": "तलका प्रश्नहरूको ठीक विकल्प छानी उत्तरपुस्तिकामा लेख्नुहोस् ।"
+            },
+            "questions": [
+                {
+                    "id": "c10-science-2080-a1",
+                    "questionNumber": 1,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "ट्रान्सफर्मरमा कुन भौतिक परिमाण सधै यथावत रहन्छ ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "बल"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "भोल्टेज"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "विद्युत् धारा"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "सामर्थ्य"
+                        }
+                    ],
+                    "correctAnswer": "not-stated",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "आवृत्ति (Frequency) सधै यथावत रहन्छ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a2",
+                    "questionNumber": 2,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "अर्जेन्टांइट धाउबाट कुन धातु पाइन्छ ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "तामा"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "सुन"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "फलाम"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "चाँदी"
+                        }
+                    ],
+                    "correctAnswer": "iv",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "अर्जेन्टांइट धाउबाट चाँदी धातु पाइन्छ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "chemistry"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a3",
+                    "questionNumber": 3,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "तलका मध्ये कुन चाहिँ अल्गीको उदाहरण हो ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "क्लमाइडोमोनस"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "मस"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "लिभरवर्टस्"
+                        }
+                    ],
+                    "correctAnswer": "i",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "क्लमाइडोमोनस अल्गीको उदाहरण हो ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a4",
+                    "questionNumber": 4,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "तलका मध्ये कुनचाहिँ नेटिजन हो ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "इन्टरनेट वितरण गर्ने"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "इन्टरनेट प्रयोग गर्ने"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "इन्टरनेट मन पराउने"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "इन्टरनेट मर्मत गर्ने"
+                        }
+                    ],
+                    "correctAnswer": "ii",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "इन्टरनेट प्रयोग गर्ने व्यक्ति नेटिजन हो ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "computer-science"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a5",
+                    "questionNumber": 5,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "म्याग्नेसियम अक्साइडलाई पानीमा मिसाउँदा कुन किसिमको रासायनिक प्रतिक्रिया हुन्छ ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "संयोजन प्रतिक्रिया"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "विस्थापन प्रतिक्रिया"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "विभाजन प्रतिक्रिया"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "अम्ल क्षार प्रतिक्रिया"
+                        }
+                    ],
+                    "correctAnswer": "i",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "संयोजन प्रतिक्रिया हुन्छ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "chemistry"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a6",
+                    "questionNumber": 6,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "प्रयोगशालामा एमोनिया ग्याँस बनाउँदा ग्याँस जारमा जम्मा गर्नु अघि लाइम टावरमा पठाइन्छ, किन ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "ग्याँस जारलाई क्षारीय बनाउन"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "ग्याँसलाई ओसिलो बनाउन"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "ग्याँसबाट अशुद्वि हटाउन"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "ग्याँसलाई सुख्खा बनाउन"
+                        }
+                    ],
+                    "correctAnswer": "iv",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "ग्याँसलाई सुख्खा बनाउनका लागि लाइम टावरमा पठाइन्छ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "chemistry"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a7",
+                    "questionNumber": 7,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "चित्रमा दिइएको दृष्टिको कमजोरीलाई हटाउनको लागि कस्तो लेन्सको प्रयोग गरिन्छ ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "प्लेनो कन्भेक्स लेन्स"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "प्लेनो कन्केभ लेन्स"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "कन्केभो कन्भेक्स लेन्स"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "कन्भेक्सो कन्केभ लेन्स"
+                        }
+                    ],
+                    "correctAnswer": "iv",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "कन्भेक्सो कन्केभ लेन्सको प्रयोग गरिन्छ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a8",
+                    "questionNumber": 8,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "यदि चित्रमा देखाइएको ट्रान्सफर्मरको प्राइमरी क्वाइलमा तारको फेराहरूको सङ्ख्या सेकेन्डरी क्वाइलमा भन्दा 4 गुणा बढी छ भने सेकेन्डरी भोल्टेजको मान कति होला ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "1110 V"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "220 V"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "110 V"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "55 V"
+                        }
+                    ],
+                    "correctAnswer": "iv",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "सेकेन्डरी भोल्टेजको मान 55 V हुन्छ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a9",
+                    "questionNumber": 9,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "तल प्रजनन् विज्ञानसँग सम्बन्धित एउटा तथ्य र दुईवटा कथनहरू दिइएका छन् । तथ्यः इन भिट्रो फर्टिलाइजेसन भनेको गभर्भाधानको एउटा यस्तो प्रक्रिया हो जसमा एउटा काँचको भाँडोमा डिम्बकोष र शुक्राणुको मिलन हुन्छ । त्यसपछि मात्र यसलाई आमाको पाठेघरमा पठाइन्छ । कथनः a) यस प्रक्रियामा शुक्राणुको आवश्यकता हुँदैन । b) सेरोगट आमाले आफ्नो पाठेघरमा भ्रुणको विकास गर्न सक्छिन् । ठीक विकल्प रोज्नुहोस् ।"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "तथ्य र दुवै कथनहरू सही छन् ।"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "तथ्य गलत छ र दुवै कथनहरू सही छन् ।"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "तथ्य र कथन 2 सही छन तर कथन 1 गलत छ ।"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "तथ्य र कथन 1 सही छन तर तथ्य 2 गलत छ ।"
+                        }
+                    ],
+                    "correctAnswer": "iii",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "तथ्य र कथन b (कथन 2) सही छन् तर कथन a (कथन 1) गलत छ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-a10",
+                    "questionNumber": 10,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "एउटा गाउँका बासिन्दाहरूलाई मुसाहरूले धहेरै सताउँदा मुसा मार्ने अभियान नै चलाए । यसको परिमाण के हुन सक्छ ?"
+                    },
+                    "options": [
+                        {
+                            "id": "i",
+                            "english": "Not available",
+                            "nepali": "पारिस्थितिक पद्वति सन्तुलित हुनेछ ।"
+                        },
+                        {
+                            "id": "ii",
+                            "english": "Not available",
+                            "nepali": "सर्पहरूको सङ्ख्या घट्नेछ ।"
+                        },
+                        {
+                            "id": "iii",
+                            "english": "Not available",
+                            "nepali": "सर्पहरूको सङ्ख्या बढ्नेछ ।"
+                        },
+                        {
+                            "id": "iv",
+                            "english": "Not available",
+                            "nepali": "किराहरूको सङ्ख्या बढ्नेछ ।"
+                        }
+                    ],
+                    "correctAnswer": "ii",
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "सर्पहरूको आहारा घट्ने हुनाले तिनीहरूको सङ्ख्या घट्नेछ ।"
+                    },
+                    "tags": [
+                        "mcq",
+                        "biology"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "group-b",
+            "name": "Group B",
+            "type": "very-short",
+            "instruction": {
+                "english": "Answer the following questions.",
+                "nepali": "तलका प्रश्नहरूको अति छोटो उत्तर लेख्नुहोस ।"
+            },
+            "questions": [
+                {
+                    "id": "c10-science-2080-b1",
+                    "questionNumber": 1,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "नियन्त्रित चरको परिभाषा दिनुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "प्रयोगात्मक कार्य गर्दा प्रयोगको नतिजालाई प्रभाव पार्ने वा प्रयोगात्मक कार्य गर्दा नियन्त्रण गरिनुपर्ने चरलाई नियन्त्रित चर भनिन्छ ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b2",
+                    "questionNumber": 2,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "RNA को पूरा रूप लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "RNA को पूरा रूप Ribonucleic Acid हो ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b3",
+                    "questionNumber": 3,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "एउटा बिरुवाको ट्यापरुट र फूलहरू छन भने यो कुन क्लासमा पर्छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "एउटा बिरुवाको ट्यापरुट र फूलहरू छन भने यो बिरुवा दुईदलीय (Dicotyledon) क्लासमा पर्छ ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b4",
+                    "questionNumber": 4,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "जलवायु परिवर्तनको मुख्य कारक ग्याँस कुन हो ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "जलवायु परिवर्तनको मुख्य कारक ग्याँस कार्बन डाइअक्साइड (CO2) हो ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "environment"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b5",
+                    "questionNumber": 5,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "पिण्डलाई स्थिर राखी कुनै दुई वस्तुबिचको दूरीलाई 3 गुणाले घटाउँदा ती दुई वस्तुहरूबिचमा लाग्ने गुरुत्वाकर्षण बलमा कस्तो परिवर्तन हुन्छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "पिण्डलाई स्थिर राखी कुनै दुई वस्तुबिचको दूरीलाई 3 गुणाले घटाउँदा ती दुई वस्तुहरूबिचमा लाग्ने गुरुत्वाकर्षण बल 9 गुणाले वृद्धि हुन्छ ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b6",
+                    "questionNumber": 6,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "जडिबुटीले राष्ट्रको अर्थतन्त्रको वृद्विको लागि कसरी टेवा पुऱ्याउँछ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "जडिबुटीहरूको खेती गरी निर्यात गर्ने सकेमा आन्तरिक रूपमा रोजगारी बढ्ने, | किसानको आर्थिक वृद्धि हुने र राज्यको आम्दानीको स्रोत बढ्ने भएकोले राष्ट्रको अर्थतन्त्रको वृद्विको लागि टेवा पुऱ्याउँछ ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b7",
+                    "questionNumber": 7,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "तपाईंको घरमा जडान गरिएको विद्युत् 220 V को छ । तपाईंसँग दुईओटा ट्रान्सफर्मर छन् । ती मध्ये एउटाको प्राइमरी क्वाइलमा फेराको सङ्ख्या सेकेन्डरी क्वाइलमा भएको भन्दा बढी छ भने अर्कोमा प्राइमरी क्वाइलमा फेराको सङ्ख्या सेकेन्डरी क्वाइलमा भएको भन्दा कम छ। 12 V को रेडियो बजाउनका लागि तपाईंले यी दुईमध्ये कुन ट्रान्सफर्मर छान्नुहुन्छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "12 V को रेडियो बजाउनका लागि मैले प्राइमरी क्वाइलभन्दा सेकेन्डरी क्वाइलको सङ्ख्या कम भएको ट्रान्सफर्मर (स्टेप डाउन ट्रान्सफर्मर) प्रयोग गर्छु ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b8",
+                    "questionNumber": 8,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "तल तालिकामा दिइएका पारमाणविक संरचनाको आधारमा ती तत्त्वहरूबिच रासायनिक प्रतिक्रिया हुँदा बन्ने यौगिकको आणविक सूत्र लेख्नुहोस । (लिथियम + फ्लोरिन)"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "ती तत्त्वहरूबिच रासायनिक प्रतिक्रिया हुँदा बन्ने यौगिक लिथियम फ्लोराइड हो र यसको आणविक सूत्र LiF3 (पाठ्यांश अनुसार) हुन्छ ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "chemistry"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-b9",
+                    "questionNumber": 9,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "कस्तो धातुको धाउको फ्रोथ फ्लोटेसन विधि प्रयोग गरेर कन्सन्ट्रेसन गरिन्छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "धाउमा भएको धातु र मिसिएका अशुद्ध पदार्थमध्ये एउटा पानीसित आकर्षित हुने र अर्को पानीभन्दा टाढा जान खोज्ने भएमा फ्रोथ फ्लोटेसन विधि प्रयोग गरेर कन्सन्ट्रेसन गरिन्छ ।"
+                    },
+                    "tags": [
+                        "very-short",
+                        "chemistry"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "group-c",
+            "name": "Group C",
+            "type": "short",
+            "instruction": {
+                "english": "Answer the following questions.",
+                "nepali": "तलका प्रश्नहरूको छोटो उत्तर लेख्नुहोस ।"
+            },
+            "questions": [
+                {
+                    "id": "c10-science-2080-c1",
+                    "questionNumber": 3,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "मोनोहाइब्रिड क्रस र फिनोटाइपको परिभाषा दिनुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "मोनोहाइब्रिड क्रस: एउटामात्र फरक गुण (Contrasting character) लाई आधार मानी गरिएको क्रस वा प्रजननलाई मोनोहाइब्रिड क्रस भनिन्छ । फिनोटाइप: सजीवहरूको बाहिरी स्वरुप वा देखापर्ने गुणलाई फिनोटाइप भनिन्छ ।"
+                    },
+                    "tags": [
+                        "short",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c2",
+                    "questionNumber": 4,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "रगतलाई मुटुबाट फोक्सोमा लैजाने र फोक्सोबाट मुटुमा ल्याउने रक्तनलीहरूको नाम लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "रगतलाई मुटुबाट फोक्सोमा लैजाने रक्तनली पल्मोनरी धमनी हो भने रगतलाई फोक्सोबाट मुटुमा ल्याउने रक्तनली पल्मोनरी शिरा हो ।"
+                    },
+                    "tags": [
+                        "short",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c3",
+                    "questionNumber": 5,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "आर्किमिडिजको सिद्धान्त र प्लवनको नियमबिचमा कुनै दुई फरक छुट्याउनुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. आर्किमिडिजको सिद्धान्तले पूर्ण वा आंशिक रूपमा डुबेको वस्तुमा लाग्ने ऊर्ध्वचाप विस्थापित तरलको तौलसँग बराबर हुन्छ भन्छ र यो तैरने र डुब्ने दुवैमा लागु हुन्छ । ii. प्लवनको नियमले तैरने वस्तुले आफ्नो तौल बराबरको तरल विस्थापित गर्छ भन्छ र यो तैरने वस्तुमा मात्र लागु हुन्छ ।"
+                    },
+                    "tags": [
+                        "short",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c4",
+                    "questionNumber": 6,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "इलेक्ट्रिक जेनेरेटर इलेक्ट्रिक मोटरभन्दा कुन कुन दुई कुरामा फरक छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. जेनेरेटरले यान्त्रिक शक्तिलाई विद्युत् शक्तिमा रुपान्तरण गर्छ र यो विद्युत् चुम्बकीय उपपादनको सिद्धान्तमा आधारित छ । ii. मोटरले विद्युत् शक्तिलाई यान्त्रिक शक्तिमा रुपान्तरण गर्छ र यो विद्युत्को मोटर असरको सिद्धान्तमा आधारित छ ।"
+                    },
+                    "tags": [
+                        "short",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c5",
+                    "questionNumber": 7,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "विषादीहरूलाई सावधानीपूर्वक भण्डारण र प्रयोग गर्नुपर्छ । यसका दुईओटा कारणहरू लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. विषादीको गलत प्रयोगले मानिस र पशुपंक्षीको स्वास्थ्य र वातावरणमा हानिकारक असर पुऱ्याउँछ । ii. यसको अत्यधिक प्रयोगले बाली उत्पादनमा नोक्सान पुऱ्याउँनुका साथै माटोको उर्वराशक्तिसमेत घटाउन सक्छ ।"
+                    },
+                    "tags": [
+                        "short",
+                        "environment"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c6",
+                    "questionNumber": 8,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "एउटा गाउँका सम्पूर्ण बासिन्दाहरू आर्थिक हिसाबले कमजोर छन् तर तिनीहरूले फूलहरू तथा कृषिजन्य वस्तुहरू उत्पादन गर्छन् । यदि तपाईं त्यस गाउँको कुनै वडाको अध्यक्ष भएको भए गाउँका बासिन्दाहरूको आर्थिक अवस्था सुधार गर्न कुन किराको व्यवसाय गर्न सुझाव दिनुहुन्थ्यो ? कुनै दुई कारणहरू लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "म मौरीको व्यवसाय गर्न सुझाव दिन्छु किनभने: i. मौरीले बालीनालीको परपरागसेचन प्रक्रिया बढाउँछ जसले गर्दा कृषि उत्पादन वृद्धि हुन्छ । ii. मौरीले मह उत्पादन गर्छ जसको व्यापार व्यवसाय गरी आर्थिक लाभ लिन सकिन्छ ।"
+                    },
+                    "tags": [
+                        "short",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c7",
+                    "questionNumber": 9,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "सँगैको चित्रमा एउटा बेलुन दिइएको छ । a. यसबाट तपाईंले बिग व्याङ सिद्धान्त कसरी प्रदर्शन गर्नुहुन्छ ? b. यस प्रदर्शनले हब्बलको सिद्वान्तको निष्कर्षलाई कसरी समर्थन गर्दछ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "a. बेलुनमा मसिना थोप्लाहरू बनाई फुक्दा ती टाढिदै जान्छन्, जसले एउटै विन्दुबाट ब्रह्माण्ड फैलिएको प्रदर्शन गर्छ । b. थोप्लाहरू टाढिए जस्तै तारापुञ्जहरू पनि एक अर्काबाट टाढा जाने गति दुरीसँगै बढ्ने नियम (V ∝ d) लाई यसले समर्थन गर्दछ ।"
+                    },
+                    "tags": [
+                        "short",
+                        "astronomy"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c8",
+                    "questionNumber": 10,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "तल दिइएको अपूर्ण शब्द समीकरणलाई सन्तुलित सूत्र समीकरणमा परिवर्तन गर्नुहोस् । म्याग्नेसियम + अक्सिजन"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "2Mg + O2 -> 2MgO"
+                    },
+                    "tags": [
+                        "short",
+                        "chemistry"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c9",
+                    "questionNumber": 11,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "कार्बन डाइअक्साइडलाई पानीसँग रासायनिक प्रतिक्रिया गराउँदा के हुन्छ ? यसको सन्तुलित रासायनिक समीकरण पनि लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "कार्बन डाइअक्साइडलाई पानीसँग रासायनिक प्रतिक्रिया गराउँदा कार्बोनिक अम्ल बन्छ । समीकरण: CO2 + H2O -> H2CO3"
+                    },
+                    "tags": [
+                        "short",
+                        "chemistry"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c10",
+                    "questionNumber": 12,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "दुईओटा कार्बन भएको सन्तृप्त हाइड्रोकार्बनको दुबै कार्बनबाट एउटा एउटा हाइड्रोजनलाई हाइड्रोक्सिल समूहले विस्थापन गर्दा बन्ने यौगिकको IUPAC नाम लेख्नुहोस् । साथै सो यौगिकको संरचनात्मक सूत्र लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "यसरी बन्ने यौगिक ग्लाइकोल हो । यसको IUPAC नाम Ethane-1,2-diol हो । संरचनात्मक सूत्रमा दुई कार्बनमा दुई OH समूह जोडिएका हुन्छन् ।"
+                    },
+                    "tags": [
+                        "short",
+                        "chemistry"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c11",
+                    "questionNumber": 13,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "गुरुत्वाकर्षण अचर राशी एउटा तत्जन्य एकाइ हो भन्ने कुरा प्रमाणित गर्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "G = Nm^2 / kg^2 = m^3 * kg^-1 * s^-2 हुनाले यसको एकाइ आधारभूत एकाइहरूमा आधारित छ, त्यसैले यो तत्जन्य एकाइ हो ।"
+                    },
+                    "tags": [
+                        "short",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-c12",
+                    "questionNumber": 14,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "केही बिरुवाहरूको विशेषता तल दिइएको छ: a. पुष्पदलको सङ्ख्या 4 वा 5 यसको गुणङ्क हुन्छ । b. प्रजननको लागि पानी आवश्यक हुन्छ । c. जरा र डाँठमा छुट्टिएको हुँदैन । d. पातहरू प्वाँखजस्ता हुन्छन् । i. यी गुणहरूलाई कमविकासको बढ्दो क्रममा मिलाएर राख्नुहोस् । ii. माथिको समूहबाट पानीमा पाइने बिरुवा पत्ता लगाई वर्गीकरण गर्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. बढ्दो क्रम: c (अल्गी) -> b (ब्रायोफाइटा) -> d (टेरिडोफाइटा) -> a (एन्जिओस्पर्म) । ii. पानीमा पाइने बिरुवा अल्गी हो । वर्गीकरण: जगत् - प्लान्टी, डिभिजन - अल्गी, उदाहरण - स्पाइरोगाइरा ।"
+                    },
+                    "tags": [
+                        "short",
+                        "biology"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "group-d",
+            "name": "Group D",
+            "type": "long",
+            "instruction": {
+                "english": "Answer the following questions.",
+                "nepali": "तलका प्रश्नहरूको लामो उत्तर लेख्नुहोस ।"
+            },
+            "questions": [
+                {
+                    "id": "c10-science-2080-d1",
+                    "questionNumber": 15,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "यहाँ प्रिज्ममा एउटा प्रकाशको किरण पठाइएको छ । i. θ1 को मान पत्ता लगाउनुहोस् । ii. Q पछि किरणको दिशा कता हुन्छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. θ1 को मान 60° हुन्छ । ii. Q पछि किरण प्रिज्मको आधार (Base) तिर बाङ्गिएर जान्छ ।"
+                    },
+                    "tags": [
+                        "long",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d2",
+                    "questionNumber": 16,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "कुनै एउटा सहरको प्रदूषण गर्ने प्रदूषकहरू तलको चित्रमा दिइएका छन् । i. दिइएका प्रदूषकहरूमा नकुहिने प्रदूषक कुन हो ? ii. यस्तो प्रकारको प्रदूषकलाई कसरी व्यवस्थापन गर्न सकिन्छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. नकुहिने प्रदूषकहरू प्लास्टिक, धातुहरू र बोतलहरू हुन् । ii. यस्ता प्रदूषकहरूलाई पुनः प्रयोग, पुनः चक्रण, उचित फोहोर व्यवस्थापन र वातावरणमैत्री विकल्प प्रवर्द्धन गरेर व्यवस्थापन गर्न सकिन्छ ।"
+                    },
+                    "tags": [
+                        "long",
+                        "environment"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d3",
+                    "questionNumber": 17,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "विशिष्ट तापधारण क्षमताको परिभाषा दिनुहोस् । यसको एकाई के हो ? तापका कुनै दुई प्रभावहरू लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "1 kg पिण्ड भएको पदार्थको तापक्रम 1°C ले परिवर्तन गर्न आवश्यक तापलाई विशिष्ट तापधारण क्षमता भनिन्छ । यसको एकाइ J/kg°C हो । तापका दुई प्रभावहरू: i. वस्तुको अवस्थामा परिवर्तन गर्दछ । ii. वस्तुको आयतन वृद्धि गर्दछ ।"
+                    },
+                    "tags": [
+                        "long",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d4",
+                    "questionNumber": 18,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "RNA र DNA बिच कुनै चारओटा फरकहरू लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. RNA एकल स्ट्रान्डको हुन्छ, DNA दुईवटा स्ट्रान्डको हुन्छ । ii. RNA मा Uracil बेस हुन्छ, DNA मा Thymine बेस हुन्छ । iii. RNA मा राइबोज सुगर हुन्छ, DNA मा डिअक्सिराइबोज सुगर हुन्छ । iv. RNA को काम प्रोटिन संश्लेषण हो, DNA को काम वंशाणुगत गुण प्रवाह हो ।"
+                    },
+                    "tags": [
+                        "long",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d5",
+                    "questionNumber": 19,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "चित्रमा आँखामा हुने एक प्रकारको दृष्टिदोष देखाइएको छ । यस दृष्टिदोषको कुनै दुईओटा कारणहरू लेख्नुहोस् । यो दृष्टिदोष कसरी हटाउन सकिन्छ ? चित्रद्धारा देखाउनुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "दृष्टिदोष दूरदृष्टि हो । कारणहरू: i. आँखाको डल्लो बाटुलो/छोटो हुनु । ii. सिलियरी मांसपेशीहरू पर्याप्त रूपमा खुम्चिन नसक्नु । समाधान: उपयुक्त पावरको कन्भेक्स लेन्स प्रयोग गरेर यो दृष्टिदोष हटाउन सकिन्छ ।"
+                    },
+                    "tags": [
+                        "long",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d6",
+                    "questionNumber": 20,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "यदि तपाईंले एउटा 6 मिनेटको भिडियोलाई 4 मिनेटको भिडियोमा छोट्याउनुपर्ने छ । यो कार्य कसरी पुरा गर्नुहुन्छ ? कुनै चार चरणहरू लेख्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "फिल्मोर वा क्यापकट जस्ता एप प्रयोग गरिन्छ । चरणहरू: i. भिडियो सम्पादन एप खोल्ने । ii. नयाँ प्रोजेक्ट सिर्जना गरी भिडियो इम्पोर्ट गर्ने । iii. अनावश्यक खण्डलाई स्प्लिट वा ट्रिम टुलले काट्ने । iv. आवश्यक ४ मिनेटको भाग मिलाएर भिडियो सेभ गर्ने ।"
+                    },
+                    "tags": [
+                        "long",
+                        "computer-science"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d7",
+                    "questionNumber": 21,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "एउटा मानिसले कुनै ठाँउमा 9kg पिण्ड भएको वस्तुको तौल 90 N पायो । सोही ठाउँमा उक्त वस्तुलाई तलतिर खसाल्दा त्यस वस्तुलाई जमिनमा पुग्न 2 sec समय लाग्यो । हावाको अवरोधलाई शुन्य मान्ने हो भने, i. वस्तु कति उचाइबाट खसालिएको थियो ? ii. यदि त्यही ठाउँमा 500 gm को ढुङ्गालाई सोही उचाइबाट खसाल्दा कति समयमा जमिनमा पुग्छ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. g = W/m = 90/9 = 10 m/s^2. उचाइ h = 1/2 * g * t^2 = 1/2 * 10 * 2^2 = 20 m. ii. ५०० ग्रामको ढुङ्गा खसाल्दा पनि २ सेकेन्ड नै लाग्छ किनभने गुरुत्वप्रवेग वस्तुको पिण्डमा भर पर्दैन ।"
+                    },
+                    "tags": [
+                        "long",
+                        "numerical",
+                        "physics"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d8",
+                    "questionNumber": 22,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "चित्रमा मुटुको बाहिरी भाग देखाइएको छ : i. चित्रमा देखाइएको कुन चाहिँ भागमा एन्जियोप्लास्टि गर्दा स्टेन्ट राखिन्छ ? ii. कुन भागले रगत मुटुबाट फोक्सोमा पुऱ्याउँछ ? iii. जब C कन्ट्रयाक्ट हुन्छ, कुन भल्भ बन्द हुन्छ ? iv. ती भागहरूमध्ये कुन भागले मुटुमा रगत ल्याउँछ ?"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. भाग D मा स्टेन्ट राखिन्छ । ii. भाग A ले रगत मुटुबाट फोक्सोमा पुऱ्याउँछ । iii. जब C (दायाँ अरिकल) कन्ट्रयाक्ट हुन्छ, तब पल्मोनरी भल्भ बन्द हुन्छ । iv. भाग F (पल्मोनरी शिरा) ले मुटुमा रगत ल्याउँछ ।"
+                    },
+                    "tags": [
+                        "long",
+                        "biology"
+                    ]
+                },
+                {
+                    "id": "c10-science-2080-d9",
+                    "questionNumber": 23,
+                    "question": {
+                        "english": "Not available",
+                        "nepali": "दिइएको तालिकाको अध्ययन गर्नुहोस् र तल सोधिएका प्रश्नहरूको उत्तर लेख्नुहोस् । i. यी मध्ये कुन तत्त्वले कडा अल्काली बनाउन सक्छ ? ii. तत्त्वहरूलाई तिनीहरूको धातु गुणको क्रम मिलाउनुहोस् । iii. ती मध्ये सबैभन्दा सानो पारमाणविक अर्धव्यास भएको तत्त्व कारण सहित स्पष्ट पार्नुहोस् ।"
+                    },
+                    "answer": {
+                        "english": "Not available",
+                        "nepali": "i. तत्त्व Q (सोडियम) ले कडा अल्काली बनाउँछ । ii. धातु गुणको क्रम: Q > X > Y > Z. iii. तत्त्व Z (क्लोरिन) को पारमाणविक अर्धव्यास सबैभन्दा सानो हुन्छ किनभने यसको न्युक्लियसमा धेरै प्रोटोन संख्या हुनाले यसले इलेक्ट्रोनहरूलाई बढी बलले केन्द्रतिर तान्छ र आकार खुम्चिन्छ ।"
+                    },
+                    "tags": [
+                        "long",
+                        "chemistry"
+                    ]
+                }
+            ]
+        }
+    ]
+}

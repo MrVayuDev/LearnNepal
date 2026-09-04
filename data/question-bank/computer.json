@@ -1,178 +1,813 @@
 {
-  "subject": "Computer Science",
-  "grade": 12,
-  "lastUpdated": "2083-01-17",
-  "structureType": "chapter",
-  "toc": [
-    { "id": "CS-CH1-1", "qno": "Ch.1", "title": "Database Management System (DBMS)", "keywords": "Normalization, DDL, DML, SQL, Primary Key" },
-    { "id": "CS-CH2-1", "qno": "Ch.2", "title": "Network & Data Communication", "keywords": "Topologies, Client-Server, Peer-to-Peer, OSI Model" },
-    { "id": "CS-CH3-1", "qno": "Ch.3", "title": "Web Technology II", "keywords": "CSS, JavaScript, PHP, client-side, server-side" },
-    { "id": "CS-CH4-1", "qno": "Ch.4", "title": "Programming in C", "keywords": "Structures, File Handling, Recursion, Pointers" },
-    { "id": "CS-CH5-1", "qno": "Ch.5", "title": "OOP Concepts", "keywords": "Classes, Objects, Inheritance, Polymorphism" },
-    { "id": "CS-CH6-1", "qno": "Ch.6", "title": "Software Process Model", "keywords": "SDLC, Waterfall, Agile, Spiral Model" },
-    { "id": "CS-CH7-1", "qno": "Ch.7", "title": "Recent Trends in ICT", "keywords": "Cloud Computing, AI, IoT, Big Data" }
-  ],
-  "chapters": [
+  "classId": "class-12",
+  "className": "Class 12",
+  "subjectId": "computer-science",
+  "subjectName": "Computer Science",
+  "language": "english",
+  "structureType": "group",
+  "groups": [
     {
-      "chapterId": "1",
-      "chapterName": "Database Management System (DBMS)",
+      "id": "group-a",
+      "name": "Group A",
+      "questionType": "mcq",
+      "instruction": "Rewrite the correct option of each question in your same answer sheet.",
       "questions": [
         {
-          "id": "CS-2081-R-1A",
-          "questionText": "Define normalization. Explain 1NF, 2NF, and 3NF with a suitable example.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "long",
-          "questionNo": "1",
-          "marks": 8,
-          "answer": "<p><strong>Normalization</strong> is a systematic database design process used to organize tables and minimize data redundancy (duplication) and dependency anomalies (insertion, deletion, and update anomalies).</p><p><strong>1. First Normal Form (1NF):</strong> A table is in 1NF if all attributes contain only atomic (indivisible) values. There must be no repeating groups or multi-valued fields.</p><p><strong>2. Second Normal Form (2NF):</strong> A table is in 2NF if it is in 1NF and all non-key attributes are fully functionally dependent on the primary key (no partial dependency, where a non-key attribute depends on only a part of a composite primary key).</p><p><strong>3. Third Normal Form (3NF):</strong> A table is in 3NF if it is in 2NF and there are no transitive dependencies (no non-key attribute depends on another non-key attribute; non-key fields must depend only on the primary key).</p><p><strong>Example:</strong> Let's take an unnormalized table of student courses:<br><code>StudentID | CourseID | CourseName | TeacherName | TeacherRoom</code><br>If CourseID and StudentID are primary keys, and TeacherRoom depends on TeacherName (transitive dependency), separating them into three tables (<code>Students</code>, <code>Courses</code>, and <code>Teachers</code>) satisfies 3NF.</p>"
+          "id": "c12-cs-2082-a1",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "database-management-system",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Which SQL query will display all records from table \"ADDRESS\" in descending order according to the lastname?"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "SELECT *FROM ADDRESS ORDER BY lastname ASC;"
+            },
+            {
+              "id": "b",
+              "text": "SELECT * FROM ADDRESS ORDFR BY lastname DESC;"
+            },
+            {
+              "id": "c",
+              "text": "SELECT * FROM ADDRESS SORT BY lastname DESC;"
+            },
+            {
+              "id": "d",
+              "text": "SELECT * FROM ADDRESS ORDER BY lastname;"
+            }
+          ],
+          "correctAnswer": "b",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Note: Option B contains a typo ('ORDFR'), but intended ORDER BY lastname DESC to sort records in descending order."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "sql",
+            "database"
+          ]
         },
         {
-          "id": "CS-2081-R-1B",
-          "questionText": "What is the difference between DDL and DML in SQL? Give examples of each.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "short",
-          "questionNo": "2",
-          "marks": 5,
-          "answer": "<p><strong>Data Definition Language (DDL)</strong> and <strong>Data Manipulation Language (DML)</strong> are the two primary subsets of SQL commands:</p><ul><li><strong>DDL (Data Definition Language):</strong> Used to define and modify the database structure (schema). These commands are auto-committed and cannot be rolled back. Examples: <code>CREATE</code> (to create tables/databases), <code>ALTER</code> (to modify structure), <code>DROP</code> (to delete structures).</li><li><strong>DML (Data Manipulation Language):</strong> Used to manipulate the data stored inside the database tables. These commands are not auto-committed and can be rolled back. Examples: <code>INSERT</code> (to add records), <code>UPDATE</code> (to modify existing records), <code>DELETE</code> (to remove records).</li></ul>"
+          "id": "c12-cs-2082-a2",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "database-management-system",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Why is normalization important in database design ?"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "It increases data redundancy, and improves storage efficiency."
+            },
+            {
+              "id": "b",
+              "text": "It reduces data redundancy, eliminates anomalies, and improve data integrity."
+            },
+            {
+              "id": "c",
+              "text": "It makes databases slower and harder to query"
+            },
+            {
+              "id": "d",
+              "text": "It is only useful for hierarchical databases"
+            }
+          ],
+          "correctAnswer": "b",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Normalization reduces data redundancy, eliminates data anomalies (insertion, update, deletion), and improves overall data integrity."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "database",
+            "normalization"
+          ]
         },
         {
-          "id": "CS-2080-R-1M",
-          "questionText": "Which of the following is a DDL command?\na. SELECT\nb. CREATE\nc. INSERT\nd. UPDATE",
-          "year": 2080,
-          "yearBS": "२०८०",
-          "examType": "regular",
-          "questionType": "mcq",
-          "questionNo": "1",
-          "marks": 1,
-          "answer": "Answer: <strong>b. CREATE</strong><br><small>Explanation: CREATE is a DDL command because it defines database structures (tables, indexes, views), while SELECT is DQL, and INSERT/UPDATE are DML commands.</small>"
-        }
-      ]
-    },
-    {
-      "chapterId": "2",
-      "chapterName": "Network & Data Communication",
-      "questions": [
-        {
-          "id": "CS-2081-R-2A",
-          "questionText": "Explain Bus, Star, and Ring topologies with their respective advantages and disadvantages.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "long",
-          "questionNo": "3",
-          "marks": 8,
-          "answer": "<p><strong>Network Topology</strong> is the structural arrangement of cables, computers, and other devices on a network.</p><p><strong>1. Bus Topology:</strong> All devices are connected to a single central cable called the backbone.</p><ul><li><em>Advantage:</em> Easy to set up, cheap, and requires less cabling.</li><li><em>Disadvantage:</em> If the backbone cable breaks, the entire network fails.</li></ul><p><strong>2. Star Topology:</strong> All devices are connected directly to a central hub, switch, or router.</p><ul><li><em>Advantage:</em> Extremely reliable; if one cable fails, only that device is disconnected.</li><li><em>Disadvantage:</em> Expensive due to cabling, and if the central hub fails, the whole network goes down.</li></ul><p><strong>3. Ring Topology:</strong> Devices are connected in a circular loop, with data traveling in one direction.</p><ul><li><em>Advantage:</em> Easy to troubleshoot, and no collision since data flows sequentially.</li><li><em>Disadvantage:</em> Failure of a single workstation halts the entire ring network.</li></ul>"
+          "id": "c12-cs-2082-a3",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "networking-and-communication",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "What type of transmission medium includes physical cables such as twisted pair, coaxial, and fiber optic?"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Guided"
+            },
+            {
+              "id": "b",
+              "text": "Terrestrial"
+            },
+            {
+              "id": "c",
+              "text": "Electromagnetic"
+            },
+            {
+              "id": "d",
+              "text": "unguided"
+            }
+          ],
+          "correctAnswer": "a",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Guided media (bounded media) use physical conductors such as twisted pair wires, coaxial cables, and fiber optic cables to transmit signal waves."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "networking",
+            "transmission-media"
+          ]
         },
         {
-          "id": "CS-2080-R-2B",
-          "questionText": "Differentiate between Client-Server and Peer-to-Peer network architectures.",
-          "year": 2080,
-          "yearBS": "२०८०",
-          "examType": "regular",
-          "questionType": "short",
-          "questionNo": "4",
-          "marks": 5,
-          "answer": "<p><strong>Client-Server Architecture:</strong></p><ul><li>Features a dedicated, centralized server that manages resources and handles requests from client computers.</li><li>Offers high security, centralized backups, and excellent scalability, but is expensive and has a single point of failure (the server).</li></ul><p><strong>Peer-to-Peer (P2P) Architecture:</strong></p><ul><li>All computers (peers) have equal status and share resources directly with each other without a central server.</li><li>Very cheap, easy to set up, and highly resilient (no single point of failure), but suffers from poor centralized security and complex backups.</li></ul>"
-        }
-      ]
-    },
-    {
-      "chapterId": "3",
-      "chapterName": "Web Technology II",
-      "questions": [
-        {
-          "id": "CS-2081-R-3A",
-          "questionText": "Explain the difference between client-side scripting and server-side scripting.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "short",
-          "questionNo": "5",
-          "marks": 5,
-          "answer": "<p><strong>Client-Side Scripting:</strong> Scripts are executed directly on the user's web browser. It is used for UI/UX interactions, validation, and micro-animations. Example technologies: <em>HTML, CSS, JavaScript</em>.</p><p><strong>Server-Side Scripting:</strong> Scripts are executed on the web server, which processes data, interacts with databases, and returns plain HTML to the browser. It handles login verification, database operations, and user records. Example technologies: <em>PHP, Node.js, Python, ASP.NET</em>.</p>"
-        }
-      ]
-    },
-    {
-      "chapterId": "4",
-      "chapterName": "Programming in C",
-      "questions": [
-        {
-          "id": "CS-2081-R-4A",
-          "questionText": "Write a program in C to create a structure named Student with members roll, name, and marks. Read details of 10 students and write them to a binary file named student.bin.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "long",
-          "questionNo": "6",
-          "marks": 8,
-          "answer": "<pre style='background:var(--bg-primary); padding:1rem; border-radius:8px; overflow-x:auto; border:1px solid var(--border); color:#a78bfa;'><code style='font-family:monospace;'>#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n\nstruct Student {\n    int roll;\n    char name[50];\n    float marks;\n};\n\nint main() {\n    struct Student s[10];\n    FILE *fp = fopen(\"student.bin\", \"wb\");\n    if (fp == NULL) {\n        printf(\"Error opening file!\\n\");\n        return 1;\n    }\n\n    printf(\"Enter details for 10 students:\\n\");\n    for (int i = 0; i &lt; 10; i++) {\n        printf(\"Student %d Roll: \", i+1);\n        scanf(\"%d\", &s[i].roll);\n        printf(\"Name: \");\n        scanf(\"%s\", s[i].name);\n        printf(\"Marks: \");\n        scanf(\"%f\", &s[i].marks);\n    }\n\n    fwrite(s, sizeof(struct Student), 10, fp);\n    fclose(fp);\n    printf(\"Data written to student.bin successfully!\\n\");\n    return 0;\n}</code></pre>"
+          "id": "c12-cs-2082-a4",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "web-technology",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Choose the correct datatype of the following variable in JavaScript.\nLet a = 4.5"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Decimal"
+            },
+            {
+              "id": "b",
+              "text": "Number"
+            },
+            {
+              "id": "c",
+              "text": "Integer"
+            },
+            {
+              "id": "d",
+              "text": "Float"
+            }
+          ],
+          "correctAnswer": "b",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "In JavaScript, all numbers including integers and floating-point decimals belong to a single primitive datatype called Number."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "javascript",
+            "web-technology"
+          ]
         },
         {
-          "id": "CS-2080-R-4B",
-          "questionText": "Write a C program to find the factorial of a number using a recursive function.",
-          "year": 2080,
-          "yearBS": "२०८०",
-          "examType": "regular",
-          "questionType": "short",
-          "questionNo": "7",
-          "marks": 5,
-          "answer": "<pre style='background:var(--bg-primary); padding:1rem; border-radius:8px; overflow-x:auto; border:1px solid var(--border); color:#a78bfa;'><code style='font-family:monospace;'>#include &lt;stdio.h&gt;\n\nlong int factorial(int n) {\n    if (n &lt;= 1)\n        return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int num;\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &num);\n    if (num &lt; 0) {\n        printf(\"Factorial of a negative number is undefined.\\n\");\n    } else {\n        printf(\"Factorial of %d = %ld\\n\", num, factorial(num));\n    }\n    return 0;\n}</code></pre>"
+          "id": "c12-cs-2082-a5",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "web-technology",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "What type of language is PHP?"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Client-side scripting"
+            },
+            {
+              "id": "b",
+              "text": "Machine level scripting"
+            },
+            {
+              "id": "c",
+              "text": "Server-side"
+            },
+            {
+              "id": "d",
+              "text": "User-side scripting"
+            }
+          ],
+          "correctAnswer": "c",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "PHP is a open-source, server-side scripting language used to develop dynamic web pages."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "php",
+            "web-technology"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-a6",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "programming-in-c",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Which of the following is a correct function declaration in C ?"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "int function (a, b);"
+            },
+            {
+              "id": "b",
+              "text": "void function (int x, int y);"
+            },
+            {
+              "id": "c",
+              "text": "func (int x, y);"
+            },
+            {
+              "id": "d",
+              "text": "int func (int x, int y)"
+            }
+          ],
+          "correctAnswer": "b",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "In C language, a function prototype syntax requires return_type function_name(datatype variable1, datatype variable2); including a terminating semicolon."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "c-programming",
+            "functions"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-a7",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "object-oriented-programming",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "What is the primary benefit of using inheritance in oop ?"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Code reusability"
+            },
+            {
+              "id": "b",
+              "text": "Error correction"
+            },
+            {
+              "id": "c",
+              "text": "Design pattern"
+            },
+            {
+              "id": "d",
+              "text": "Debugging"
+            }
+          ],
+          "correctAnswer": "a",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Inheritance allows a child class to inherit features from a parent class, facilitating code reusability."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "oop",
+            "inheritance"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-a8",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "software-engineering",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "The method of testing smallest functional units of code is called ............"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Functional Testing"
+            },
+            {
+              "id": "b",
+              "text": "Method Testing"
+            },
+            {
+              "id": "c",
+              "text": "Unit Testing"
+            },
+            {
+              "id": "d",
+              "text": "System Testing"
+            }
+          ],
+          "correctAnswer": "c",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Unit testing is a level of software testing where individual units or components of a software are tested independently."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "software-engineering",
+            "testing"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-a9",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "recent-trends-in-technology",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "What is an example of a SaaS application in cloud?"
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "a",
+              "text": "Amazon Ec2."
+            },
+            {
+              "id": "b",
+              "text": "Microsoft Azure."
+            },
+            {
+              "id": "c",
+              "text": "Google Docs."
+            },
+            {
+              "id": "d",
+              "text": "VMware."
+            }
+          ],
+          "correctAnswer": "c",
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Google Docs is a Software as a Service (SaaS) application accessed via web browsers without software installation."
+              }
+            ]
+          },
+          "tags": [
+            "mcq",
+            "cloud-computing",
+            "saas"
+          ]
         }
       ]
     },
     {
-      "chapterId": "5",
-      "chapterName": "OOP Concepts",
+      "id": "group-b",
+      "name": "Group B",
+      "questionType": "short",
+      "instruction": "Answer the following questions briefly.",
       "questions": [
         {
-          "id": "CS-2081-R-5A",
-          "questionText": "Explain the four pillars of Object-Oriented Programming (OOP) with real-world analogies.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "short",
-          "questionNo": "8",
-          "marks": 5,
-          "answer": "<p>The four primary pillars of OOP are:</p><ol><li><strong>Encapsulation:</strong> Wrapping variables and code into a single unit (class) to protect it from outside interference. <em>Analogy:</em> A capsule enclosing medicinal ingredients.</li><li><strong>Inheritance:</strong> Allowing a new class (child) to inherit properties and behaviors of an existing class (parent). <em>Analogy:</em> A child inheriting physical traits and property from their parents.</li><li><strong>Polymorphism:</strong> The ability of a single interface or function to take on multiple forms depending on execution. <em>Analogy:</em> A person acting as a customer, employee, or spouse in different settings.</li><li><strong>Abstraction:</strong> Hiding internal complexities and showing only the essential features of an object. <em>Analogy:</em> Driving a car using only the accelerator and steering wheel, without knowing how the internal combustion engine works.</li></ol>"
+          "id": "c12-cs-2082-b10-or1",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "database-management-system",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "What is Normalization? Explain 2 NF."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Normalization is the systematic technique of organizing data in a database to reduce redundancy and eliminate unwanted anomalies (Insertion, Update, Deletion)."
+              },
+              {
+                "type": "text",
+                "value": "Second Normal Form (2NF):\nA relation is in 2NF if it satisfies two conditions:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "It is already in 1NF.",
+                  "It has no partial dependency, meaning all non-prime attributes are fully functionally dependent on the primary key."
+                ]
+              }
+            ]
+          },
+          "tags": [
+            "database",
+            "normalization",
+            "2nf"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-b10-or2",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "database-management-system",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Write two DDL Commands and three DML Commands in SQL with Syntax."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Two DDL Commands:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "CREATE: Used to create database objects like tables.\nSyntax: CREATE TABLE table_name (column1 datatype, column2 datatype);",
+                  "DROP: Used to remove existing database structures.\nSyntax: DROP TABLE table_name;"
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Three DML Commands:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "INSERT: Adds new rows of data to a table.\nSyntax: INSERT INTO table_name (col1, col2) VALUES (val1, val2);",
+                  "UPDATE: Modifies existing records in a table.\nSyntax: UPDATE table_name SET col1 = val1 WHERE condition;",
+                  "DELETE: Removes rows from a table.\nSyntax: DELETE FROM table_name WHERE condition;"
+                ]
+              }
+            ]
+          },
+          "tags": [
+            "database",
+            "sql",
+            "ddl",
+            "dml"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-b11-or1",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "web-technology",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Write a program in JavaScript to input Age of a person and display whether the person is eligible for voting or not. (If Age is greater than or equal to 18 years, eligible for voting otherwise not eligible)"
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "<script>\n  let age = prompt(\"Enter your age:\");\n  age = Number(age);\n  if (age >= 18) {\n    alert(\"Eligible for voting\");\n  } else {\n    alert(\"Not eligible for voting\");\n  }\n</script>"
+              }
+            ]
+          },
+          "tags": [
+            "javascript",
+            "web-technology",
+            "programming"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-b11-or2",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "web-technology",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Write a PHP function which is commonly used to establish a connection to a MySQL database with an example."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "In PHP, the function mysqli_connect() is commonly used to establish a connection to a MySQL database."
+              },
+              {
+                "type": "text",
+                "value": "<?php\n  $servername = \"localhost\";\n  $username = \"root\";\n  $password = \"\";\n  $dbname = \"test_db\";\n\n  // Create connection\n  $conn = mysqli_connect($servername, $username, $password, $dbname);\n\n  // Check connection\n  if (!$conn) {\n    die(\"Connection failed: \" . mysqli_connect_error());\n  }\n  echo \"Connected successfully\";\n?>"
+              }
+            ]
+          },
+          "tags": [
+            "php",
+            "mysql",
+            "web-technology"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-b12",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "object-oriented-programming",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Write short notes on \"class\" and \"Polymorphism\" in Object Oriented programming."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Class: A class is a user-defined blueprint or template from which objects are created. It encapsulates data members and member functions into a single unit."
+              },
+              {
+                "type": "text",
+                "value": "Polymorphism: Polymorphism means 'many forms'. It allows a single interface or method to take multiple forms depending on the underlying data type or object."
+              }
+            ]
+          },
+          "tags": [
+            "oop",
+            "class",
+            "polymorphism"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-b13",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "software-engineering",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Explain Agile method of software development."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "The Agile methodology is an iterative and flexible approach to software development. Key characteristics include:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Iterative Development: Projects are broken into short, repeatable sprints (usually 2 to 4 weeks).",
+                  "Customer Collaboration: Continuous interaction with the client throughout the lifecycle.",
+                  "Flexibility: Readily adapts to changing requirements at any development stage.",
+                  "Continuous Feedback and Deployment: Early delivery of working functional modules."
+                ]
+              }
+            ]
+          },
+          "tags": [
+            "software-engineering",
+            "agile"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-b14",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "recent-trends-in-technology",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Explain the three \"Vs\" of big data."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "The three key Vs characterizing Big Data are:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Volume: The massive scale or sheer amount of data generated every second.",
+                  "Velocity: The high speed at which new data is generated and collected.",
+                  "Variety: The structural diversity of data types, including structured, semi-structured, and unstructured data."
+                ]
+              }
+            ]
+          },
+          "tags": [
+            "big-data",
+            "recent-trends"
+          ]
         }
       ]
     },
     {
-      "chapterId": "6",
-      "chapterName": "Software Process Model",
+      "id": "group-c",
+      "name": "Group C",
+      "questionType": "long",
+      "instruction": "Answer the following questions in detail.",
       "questions": [
         {
-          "id": "CS-2081-R-6A",
-          "questionText": "What are the phases of the Software Development Life Cycle (SDLC)? Explain briefly.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "short",
-          "questionNo": "9",
-          "marks": 5,
-          "answer": "<p>The <strong>Software Development Life Cycle (SDLC)</strong> consists of the following standard phases:</p><ol><li><strong>Requirement Analysis & Planning:</strong> Gathering client feedback and outlining scope, timelines, and budgets.</li><li><strong>Defining Requirements:</strong> Creating the Software Requirement Specification (SRS) document defining all software features.</li><li><strong>System Design:</strong> Architectural modeling, UI/UX framing, and database schema creation.</li><li><strong>Implementation (Coding):</strong> The actual code production by software engineering teams.</li><li><strong>Testing:</strong> Verifying code against anomalies, bugs, security leaks, and client specifications.</li><li><strong>Deployment & Maintenance:</strong> Launching the software in production and updating it to solve bugs and client requests.</li></ol>"
-        }
-      ]
-    },
-    {
-      "chapterId": "7",
-      "chapterName": "Recent Trends in ICT",
-      "questions": [
+          "id": "c12-cs-2082-c15",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "networking-and-communication",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "a) Write four difference between Client Server and Peer to Peer network.\nb) Explain simplex and full-duplex with diagram."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "table",
+                "headers": [
+                  "Client-Server Network",
+                  "Peer-to-Peer Network"
+                ],
+                "rows": [
+                  [
+                    "Centralized management via a dedicated server.",
+                    "Decentralized structure where each node acts as both client and server."
+                  ],
+                  [
+                    "Higher setup cost and complex administration.",
+                    "Lower installation cost and simpler setup."
+                  ],
+                  [
+                    "Data backup is centralized and straightforward.",
+                    "Each user manages individual backups."
+                  ],
+                  [
+                    "High scalability for large organizations.",
+                    "Suitable for smaller networks (less than 10 nodes)."
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Simplex Transmission Mode:\nData flows in only one direction (unidirectional). Example: Keyboard to CPU, Radio Broadcasting."
+              },
+              {
+                "type": "text",
+                "value": "Full-Duplex Transmission Mode:\nData flows in both directions simultaneously (bidirectional). Example: Mobile phones, Telephone conversations."
+              }
+            ]
+          },
+          "tags": [
+            "networking",
+            "client-server",
+            "peer-to-peer",
+            "transmission-mode"
+          ]
+        },
         {
-          "id": "CS-2081-R-7A",
-          "questionText": "What is Cloud Computing? State its benefits and security concerns in modern times.",
-          "year": 2081,
-          "yearBS": "२०८१",
-          "examType": "regular",
-          "questionType": "short",
-          "questionNo": "10",
-          "marks": 5,
-          "answer": "<p><strong>Cloud Computing</strong> is the on-demand delivery of computing services—including servers, storage, databases, networking, software, and analytics—over the internet (\"the cloud\") on a pay-as-you-go pricing model.</p><p><strong>Benefits:</strong></p><ul><li><em>Cost Efficiency:</em> Eliminates the capital expense of buying hardware and setting up physical data centers.</li><li><em>Scalability:</em> Resources can be dynamically scaled up or down instantly based on server loads.</li><li><em>Global Reach:</em> Deploy applications worldwide with minimal latency in a single click.</li></ul><p><strong>Security Concerns:</strong></p><ul><li>Data breach risks, shared vulnerability risks in public cloud networks, lack of direct server control, and strict compliance issues with localized data laws.</li></ul>"
+          "id": "c12-cs-2082-c16-or1",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "programming-in-c",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Write a C program to enter information of 10 clients, including accountID, accountname, address, and balance, and display the information using a structure."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "#include <stdio.h>\n\nstruct Client {\n    int accountID;\n    char accountname[50];\n    char address[50];\n    float balance;\n};\n\nint main() {\n    struct Client c[10];\n    int i;\n\n    for (i = 0; i < 10; i++) {\n        printf(\"Enter Account ID, Name, Address and Balance for client %d:\\n\", i + 1);\n        scanf(\"%d %s %s %f\", &c[i].accountID, c[i].accountname, c[i].address, &c[i].balance);\n    }\n\n    printf(\"\\n--- Client Details ---\\n\");\n    for (i = 0; i < 10; i++) {\n        printf(\"ID: %d | Name: %s | Address: %s | Balance: %.2f\\n\", c[i].accountID, c[i].accountname, c[i].address, c[i].balance);\n    }\n\n    return 0;\n}"
+              }
+            ]
+          },
+          "tags": [
+            "c-programming",
+            "structures"
+          ]
+        },
+        {
+          "id": "c12-cs-2082-c16-or2",
+          "year": "2082",
+          "examType": "NEB",
+          "chapterId": "programming-in-c",
+          "question": {
+            "content": [
+              {
+                "type": "text",
+                "value": "Describe file handling modes on C. Write a C program to create and write data into a file."
+              }
+            ]
+          },
+          "answer": {
+            "content": [
+              {
+                "type": "text",
+                "value": "File Handling Modes in C:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "\"r\": Opens an existing file for reading.",
+                  "\"w\": Opens a file for writing. Overwrites if it exists, creates if non-existent.",
+                  "\"a\": Opens a file to append data at the end.",
+                  "\"r+\": Opens file for both reading and writing.",
+                  "\"w+\": Opens file for reading and writing (overwrites).",
+                  "\"a+\": Opens file for reading and appending."
+                ]
+              },
+              {
+                "type": "text",
+                "value": "#include <stdio.h>\n\nint main() {\n    FILE *fptr;\n    fptr = fopen(\"student.txt\", \"w\");\n\n    if (fptr == NULL) {\n        printf(\"Error opening file!\");\n        return 1;\n    }\n\n    fprintf(fptr, \"Welcome to C File Handling.\\n\");\n    fclose(fptr);\n    printf(\"Data written successfully.\");\n\n    return 0;\n}"
+              }
+            ]
+          },
+          "tags": [
+            "c-programming",
+            "file-handling"
+          ]
         }
       ]
     }

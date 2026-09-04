@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEB Question Bank | LearnNepal</title>
-    <meta name="description" content="Practice with solved NEB board exam past questions — MCQ, Short Answer, Long Answer, and multi-level questions for Grade 12." />
+    <meta name="description" content="Practice with solved NEB board exam past questions — MCQ, Short Answer, Long Answer for Grade 12 Computer Science, English, and Nepali." />
     <link rel="icon" href="../../../assets/images/logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <script src="../../../scripts/theme.js"></script>
     <link rel="stylesheet" href="../../../styles/main.css" />
+    <link rel="stylesheet" href="../../../styles/question-bank.css" />
 </head>
 <body>
 
@@ -27,7 +28,7 @@
             <nav class="nav-menu" aria-label="Main navigation">
                 <a href="../../../index.html" class="nav-link">Home</a>
                 <a href="../../courses.html" class="nav-link">Courses</a>
-                <a href="index.html" class="nav-link active">Question Bank</a>
+                <a href="../../question-bank/index.html" class="nav-link active">Question Bank</a>
                 <a href="../../../about.html" class="nav-link">About</a>
                 <button class="search-trigger btn-search" aria-label="Search">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -38,75 +39,105 @@
         </div>
     </header>
 
-    <main class="qb-main-layout" id="qb-main">
+    <main>
 
-        <!-- ══ FILTER PANEL ══ -->
-        <aside class="qb-filter-panel" id="qb-filters">
-            <div class="qb-filter-header">
-                <span class="material-symbols-outlined" style="color:var(--primary);">tune</span>
-                <h2>Filters</h2>
+    <!-- ═══ HERO ═══ -->
+    <section class="qb-hero section" style="padding:3.5rem 0 2.5rem">
+        <div class="container" style="max-width:800px;text-align:center">
+            <nav class="breadcrumb animate-fade-up" aria-label="breadcrumb" style="justify-content:center">
+                <a href="../../../index.html" style="color:rgba(255,255,255,.6)">Home</a><span style="color:rgba(255,255,255,.35)">›</span>
+                <a href="../../question-bank/index.html" style="color:rgba(255,255,255,.6)">Question Bank</a><span style="color:rgba(255,255,255,.35)">›</span>
+                <span style="color:rgba(255,255,255,.9)">Class 12</span>
+            </nav>
+            <span class="qb-badge animate-fade-up delay-100">
+                <span class="material-symbols-outlined" style="font-size:16px">school</span>
+                Class 12 — NEB
+            </span>
+            <h1 class="animate-fade-up delay-200" style="margin-top:0.75rem">Class 12 Question Bank</h1>
+            <p class="animate-fade-up delay-300" style="max-width:520px">
+                Solved NEB board exam past questions with detailed answers. Select a subject below to start practicing.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══ SUBJECT CARDS ═══ -->
+    <section class="section" style="padding-top:2rem">
+        <div class="qb-page">
+
+            <div class="qb-sgrid animate-fade-up delay-300">
+
+                <!-- Computer Science -->
+                <a href="computer/index.html" class="qb-scard">
+                    <div class="qb-sicon" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(79, 70, 229, 0.04));">
+                        <span class="material-symbols-outlined" style="font-size:28px;color:var(--primary)">terminal</span>
+                    </div>
+                    <h3>Computer Science</h3>
+                    <p>Past NEB questions organized by Group — MCQ, Short Answer, and Long Answer with detailed solutions.</p>
+                    <div class="qb-sstats">
+                        <span><strong>75</strong> Marks</span>
+                        <span>•</span>
+                        <span>English</span>
+                        <span>•</span>
+                        <span>3 Groups</span>
+                    </div>
+                </a>
+
+                <!-- English -->
+                <a href="english/index.html" class="qb-scard">
+                    <div class="qb-sicon" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(59, 130, 246, 0.04));">
+                        <span class="material-symbols-outlined" style="font-size:28px;color:#3b82f6">auto_stories</span>
+                    </div>
+                    <h3>English</h3>
+                    <p>Comprehension, Literature, Composition, and Grammar — past questions by section with model answers.</p>
+                    <div class="qb-sstats">
+                        <span><strong>75</strong> Marks</span>
+                        <span>•</span>
+                        <span>English</span>
+                        <span>•</span>
+                        <span>5 Sections</span>
+                    </div>
+                </a>
+
+                <!-- Nepali -->
+                <a href="nepali/index.html" class="qb-scard">
+                    <div class="qb-sicon" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(236, 72, 153, 0.04));">
+                        <span class="material-symbols-outlined" style="font-size:28px;color:#ec4899">translate</span>
+                    </div>
+                    <h3>Nepali (नेपाली)</h3>
+                    <p>पद्य, गद्य, व्यावहारिक लेखन र व्याकरण — past exam questions organized by section.</p>
+                    <div class="qb-sstats">
+                        <span><strong>75</strong> Marks</span>
+                        <span>•</span>
+                        <span>Nepali</span>
+                        <span>•</span>
+                        <span>5 Sections</span>
+                    </div>
+                </a>
+
             </div>
 
-            <div class="qb-filter-group">
-                <div class="qb-filter-title">Subject</div>
-                <label class="qb-check"><input type="checkbox" data-filter="subject" value="cs" checked /> Computer Science</label>
-                <label class="qb-check"><input type="checkbox" data-filter="subject" value="en" checked /> English</label>
-                <label class="qb-check"><input type="checkbox" data-filter="subject" value="np" checked /> Nepali</label>
-            </div>
-
-            <div class="qb-filter-group">
-                <div class="qb-filter-title">Question Type</div>
-                <label class="qb-check"><input type="checkbox" data-filter="type" value="MCQ" checked /> MCQ</label>
-                <label class="qb-check"><input type="checkbox" data-filter="type" value="SQ" checked /> Short Answer (SQ)</label>
-                <label class="qb-check"><input type="checkbox" data-filter="type" value="LQ" checked /> Long Answer (LQ)</label>
-                <label class="qb-check"><input type="checkbox" data-filter="type" value="ML" checked /> Multi-Level</label>
-            </div>
-
-            <div class="qb-filter-group">
-                <div class="qb-filter-title">Year</div>
-                <div class="qb-year-chips" id="qb-year-chips">
-                    <button class="qb-year-chip active" data-year="all">All</button>
-                    <button class="qb-year-chip" data-year="2081">2081</button>
-                    <button class="qb-year-chip" data-year="2080">2080</button>
-                    <button class="qb-year-chip" data-year="2079">2079</button>
-                    <button class="qb-year-chip" data-year="2078">2078</button>
-                    <button class="qb-year-chip" data-year="2077">2077</button>
+            <!-- Features -->
+            <div class="qb-fgrid animate-fade-up delay-400">
+                <div class="qb-fcard">
+                    <span class="material-symbols-outlined" style="font-size:28px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">filter_list</span>
+                    <h4>Smart Filters</h4>
+                    <p>Filter by year, exam type, group, chapter, and question type — all dynamically generated from data.</p>
+                </div>
+                <div class="qb-fcard">
+                    <span class="material-symbols-outlined" style="font-size:28px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">lightbulb</span>
+                    <h4>Solved Answers</h4>
+                    <p>Every question includes detailed solutions with step-by-step explanations and model answers.</p>
+                </div>
+                <div class="qb-fcard">
+                    <span class="material-symbols-outlined" style="font-size:28px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">share</span>
+                    <h4>Shareable Links</h4>
+                    <p>Filter state is saved in the URL — share specific question sets with classmates instantly.</p>
                 </div>
             </div>
 
-            <div class="qb-filter-group" style="margin-top:var(--space-xl);">
-                <button class="btn btn-outline" style="width:100%;font-size:0.85rem;" id="qb-reset">Reset Filters</button>
-            </div>
-        </aside>
-
-        <!-- ══ QUESTIONS AREA ══ -->
-        <div class="qb-questions-area">
-
-            <div class="qb-toolbar">
-                <span class="material-symbols-outlined" style="color:var(--outline);flex-shrink:0;">search</span>
-                <input class="qb-search-input" type="text" id="qb-search" placeholder="Search questions…" />
-                <span class="material-symbols-outlined" style="color:var(--outline);cursor:pointer;" id="qb-search-clear" title="Clear">close</span>
-            </div>
-
-            <div class="qb-status-bar">
-                <span class="qb-status-text">Showing <strong id="qb-count">0</strong> questions</span>
-                <select class="qb-sort-select" id="qb-sort">
-                    <option value="default">Default Order</option>
-                    <option value="year-desc">Newest First</option>
-                    <option value="year-asc">Oldest First</option>
-                    <option value="marks-desc">Highest Marks</option>
-                    <option value="marks-asc">Lowest Marks</option>
-                </select>
-            </div>
-
-            <div id="qb-list"></div>
-
-            <div id="qb-empty" style="display:none;text-align:center;padding:var(--space-3xl) var(--space-xl);">
-                <span class="material-symbols-outlined" style="font-size:3rem;color:var(--outline);display:block;margin-bottom:var(--space-lg);">search_off</span>
-                <p style="color:var(--on-surface-variant);">No questions match your filters. Try adjusting your search or filters.</p>
-            </div>
-
         </div>
+    </section>
+
     </main>
 
     <footer class="footer" role="contentinfo">
@@ -144,242 +175,5 @@
     <script src="../../../scripts/app.js"></script>
     <script src="../../../scripts/search.js"></script>
     <script src="../../../scripts/transitions.js"></script>
-    <script>
-    // ── Question Bank Data ──────────────────────────────────────────────────────
-    const QB_DATA = [
-      // COMPUTER SCIENCE
-      { id:'cs-2081-01', subject:'cs', subjectName:'Computer Science', year:2081, type:'MCQ', marks:1,
-        question:'Which of the following is a non-volatile memory?',
-        options:['A) RAM', 'B) ROM', 'C) Cache', 'D) Register'],
-        answer:'B) ROM',
-        solution:'ROM (Read-Only Memory) retains data even when power is off, making it non-volatile. RAM, Cache, and Registers lose data when power is removed.' },
-
-      { id:'cs-2081-02', subject:'cs', subjectName:'Computer Science', year:2081, type:'SQ', marks:5,
-        question:'Define a Database Management System (DBMS). What are the advantages of DBMS over traditional file processing?',
-        solution:'A DBMS is software that manages and organizes data in a database, providing efficient storage, retrieval, and manipulation.\n\nAdvantages over traditional file processing:\n1. Data redundancy reduction\n2. Data consistency & integrity\n3. Data sharing among multiple users\n4. Data security & access control\n5. Backup & recovery features\n6. Data independence' },
-
-      { id:'cs-2081-03', subject:'cs', subjectName:'Computer Science', year:2081, type:'LQ', marks:10,
-        question:'What is Object-Oriented Programming (OOP)? Explain its four fundamental principles with examples in C++.',
-        solution:'OOP is a programming paradigm that organizes software design around data or objects rather than functions.\n\nFour Principles:\n1. Encapsulation: Bundling data and methods (e.g., class Student { private: int age; public: void setAge(int a){age=a;} });\n2. Abstraction: Hiding complex implementation (e.g., abstract class Shape { virtual float area() = 0; });\n3. Inheritance: Deriving new classes from existing (e.g., class Dog : public Animal {});\n4. Polymorphism: One interface, many implementations (e.g., function overloading/overriding).' },
-
-      { id:'cs-2081-04', subject:'cs', subjectName:'Computer Science', year:2081, type:'ML', marks:10,
-        question:'Answer the following based on networking:\n1.A. What is a computer network?\n1.B. Differentiate between LAN and WAN.\n2.A. What is the OSI model?\n2.B. Explain any three layers of the OSI model.\n2.C. What is the role of the Transport layer?',
-        solution:'1.A. A computer network is a group of interconnected devices that share resources and communicate using protocols.\n\n1.B. LAN vs WAN:\n- LAN: Local Area Network, covers small area (office/building), high speed, low cost\n- WAN: Wide Area Network, covers large geographic area, lower speed, higher cost (e.g., Internet)\n\n2.A. OSI (Open Systems Interconnection) model is a 7-layer conceptual framework for network communication.\n\n2.B. Three layers:\n- Physical: Transmits raw bits over physical medium\n- Data Link: Error detection/correction, MAC addressing\n- Network: Routing and logical addressing (IP)\n\n2.C. Transport Layer: Ensures end-to-end communication, data segmentation, flow control, and error recovery (TCP/UDP).' },
-
-      { id:'cs-2080-01', subject:'cs', subjectName:'Computer Science', year:2080, type:'MCQ', marks:1,
-        question:'The full form of HTML is:',
-        options:['A) Hyper Text Markup Language', 'B) High Text Machine Language', 'C) Hyper Transfer Markup Language', 'D) Hyper Text Machine Level'],
-        answer:'A) Hyper Text Markup Language',
-        solution:'HTML stands for Hyper Text Markup Language, the standard language for creating web pages.' },
-
-      { id:'cs-2080-02', subject:'cs', subjectName:'Computer Science', year:2080, type:'SQ', marks:5,
-        question:'What is normalization in DBMS? Explain 1NF and 2NF with examples.',
-        solution:'Normalization is the process of organizing a database to reduce redundancy and improve data integrity.\n\n1NF (First Normal Form):\n- Every column must have atomic (indivisible) values\n- Each row must be unique\nExample: A table with a "Phone" column containing multiple phone numbers violates 1NF.\n\n2NF (Second Normal Form):\n- Must be in 1NF\n- No partial dependency (non-key attributes must depend on the whole primary key)\nExample: If Order(OrderID, ProductID, ProductName) — ProductName depends only on ProductID, not the full composite key, violating 2NF.' },
-
-      { id:'cs-2079-01', subject:'cs', subjectName:'Computer Science', year:2079, type:'MCQ', marks:1,
-        question:'Which sorting algorithm has the best average-case time complexity?',
-        options:['A) Bubble Sort — O(n²)', 'B) Merge Sort — O(n log n)', 'C) Selection Sort — O(n²)', 'D) Insertion Sort — O(n²)'],
-        answer:'B) Merge Sort — O(n log n)',
-        solution:'Merge Sort has O(n log n) average and worst-case complexity, making it the most efficient among the options listed.' },
-
-      // ENGLISH
-      { id:'en-2081-01', subject:'en', subjectName:'English', year:2081, type:'SQ', marks:5,
-        question:'Read the following passage and answer the questions:\n\nEducation is the most powerful weapon which you can use to change the world. A good education system should aim not only to impart knowledge but also to develop critical thinking and moral values.\n\na) What is described as the most powerful weapon?\nb) What should a good education system aim to develop?',
-        solution:'a) Education is described as the most powerful weapon to change the world.\n\nb) A good education system should aim to develop not only knowledge but also critical thinking and moral values.' },
-
-      { id:'en-2081-02', subject:'en', subjectName:'English', year:2081, type:'LQ', marks:10,
-        question:'Write a formal letter to the editor of a national newspaper expressing your concern about the increasing use of social media among teenagers and its impact on academic performance.',
-        solution:'[Model Answer — Formal Letter Format]\n\nKathmandu, Nepal\nDate: [Current Date]\n\nThe Editor\nThe Kathmandu Post\nKathmandu, Nepal\n\nSubject: Concern regarding Social Media Impact on Teenagers\n\nDear Editor,\n\nThrough the esteemed columns of your newspaper, I wish to express my deep concern regarding the growing addiction to social media among Nepali teenagers and its detrimental effect on their academic performance.\n\nIn recent years, platforms like TikTok, Instagram, and YouTube have captured the attention of students who spend an alarming number of hours scrolling rather than studying. Research indicates that excessive screen time reduces concentration, disrupts sleep patterns, and weakens the ability to focus on academic tasks.\n\nI urge parents, educators, and policymakers to take decisive action. Schools should incorporate digital literacy programs, and parents must monitor screen time at home. A balanced approach to technology use is the need of the hour.\n\nThank you for publishing this concern.\n\nYours sincerely,\n[Your Name]\nClass 12 Student' },
-
-      { id:'en-2081-03', subject:'en', subjectName:'English', year:2081, type:'MCQ', marks:1,
-        question:'Choose the correct indirect speech: He said, "I am going to school."',
-        options:['A) He said that he is going to school.', 'B) He said that he was going to school.', 'C) He said that he went to school.', 'D) He said that he had been going to school.'],
-        answer:'B) He said that he was going to school.',
-        solution:'In indirect speech, "am" changes to "was" (backshifting of tense) and "I" changes to "he".' },
-
-      { id:'en-2080-01', subject:'en', subjectName:'English', year:2080, type:'SQ', marks:5,
-        question:'What is the theme of the poem "The Road Not Taken" by Robert Frost? How does the speaker feel about his choice?',
-        solution:'Theme: The poem explores the theme of choices and their consequences in life. The speaker stands at a fork in the road and must choose one path.\n\nThe Speaker\'s Feelings: The speaker feels a sense of nostalgia and reflection. Although he tries to convince himself he will "take the other someday," he knows he probably never will. In the final stanza, he imagines looking back with a "sigh," suggesting both pride in his individuality and a lingering wonder about what the other path might have offered.' },
-
-      // NEPALI
-      { id:'np-2081-01', subject:'np', subjectName:'Nepali', year:2081, type:'SQ', marks:5,
-        question:'तलको गद्यांश पढी सोधिएका प्रश्नहरूको उत्तर दिनुहोस्:\n"नेपाली साहित्यको इतिहास अत्यन्त गौरवशाली छ। यहाँ भानुभक्त आचार्यदेखि आधुनिक युगसम्मका अनेकौं प्रतिभाशाली कविहरूले साहित्यको विकासमा महत्त्वपूर्ण योगदान पुर्‍याएका छन्।"\n\n(क) नेपाली साहित्यको इतिहास कस्तो छ?\n(ख) कविहरूले के गरेका छन्?',
-        solution:'(क) नेपाली साहित्यको इतिहास अत्यन्त गौरवशाली छ।\n\n(ख) भानुभक्त आचार्यदेखि आधुनिक युगसम्मका प्रतिभाशाली कविहरूले साहित्यको विकासमा महत्त्वपूर्ण योगदान पुर्‍याएका छन्।' },
-
-      { id:'np-2081-02', subject:'np', subjectName:'Nepali', year:2081, type:'LQ', marks:10,
-        question:'आफ्नो विद्यालयमा पुस्तकालयको व्यवस्था गरिदिनु हुन अनुरोध गर्दै प्रधानाध्यापकलाई निवेदन लेख्नुहोस्।',
-        solution:'श्री प्रधानाध्यापक महोदय,\nXXX माध्यमिक विद्यालय,\nकाठमाडौं।\n\nविषयः पुस्तकालयको व्यवस्था गरिपाऊँ।\n\nमहोदय,\n\nसविनय निवेदन गर्नु छ कि यस विद्यालयमा राम्रो पुस्तकालयको व्यवस्था नहुँदा विद्यार्थीहरूलाई अध्ययनमा कठिनाई भइरहेको छ। राम्रो पुस्तकालयले विद्यार्थीहरूको ज्ञान वृद्धि गर्न, स्वअध्ययनको क्षमता बढाउन र परीक्षाको राम्रो तयारी गर्न सहयोग पुग्छ।\n\nअतः हजुरसँग विनम्र अनुरोध छ कि यस विद्यालयमा आवश्यक पुस्तकहरू र अध्ययन कक्षको व्यवस्था गरिदिनु होला। यसबाट हामी सबै विद्यार्थीहरू लाभान्वित हुनेछौं।\n\nनिवेदक,\nXXX\nकक्षा १२' },
-
-      { id:'np-2081-03', subject:'np', subjectName:'Nepali', year:2081, type:'ML', marks:10,
-        question:'तलका प्रश्नहरूको उत्तर लेख्नुहोस्:\n१.क. नेपाली भाषाको महत्त्व के हो?\n१.ख. नेपाली भाषाको विकासमा भानुभक्त आचार्यको योगदान बताउनुहोस्।\n२.क. कविता र गद्यमा के फरक छ?\n२.ख. लोककथाको परिचय दिनुहोस्।',
-        solution:'१.क. नेपाली भाषा नेपालको राष्ट्रभाषा हो। यो नेपाली जनताको पहिचान, एकता र संस्कृतिको माध्यम हो। यसले नेपाललाई एकसूत्रमा बाँध्ने काम गर्दछ।\n\n१.ख. भानुभक्त आचार्यलाई नेपाली साहित्यका आदिकवि मानिन्छ। उनले वाल्मीकि रामायणलाई नेपालीमा अनुवाद गरी नेपाली साहित्यको विकासमा अतुलनीय योगदान पुर्‍याए।\n\n२.क. कविता छन्दबद्ध, लयात्मक र भावनाप्रधान हुन्छ जबकि गद्य सरल, स्वतन्त्र र विचारप्रधान हुन्छ।\n\n२.ख. लोककथा जनमानसमा पुस्तौंदेखि प्रचलित मौखिक साहित्य हो। यसमा नैतिक शिक्षा, परम्परा र समाजका मूल्यहरू प्रतिबिम्बित हुन्छन्।' },
-    ];
-
-    // ── State ────────────────────────────────────────────────
-    let activeSubjects = new Set(['cs','en','np']);
-    let activeTypes    = new Set(['MCQ','SQ','LQ','ML']);
-    let activeYear     = 'all';
-    let sortMode       = 'default';
-    let searchQuery    = '';
-
-    // ── Render ───────────────────────────────────────────────
-    function getFiltered() {
-      return QB_DATA.filter(q => {
-        if (!activeSubjects.has(q.subject)) return false;
-        if (!activeTypes.has(q.type)) return false;
-        if (activeYear !== 'all' && q.year !== parseInt(activeYear)) return false;
-        if (searchQuery) {
-          const s = searchQuery.toLowerCase();
-          if (!q.question.toLowerCase().includes(s) &&
-              !q.subjectName.toLowerCase().includes(s) &&
-              !(q.solution||'').toLowerCase().includes(s)) return false;
-        }
-        return true;
-      });
-    }
-
-    function sortData(arr) {
-      const a = [...arr];
-      switch(sortMode) {
-        case 'year-desc': return a.sort((x,y) => y.year - x.year);
-        case 'year-asc':  return a.sort((x,y) => x.year - y.year);
-        case 'marks-desc':return a.sort((x,y) => y.marks - x.marks);
-        case 'marks-asc': return a.sort((x,y) => x.marks - y.marks);
-        default: return a;
-      }
-    }
-
-    function typeBadge(type) {
-      const map = { MCQ:'MCQ', SQ:'SQ', LQ:'LQ', ML:'Multi-Level' };
-      return map[type] || type;
-    }
-
-    function subjectBadge(subj) {
-      const cls = { cs:'cs', en:'en', np:'np' };
-      return cls[subj] || '';
-    }
-
-    function renderOptions(opts) {
-      if (!opts || !opts.length) return '';
-      return '<ul style="list-style:none;padding:0;margin:var(--space-md) 0 0;display:flex;flex-direction:column;gap:var(--space-xs);">' +
-        opts.map(o => `<li style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;border-radius:var(--radius-md);border:1px solid var(--outline-variant);font-size:0.88rem;color:var(--on-surface);">${o}</li>`).join('') +
-        '</ul>';
-    }
-
-    function renderCard(q) {
-      const id = 'sol-' + q.id;
-      return `
-        <div class="qb-question-card" data-id="${q.id}">
-          <div class="qb-card-meta">
-            <div class="qb-tags">
-              <span class="qb-tag ${subjectBadge(q.subject)}">${q.subjectName}</span>
-              <span class="qb-tag yr">${q.year}</span>
-              <span class="qb-tag tp">${typeBadge(q.type)}</span>
-            </div>
-            <span class="qb-marks">${q.marks} Mark${q.marks>1?'s':''}</span>
-          </div>
-          <div class="qb-card-q">${q.question}${renderOptions(q.options)}</div>
-          <div class="qb-card-footer">
-            <a href="${q.subject === 'cs' ? 'computer/index.html' : q.subject === 'en' ? 'english/index.html' : 'nepali/index.html'}" class="qb-subject-link">
-              <span class="material-symbols-outlined" style="font-size:0.9rem;">open_in_new</span>
-              View ${q.subjectName} QB
-            </a>
-            <button class="qb-toggle-btn" onclick="toggleSolution('${id}', this)">
-              <span class="material-symbols-outlined" style="font-size:0.9rem;">lightbulb</span>
-              Show Solution
-            </button>
-          </div>
-          <div id="${id}" class="qb-solution" style="display:none;">
-            <strong>Solution / Answer:</strong>
-            ${q.answer ? '<div style="margin-bottom:var(--space-xs);font-weight:700;color:var(--secondary);">Answer: ' + q.answer + '</div>' : ''}
-            <div style="white-space:pre-line;">${q.solution || 'Solution not available yet.'}</div>
-          </div>
-        </div>`;
-    }
-
-    function render() {
-      const filtered = sortData(getFiltered());
-      const list  = document.getElementById('qb-list');
-      const count = document.getElementById('qb-count');
-      const empty = document.getElementById('qb-empty');
-      count.textContent = filtered.length;
-      if (!filtered.length) {
-        list.innerHTML = '';
-        empty.style.display = '';
-      } else {
-        empty.style.display = 'none';
-        list.innerHTML = filtered.map(renderCard).join('');
-      }
-    }
-
-    function toggleSolution(id, btn) {
-      var box = document.getElementById(id);
-      var visible = box.style.display !== 'none';
-      box.style.display = visible ? 'none' : '';
-      btn.innerHTML = visible
-        ? '<span class="material-symbols-outlined" style="font-size:0.9rem;">lightbulb</span> Show Solution'
-        : '<span class="material-symbols-outlined" style="font-size:0.9rem;">lightbulb_circle</span> Hide Solution';
-    }
-
-    // ── Event Listeners ──────────────────────────────────────
-    document.addEventListener('DOMContentLoaded', function() {
-      // Checkboxes
-      document.querySelectorAll('[data-filter]').forEach(function(cb) {
-        cb.addEventListener('change', function() {
-          var filter = this.dataset.filter;
-          var val = this.value;
-          var set = filter === 'subject' ? activeSubjects : activeTypes;
-          this.checked ? set.add(val) : set.delete(val);
-          render();
-        });
-      });
-
-      // Year chips
-      document.querySelectorAll('[data-year]').forEach(function(chip) {
-        chip.addEventListener('click', function() {
-          document.querySelectorAll('[data-year]').forEach(function(c) { c.classList.remove('active'); });
-          this.classList.add('active');
-          activeYear = this.dataset.year;
-          render();
-        });
-      });
-
-      // Sort
-      document.getElementById('qb-sort').addEventListener('change', function() {
-        sortMode = this.value;
-        render();
-      });
-
-      // Search
-      document.getElementById('qb-search').addEventListener('input', function() {
-        searchQuery = this.value.trim();
-        render();
-      });
-
-      // Clear search
-      document.getElementById('qb-search-clear').addEventListener('click', function() {
-        document.getElementById('qb-search').value = '';
-        searchQuery = '';
-        render();
-      });
-
-      // Reset
-      document.getElementById('qb-reset').addEventListener('click', function() {
-        activeSubjects = new Set(['cs','en','np']);
-        activeTypes    = new Set(['MCQ','SQ','LQ','ML']);
-        activeYear     = 'all';
-        sortMode       = 'default';
-        searchQuery    = '';
-        document.getElementById('qb-search').value = '';
-        document.getElementById('qb-sort').value = 'default';
-        document.querySelectorAll('[data-filter]').forEach(function(cb) { cb.checked = true; });
-        document.querySelectorAll('[data-year]').forEach(function(c) { c.classList.toggle('active', c.dataset.year === 'all'); });
-        render();
-      });
-
-      render();
-    });
-    </script>
 </body>
 </html>
-

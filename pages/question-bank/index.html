@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal Question Bank — Class 10, 11 &amp; 12 | LearnNepal</title>
+    <meta name="description" content="Explore solved past exam question banks for Class 10 (SEE), Class 11 (NEB), and Class 12 (NEB) with smart filters, model answers, and bilingual support." />
+    <link rel="icon" href="../../assets/images/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="../../scripts/theme.js"></script>
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/question-bank.css" />
+    <style>
+        .class-selector-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.5rem auto 2.5rem;
+            flex-wrap: wrap;
+        }
+        .class-tab-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: var(--radius-full);
+            background: var(--surface-container-low);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s var(--ease-spring);
+        }
+        .class-tab-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .class-tab-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--on-primary);
+            box-shadow: 0 4px 16px var(--accent-muted);
+        }
+        .class-section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2.5rem 0 1.25rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .class-section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        .class-section-badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.2rem 0.65rem;
+            border-radius: var(--radius-full);
+            background: var(--accent-muted);
+            color: var(--accent);
+            border: 1px solid var(--accent-border);
+        }
+        .qb-portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+        .qb-subject-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.6rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.35s var(--ease-spring);
+            position: relative;
+            overflow: hidden;
+        }
+        .qb-subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--qb-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s var(--ease-spring);
+        }
+        .qb-subject-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-border);
+            box-shadow: var(--shadow-lg);
+        }
+        .qb-subject-card:hover::before {
+            transform: scaleX(1);
+        }
+        .qb-sub-icon-wrap {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .qb-sub-title {
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 0 0 0.4rem;
+        }
+        .qb-sub-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        .qb-sub-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.74rem;
+            color: var(--text-tertiary);
+            font-weight: 600;
+        }
+        .qb-sub-meta strong {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header" id="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/images/logo.png" alt="LearnNepal">
+                LearnNepal
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../courses.html" class="nav-link">Courses</a>
+                <a href="index.html" class="nav-link active">Question Bank</a>
+                <a href="../../about.html" class="nav-link">About</a>
+                <button class="search-trigger btn-search" aria-label="Search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <span>Search</span><kbd>Ctrl K</kbd>
+                </button>
+                <a href="../../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══ HERO ═══ -->
+        <section class="qb-hero section" style="padding:3.5rem 0 2.5rem">
+            <div class="container" style="max-width:850px;text-align:center">
+                <span class="qb-badge animate-fade-up">
+                    <span class="material-symbols-outlined" style="font-size:16px">quiz</span>
+                    Universal Exam Preparation
+                </span>
+                <h1 class="animate-fade-up delay-100" style="margin-top:0.75rem">Question Bank Portal</h1>
+                <p class="animate-fade-up delay-200" style="max-width:560px">
+                    Access solved past board exam questions for Class 10 (SEE), Class 11, and Class 12 (NEB). Filter by year, exam type, chapter, and question type.
+                </p>
+
+                <!-- Class Filter Tabs -->
+                <div class="class-selector-wrap animate-fade-up delay-300">
+                    <button class="class-tab-btn active" data-class="all">
+                        <span class="material-symbols-outlined" style="font-size:18px">apps</span>
+                        All Classes
+                    </button>
+                    <button class="class-tab-btn" data-class="class-10">
+                        <span class="material-symbols-outlined" style="font-size:18px">school</span>
+                        Class 10 (SEE)
+                    </button>
+                    <button class="class-tab-btn" data-class="class-11">
+                        <span class="material-symbols-outlined" style="font-size:18px">menu_book</span>
+                        Class 11 (NEB)
+                    </button>
+                    <button class="class-tab-btn" data-class="class-12">
+                        <span class="material-symbols-outlined" style="font-size:18px">workspace_premium</span>
+                        Class 12 (NEB)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PORTAL CONTENT ═══ -->
+        <section class="section" style="padding-top:1rem">
+            <div class="container" style="max-width:1050px">
+
+                <!-- ════ CLASS 10 (SEE) ════ -->
+                <div class="class-block" id="block-class-10">
+                    <div class="class-section-header">
+                        <div class="class-section-title">
+                            <span class="material-symbols-outlined" style="color:#22c55e">school</span>
+                            Grade 10 — SEE Question Bank
+                        </div>
+                        <span class="class-section-badge">SEE Examination</span>
+                    </div>
+
+                    <div class="qb-portal-grid">
+                        <!-- Science & Technology -->
+                        <a href="../class-10/question-bank/science/index.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(34,197,94,0.12);color:#22c55e">
+                                <span class="material-symbols-outlined" style="font-size:26px">science</span>
+                            </div>
+                            <h3 class="qb-sub-title">Science &amp; Technology</h3>
+                            <p class="qb-sub-desc">SEE Science past exam questions — bilingual (English/Nepali) with MCQs, short questions, and model answers.</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>75</strong> Marks</span>
+                                <span>•</span>
+                                <span>Bilingual (EN / NP)</span>
+                                <span>•</span>
+                                <span>4 Groups</span>
+                            </div>
+                        </a>
+
+                        <!-- Optional Mathematics -->
+                        <a href="../class-10/opt-math/index.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(234,179,8,0.12);color:#eab308">
+                                <span class="material-symbols-outlined" style="font-size:26px">functions</span>
+                            </div>
+                            <h3 class="qb-sub-title">Optional Mathematics</h3>
+                            <p class="qb-sub-desc">Comprehensive solutions, formulas, matrices, coordinate geometry, trigonometry, and vector exercises.</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>100</strong> Marks</span>
+                                <span>•</span>
+                                <span>English / Nepali</span>
+                                <span>•</span>
+                                <span>11 Units</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ════ CLASS 11 (NEB) ════ -->
+                <div class="class-block" id="block-class-11">
+                    <div class="class-section-header">
+                        <div class="class-section-title">
+                            <span class="material-symbols-outlined" style="color:#6366f1">menu_book</span>
+                            Grade 11 — NEB Question Bank
+                        </div>
+                        <span class="class-section-badge">NEB Board</span>
+                    </div>
+
+                    <div class="qb-portal-grid">
+                        <!-- Computer Science -->
+                        <a href="../class-11/computer/c11_computer_syllabus.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(99,102,241,0.12);color:#6366f1">
+                                <span class="material-symbols-outlined" style="font-size:26px">terminal</span>
+                            </div>
+                            <h3 class="qb-sub-title">Computer Science</h3>
+                            <p class="qb-sub-desc">Computer fundamentals, Number Systems, Software concepts, C Programming basics, and Web Tech.</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>50</strong> Marks Theory</span>
+                                <span>•</span>
+                                <span>English</span>
+                                <span>•</span>
+                                <span>3 Groups</span>
+                            </div>
+                        </a>
+
+                        <!-- English -->
+                        <a href="../class-11/english.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(59,130,246,0.12);color:#3b82f6">
+                                <span class="material-symbols-outlined" style="font-size:26px">auto_stories</span>
+                            </div>
+                            <h3 class="qb-sub-title">English</h3>
+                            <p class="qb-sub-desc">Language development, Short Stories, Poems, Essays, One-Act Plays, and Grammar exercises.</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>75</strong> Marks</span>
+                                <span>•</span>
+                                <span>English</span>
+                                <span>•</span>
+                                <span>Syllabus Notes</span>
+                            </div>
+                        </a>
+
+                        <!-- Nepali -->
+                        <a href="../class-11/nepali.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(236,72,153,0.12);color:#ec4899">
+                                <span class="material-symbols-outlined" style="font-size:26px">translate</span>
+                            </div>
+                            <h3 class="qb-sub-title">Nepali (नेपाली)</h3>
+                            <p class="qb-sub-desc">पाठ्यक्रममा आधारित पाठहरू, कविता, कथा, निबन्ध र व्याकरण अभ्यासका प्रश्नोत्तरहरू।</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>75</strong> Marks</span>
+                                <span>•</span>
+                                <span>नेपाली</span>
+                                <span>•</span>
+                                <span>व्याकरण र साहित्य</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ════ CLASS 12 (NEB) ════ -->
+                <div class="class-block" id="block-class-12">
+                    <div class="class-section-header">
+                        <div class="class-section-title">
+                            <span class="material-symbols-outlined" style="color:#f59e0b">workspace_premium</span>
+                            Grade 12 — NEB Question Bank
+                        </div>
+                        <span class="class-section-badge">Board Exam Solutions</span>
+                    </div>
+
+                    <div class="qb-portal-grid">
+                        <!-- Computer Science -->
+                        <a href="../class-12/question-bank/computer/index.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(99,102,241,0.12);color:#6366f1">
+                                <span class="material-symbols-outlined" style="font-size:26px">terminal</span>
+                            </div>
+                            <h3 class="qb-sub-title">Computer Science</h3>
+                            <p class="qb-sub-desc">DBMS, Networking, Web Technology, C Programming, OOP, Software Engineering, and Recent Trends with solved MCQs &amp; explanations.</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>75</strong> Marks</span>
+                                <span>•</span>
+                                <span>3 Groups (A/B/C)</span>
+                                <span>•</span>
+                                <span>Fully Solved</span>
+                            </div>
+                        </a>
+
+                        <!-- English -->
+                        <a href="../class-12/question-bank/english/index.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(59,130,246,0.12);color:#3b82f6">
+                                <span class="material-symbols-outlined" style="font-size:26px">auto_stories</span>
+                            </div>
+                            <h3 class="qb-sub-title">English</h3>
+                            <p class="qb-sub-desc">Comprehension Passages, Literature (Short Stories, Poems, Plays), Composition &amp; Grammar with model solutions.</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>75</strong> Marks</span>
+                                <span>•</span>
+                                <span>5 Sections (A to E)</span>
+                                <span>•</span>
+                                <span>Model Solutions</span>
+                            </div>
+                        </a>
+
+                        <!-- Nepali -->
+                        <a href="../class-12/question-bank/nepali/index.html" class="qb-subject-card">
+                            <div class="qb-sub-icon-wrap" style="background:rgba(236,72,153,0.12);color:#ec4899">
+                                <span class="material-symbols-outlined" style="font-size:26px">translate</span>
+                            </div>
+                            <h3 class="qb-sub-title">Nepali (नेपाली)</h3>
+                            <p class="qb-sub-desc">पद्य, गद्य, व्यावहारिक लेखन, बोध र व्याकरण सम्बन्धी विगतका बोर्ड परीक्षाका सबै प्रश्नहरूको समाधान।</p>
+                            <div class="qb-sub-meta">
+                                <span><strong>75</strong> Marks</span>
+                                <span>•</span>
+                                <span>नेपाली</span>
+                                <span>•</span>
+                                <span>पूर्ण समाधान</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ════ FEATURES BENTO ════ -->
+                <div class="qb-fgrid animate-fade-up" style="margin-top:3rem">
+                    <div class="qb-fcard">
+                        <span class="material-symbols-outlined" style="font-size:32px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">filter_alt</span>
+                        <h4>Dynamic Smart Filters</h4>
+                        <p>Filter questions dynamically by year, exam type, chapter, and question format without reloading the page.</p>
+                    </div>
+                    <div class="qb-fcard">
+                        <span class="material-symbols-outlined" style="font-size:32px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">check_circle</span>
+                        <h4>Verified Answers</h4>
+                        <p>Detailed step-by-step solutions, code snippets, and grading guidance written for NEB exam scoring.</p>
+                    </div>
+                    <div class="qb-fcard">
+                        <span class="material-symbols-outlined" style="font-size:32px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">translate</span>
+                        <h4>Bilingual Ready</h4>
+                        <p>Instant switching between English and Nepali Devanagari scripts for bilingual academic subjects.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="logo">
+                        <img src="../../assets/images/logo.png" alt="LearnNepal">
+                        LearnNepal
+                    </a>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes &amp; question banks — completely free.</p>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">Class 10 (SEE)</h5>
+                    <ul class="footer-links">
+                        <li><a href="../class-10/question-bank/science/index.html">Science Question Bank</a></li>
+                        <li><a href="../class-10/opt-math/index.html">Optional Math</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">Class 12 (NEB)</h5>
+                    <ul class="footer-links">
+                        <li><a href="../class-12/question-bank/computer/index.html">Computer Science</a></li>
+                        <li><a href="../class-12/question-bank/english/index.html">English</a></li>
+                        <li><a href="../class-12/question-bank/nepali/index.html">Nepali</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="../courses.html">All Courses</a></li>
+                        <li><a href="../../about.html">About Us</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/search.js"></script>
+    <script src="../../scripts/transitions.js"></script>
+    <script>
+        // Interactive Class Tab Filtering
+        document.querySelectorAll('.class-tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.class-tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const selectedClass = this.dataset.class;
+                
+                document.querySelectorAll('.class-block').forEach(block => {
+                    if (selectedClass === 'all') {
+                        block.style.display = 'block';
+                    } else {
+                        block.style.display = block.id === 'block-' + selectedClass ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
