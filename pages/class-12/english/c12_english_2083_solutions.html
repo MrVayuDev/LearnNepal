@@ -1,23 +1,453 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEB Class 12 English 2083 (2026) Solutions | LearnNepal</title>
-    <meta name="description" content="LearnNepal - Premium NEB Class 11 and 12 Notes. Free, structured study materials." />
+    <meta name="description" content="Complete NEB Class 12 English 2083 (2026) Model Question Paper solutions. Comprehensive answers for Comprehension, Literature, Composition, Grammar, and Vocabulary." />
 
     <link rel="icon" href="../../../assets/images/logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="../../../assets/images/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
     <script src="../../../scripts/theme.js"></script>
     <link rel="stylesheet" href="../../../styles/main.css" />
 
-        
+    <style>
+        /* ─── Solved Paper Specific Styles ─── */
+        .paper-meta-card {
+            background: var(--surface-container-low);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .paper-meta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-gradient, linear-gradient(90deg, #3525cd, #006c49));
+        }
+
+        .paper-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--outline-variant);
+        }
+
+        .paper-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .paper-info-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--on-surface-variant);
+        }
+
+        .paper-info-val {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--on-surface);
+        }
+
+        .paper-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.25rem;
+        }
+
+        /* ── Section Blocks ── */
+        .section-block {
+            margin-bottom: 3rem;
+            scroll-margin-top: calc(var(--header-height) + 1.5rem);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--surface-container-low);
+            border: 1px solid var(--outline-variant);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+
+        .section-title-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .section-title-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--on-surface);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .section-badge {
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: var(--radius-full);
+            background: var(--primary);
+            color: var(--on-primary);
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        /* ── Passage Scroller ── */
+        .passage-card {
+            background: var(--surface-container-low);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-lg);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .passage-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            background: var(--surface-container);
+            border-bottom: 1px solid var(--outline-variant);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--on-surface-variant);
+        }
+
+        .passage-scroller {
+            max-height: 380px;
+            overflow-y: auto;
+            padding: 1.5rem;
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--on-surface);
+            scrollbar-width: thin;
+            scrollbar-color: var(--outline-variant) transparent;
+        }
+
+        .passage-scroller::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .passage-scroller::-webkit-scrollbar-thumb {
+            background: var(--outline-variant);
+            border-radius: 4px;
+        }
+
+        .passage-scroller p {
+            margin-bottom: 1rem;
+        }
+
+        .passage-scroller p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── Question Card Box ── */
+        .question-box {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-xl);
+            margin-bottom: 1.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .question-box:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .q-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background: var(--surface-container-low);
+            border-bottom: 1px solid var(--outline-variant);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--on-surface);
+            line-height: 1.5;
+        }
+
+        .q-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2.2rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: var(--radius-full);
+            background: var(--primary);
+            color: var(--on-primary);
+            font-size: 0.8rem;
+            font-weight: 800;
+            flex-shrink: 0;
+            letter-spacing: 0.02em;
+        }
+
+        .q-body {
+            padding: 1.15rem 1.25rem;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: var(--on-surface);
+            background: var(--surface-container-lowest);
+        }
+
+        .q-body .mcq-item {
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.85rem;
+            border-bottom: 1px dashed var(--surface-container-high);
+        }
+
+        .q-body .mcq-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .q-body .mcq-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.35rem 1rem;
+            margin-top: 0.35rem;
+            padding-left: 1.2rem;
+            color: var(--on-surface-variant);
+            font-size: 0.9rem;
+        }
+
+        /* ── Answer Container ── */
+        .ans-container {
+            background: var(--surface-container-low);
+            border-top: 1px solid var(--outline-variant);
+            padding: 1.25rem;
+        }
+
+        .ans-label {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--secondary);
+            margin-bottom: 0.85rem;
+        }
+
+        .ans-label .material-symbols-outlined {
+            font-size: 16px;
+        }
+
+        .ans-content {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--on-surface);
+        }
+
+        .ans-content ol, .ans-content ul {
+            padding-left: 1.4rem;
+            margin: 0.5rem 0;
+        }
+
+        .ans-content li {
+            margin-bottom: 0.6rem;
+        }
+
+        .ans-content li:last-child {
+            margin-bottom: 0;
+        }
+
+        .ans-content p {
+            margin-bottom: 0.85rem;
+        }
+
+        .ans-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .grammar-item {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-md);
+            padding: 0.9rem 1.1rem;
+            margin-bottom: 0.85rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .grammar-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .grammar-item:hover {
+            border-color: var(--primary);
+        }
+
+        .grammar-context {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--on-surface-variant);
+            background: var(--surface-container);
+            padding: 0.2rem 0.55rem;
+            border-radius: var(--radius-sm);
+        }
+
+        /* ── Letter Preview Format ── */
+        .letter-preview {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 1.75rem;
+            font-size: 0.96rem;
+            line-height: 1.8;
+            color: var(--on-surface);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .letter-preview p {
+            margin-bottom: 1rem;
+        }
+
+        /* ── Data Interpretation Table ── */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1rem 0;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--outline-variant);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.92rem;
+        }
+
+        .data-table th, .data-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .data-table th {
+            background: var(--surface-container);
+            font-weight: 700;
+            color: var(--on-surface);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+        }
+
+        .data-table tbody tr:hover {
+            background: var(--surface-container);
+        }
+
+        .data-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ── Section Jump Pills ── */
+        .section-jump-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding: 0.5rem 0 1rem;
+            margin-bottom: 1.5rem;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+
+        .section-jump-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .jump-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.85rem;
+            border-radius: var(--radius-full);
+            background: var(--surface-container-low);
+            border: 1px solid var(--outline-variant);
+            color: var(--on-surface);
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .jump-pill:hover, .jump-pill.active {
+            background: var(--primary);
+            color: var(--on-primary);
+            border-color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        /* Print Styles */
+        @media print {
+            .header, .sidebar, .mobile-toggle, .sidebar-toggle-btn, .paper-actions, .ad-container, .footer, #reading-progress, .section-jump-bar {
+                display: none !important;
+            }
+            .docs-layout {
+                display: block !important;
+            }
+            .docs-content {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            .question-box {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                border: 1px solid #ccc !important;
+                box-shadow: none !important;
+                margin-bottom: 1.5rem !important;
+            }
+            .passage-scroller {
+                max-height: none !important;
+                overflow: visible !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
@@ -52,461 +482,866 @@
     </header>
 
     <main>
-<div class="solved-paper-layout">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-title">
-                <a href="../question-bank/english/index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
-                    <span>&larr;</span> Q. Bank Dashboard
-                </a>
-            </div>
-            <button class="mobile-sidebar-toggle" aria-label="Toggle Table of Contents">
-                <span>&#9776; Paper Sections</span>
-                <span class="tree-act-indicator" style="margin-left:auto; font-size: 0.8em; opacity: 0.7;">&#9660;</span>
-            </button>
-            <nav class="sidebar-nav">
-                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-tertiary); margin: 0.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Exam Sections</div>
-                <a href="#sec-a" class="sidebar-link active">Section A: Comprehension</a>
-                <a href="#sec-b" class="sidebar-link">Section B: Literature</a>
-                <a href="#sec-c" class="sidebar-link">Section C: Composition</a>
-                <a href="#sec-d" class="sidebar-link">Section D: Grammar</a>
-                <a href="#sec-e" class="sidebar-link">Section E: Vocabulary</a>
-            </nav>
-            <div class="ad-container ad-sidebar">
-                <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" style="text-decoration: none; display: block; text-align: center;">
-                    <div style="font-size: 0.9rem; font-weight: 600; color: #FF0000; margin-bottom: 0.5rem;">YOUTUBE CHANNEL</div>
-                    <div style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">Video solutions and tutorials are live now!</div>
-                    <button class="btn btn-sm" style="background: #FF0000; color: white; width: 100%; justify-content: center; border:none; cursor: pointer;">Subscribe &rarr;</button>
-                </a>
-            </div>
-        </aside>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="../../../index.html">Home</a>
+            <span class="breadcrumb-sep">&rsaquo;</span>
+            <a href="../../../pages/courses.html">Courses</a>
+            <span class="breadcrumb-sep">&rsaquo;</span>
+            <a href="c12_english_syllabus.html">Class 12 English</a>
+            <span class="breadcrumb-sep">&rsaquo;</span>
+            <span class="breadcrumb-current">2083 Board Solutions</span>
+        </nav>
 
-        <!-- Main Content -->
-        <main class="docs-content">
-            <div class="animate-fade-up">
-                <span class="badge">NEB Grade XII &bull; Board Solutions</span>
-                <h1 style="margin: 0.75rem 0 0.5rem; font-size: 2.2rem; font-weight: 800;">Compulsory English Solved Paper 2083</h1>
-                <div style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2.5rem; line-height: 1.6;">
-                    Complete structural solutions for the 2083 (2026) Board Exam. Includes comprehension reference scroller, comparative tables, grammar explanations, and formal letters.
+        <div class="docs-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-header-row">
+                    <div class="sidebar-title">
+                        <a href="c12_english_syllabus.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">
+                            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+                            <span>English Syllabus</span>
+                        </a>
+                    </div>
+                    <button class="sidebar-close-btn" aria-label="Close sidebar" title="Close sidebar">
+                        <span class="material-symbols-outlined" style="font-size:18px;">close</span>
+                    </button>
                 </div>
 
-                <!-- Section A -->
-                <section class="section-block" id="sec-a">
-                    <div class="section-header">
-                        <h2 class="section-title-text">Section A: Comprehension</h2>
-                        <span class="section-badge">15 Marks</span>
-                    </div>
-                    <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-tertiary); margin-bottom: 0.5rem; text-transform: uppercase;">Passage Text (Scrollable)</div>
-                    <div class="passage-scroller">
-                        <p><strong>The Magical Library</strong></p>
-                        <p>In a quiet corner of the bustling city, there stood an old, dusty library. While most people hurried past, its unassuming exterior hid an incredible secret. The librarian, an elderly woman named Ms. Abernathy, was not an ordinary librarian; she was the guardian of a magical library.</p>
-                        <p>One sunny afternoon, Sarah, an eighth-grader with an insatiable love for books, stumbled upon the library. She had always been drawn to stories of magic and adventure, and something about the library's unassuming facade piqued her curiosity. As she stepped inside, a small bell above the door tinkled, announcing her arrival. Ms. Abernathy greeted her with a warm smile, sensing Sarah’s keen interest in books.</p>
-                        <p>Sarah soon discovered the true enchantment of the library. Its shelves held volumes that could transport readers to other worlds. She found herself immersed in tales of knights and dragons, enchanted forests, and talking animals. These books had a way of making her feel like she was right there, part of the adventure.</p>
-                        <p>As the weeks passed, Sarah spent hours at the library, delving into one captivating story after another. She uncovered a book about a boy who could fly, and as she read, she felt her feet lifting off the ground. She found herself soaring over the city, experiencing the thrill of flight. Another day, she read about a time-traveling watch, and suddenly, she was witnessing historical events unfold before her eyes.</p>
-                        <p>One day, as Sarah was browsing the shelves, she noticed a book titled “The Lost Amulet of Althoria.” The cover featured a golden amulet with a shimmering blue gem. Ms. Abernathy explained that this was a unique book—it was unfinished. No one knew how the story ended because no reader had ever returned the book. Sarah decided to take on the challenge. She opened the book and was immediately drawn into a tale of a young adventurer, Alaric, on a quest to find the lost amulet. She felt herself journeying through dark forests, crossing treacherous rivers, and facing mythical creatures. The more she read, the deeper she became entangled in the story. It was as though she had become Alaric, feeling his determination and bravery.</p>
-                        <p>As the days turned into weeks, Sarah's friends and family grew concerned. She had become so absorbed in the book that she neglected her usual activities. Ms. Abernathy gently reminded her to take breaks, but Sarah was determined to reach the end of the story.</p>
-                        <p>Finally, one evening, as Sarah read the last page, she found herself standing in a clearing, facing an ornate door. Through the door, she saw a dazzling chamber with the lost amulet resting on a pedestal. With a deep breath, she opened the door and approached the amulet. As she touched it, a burst of blue light enveloped her, and she felt herself returning to the library.</p>
-                        <p>When she opened her eyes, she was back among the dusty bookshelves, holding the book in her hands. Ms. Abernathy congratulated her on completing the unfinished story. Sarah had not only finished the tale but had also experienced an adventure unlike any other.</p>
-                        <p>From that day on, Sarah continued to visit the magical library, understanding that the real magic was not just in the stories but in the way they made her feel and the adventures they allowed her to live.</p>
+                <nav class="sidebar-nav">
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--on-surface-variant); margin: 0.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Exam Sections</div>
+                    <a href="#sec-a" class="sidebar-link active">
+                        <span>Section A: Comprehension</span>
+                        <span style="margin-left: auto; font-size: 0.75rem; opacity: 0.8;">15M</span>
+                    </a>
+                    <a href="#sec-b" class="sidebar-link">
+                        <span>Section B: Literature</span>
+                        <span style="margin-left: auto; font-size: 0.75rem; opacity: 0.8;">20M</span>
+                    </a>
+                    <a href="#sec-c" class="sidebar-link">
+                        <span>Section C: Composition</span>
+                        <span style="margin-left: auto; font-size: 0.75rem; opacity: 0.8;">25M</span>
+                    </a>
+                    <a href="#sec-d" class="sidebar-link">
+                        <span>Section D: Grammar</span>
+                        <span style="margin-left: auto; font-size: 0.75rem; opacity: 0.8;">10M</span>
+                    </a>
+                    <a href="#sec-e" class="sidebar-link">
+                        <span>Section E: Vocabulary</span>
+                        <span style="margin-left: auto; font-size: 0.75rem; opacity: 0.8;">5M</span>
+                    </a>
+
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--on-surface-variant); margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Quick Resources</div>
+                    <a href="../question-bank/english/index.html" class="sidebar-link">
+                        <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle; margin-right: 6px;">quiz</span>
+                        Question Bank
+                    </a>
+                    <a href="c12_english_syllabus.html" class="sidebar-link">
+                        <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle; margin-right: 6px;">menu_book</span>
+                        Full Syllabus
+                    </a>
+                    <a href="c12_english_story_1.html" class="sidebar-link">
+                        <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle; margin-right: 6px;">auto_stories</span>
+                        Short Stories Notes
+                    </a>
+                </nav>
+
+                <div class="ad-container ad-sidebar">
+                    <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" style="text-decoration: none; display: block; text-align: center;">
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #FF0000; margin-bottom: 0.35rem; display: flex; align-items: center; justify-content: center; gap: 0.3rem;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            OFFICIAL YOUTUBE
+                        </div>
+                        <div style="color: var(--on-surface-variant); font-size: 0.82rem; margin-bottom: 0.85rem; line-height: 1.4;">Video solutions & step-by-step paper explanations live!</div>
+                        <span class="btn btn-sm" style="background: #FF0000; color: white; width: 100%; justify-content: center; border:none; border-radius: var(--radius-full); font-weight: 700;">Subscribe Free &rarr;</span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <article class="docs-content">
+                <div class="animate-fade-up">
+                    <button class="sidebar-toggle-btn" aria-label="Toggle sections sidebar" title="Toggle sections sidebar">
+                        <span class="material-symbols-outlined">menu_open</span>
+                        <span>Exam Sections</span>
+                    </button>
+
+                    <!-- Paper Header Meta Card -->
+                    <div class="paper-meta-card">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700;">NEB Grade XII &bull; Board Exam 2083 (2026)</span>
+                            <span class="badge" style="background: var(--secondary-fixed, #6ffbbe); color: var(--on-secondary-fixed, #002113); font-weight: 700;">Model Solutions</span>
+                        </div>
+                        <h1 style="margin: 0.5rem 0 0.5rem; font-size: clamp(1.6rem, 3.5vw, 2.25rem); font-weight: 800; color: var(--on-surface); line-height: 1.2;">
+                            Compulsory English Solved Paper 2083
+                        </h1>
+                        <p style="color: var(--on-surface-variant); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Official model question solutions with detailed grammatical explanations, complete literature comparative answers, essay structures, and passage reading assistance.
+                        </p>
+
+                        <div class="paper-info-grid">
+                            <div class="paper-info-item">
+                                <span class="paper-info-label">Subject Code</span>
+                                <span class="paper-info-val">0041</span>
+                            </div>
+                            <div class="paper-info-item">
+                                <span class="paper-info-label">Full Marks</span>
+                                <span class="paper-info-val">75 Marks</span>
+                            </div>
+                            <div class="paper-info-item">
+                                <span class="paper-info-label">Pass Marks</span>
+                                <span class="paper-info-val">27 Marks</span>
+                            </div>
+                            <div class="paper-info-item">
+                                <span class="paper-info-label">Time Allotted</span>
+                                <span class="paper-info-val">3:00 Hours</span>
+                            </div>
+                        </div>
+
+                        <div class="paper-actions">
+                            <button onclick="window.print()" class="btn btn-outline btn-sm" style="border-radius: var(--radius-full); gap: 0.4rem; cursor: pointer;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">print</span>
+                                <span>Print / Save as PDF</span>
+                            </button>
+                            <a href="../question-bank/english/index.html" class="btn btn-primary btn-sm" style="border-radius: var(--radius-full); gap: 0.4rem;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">quiz</span>
+                                <span>Browse All Questions</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Q1(A) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">1(A)</span> Fill in the blanks with the correct highlighted words.</div>
-                        <div class="q-body">
-                            a. World leaders are now united in their ...... for peace.<br>
-                            b. People are impressed by her ........ manner and relaxed style of writing.<br>
-                            c. As I started to live on my own, I ........ myself in my career.<br>
-                            d. The stuff written about me helped to establish me as a/an ......... figure in public.<br>
-                            e. His desire for money is ........ .
+                    <!-- Jump Bar -->
+                    <div class="section-jump-bar" aria-label="Jump to section">
+                        <a href="#sec-a" class="jump-pill active">Section A (15M)</a>
+                        <a href="#sec-b" class="jump-pill">Section B (20M)</a>
+                        <a href="#sec-c" class="jump-pill">Section C (25M)</a>
+                        <a href="#sec-d" class="jump-pill">Section D (10M)</a>
+                        <a href="#sec-e" class="jump-pill">Section E (5M)</a>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- SECTION A: COMPREHENSION (15 MARKS) -->
+                    <!-- ============================================== -->
+                    <section class="section-block" id="sec-a">
+                        <div class="section-header">
+                            <div class="section-title-wrap">
+                                <span class="material-symbols-outlined section-title-icon">menu_book</span>
+                                <h2 class="section-title-text">Section A: Comprehension</h2>
+                            </div>
+                            <span class="section-badge">15 Marks</span>
                         </div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <ol type="a">
-                                    <li>World leaders are now united in their <strong>quest</strong> for peace.</li>
-                                    <li>People are impressed by her <strong>unassuming</strong> manner and relaxed style of writing.</li>
-                                    <li>As I started to live on my own, I <strong>immersed</strong> myself in my career.</li>
-                                    <li>The stuff written about me helped to establish me as an <strong>ordinary</strong> figure in public.</li>
-                                    <li>His desire for money is <strong>insatiable</strong>.</li>
+
+                        <!-- Reading Passage Scroller -->
+                        <div class="passage-card">
+                            <div class="passage-header">
+                                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                    <span class="material-symbols-outlined" style="font-size: 16px;">auto_stories</span>
+                                    <span>Read the text and answer the questions</span>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--on-surface-variant);">Scroll to read &darr;</span>
+                            </div>
+                            <div class="passage-scroller">
+                                <p style="font-size: 1.15rem; font-weight: 800; color: var(--on-surface); margin-bottom: 0.75rem;">The Magical Library</p>
+                                <p>In a quiet corner of the bustling city, there stood an old, dusty library. While most people hurried past, its unassuming exterior hid an incredible secret. The librarian, an elderly woman named Ms. Abernathy, was not an ordinary librarian; she was the guardian of a magical library.</p>
+                                <p>One sunny afternoon, Sarah, an eighth-grader with an insatiable love for books, stumbled upon the library. She had always been drawn to stories of magic and adventure, and something about the library's unassuming facade piqued her curiosity. As she stepped inside, a small bell above the door tinkled, announcing her arrival. Ms. Abernathy greeted her with a warm smile, sensing Sarah’s keen interest in books.</p>
+                                <p>Sarah soon discovered the true enchantment of the library. Its shelves held volumes that could transport readers to other worlds. She found herself immersed in tales of knights and dragons, enchanted forests, and talking animals. These books had a way of making her feel like she was right there, part of the adventure.</p>
+                                <p>As the weeks passed, Sarah spent hours at the library, delving into one captivating story after another. She uncovered a book about a boy who could fly, and as she read, she felt her feet lifting off the ground. She found herself soaring over the city, experiencing the thrill of flight. Another day, she read about a time-traveling watch, and suddenly, she was witnessing historical events unfold before her eyes.</p>
+                                <p>One day, as Sarah was browsing the shelves, she noticed a book titled &ldquo;The Lost Amulet of Althoria.&rdquo; The cover featured a golden amulet with a shimmering blue gem. Ms. Abernathy explained that this was a unique book—it was unfinished. No one knew how the story ended because no reader had ever returned the book. Sarah decided to take on the challenge. She opened the book and was immediately drawn into a tale of a young adventurer, Alaric, on a quest to find the lost amulet. She felt herself journeying through dark forests, crossing treacherous rivers, and facing mythical creatures. The more she read, the deeper she became entangled in the story. It was as though she had become Alaric, feeling his determination and bravery.</p>
+                                <p>As the days turned into weeks, Sarah's friends and family grew concerned. She had become so absorbed in the book that she neglected her usual activities. Ms. Abernathy gently reminded her to take breaks, but Sarah was determined to reach the end of the story.</p>
+                                <p>Finally, one evening, as Sarah read the last page, she found herself standing in a clearing, facing an ornate door. Through the door, she saw a dazzling chamber with the lost amulet resting on a pedestal. With a deep breath, she opened the door and approached the amulet. As she touched it, a burst of blue light enveloped her, and she felt herself returning to the library.</p>
+                                <p>When she opened her eyes, she was back among the dusty bookshelves, holding the book in her hands. Ms. Abernathy congratulated her on completing the unfinished story. Sarah had not only finished the tale but had also experienced an adventure unlike any other.</p>
+                                <p>From that day on, Sarah continued to visit the magical library, understanding that the real magic was not just in the stories but in the way they made her feel and the adventures they allowed her to live.</p>
+                            </div>
+                        </div>
+
+                        <!-- Q1(A) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">1(A)</span>
+                                <div>Fill in the blanks with the correct words from the passage. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[5 &times; 1 = 5 Marks]</span></div>
+                            </div>
+                            <div class="q-body">
+                                <ol type="a" style="margin: 0; padding-left: 1.3rem;">
+                                    <li>World leaders are now united in their ............ for peace.</li>
+                                    <li>People are impressed by her ............ manner and relaxed style of writing.</li>
+                                    <li>As I started to live on my own, I ............ myself in my career.</li>
+                                    <li>The stuff written about me helped to establish me as a/an ............ figure in public.</li>
+                                    <li>His desire for money is ............ .</li>
                                 </ol>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Q1(B) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">1(B)</span> Choose and copy the correct alternatives.</div>
-                        <div class="q-body">
-                            a. Where is the story set? (i) a bustling city (ii) a dazzling chamber...<br>
-                            b. Who is Ms. Abernathy? (iii) a librarian...<br>
-                            c. What unique quality do the books have? (ii) They can make readers part of the adventure...<br>
-                            d. How does Sarah feel when she touches the amulet? (iv) enchanted...<br>
-                            e. What kind of character is Sarah? (iii) imaginative and obsessed...
-                        </div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <ol type="a">
-                                    <li>Where is the story set? &rarr; <strong>(i) a bustling city</strong></li>
-                                    <li>Who is Ms. Abernathy in the story? &rarr; <strong>(iii) a librarian</strong></li>
-                                    <li>What unique quality do the books in the library have? &rarr; <strong>(ii) They can make readers a part of the adventure.</strong></li>
-                                    <li>How does Sarah feel when she touches the lost amulet? &rarr; <strong>(iv) enchanted</strong></li>
-                                    <li>What kind of character is Sarah in the story? &rarr; <strong>(iii) imaginative and obsessed</strong></li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q1(C) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">1(C)</span> Answer the following questions.</div>
-                        <div class="q-body">
-                            a. Why did Sarah go to the library in the beginning?<br>
-                            b. What happened when Sarah reads the book about a boy who can fly?<br>
-                            c. What was special about the book "The Lost Amulet of Althoria"?<br>
-                            d. What was Alaric searching for in the tale?<br>
-                            e. Was Sarah more determined to read books at the end? Give a reason.
-                        </div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <ol type="a">
-                                    <li><strong>Why did Sarah go to the library in the beginning?</strong><br>Sarah went to the library initially because she had an insatiable love for books, was drawn to stories of magic and adventure, and the library's unassuming facade piqued her curiosity.</li>
-                                    <li><strong>What happened when Sarah reads the book about a boy who can fly?</strong><br>When Sarah read the book about a boy who could fly, she felt her feet lifting off the ground and experienced the thrill of soaring over the city.</li>
-                                    <li><strong>What was special about the book "The Lost Amulet of Althoria"?</strong><br>The book was unique and unfinished because no reader had ever returned it, meaning no one knew how the story ended.</li>
-                                    <li><strong>What was Alaric searching for in the tale?</strong><br>Alaric was searching for the lost amulet of Althoria, which was a golden amulet with a shimmering blue gem.</li>
-                                    <li><strong>Was Sarah more determined to read books at the end? Give a reason.</strong><br>Yes, Sarah remained highly determined to read and visit the magical library because she realized that the true magic was not just in the stories themselves, but in the way they made her feel and the adventures they allowed her to live.</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Section B -->
-                <section class="section-block" id="sec-b">
-                    <div class="section-header">
-                        <h2 class="section-title-text">Section B: Literature</h2>
-                        <span class="section-badge">20 Marks</span>
-                    </div>
-
-                    <!-- Q2(a) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">2(a)</span> How would you react if you were in the young man's situation at the end of the story? (Neighbours)</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p>If I were in the young husband's situation at the end of "Neighbours", I would feel deeply moved, humbled, and grateful. Witnessing the overwhelming, genuine joy and support of the immigrant neighbours during the birth of his child would dissolve all my previous prejudices and cultural wariness. I would weep just as he did, realizing that human connection, empathy, and community transcend linguistic and cultural barriers, and I would fully embrace them as family.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q2(b) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">2(b)</span> How was Gouvernail different from Mrs. Baroda's expectation? (A Respectable Woman) OR Do you think Rakesh was a devoted son? Explain. (A Devoted Son)</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p><strong>Option A (A Respectable Woman):</strong><br>
-                                Mrs. Baroda expected Gouvernail to be a demanding, cynical, and highly intellectual city man who would disrupt their quiet plantation life. Instead, she found him to be quiet, lovable, unassuming, and extremely easygoing. He had no desire to impress anyone, did not speak much, and spent his time enjoying the peaceful outdoor air. His gentle, non-intrusive nature surprised Mrs. Baroda and made her feel comfortable yet secretly drawn to him.</p>
-                                <hr style="border: none; border-top: 1px solid var(--border); margin: 1rem 0;">
-                                <p><strong>Option B (A Devoted Son):</strong><br>
-                                Initially, Rakesh was an exemplary devoted son who respected his father, Varma, by touching his feet and dedicating his success to him. However, when Varma grew old and sick, Rakesh's devotion turned into clinical, authoritarian supervision. He strictly restricted his father's food and forced medications upon him. While Rakesh acted out of professional medical duty to prolong his father's life, he ignored his father's emotional needs, rendering his devotion oppressive rather than compassionate.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q2(c) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">2(c)</span> What does the poet say about God's greatness? (Every Morning I Wake)</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p>In "Every Morning I Wake," Dylan Thomas depicts God's greatness through His infinite mercy, love, and protection of ordinary human beings. The poet portrays God as a benevolent guardian who looks down upon the residents of Milk Wood with compassion, despite their moral and physical flaws. God's greatness lies in His readiness to bless, forgive, and watch over frail and imperfect creatures day and night, offering them hope and solace.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q2(d) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">2(d)</span> Where was the author when he was late for lunch? (On Libraries) OR What is the goal of the Universal Declaration of Human Rights? (Human Rights and the Age of Inequality)</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p><strong>Option A (On Libraries):</strong><br>
-                                In "On Libraries," the author was inside a library (such as the British Museum Library), deeply absorbed in reading and researching books. Lost in the world of literature and knowledge, he completely lost track of time, which caused him to be late for his lunch appointment.</p>
-                                <hr style="border: none; border-top: 1px solid var(--border); margin: 1rem 0;">
-                                <p><strong>Option B (Human Rights and the Age of Inequality):</strong><br>
-                                The primary goal of the Universal Declaration of Human Rights (UDHR) is to establish a global framework that guarantees the fundamental dignity, freedom, and equal rights of every human being. It aims to protect individuals from state tyranny and oppression. However, the essay notes that while it succeeded in promoting civil and political rights, it has struggled to address the massive economic inequality in the modern era.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q2(e) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">2(e)</span> Do you think that August Strindberg portrays despair in a very powerful and realistic way? Give a reason. (Facing Death)</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p>Yes, August Strindberg portrays despair powerfully and realistically through Monsieur Durand in "Facing Death." Durand is bankrupt, starved, and hated by his daughters. His despair is realistic because it stems from financial ruin and familial breakdown. His ultimate decision to commit suicide by burning down the house to secure insurance money for his ungrateful daughters shows the tragic, extreme limits a desperate person will go to.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q3(a) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">3(a)</span> What was the reaction of the community to the old man with enormous wings and what does it show about humanity and compassion? (A Very Old Man with Enormous Wings) OR What are Nock's ideas about marriage in society? (Marriage as a Social Institution)</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p><strong>Option A (A Very Old Man with Enormous Wings):</strong><br>
-                                In Gabriel García Márquez's story, the community reacts to the old man with wings with superficial curiosity, greed, and exploitation. Pelayo and Elisenda cage him in a chicken coop, and the townspeople treat him like a circus sideshow, throwing stones, poking him with hot branding irons, and demanding miracles. The local priest, Father Gonzaga, suspects him because he cannot speak Latin, and eventually, the crowd abandons him for a more sensational attraction (the spider woman).</p>
-                                <p>This reaction shows that humanity often fears, dehumanizes, and exploits what it does not understand. True compassion is replaced by commercial and personal exploitation. People objectify the winged man for entertainment and miracles, demonstrating that human empathy can be transactional, shallow, and highly intolerant of differences or deviations from expected grandeur.</p>
-                                <hr style="border: none; border-top: 1px solid var(--border); margin: 1.5rem 0;">
-                                <p><strong>Option B (Marriage as a Social Institution):</strong><br>
-                                In "Marriage as a Social Institution," Stephen L. Nock argues that marriage is a vital social institution rather than just a private relationship built on romance. It establishes legal, moral, and social norms that govern adult behavior, assign responsibilities, and provide stable environments for raising children. It acts as a contract that connects couples to the larger community.</p>
-                                <p>I agree with Nock's ideas. While romantic love is crucial for personal fulfillment, the institutional framework of marriage offers necessary societal stability. It encourages long-term commitment, mutual economic security, and clear legal protections for parents and children. By viewing marriage as a social institution, society fosters stability, parental responsibility, and mutual accountability that individual emotions alone cannot sustain.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q3(b) -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">3(b)</span> Explain the following lines of the poem, 'A Day' with reference to the context:<br>
-                        <em>The hills untied their bonnets,<br>The bobolinks begun.<br>Then I said softly to myself,<br>That must have been the sun!</em></div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p><strong>Context:</strong> These lines are taken from Emily Dickinson's descriptive poem 'A Day', which captures the beauty and awe of a sunrise.</p>
-                                <p><strong>Explanation:</strong> Here, the speaker describes the magical transition of dawn using vivid personification and auditory imagery. "The hills untied their bonnets" describes the morning mist rising and clearing away from the hilltops, metaphorically compared to hills taking off their bonnets (hats) to greet the morning light. "The bobolinks begun" refers to the sudden morning songs of the bobolinks (birds). Witnessing this sudden awakening of nature—the light unveiling the hills and the birds singing—the speaker softly realizes that the sun has risen. These lines beautifully convey the quiet, majestic, and transformative power of the sun as it awakens the earth.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Section C -->
-                <section class="section-block" id="sec-c">
-                    <div class="section-header">
-                        <h2 class="section-title-text">Section C: Composition</h2>
-                        <span class="section-badge">25 Marks</span>
-                    </div>
-
-                    <!-- Q4 -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">4</span> Study the following table and interpret the information given in the table in about 150 words. Make comparison where necessary.</div>
-                        <div class="q-body" style="margin-bottom: 1rem;">
-                            <strong>Monthly Sales Data for XYZ Company (in thousands of dollars)</strong>
-                        </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Month</th>
-                                    <th>Product A</th>
-                                    <th>Product B</th>
-                                    <th>Product C</th>
-                                    <th>Total Sales</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>January</td>
-                                    <td>50</td>
-                                    <td>40</td>
-                                    <td>30</td>
-                                    <td>120</td>
-                                </tr>
-                                <tr>
-                                    <td>February</td>
-                                    <td>60</td>
-                                    <td>35</td>
-                                    <td>25</td>
-                                    <td>120</td>
-                                </tr>
-                                <tr>
-                                    <td>March</td>
-                                    <td>70</td>
-                                    <td>45</td>
-                                    <td>35</td>
-                                    <td>150</td>
-                                </tr>
-                                <tr>
-                                    <td>April</td>
-                                    <td>65</td>
-                                    <td>50</td>
-                                    <td>40</td>
-                                    <td>155</td>
-                                </tr>
-                                <tr>
-                                    <td>May</td>
-                                    <td>75</td>
-                                    <td>55</td>
-                                    <td>45</td>
-                                    <td>175</td>
-                                </tr>
-                                <tr>
-                                    <td>June</td>
-                                    <td>80</td>
-                                    <td>60</td>
-                                    <td>50</td>
-                                    <td>190</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p>The table details the monthly sales (in thousands of dollars) of three products (A, B, and C) for XYZ Company from January to June. Overall, the total sales of the company demonstrate a strong, positive growth trend, rising from $120,000 in January and February to a peak of $190,000 in June.</p>
-                                <p>Product A remained the highest contributor throughout the entire period. Its sales began at $50,000 in January, steadily grew to $70,000 in March, dipped slightly to $65,000 in April, and then climbed to its peak of $80,000 in June. Product B was the second-highest performer, starting at $40,000, hit a low of $35,000 in February, and thereafter rose consistently to finish at $60,000 in June. Product C, while generating the lowest sales, followed a similar trajectory, starting at $30,000, dipping to $25,000 in February, and steadily growing to end at $50,000 in June. In comparison, all three products recorded their highest sales in June, highlighting a highly successful second quarter for the company.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Q5 -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">5</span> It is often said, 'Save nature to save the future'. Write a letter to the editor of a national newspaper about the effects of environmental pollution in about 180 words.</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <div class="letter-preview">
-                                    <p>Kathmandu, Nepal<br>May 23, 2026</p>
-                                    <p>To,<br>The Editor,<br>The Rising Nepal,<br>Kathmandu, Nepal.</p>
-                                    <p><strong>Subject: The Alarming Effects of Environmental Pollution.</strong></p>
-                                    <p>Sir,<br>I would like to utilize the columns of your esteemed newspaper to highlight the critical issue of environmental pollution in Nepal. The adage, 'Save nature to save the future', is a stark warning that we must heed immediately.</p>
-                                    <p>Due to rapid, unplanned urbanization and industrial activity, our air and water resources are heavily polluted. Kathmandu's air quality is frequently hazardous, causing severe respiratory issues. Our sacred rivers, like the Bagmati, have become dumping grounds for municipal and industrial waste. Additionally, deforestation and land degradation aggravate landslides and climate change.</p>
-                                    <p>If we do not protect our natural ecosystem now, we are compromising the health and survival of future generations. The government must strictly enforce environmental laws, promote clean public transportation, and manage solid waste efficiently. Public participation in green campaigns is also essential. Let us act together to save our environment.</p>
-                                    <p>Yours faithfully,<br><strong>A Concerned Citizen</strong></p>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Solution & Vocabulary Analysis</span>
+                                </div>
+                                <div class="ans-content">
+                                    <ol type="a">
+                                        <li>World leaders are now united in their <strong>quest</strong> for peace. <span style="color: var(--on-surface-variant); font-size: 0.85rem;">(from: <em>&ldquo;quest to find the lost amulet&rdquo;</em>)</span></li>
+                                        <li>People are impressed by her <strong>unassuming</strong> manner and relaxed style of writing. <span style="color: var(--on-surface-variant); font-size: 0.85rem;">(from: <em>&ldquo;unassuming exterior / facade&rdquo;</em>)</span></li>
+                                        <li>As I started to live on my own, I <strong>immersed</strong> myself in my career. <span style="color: var(--on-surface-variant); font-size: 0.85rem;">(from: <em>&ldquo;immersed in tales of knights&rdquo;</em>)</span></li>
+                                        <li>The stuff written about me helped to establish me as an <strong>ordinary</strong> figure in public. <span style="color: var(--on-surface-variant); font-size: 0.85rem;">(from: <em>&ldquo;not an ordinary librarian&rdquo;</em>)</span></li>
+                                        <li>His desire for money is <strong>insatiable</strong>. <span style="color: var(--on-surface-variant); font-size: 0.85rem;">(from: <em>&ldquo;insatiable love for books&rdquo;</em>)</span></li>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Q6 -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">6</span> Write an essay on walking as a physical activity and its role in building physical, mental and social behavior of an individual in about 300 words.</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solution & Analysis</div>
-                            <div class="ans-content">
-                                <p style="text-align: center; font-weight: 700; margin-bottom: 1rem;">Walking: A Path to Holistic Well-being</p>
-                                <p>Walking is one of the most fundamental, natural, and accessible physical activities. Requiring no expensive equipment or memberships, it offers a powerful way to enhance physical, mental, and social well-being.</p>
-                                <p>Physically, regular walking is a cornerstone of good health. It strengthens the cardiovascular system, improves blood circulation, and controls blood pressure. A daily brisk walk of thirty minutes helps manage body weight, boosts metabolism, and reduces the risk of chronic illnesses such as type 2 diabetes and heart disease. Furthermore, it is a low-impact exercise that strengthens muscles and joints, making it highly suitable for individuals of all age groups.</p>
-                                <p>Mentally, walking is highly therapeutic. It stimulates the release of endorphins, which are the body's natural mood lifters. This helps significantly reduce stress, anxiety, and depressive feelings. Walking in natural green environments, often called "green walking," clears the mind, increases concentration, and fosters creativity. It serves as a peaceful break from the digital screens and fast-paced routine of modern life, allowing for healthy reflection and stress relief.</p>
-                                <p>Socially, walking acts as a bridge for connection. Walking in neighborhood parks or walking clubs encourages interactions and builds a sense of community. It helps reduce social isolation and loneliness by offering opportunities to converse with others. Group walking promotes team spirit and collective motivation. Moreover, replacing short vehicle trips with walks reflects responsible social behavior by reducing pollution and carbon emissions.</p>
-                                <p>In conclusion, walking is much more than a physical movement. It is a holistic practice that keeps the body fit, calms the mind, and fosters social connections. Incorporating walking into our daily lives is a simple yet profound step toward building a healthier and more connected society.</p>
+                        <!-- Q1(B) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">1(B)</span>
+                                <div>Choose and copy the correct alternatives. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[5 &times; 1 = 5 Marks]</span></div>
+                            </div>
+                            <div class="q-body">
+                                <div class="mcq-item">
+                                    <strong>a. Where is the story set?</strong>
+                                    <div class="mcq-options">
+                                        <span>(i) a bustling city</span>
+                                        <span>(ii) a dazzling chamber</span>
+                                        <span>(iii) an enchanted building</span>
+                                        <span>(iv) a magical forest</span>
+                                    </div>
+                                </div>
+                                <div class="mcq-item">
+                                    <strong>b. Who is Ms. Abernathy in the story?</strong>
+                                    <div class="mcq-options">
+                                        <span>(i) a magical creature</span>
+                                        <span>(ii) a narrator</span>
+                                        <span>(iii) a librarian</span>
+                                        <span>(iv) a character from a book</span>
+                                    </div>
+                                </div>
+                                <div class="mcq-item">
+                                    <strong>c. What unique quality do the books in the library have?</strong>
+                                    <div class="mcq-options">
+                                        <span>(i) They can speak to the readers gently.</span>
+                                        <span>(ii) They can make readers a part of the adventure.</span>
+                                        <span>(iii) They grant wishes reading their inner motives.</span>
+                                        <span>(iv) They can predict the reader's fortune.</span>
+                                    </div>
+                                </div>
+                                <div class="mcq-item">
+                                    <strong>d. How does Sarah feel when she touches the lost amulet?</strong>
+                                    <div class="mcq-options">
+                                        <span>(i) disappointed</span>
+                                        <span>(ii) afraid</span>
+                                        <span>(iii) awakened</span>
+                                        <span>(iv) enchanted</span>
+                                    </div>
+                                </div>
+                                <div class="mcq-item">
+                                    <strong>e. What kind of character is Sarah in the story?</strong>
+                                    <div class="mcq-options">
+                                        <span>(i) brave and proud</span>
+                                        <span>(ii) determined and courageous</span>
+                                        <span>(iii) imaginative and obsessed</span>
+                                        <span>(iv) obedient and tactful</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Correct Alternatives</span>
+                                </div>
+                                <div class="ans-content">
+                                    <ol type="a">
+                                        <li>Where is the story set? &rarr; <strong>(i) a bustling city</strong></li>
+                                        <li>Who is Ms. Abernathy in the story? &rarr; <strong>(iii) a librarian</strong></li>
+                                        <li>What unique quality do the books in the library have? &rarr; <strong>(ii) They can make readers a part of the adventure.</strong></li>
+                                        <li>How does Sarah feel when she touches the lost amulet? &rarr; <strong>(iv) enchanted</strong></li>
+                                        <li>What kind of character is Sarah in the story? &rarr; <strong>(iii) imaginative and obsessed</strong></li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
 
-                <!-- Section D -->
-                <section class="section-block" id="sec-d">
-                    <div class="section-header">
-                        <h2 class="section-title-text">Section D: Grammar</h2>
-                        <span class="section-badge">10 Marks</span>
-                    </div>
-
-                    <!-- Q7 -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">7</span> Do as instructed in the brackets and rewrite the sentences.</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solutions with Grammatical Context</div>
-                            <div class="ans-content">
-                                <ul style="list-style-type: none; padding-left: 0;">
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>a. Health care in Nepal is not as expensive as it is in the US. (Identify the adjective.)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">expensive</span>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>b. My car needs ............ right now. (Choose the correct form: repair/repairing/to repair/repaired)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">repairing</span><br>
-                                        <small style="color:var(--text-tertiary);">Context: The verb 'need' followed by a gerund ('repairing') indicates passive necessity.</small>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>c. This is the house. We spent our childhood in the house. (Join using appropriate relative pronoun.)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">This is the house where we spent our childhood.</span> (or: <em>This is the house in which we spent our childhood.</em>)
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>d. Sumsher along with his friends ........... me well. (Choose: know/knows/have known/knowing)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">knows</span><br>
-                                        <small style="color:var(--text-tertiary);">Context: Subject-verb agreement with parenthetical phrases like 'along with' aligns with the singular subject 'Sumsher'.</small>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>e. Don't stare ......... me. I have no mistake. (Use appropriate preposition.)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">at</span>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>f. You ....... not tell anyone about this. It's too confidential. (Choose modal: may/must/would/could)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">must</span>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>g. The customer ............ the machine before he complained about the error. (Write correct form of 'purchase')</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">had purchased</span><br>
-                                        <small style="color:var(--text-tertiary);">Context: Past perfect tense ('had purchased') is used for the action completed before another past event ('complained').</small>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>h. We are close friends. We have not seen each other's houses. (Join with 'despite'.)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">Despite being close friends, we have not seen each other's houses.</span>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>i. Yangma said, "You are my source of inspiration in life." (Change into indirect speech.)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">Yangma told me that I was his/her source of inspiration in life.</span>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>j. Loku was presenting his project for the first time. (Change into passive voice.)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">His project was being presented by Loku for the first time.</span>
-                                    </li>
-                                </ul>
+                        <!-- Q1(C) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">1(C)</span>
+                                <div>Answer the following questions in short. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[5 &times; 1 = 5 Marks]</span></div>
+                            </div>
+                            <div class="q-body">
+                                <ol type="a" style="margin: 0; padding-left: 1.3rem;">
+                                    <li>Why did Sarah go to the library in the beginning?</li>
+                                    <li>What happened when Sarah reads the book about a boy who can fly?</li>
+                                    <li>What was special about the book &ldquo;The Lost Amulet of Althoria&rdquo;?</li>
+                                    <li>What was Alaric searching for in the tale?</li>
+                                    <li>Was Sarah more determined to read books at the end? Give a reason.</li>
+                                </ol>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Short Answer Solutions</span>
+                                </div>
+                                <div class="ans-content">
+                                    <ol type="a">
+                                        <li><strong>Why did Sarah go to the library in the beginning?</strong><br>Sarah went to the library initially because she had an insatiable love for books, was naturally drawn to stories of magic and adventure, and the library's unassuming facade piqued her curiosity.</li>
+                                        <li><strong>What happened when Sarah reads the book about a boy who can fly?</strong><br>When Sarah read the book about a boy who could fly, she felt her feet lifting off the ground and experienced the sensation of soaring over the city.</li>
+                                        <li><strong>What was special about the book &ldquo;The Lost Amulet of Althoria&rdquo;?</strong><br>The book was unique and unfinished because no previous reader had ever returned it, meaning no one had ever reached or known its ending.</li>
+                                        <li><strong>What was Alaric searching for in the tale?</strong><br>Alaric was searching for the lost amulet of Althoria, an ornate golden amulet adorned with a shimmering blue gemstone.</li>
+                                        <li><strong>Was Sarah more determined to read books at the end? Give a reason.</strong><br>Yes, Sarah became even more determined to read books because she realized that true magic lived not just in the words, but in how stories made her feel and the extraordinary adventures they allowed her to live.</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Section E -->
-                <section class="section-block" id="sec-e">
-                    <div class="section-header">
-                        <h2 class="section-title-text">Section E: Vocabulary & Sounds</h2>
-                        <span class="section-badge">5 Marks</span>
-                    </div>
+                    <!-- ============================================== -->
+                    <!-- SECTION B: LITERATURE (20 MARKS) -->
+                    <!-- ============================================== -->
+                    <section class="section-block" id="sec-b">
+                        <div class="section-header">
+                            <div class="section-title-wrap">
+                                <span class="material-symbols-outlined section-title-icon">history_edu</span>
+                                <h2 class="section-title-text">Section B: Literature</h2>
+                            </div>
+                            <span class="section-badge">20 Marks</span>
+                        </div>
 
-                    <!-- Q8 -->
-                    <div class="question-box">
-                        <div class="q-header"><span class="q-num">8</span> Choose and copy the correct alternatives.</div>
-                        <div class="ans-container">
-                            <div class="ans-label">Solutions & Explanations</div>
-                            <div class="ans-content">
-                                <ul style="list-style-type: none; padding-left: 0;">
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>a. It's a beautiful present for me. What is the word class of the underlined word 'present'?</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">(i) noun</span><br>
-                                        <small style="color:var(--text-tertiary);">Explanation: In this context, 'present' is preceded by an adjective and an article, representing a tangible gift (noun).</small>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>b. Which of the following words comes before 'choice' in the dictionary? (choose, chrome, chide, chord)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">(iii) chide</span><br>
-                                        <small style="color:var(--text-tertiary);">Explanation: Alphabetical ordering: ch-i-d-e comes before ch-o-i-c-e, whereas choose, chord, and chrome come after choice.</small>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>c. The babysitter ........... the girl while her parents were not at home. (looked after, looked at, looked over, looked up)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">(i) looked after</span><br>
-                                        <small style="color:var(--text-tertiary);">Explanation: 'Look after' is a phrasal verb meaning to take care of someone.</small>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>d. Which of the following words takes the prefix 'il-'? (balance, fertile, legal, mobile)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">(iii) legal</span><br>
-                                        <small style="color:var(--text-tertiary);">Explanation: 'Il-' combined with 'legal' forms 'illegal' (meaning not legal).</small>
-                                    </li>
-                                    <li style="margin-bottom: 1.25rem;">
-                                        <strong>e. Which of the following words has the same initial sound as 'chaos'? (chance, chemical, circus, cinema)</strong><br>
-                                        &rarr; Answer: <span class="badge" style="background:var(--accent-muted); color:var(--accent); font-size:0.8rem; font-weight:700;">(ii) chemical</span><br>
-                                        <small style="color:var(--text-tertiary);">Explanation: Both 'chaos' and 'chemical' begin with the hard /k/ sound, unlike 'chance' (/tʃ/), 'circus' (/s/), and 'cinema' (/s/).</small>
-                                    </li>
-                                </ul>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--on-surface-variant); text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.04em;">
+                            Question 2: Short Answer Questions [5 &times; 2 = 10 Marks]
+                        </div>
+
+                        <!-- Q2(a) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">2(a)</span>
+                                <div>How would you react if you were in the young man's situation at the end of the story? (Neighbours) <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[2 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Answer</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p>If I were in the young husband's situation at the end of Tim Winton's <em>&ldquo;Neighbours&rdquo;</em>, I would feel deeply moved, humbled, and grateful. Witnessing the overwhelming, genuine joy and collective celebration of the European immigrant neighbours upon the birth of his newborn child would instantly dissolve all my previous prejudices and cultural wariness. Like the young husband, I would weep tears of gratitude, realizing that human empathy, love, and neighbourly solidarity transcend all linguistic and cultural boundaries.</p>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Q2(b) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">2(b)</span>
+                                <div>How was Gouvernail different from Mrs. Baroda's expectation? (A Respectable Woman) <br><span style="color: var(--primary); font-size: 0.88rem;">OR</span> Do you think Rakesh was a devoted son? Explain. (A Devoted Son) <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[2 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Answers (Both Options Covered)</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p><strong>Option A (A Respectable Woman):</strong><br>
+                                    Mrs. Baroda had expected Gouvernail to be a demanding, cynical, and overly intellectual city man who would disrupt their quiet, peaceful plantation life. Contrary to her expectations, she found him to be remarkably gentle, quiet, lovable, and unassuming. He made no effort to impress anyone, spent hours quietly enjoying the country air, and spoke with an unpretentious warmth that surprisingly charmed her.</p>
+                                    <hr style="border: none; border-top: 1px solid var(--outline-variant); margin: 1rem 0;">
+                                    <p><strong>Option B (A Devoted Son):</strong><br>
+                                    Initially, Rakesh was an exemplary devoted son who honoured his parents by touching his father's feet and attributing all his medical accolades to them. However, when his father Varma fell ill in old age, Rakesh's devotion shifted into rigid, clinical, and authoritarian control. He strictly restricted his father's favourite foods and ignored his emotional dignity. Thus, while professionally dutiful, his devotion became emotionally suffocating rather than genuinely compassionate.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2(c) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">2(c)</span>
+                                <div>What does the poet say about God's greatness? (Every Morning I Wake) <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[2 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Answer</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p>In <em>&ldquo;Every Morning I Wake&rdquo;</em>, Dylan Thomas portrays God's greatness through His boundless mercy, benevolence, and unconditional love for ordinary, mortal human beings. Rather than depicting an intimidating and wrathful deity, the poet presents God as a caring guardian who watches over the frail, imperfect, and vulnerable residents of Milk Wood, protecting them through the dark of night and blessing their simple everyday lives.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2(d) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">2(d)</span>
+                                <div>Where was the author when he was late for lunch? (On Libraries) <br><span style="color: var(--primary); font-size: 0.88rem;">OR</span> What is the goal of the Universal Declaration of Human Rights? (Human Rights and the Age of Inequality) <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[2 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Answers (Both Options Covered)</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p><strong>Option A (On Libraries):</strong><br>
+                                    In Oliver Sacks' essay <em>&ldquo;On Libraries&rdquo;</em>, the author was deeply immersed in the world of books inside a library (specifically the British Museum Library / Willesden Green Library). Completely absorbed in researching and reading scientific volumes, he lost all sense of time and physical surroundings, which caused him to be late for his lunch appointment.</p>
+                                    <hr style="border: none; border-top: 1px solid var(--outline-variant); margin: 1rem 0;">
+                                    <p><strong>Option B (Human Rights and the Age of Inequality):</strong><br>
+                                    The primary goal of the Universal Declaration of Human Rights (UDHR, 1948) is to establish a universal baseline of inherent human dignity, protecting all individuals from state cruelty, tyranny, discrimination, and political persecution. Samuel Moyn notes that while it established vital political and civil liberties, its framework has struggled to address the massive economic disparities produced by modern neoliberalism.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2(e) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">2(e)</span>
+                                <div>Do you think that August Strindberg portrays despair in a very powerful and realistic way? Give a reason. (Facing Death) <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[2 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Answer</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p>Yes, August Strindberg portrays despair with stark realism and tragic intensity through Monsieur Durand in <em>&ldquo;Facing Death&rdquo;</em>. Durand's despair is deeply realistic because it arises from tangible realities—crushing financial bankruptcy, starvation, and the bitter hatred of his own daughters whom he silently sacrificed everything for. His ultimate resolution to set fire to his own boarding house and perish inside to secure fire insurance money reflects the tragic, desperate extremes a hopeless person will reach.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="font-size: 0.85rem; font-weight: 700; color: var(--on-surface-variant); text-transform: uppercase; margin: 2rem 0 1rem; letter-spacing: 0.04em;">
+                            Question 3: Long Answer Questions [2 &times; 5 = 10 Marks]
+                        </div>
+
+                        <!-- Q3(a) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">3(a)</span>
+                                <div>What was the reaction of the community to the old man with enormous wings and what does it show about humanity and compassion? (A Very Old Man with Enormous Wings) <br><span style="color: var(--primary); font-size: 0.88rem;">OR</span> What are Nock's ideas about marriage in society? Do you agree or disagree with him? Why? (Marriage as a Social Institution) <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[5 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Answers (Detailed Analysis)</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p><strong>Option A (A Very Old Man with Enormous Wings):</strong><br>
+                                    In Gabriel García Márquez's story, the community reacts to the arrival of the winged old man with superficial fascination, monetary greed, and profound cruelty. Instead of viewing him as an angel or displaying genuine charity, Pelayo and Elisenda cage him in their filthy chicken coop and charge five cents per admission. The villagers treat him like a circus oddity—poking him with hot branding irons, throwing stones, and plucking his feathers when he fails to perform miracles. Father Gonzaga doubts his sanctity simply because he cannot speak Latin. Eventually, when a spider-woman arrives, the fickle public completely abandons him.</p>
+                                    <p>This reaction exposes the dark side of human nature: people often dehumanize, commercialize, and abuse what they cannot comprehend. True spiritual compassion is supplanted by selfish greed and amusement. It demonstrates that human sympathy is often shallow and conditional, quickly turning hostile when others fail to meet conventional expectations.</p>
+                                    <hr style="border: none; border-top: 1px solid var(--outline-variant); margin: 1.25rem 0;">
+                                    <p><strong>Option B (Marriage as a Social Institution):</strong><br>
+                                    In <em>&ldquo;Marriage as a Social Institution,&rdquo;</em> Stephen L. Nock argues that marriage is fundamentally a public social institution rather than merely an intimate, private romance. As an institution, marriage is governed by social norms, legal obligations, and cultural expectations that define marital roles, encourage fidelity, and establish shared responsibility for raising children and sustaining economic stability.</p>
+                                    <p>I agree with Nock's perspective. While romantic love is necessary for mutual affection and emotional bonding, romantic feelings fluctuate over time. The institutional framework of marriage provides enduring structure, legal rights, and social accountability that keep families stable through life's trials. Viewing marriage as a social institution protects the interests of children and creates a cohesive, resilient society.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q3(b) -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">3(b)</span>
+                                <div>
+                                    Explain the following lines of the poem, 'A Day' with reference to the context: <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[5 Marks]</span><br>
+                                    <em style="font-weight: 500; color: var(--on-surface-variant); display: block; margin-top: 0.4rem; padding-left: 0.75rem; border-left: 2px solid var(--primary);">
+                                        The hills untied their bonnets,<br>
+                                        The bobolinks begun.<br>
+                                        Then I said softly to myself,<br>
+                                        That must have been the sun!
+                                    </em>
+                                </div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Context & Detailed Explanation</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p><strong>Context:</strong> These lines are extracted from the renowned nature poem <em>&ldquo;A Day&rdquo;</em> composed by American poet Emily Dickinson. In this poem, the speaker presents a child-like, awe-inspiring observation of nature as it transitions through sunrise and sunset.</p>
+                                    <p><strong>Explanation:</strong> In these specific lines, the speaker captures the majestic arrival of dawn using vivid personification and auditory imagery:</p>
+                                    <ul>
+                                        <li><em>&ldquo;The hills untied their bonnets&rdquo;</em> is a charming personification comparing the morning mist lifting from the hilltops to women untying and removing their hats (bonnets) to greet the day. As the sunlight touches the earth, shadows disappear and the green landscape is revealed.</li>
+                                        <li><em>&ldquo;The bobolinks begun&rdquo;</em> introduces auditory imagery, describing the sudden, melodic morning singing of the bobolinks (songbirds) as they awaken to the sunlight.</li>
+                                        <li><em>&ldquo;Then I said softly to myself, / That must have been the sun!&rdquo;</em> highlights the speaker's gentle revelation and reverence. Having observed the unveiling of the hills and the burst of birdsong, the speaker humbly concludes that the glorious force behind this magical awakening is none other than the sun.</li>
+                                    </ul>
+                                    <p>These lines celebrate the effortless majesty and transformative energy with which morning light brings the world to life.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============================================== -->
+                    <!-- SECTION C: COMPOSITION (25 MARKS) -->
+                    <!-- ============================================== -->
+                    <section class="section-block" id="sec-c">
+                        <div class="section-header">
+                            <div class="section-title-wrap">
+                                <span class="material-symbols-outlined section-title-icon">edit_note</span>
+                                <h2 class="section-title-text">Section C: Composition</h2>
+                            </div>
+                            <span class="section-badge">25 Marks</span>
+                        </div>
+
+                        <!-- Q4: Data Interpretation -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">4</span>
+                                <div>Study the following table and interpret the information given in the table in about 150 words. Make comparisons where necessary. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[7 Marks]</span></div>
+                            </div>
+                            <div class="q-body">
+                                <div style="font-weight: 700; color: var(--on-surface); margin-bottom: 0.5rem;">
+                                    Monthly Sales Data for XYZ Company (in thousands of dollars)
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Month</th>
+                                                <th>Product A</th>
+                                                <th>Product B</th>
+                                                <th>Product C</th>
+                                                <th>Total Sales</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>January</strong></td>
+                                                <td>50</td>
+                                                <td>40</td>
+                                                <td>30</td>
+                                                <td><strong>120</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>February</strong></td>
+                                                <td>60</td>
+                                                <td>35</td>
+                                                <td>25</td>
+                                                <td><strong>120</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>March</strong></td>
+                                                <td>70</td>
+                                                <td>45</td>
+                                                <td>35</td>
+                                                <td><strong>150</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>April</strong></td>
+                                                <td>65</td>
+                                                <td>50</td>
+                                                <td>40</td>
+                                                <td><strong>155</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>May</strong></td>
+                                                <td>75</td>
+                                                <td>55</td>
+                                                <td>45</td>
+                                                <td><strong>175</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>June</strong></td>
+                                                <td>80</td>
+                                                <td>60</td>
+                                                <td>50</td>
+                                                <td><strong>190</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Interpretation</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p>The provided table illustrates the monthly sales figures (in thousands of dollars) for three products—Product A, Product B, and Product C—manufactured by XYZ Company over a six-month period from January to June. Overall, the company witnessed a strong upward growth trajectory, with total monthly sales increasing significantly from $120,000 in January and February to a peak of $190,000 in June.</p>
+                                    <p>Among the three items, Product A was the primary revenue driver throughout the entire semester. Its sales commenced at $50,000 in January, experienced steady gains to reach $70,000 in March, recorded a minor dip to $65,000 in April, and ultimately reached an all-time high of $80,000 in June. Product B ranked second overall; after a slight drop from $40,000 in January to $35,000 in February, it achieved consistent month-on-month growth, culminating at $60,000 in June. Product C recorded the lowest revenue, beginning at $30,000, touching a low of $25,000 in February, and steadily expanding to $50,000 by June.</p>
+                                    <p>In conclusion, all three product lines registered their maximum performance in June, highlighting a particularly strong second quarter for XYZ Company.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q5: Letter to Editor -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">5</span>
+                                <div>It is often said, 'Save nature to save the future'. Write a letter to the editor of a national newspaper about the effects of environmental pollution in about 180 words. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[8 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Formal Letter</span>
+                                </div>
+                                <div class="ans-content">
+                                    <div class="letter-preview">
+                                        <p>
+                                            Kathmandu, Nepal<br />
+                                            May 23, 2026
+                                        </p>
+                                        <p>
+                                            To,<br />
+                                            The Editor,<br />
+                                            The Rising Nepal,<br />
+                                            Kathmandu, Nepal.
+                                        </p>
+                                        <p><strong>Subject: The Alarming Effects of Environmental Pollution.</strong></p>
+                                        <p>Sir,</p>
+                                        <p>
+                                            Through the esteemed columns of your widely circulated daily, I wish to voice serious concern regarding the escalating environmental degradation across Nepal. The proverb, <em>&ldquo;Save nature to save the future,&rdquo;</em> serves as a critical warning that requires immediate collective action.
+                                        </p>
+                                        <p>
+                                            Rapid and unplanned urbanization, unchecked industrial discharges, and vehicular emissions have severely deteriorated our air and water quality. Kathmandu regularly ranks among the world's most polluted cities during winter, exposing citizens—particularly children and senior citizens—to debilitating respiratory and cardiovascular illnesses. Furthermore, our sacred rivers, including the Bagmati, have been converted into open conduits for untreated sewage and plastic waste. In the hills, rampant deforestation intensifies seasonal landslides, soil erosion, and erratic weather patterns.
+                                        </p>
+                                        <p>
+                                            If we do not preserve our ecosystems today, we jeopardize the well-being and survival of future generations. The government must strictly enforce emission standards, transition toward electric public transit, and introduce community waste-segregation policies. Individual citizens must also actively adopt eco-friendly lifestyles.
+                                        </p>
+                                        <p>
+                                            Yours faithfully,<br />
+                                            <strong>A Concerned Citizen</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q6: Essay Writing -->
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">6</span>
+                                <div>Write an essay on walking as a physical activity and its role in building physical, mental and social behavior of an individual in about 300 words. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[10 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Model Essay</span>
+                                </div>
+                                <div class="ans-content">
+                                    <p style="text-align: center; font-size: 1.15rem; font-weight: 800; color: var(--on-surface); margin-bottom: 1.25rem;">
+                                        Walking: A Holistic Path to Well-being
+                                    </p>
+                                    <p>Walking is one of the most natural, fundamental, and universally accessible physical activities available to humanity. Requiring no costly memberships, elaborate gear, or specialised coaching, it provides an invaluable pathway to nurturing an individual's physical vitality, psychological clarity, and social engagement.</p>
+                                    <p>From a physical perspective, regular brisk walking serves as a cornerstone of preventive health. Engaging in a thirty-minute walk daily strengthens the cardiovascular system, improves blood circulation, and optimizes arterial pressure. Because it is a low-impact exercise, it gently conditions muscle groups and lubricates joint cartilage without causing musculoskeletal strain. Over time, it helps regulate body weight, boosts basal metabolism, and significantly reduces the incidence of chronic lifestyle ailments such as type 2 diabetes, stroke, and cardiac disorders.</p>
+                                    <p>Mentally, walking serves as a potent therapeutic intervention. Physical locomotion stimulates the production of neurochemicals like endorphins and serotonin, which naturally elevate mood and combat psychological exhaustion. Spending time walking in open green spaces—commonly referred to as &ldquo;green exercise&rdquo;—quiets mental rumination, relieves anxiety, and sharpens cognitive focus. It provides a sanctuary from digital screen fatigue, offering individuals valuable solitude to reflect, untangle complex thoughts, and spark creativity.</p>
+                                    <p>Socially, walking acts as an essential catalyst for community connection. Walking through neighborhood trails, public parks, or pedestrian plazas encourages spontaneous greetings and meaningful conversations, curbing modern feelings of urban loneliness and social isolation. Walking clubs and communal walking groups foster teamwork, mutual accountability, and intergenerational empathy. Furthermore, opting to walk rather than drive short commutes diminishes vehicular emissions, modeling environmentally conscientious civic behavior.</p>
+                                    <p>In conclusion, walking is far more than simple locomotion; it is a holistic lifestyle habit that revitalizes the body, pacifies the mind, and knits society closer together. Cultivating a daily walking routine is an empowering investment in a healthier, calmer, and more connected future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============================================== -->
+                    <!-- SECTION D: GRAMMAR (10 MARKS) -->
+                    <!-- ============================================== -->
+                    <section class="section-block" id="sec-d">
+                        <div class="section-header">
+                            <div class="section-title-wrap">
+                                <span class="material-symbols-outlined section-title-icon">spellcheck</span>
+                                <h2 class="section-title-text">Section D: Grammar</h2>
+                            </div>
+                            <span class="section-badge">10 Marks</span>
+                        </div>
+
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">7</span>
+                                <div>Do as instructed in the brackets and rewrite the sentences. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[10 &times; 1 = 10 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Grammar Solutions & Structural Explanations</span>
+                                </div>
+                                <div class="ans-content">
+                                    <!-- a -->
+                                    <div class="grammar-item">
+                                        <strong>a. Health care in Nepal is not as expensive as it is in the US.</strong> <em>(Identify the adjective in the sentence.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">expensive</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Context: 'Expensive' is a qualitative adjective appearing in the equative degree structure 'as + adjective + as'.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- b -->
+                                    <div class="grammar-item">
+                                        <strong>b. My car needs ............ (repair/repairing/to repair/repaired) right now.</strong> <em>(Choose the correct form of the verb.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">repairing</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Rule: 'Need + Gerund (V-ing)' conveys passive necessity (i.e. 'needs to be repaired').</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- c -->
+                                    <div class="grammar-item">
+                                        <strong>c. This is the house. We spent our childhood in the house.</strong> <em>(Join using appropriate relative pronoun.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">This is the house where we spent our childhood.</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Alternative: <em>This is the house in which we spent our childhood.</em> 'Where' acts as a relative adverb of place.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- d -->
+                                    <div class="grammar-item">
+                                        <strong>d. Sumsher along with his friends ........... (know/knows/have known/knowing) me well.</strong> <em>(Subject-verb agreement.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">knows</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Rule: In phrases joined by 'along with', 'with', or 'as well as', the verb agrees with the primary subject ('Sumsher' = singular).</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- e -->
+                                    <div class="grammar-item">
+                                        <strong>e. Don't stare ......... me. I have no mistake.</strong> <em>(Use appropriate preposition.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">at</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Rule: 'Stare at', 'glance at', and 'look at' take the preposition 'at' when indicating direction of gaze.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- f -->
+                                    <div class="grammar-item">
+                                        <strong>f. You ....... (may/must/would/could) not tell anyone about this. It's too confidential.</strong> <em>(Choose modal verb.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">must</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Rule: 'Must not' expresses strong prohibition required by high confidentiality.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- g -->
+                                    <div class="grammar-item">
+                                        <strong>g. The customer ............ the machine before he complained about the error.</strong> <em>(Correct form of 'purchase'.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">had purchased</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Rule: Past perfect ('had purchased') describes the earlier action completed before another past event ('complained').</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- h -->
+                                    <div class="grammar-item">
+                                        <strong>h. We are close friends. We have not seen each other's houses.</strong> <em>(Join with 'despite'.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">Despite being close friends, we have not seen each other's houses.</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Alternative: <em>Despite the fact that we are close friends, we have not seen each other's houses.</em></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- i -->
+                                    <div class="grammar-item">
+                                        <strong>i. Yangma said, &ldquo;You are my source of inspiration in life.&rdquo;</strong> <em>(Change into indirect speech.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">Yangma told me that I was his/her source of inspiration in life.</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Rule: Present tense 'are' changes to past 'was'; 1st person possessive 'my' shifts to 'his/her'.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- j -->
+                                    <div class="grammar-item">
+                                        <strong>j. Loku was presenting his project for the first time.</strong> <em>(Change into passive voice.)</em><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">His project was being presented by Loku for the first time.</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Rule: Past continuous passive uses 'was/were + being + past participle (V3)'.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============================================== -->
+                    <!-- SECTION E: VOCABULARY & SOUNDS (5 MARKS) -->
+                    <!-- ============================================== -->
+                    <section class="section-block" id="sec-e">
+                        <div class="section-header">
+                            <div class="section-title-wrap">
+                                <span class="material-symbols-outlined section-title-icon">translate</span>
+                                <h2 class="section-title-text">Section E: Vocabulary &amp; Sounds</h2>
+                            </div>
+                            <span class="section-badge">5 Marks</span>
+                        </div>
+
+                        <div class="question-box">
+                            <div class="q-header">
+                                <span class="q-num">8</span>
+                                <div>Choose and copy the correct alternatives. <span style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">[5 &times; 1 = 5 Marks]</span></div>
+                            </div>
+                            <div class="ans-container">
+                                <div class="ans-label">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                    <span>Solutions with Linguistic Explanations</span>
+                                </div>
+                                <div class="ans-content">
+                                    <!-- a -->
+                                    <div class="grammar-item">
+                                        <strong>a. It's a beautiful present for me. What is the word class of the underlined word 'present'?</strong><br />
+                                        <span style="color: var(--on-surface-variant); font-size: 0.9rem;">(i) noun &nbsp;&bull;&nbsp; (ii) adjective &nbsp;&bull;&nbsp; (iii) adverb &nbsp;&bull;&nbsp; (iv) verb</span><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">(i) noun</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Explanation: 'Present' here is preceded by an article ('a') and an adjective ('beautiful'), functioning as the direct object noun meaning 'gift'.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- b -->
+                                    <div class="grammar-item">
+                                        <strong>b. Which of the following words comes before the word 'choice' in the dictionary?</strong><br />
+                                        <span style="color: var(--on-surface-variant); font-size: 0.9rem;">(i) choose &nbsp;&bull;&nbsp; (ii) chrome &nbsp;&bull;&nbsp; (iii) chide &nbsp;&bull;&nbsp; (iv) chord</span><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">(iii) chide</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Alphabetical check: 'ch-i' precedes 'ch-o'. Hence 'chide' comes before 'choice', whereas choose, chord, and chrome appear after.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- c -->
+                                    <div class="grammar-item">
+                                        <strong>c. The babysitter ........... the girl while her parents were not at home.</strong><br />
+                                        <span style="color: var(--on-surface-variant); font-size: 0.9rem;">(i) looked after &nbsp;&bull;&nbsp; (ii) looked at &nbsp;&bull;&nbsp; (iii) looked over &nbsp;&bull;&nbsp; (iv) looked up</span><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">(i) looked after</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Phrasal Verb: 'Look after' means to take care of or tend to someone.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- d -->
+                                    <div class="grammar-item">
+                                        <strong>d. Which of the following words takes the prefix 'il-'?</strong><br />
+                                        <span style="color: var(--on-surface-variant); font-size: 0.9rem;">(i) balance &nbsp;&bull;&nbsp; (ii) fertile &nbsp;&bull;&nbsp; (iii) legal &nbsp;&bull;&nbsp; (iv) mobile</span><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">(iii) legal</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Prefix Rule: Root words beginning with 'l' assimilate the negative prefix 'in-' into 'il-' &rarr; 'illegal' (vs imbalance, infertile, immobile).</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- e -->
+                                    <div class="grammar-item">
+                                        <strong>e. Which of the following words has the same initial sound as in the word 'chaos'?</strong><br />
+                                        <span style="color: var(--on-surface-variant); font-size: 0.9rem;">(i) chance &nbsp;&bull;&nbsp; (ii) chemical &nbsp;&bull;&nbsp; (iii) circus &nbsp;&bull;&nbsp; (iv) cinema</span><br />
+                                        &rarr; Answer: <span class="badge" style="background: var(--primary-fixed, #e2dfff); color: var(--on-primary-fixed, #0f0069); font-weight: 700; font-size: 0.88rem;">(ii) chemical</span>
+                                        <div class="grammar-context">
+                                            <span class="material-symbols-outlined" style="font-size: 14px;">info</span>
+                                            <span>Phonetics: 'Chaos' begins with the voiceless velar plosive /k/ (/ˈkeɪ.ɒs/), matching 'chemical' (/ˈkem.ɪ.kəl/). In contrast, 'chance' starts with /tʃ/, and 'circus'/'cinema' with /s/.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Bottom Navigation -->
+                    <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--outline-variant); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                        <a href="c12_english_syllabus.html" class="btn btn-outline" style="border-radius: var(--radius-full);">
+                            &larr; English Syllabus
+                        </a>
+                        <a href="../question-bank/english/index.html" class="btn btn-primary" style="border-radius: var(--radius-full);">
+                            English Question Bank &rarr;
+                        </a>
                     </div>
-                </section>
-            </div>
-        </main>
-    </div>
+                </div>
+            </article>
+
+            <div class="sidebar-overlay"></div>
+        </div>
     </main>
 
     <footer class="footer" role="contentinfo">
@@ -515,9 +1350,9 @@
                 <div class="footer-brand">
                     <a href="../../../index.html" class="logo">
                         <img src="../../../assets/images/logo.png" alt="LearnNepal">
-                        LearnNepal<span></span>
+                        LearnNepal
                     </a>
-                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes â€” completely free.</p>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes — completely free.</p>
                     <div class="footer-social">
                         <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
@@ -559,12 +1394,12 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&#169; 2026 LearnNepal &#8212; Built with &#10084; for NEB students across Nepal</p>
+                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
                 <div class="footer-bottom-links">
                     <a href="../../../privacy.html">Privacy</a>
-                    <span>&#8226;</span>
+                    <span>&bull;</span>
                     <a href="../../../contact.html">Contact</a>
-                    <span>&#8226;</span>
+                    <span>&bull;</span>
                     <a href="../../../about.html">About</a>
                 </div>
             </div>
@@ -576,12 +1411,49 @@
     <script src="../../../scripts/transitions.js"></script>
     <script>
     (function () {
+        // Reading progress bar
         var bar = document.getElementById('reading-progress');
         if (bar) {
             window.addEventListener('scroll', function() {
                 var el = document.documentElement;
                 bar.style.width = Math.min(el.scrollTop / (el.scrollHeight - el.clientHeight) * 100, 100) + '%';
             }, { passive: true });
+        }
+
+        // Active Section ScrollSpy for Sidebar & Jump Bar
+        var sections = document.querySelectorAll('.section-block');
+        var sidebarLinks = document.querySelectorAll('.sidebar-nav a[href^="#"]');
+        var jumpPills = document.querySelectorAll('.jump-pill');
+
+        if ('IntersectionObserver' in window && sections.length > 0) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var id = entry.target.getAttribute('id');
+                        sidebarLinks.forEach(function(link) {
+                            if (link.getAttribute('href') === '#' + id) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                        jumpPills.forEach(function(pill) {
+                            if (pill.getAttribute('href') === '#' + id) {
+                                pill.classList.add('active');
+                            } else {
+                                pill.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                rootMargin: '-20% 0px -65% 0px',
+                threshold: 0
+            });
+
+            sections.forEach(function(sec) {
+                observer.observe(sec);
+            });
         }
     })();
     </script>

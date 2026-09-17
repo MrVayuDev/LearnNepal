@@ -199,12 +199,12 @@
       _groupId: group ? (group.id || '') : '',
       _groupName: group ? (group.name || '') : '',
       _questionType: q.questionType || (group ? (group.questionType || group.type || '') : ''),
-      // Exam context (filled during collection)
-      _year: '',
-      _examTypeId: '',
-      _examTypeName: '',
-      _setId: '',
-      _setName: '',
+      // Exam context (filled during collection or from question)
+      _year: q.year ? String(q.year) : '',
+      _examTypeId: q.examType ? (typeof q.examType === 'string' ? q.examType.toLowerCase() : (q.examType.id || 'regular')) : '',
+      _examTypeName: q.examType ? (typeof q.examType === 'string' ? q.examType : (q.examType.name || 'Regular')) : '',
+      _setId: q.set ? q.set.toLowerCase().replace(/\s+/g, '-') : 'single',
+      _setName: q.set ? q.set : 'Question Paper',
       // Legacy fields
       _section: q.section || '',
       _subCategory: q.subCategory || '',
@@ -485,11 +485,13 @@
       (exam.sets || []).forEach(function (set) {
         (set.groups || []).forEach(function (group) {
           (group.questions || []).forEach(function (q) {
-            q._year = exam.year;
-            q._examTypeId = exam.examType.id;
-            q._examTypeName = exam.examType.name;
-            q._setId = set.id;
-            q._setName = set.name;
+            q._year = q._year || exam.year;
+            q._examTypeId = q._examTypeId || (exam.examType ? exam.examType.id : 'regular');
+            q._examTypeName = q._examTypeName || (exam.examType ? exam.examType.name : 'Regular Examination');
+            if ((!q._setId || q._setId === 'single') && set.id) {
+              q._setId = set.id;
+              q._setName = set.name || set.id;
+            }
             q._groupId = q._groupId || group.id;
             q._groupName = q._groupName || group.name;
             q._questionType = q._questionType || group.questionType;
