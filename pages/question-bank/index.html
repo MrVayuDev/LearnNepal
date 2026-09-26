@@ -1,155 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="shell-type" content="web_standard">
     <title>Universal Question Bank — Class 10, 11 &amp; 12 | LearnNepal</title>
-    <meta name="description" content="Explore solved past exam question banks for Class 10 (SEE), Class 11 (NEB), and Class 12 (NEB) with smart filters, model answers, and bilingual support." />
+    <meta name="description"
+        content="Explore solved past board exam question banks for Class 10 (SEE), Class 11 (NEB), and Class 12 (NEB) with smart filters, model answers, and bilingual support." />
     <link rel="icon" href="../../assets/images/logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="../../assets/images/logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
     <script src="../../scripts/theme.js"></script>
-    <link rel="stylesheet" href="../../styles/main.css" />
-    <link rel="stylesheet" href="../../styles/question-bank.css" />
+    <link rel="stylesheet" href="../../styles/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .class-selector-wrap {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1.5rem auto 2.5rem;
-            flex-wrap: wrap;
+        /* Ensure scroll works — override any Tailwind/reset conflicts */
+        html {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            scroll-behavior: smooth;
+            height: auto !important;
         }
-        .class-tab-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.6rem 1.4rem;
-            border-radius: var(--radius-full);
-            background: var(--surface-container-low);
-            border: 1px solid var(--border);
-            color: var(--text-secondary);
-            font-size: 0.88rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.25s var(--ease-spring);
+        body {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            min-height: 100vh;
+            height: auto !important;
         }
-        .class-tab-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
+        /* Remove footer top margin — content already has its own spacing */
+        .footer {
+            margin-top: 0 !important;
         }
-        .class-tab-btn.active {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: var(--on-primary);
-            box-shadow: 0 4px 16px var(--accent-muted);
+        /* Prevent Tailwind's preflight from hiding overflow */
+        main {
+            overflow: visible !important;
         }
-        .class-section-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 2.5rem 0 1.25rem;
-            padding-bottom: 0.6rem;
-            border-bottom: 2px solid var(--border);
-        }
-        .class-section-title {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin: 0;
-        }
-        .class-section-badge {
-            font-size: 0.72rem;
-            font-weight: 700;
-            padding: 0.2rem 0.65rem;
-            border-radius: var(--radius-full);
-            background: var(--accent-muted);
-            color: var(--accent);
-            border: 1px solid var(--accent-border);
-        }
-        .qb-portal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.25rem;
-            margin-bottom: 2.5rem;
-        }
-        .qb-subject-card {
-            background: var(--bg-elevated);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 1.6rem;
-            text-decoration: none;
+        /* Fix link styling on subject cards */
+        a[data-path] {
+            text-decoration: none !important;
             color: inherit;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.35s var(--ease-spring);
-            position: relative;
-            overflow: hidden;
-        }
-        .qb-subject-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--qb-gold));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.35s var(--ease-spring);
-        }
-        .qb-subject-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--accent-border);
-            box-shadow: var(--shadow-lg);
-        }
-        .qb-subject-card:hover::before {
-            transform: scaleX(1);
-        }
-        .qb-sub-icon-wrap {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .qb-sub-title {
-            font-size: 1.12rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin: 0 0 0.4rem;
-        }
-        .qb-sub-desc {
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            line-height: 1.55;
-            margin-bottom: 1rem;
-            flex-grow: 1;
-        }
-        .qb-sub-meta {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding-top: 0.85rem;
-            border-top: 1px solid var(--border);
-            font-size: 0.74rem;
-            color: var(--text-tertiary);
-            font-weight: 600;
-        }
-        .qb-sub-meta strong {
-            color: var(--text-primary);
         }
     </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#e9e7ed",
+                        "on-background": "#1a1b20",
+                        "tag-year-bg": "#EEF2FF",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#afb2ff",
+                        "secondary-container": "#5563f7",
+                        "on-secondary-container": "#fffbff",
+                        "surface": "#faf8fe",
+                        "tag-neb-text": "#991B1B",
+                        "on-secondary-fixed": "#000668",
+                        "border-subtle": "#E2E8F0",
+                        "surface-tint": "#4044ec",
+                        "tag-marks-bg": "#FEF3C7",
+                        "on-tertiary-fixed-variant": "#005137",
+                        "tertiary-fixed-dim": "#68dba9",
+                        "text-muted": "#64748B",
+                        "surface-bright": "#faf8fe",
+                        "accent-purple": "#7C3AED",
+                        "surface-container-highest": "#e3e2e8",
+                        "outline": "#767587",
+                        "surface-card": "#FFFFFF",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "tag-topic-text": "#334155",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2f3035",
+                        "surface-container-low": "#f4f3f9",
+                        "tag-topic-bg": "#F1F5F9",
+                        "border-hover": "#CBD5E1",
+                        "accent-purple-light": "#EDE9FE",
+                        "tag-marks-text": "#92400E",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1b20",
+                        "surface-container": "#efedf3",
+                        "surface-bg": "#F8FAFC",
+                        "on-error-container": "#93000a",
+                        "tag-type-text": "#065F46",
+                        "tag-neb-bg": "#FEE2E2",
+                        "on-tertiary-container": "#58cd9b",
+                        "tag-year-text": "#3730A3",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#003b27",
+                        "outline-variant": "#c6c4d9",
+                        "background": "#faf8fe",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#c0c1ff",
+                        "tertiary-container": "#005439",
+                        "tertiary-fixed": "#85f8c4",
+                        "on-tertiary-fixed": "#002114",
+                        "inverse-on-surface": "#f2f0f6",
+                        "on-primary-fixed": "#04006d",
+                        "on-surface-variant": "#454556",
+                        "on-primary-fixed-variant": "#2220d6",
+                        "on-secondary-fixed-variant": "#1d2cc9",
+                        "primary-container": "#2625d8",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-dim": "#dbd9df",
+                        "primary": "#0c00b1",
+                        "secondary": "#3947dd",
+                        "surface-variant": "#e3e2e8",
+                        "secondary-fixed": "#e0e0ff",
+                        "tag-type-bg": "#ECFDF5"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "space-sm": "0.5rem",
+                        "space-lg": "1.5rem",
+                        "gutter": "1.5rem",
+                        "margin": "2rem",
+                        "space-md": "1rem",
+                        "margin-mobile": "1rem",
+                        "space-xl": "2.5rem",
+                        "space-xs": "0.25rem",
+                        "gutter-sm": "1rem"
+                    },
+                    fontFamily: {
+                        "label-badge": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-hero-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "display-hero-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        };
+    </script>
 </head>
-<body>
+
+<body class="bg-surface-bg font-body-md text-on-surface antialiased">
 
     <!-- ═══ HEADER ═══ -->
     <header class="header" id="site-header">
@@ -167,7 +186,11 @@
                 <a href="index.html" class="nav-link active">Question Bank</a>
                 <a href="../../about.html" class="nav-link">About</a>
                 <button class="search-trigger btn-search" aria-label="Search">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
                     <span>Search</span><kbd>Ctrl K</kbd>
                 </button>
                 <a href="../../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
@@ -175,235 +198,564 @@
         </div>
     </header>
 
-    <main>
-
-        <!-- ═══ HERO ═══ -->
-        <section class="qb-hero section" style="padding:3.5rem 0 2.5rem">
-            <div class="container" style="max-width:850px;text-align:center">
-                <span class="qb-badge animate-fade-up">
-                    <span class="material-symbols-outlined" style="font-size:16px">quiz</span>
-                    Universal Exam Preparation
-                </span>
-                <h1 class="animate-fade-up delay-100" style="margin-top:0.75rem">Question Bank Portal</h1>
-                <p class="animate-fade-up delay-200" style="max-width:560px">
-                    Access solved past board exam questions for Class 10 (SEE), Class 11, and Class 12 (NEB). Filter by year, exam type, chapter, and question type.
-                </p>
-
-                <!-- Class Filter Tabs -->
-                <div class="class-selector-wrap animate-fade-up delay-300">
-                    <button class="class-tab-btn active" data-class="all">
-                        <span class="material-symbols-outlined" style="font-size:18px">apps</span>
-                        All Classes
-                    </button>
-                    <button class="class-tab-btn" data-class="class-10">
-                        <span class="material-symbols-outlined" style="font-size:18px">school</span>
-                        Class 10 (SEE)
-                    </button>
-                    <button class="class-tab-btn" data-class="class-11">
-                        <span class="material-symbols-outlined" style="font-size:18px">menu_book</span>
-                        Class 11 (NEB)
-                    </button>
-                    <button class="class-tab-btn" data-class="class-12">
-                        <span class="material-symbols-outlined" style="font-size:18px">workspace_premium</span>
-                        Class 12 (NEB)
-                    </button>
+    <main class="w-full bg-surface-bg" style="padding-top: var(--header-height, 64px); padding-bottom: 0;">
+        <div class="flex flex-col w-full">
+            <!-- Interactive & Decorative Ambient Background -->
+            <div
+                class="relative w-full overflow-hidden bg-gradient-to-b from-[#eef2ff] via-[#f1f5f9]/60 to-surface-bg border-b border-border-subtle/50">
+                <div
+                    class="absolute -top-24 -left-24 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10">
+                </div>
+                <div
+                    class="absolute top-1/2 right-10 -translate-y-1/2 w-[480px] h-[360px] bg-accent-purple-light/50 rounded-full blur-3xl pointer-events-none -z-10">
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto px-gutter py-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+                    <div class="flex flex-col items-start text-left max-w-2xl z-10">
+                        <div
+                            class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-tag-year-bg text-[#2625d8] border border-primary-fixed mb-space-md shadow-sm">
+                            <span class="material-symbols-outlined text-[18px]">school</span>
+                            <span class="font-label-badge text-label-badge font-bold">Universal Exam Preparation</span>
+                        </div>
+                        <h1
+                            class="font-display-hero text-display-hero text-on-surface tracking-tight mb-space-sm font-bold">
+                            Question Bank <span class="text-primary-container">Portal</span></h1>
+                        <p class="font-body-lg text-body-lg text-text-muted mb-space-xl leading-relaxed max-w-xl">
+                            Access solved past board exam questions for Class 10 (SEE), Class 11, and Class 12 (NEB).
+                            Filter by year, exam type, chapter, and question type.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-space-sm">
+                            <button
+                                class="filter-btn active flex items-center gap-space-xs px-space-lg py-2.5 rounded-full font-headline-sm text-headline-sm transition-all bg-primary-container text-on-primary shadow-[0_4px_14px_rgba(38,37,216,0.3)] cursor-pointer"
+                                data-filter="all" onclick="filterGrade('all')" type="button">
+                                <span class="material-symbols-outlined text-[18px]">grid_view</span>
+                                <span>All Classes</span>
+                            </button>
+                            <button
+                                class="filter-btn flex items-center gap-space-xs px-space-lg py-2.5 rounded-full font-headline-sm text-headline-sm transition-all bg-surface-card border border-border-subtle hover:border-border-hover text-on-surface hover:text-primary shadow-sm cursor-pointer"
+                                data-filter="grade-10" onclick="filterGrade('grade-10')" type="button">
+                                <span class="material-symbols-outlined text-[18px] text-text-muted">school</span>
+                                <span>Class 10 (SEE)</span>
+                            </button>
+                            <button
+                                class="filter-btn flex items-center gap-space-xs px-space-lg py-2.5 rounded-full font-headline-sm text-headline-sm transition-all bg-surface-card border border-border-subtle hover:border-border-hover text-on-surface hover:text-primary shadow-sm cursor-pointer"
+                                data-filter="grade-11" onclick="filterGrade('grade-11')" type="button">
+                                <span class="material-symbols-outlined text-[18px] text-text-muted">menu_book</span>
+                                <span>Class 11 (NEB)</span>
+                            </button>
+                            <button
+                                class="filter-btn flex items-center gap-space-xs px-space-lg py-2.5 rounded-full font-headline-sm text-headline-sm transition-all bg-surface-card border border-border-subtle hover:border-border-hover text-on-surface hover:text-primary shadow-sm cursor-pointer"
+                                data-filter="grade-12" onclick="filterGrade('grade-12')" type="button">
+                                <span
+                                    class="material-symbols-outlined text-[18px] text-text-muted">workspace_premium</span>
+                                <span>Class 12 (NEB)</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="relative w-full max-w-sm lg:max-w-md h-64 lg:h-72 hidden sm:flex items-center justify-center flex-shrink-0 select-none pointer-events-none">
+                        <div class="absolute -top-2 right-12 w-3 h-3 text-[#2625d8]/40 font-bold text-[18px]">✦</div>
+                        <div class="absolute top-6 right-2 w-2 h-2 rounded-full bg-secondary-container/40"></div>
+                        <div class="absolute bottom-8 left-4 w-2.5 h-2.5 text-[#2625d8]/30 font-bold text-[16px]">✦
+                        </div>
+                        <div
+                            class="absolute w-44 h-56 rounded-2xl bg-white/60 border border-primary-fixed shadow-sm -rotate-12 translate-x-[-20px] translate-y-4 backdrop-blur-sm p-4 flex flex-col gap-2.5 opacity-70">
+                            <div class="w-16 h-2 bg-primary-fixed-dim/60 rounded-full"></div>
+                            <div class="w-full h-1.5 bg-surface-container-high rounded-full"></div>
+                            <div class="w-4/5 h-1.5 bg-surface-container-high rounded-full"></div>
+                            <div class="w-3/4 h-1.5 bg-surface-container-high rounded-full"></div>
+                        </div>
+                        <div
+                            class="absolute w-48 h-60 rounded-2xl bg-white/80 border border-[#c0c1ff] shadow-md -rotate-6 translate-x-[10px] translate-y-2 backdrop-blur-sm p-4 flex flex-col gap-3">
+                            <div class="w-20 h-2.5 bg-primary-fixed/80 rounded-full"></div>
+                            <div class="w-full h-2 bg-border-subtle rounded-full"></div>
+                            <div class="w-5/6 h-2 bg-border-subtle rounded-full"></div>
+                            <div class="w-4/5 h-2 bg-border-subtle rounded-full"></div>
+                            <div class="w-2/3 h-2 bg-border-subtle rounded-full"></div>
+                        </div>
+                        <div
+                            class="relative w-52 h-64 rounded-2xl bg-surface-card border border-[#bfdbfe] shadow-[0_12px_32px_rgba(38,37,216,0.12)] rotate-3 translate-x-[40px] p-5 flex flex-col gap-3.5 z-10">
+                            <div class="w-24 h-3 bg-secondary-container/30 rounded-full"></div>
+                            <div class="w-full h-2 bg-surface-container-high rounded-full"></div>
+                            <div class="w-full h-2 bg-surface-container-high rounded-full"></div>
+                            <div class="w-4/5 h-2 bg-surface-container-high rounded-full"></div>
+                            <div class="w-3/4 h-2 bg-surface-container-high rounded-full"></div>
+                            <div class="w-1/2 h-2 bg-surface-container-high rounded-full mt-1"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- ═══ PORTAL CONTENT ═══ -->
-        <section class="section" style="padding-top:1rem">
-            <div class="container" style="max-width:1050px">
-
-                <!-- ════ CLASS 10 (SEE) ════ -->
-                <div class="class-block" id="block-class-10">
-                    <div class="class-section-header">
-                        <div class="class-section-title">
-                            <span class="material-symbols-outlined" style="color:#22c55e">school</span>
-                            Grade 10 — SEE Question Bank
-                        </div>
-                        <span class="class-section-badge">SEE Examination</span>
-                    </div>
-
-                    <div class="qb-portal-grid">
-                        <!-- Science & Technology -->
-                        <a href="../class-10/question-bank/science/index.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(34,197,94,0.12);color:#22c55e">
-                                <span class="material-symbols-outlined" style="font-size:26px">science</span>
+            <!-- Content Stream Container -->
+            <div class="max-w-[1200px] mx-auto px-gutter pt-8 pb-10 flex flex-col gap-6 w-full">
+                <!-- ==================== SECTION: GRADE 10 (SEE) ==================== -->
+                <section class="grade-section flex flex-col gap-space-md transition-all duration-300"
+                    id="section-grade-10">
+                    <div class="flex items-center justify-between flex-wrap gap-space-sm pb-space-xs">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-tag-type-bg flex items-center justify-center text-tag-type-text">
+                                <span class="material-symbols-outlined text-[20px]">school</span>
                             </div>
-                            <h3 class="qb-sub-title">Science &amp; Technology</h3>
-                            <p class="qb-sub-desc">SEE Science past exam questions — bilingual (English/Nepali) with MCQs, short questions, and model answers.</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>75</strong> Marks</span>
-                                <span>•</span>
-                                <span>Bilingual (EN / NP)</span>
-                                <span>•</span>
+                            <h2 class="font-headline-lg text-headline-lg text-on-surface">Grade 10 — SEE Question Bank
+                            </h2>
+                        </div>
+                        <div
+                            class="inline-flex items-center px-space-md py-1 rounded-full bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge shadow-sm">
+                            SEE Examination
+                        </div>
+                    </div>
+                    <!-- Subject Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+                        <!-- Compulsory English Card -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none overflow-hidden"
+                            data-path="question-bank" href="../class-10/question-bank/english/index.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-year-bg flex items-center justify-center text-[#3b82f6] group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">auto_stories</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[22px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        Compulsory English
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        SEE English past papers with all 7 provincial versions — Reading Comprehension, Guided &amp; Free Writing, and Grammar.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">75 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">7 Provinces</span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span>Reading &amp; Writing</span>
+                            </div>
+                        </a>
+                        <!-- Science & Technology Card -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none overflow-hidden"
+                            data-path="question-bank" href="../class-10/question-bank/science/index.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-type-bg flex items-center justify-center text-tag-type-text group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">science</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[22px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        Science &amp; Technology
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        SEE Science past exam questions — bilingual (English/Nepali) with MCQs, short
+                                        questions, and model answers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">75 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Bilingual
+                                    (EN / NP)</span>
+                                <span class="text-surface-container-highest">•</span>
                                 <span>4 Groups</span>
                             </div>
                         </a>
-
-                        <!-- Optional Mathematics -->
-                        <a href="../class-10/opt-math/index.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(234,179,8,0.12);color:#eab308">
-                                <span class="material-symbols-outlined" style="font-size:26px">functions</span>
+                        <!-- Optional Mathematics Card -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none overflow-hidden"
+                            data-path="question-bank" href="../class-10/opt-math/index.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-marks-bg/80 flex items-center justify-center text-tag-marks-text group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">functions</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[22px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        Optional Mathematics
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        Comprehensive solutions, formulas, matrices, coordinate geometry, trigonometry,
+                                        and vector exercises.
+                                    </p>
+                                </div>
                             </div>
-                            <h3 class="qb-sub-title">Optional Mathematics</h3>
-                            <p class="qb-sub-desc">Comprehensive solutions, formulas, matrices, coordinate geometry, trigonometry, and vector exercises.</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>100</strong> Marks</span>
-                                <span>•</span>
-                                <span>English / Nepali</span>
-                                <span>•</span>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">100 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">English
+                                    / Nepali</span>
+                                <span class="text-surface-container-highest">•</span>
                                 <span>11 Units</span>
                             </div>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <!-- ════ CLASS 11 (NEB) ════ -->
-                <div class="class-block" id="block-class-11">
-                    <div class="class-section-header">
-                        <div class="class-section-title">
-                            <span class="material-symbols-outlined" style="color:#6366f1">menu_book</span>
-                            Grade 11 — NEB Question Bank
-                        </div>
-                        <span class="class-section-badge">NEB Board</span>
-                    </div>
-
-                    <div class="qb-portal-grid">
-                        <!-- Computer Science -->
-                        <a href="../class-11/computer/c11_computer_syllabus.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(99,102,241,0.12);color:#6366f1">
-                                <span class="material-symbols-outlined" style="font-size:26px">terminal</span>
+                <!-- ==================== SECTION: GRADE 11 (NEB) ==================== -->
+                <section class="grade-section flex flex-col gap-space-md transition-all duration-300"
+                    id="section-grade-11">
+                    <div class="flex items-center justify-between flex-wrap gap-space-sm pb-space-xs">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-tag-year-bg flex items-center justify-center text-tag-year-text">
+                                <span class="material-symbols-outlined text-[20px]">menu_book</span>
                             </div>
-                            <h3 class="qb-sub-title">Computer Science</h3>
-                            <p class="qb-sub-desc">Computer fundamentals, Number Systems, Software concepts, C Programming basics, and Web Tech.</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>50</strong> Marks Theory</span>
-                                <span>•</span>
-                                <span>English</span>
-                                <span>•</span>
+                            <h2 class="font-headline-lg text-headline-lg text-on-surface">Grade 11 — NEB Question Bank
+                            </h2>
+                        </div>
+                        <div
+                            class="inline-flex items-center px-space-md py-1 rounded-full bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge shadow-sm">
+                            NEB Board
+                        </div>
+                    </div>
+                    <!-- Subject Cards Grid (3 Columns) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+                        <!-- Grade 11: Computer Science -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none"
+                            data-path="question-bank" href="../class-11/computer/c11_computer_syllabus.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-year-bg flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">terminal</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[20px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        Computer Science
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        Computer fundamentals, Number Systems, Software concepts, C Programming basics,
+                                        and Web Tech.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">50 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks
+                                        Theory</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">English</span>
+                                <span class="text-surface-container-highest">•</span>
                                 <span>3 Groups</span>
                             </div>
                         </a>
-
-                        <!-- English -->
-                        <a href="../class-11/english.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(59,130,246,0.12);color:#3b82f6">
-                                <span class="material-symbols-outlined" style="font-size:26px">auto_stories</span>
+                        <!-- Grade 11: English -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none"
+                            data-path="question-bank" href="../class-11/english.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-year-bg/80 flex items-center justify-center text-secondary-container group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">auto_stories</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[20px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        English
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        Language development, Short Stories, Poems, Essays, One-Act Plays, and Grammar
+                                        exercises.
+                                    </p>
+                                </div>
                             </div>
-                            <h3 class="qb-sub-title">English</h3>
-                            <p class="qb-sub-desc">Language development, Short Stories, Poems, Essays, One-Act Plays, and Grammar exercises.</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>75</strong> Marks</span>
-                                <span>•</span>
-                                <span>English</span>
-                                <span>•</span>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">75 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">English</span>
+                                <span class="text-surface-container-highest">•</span>
                                 <span>Syllabus Notes</span>
                             </div>
                         </a>
-
-                        <!-- Nepali -->
-                        <a href="../class-11/nepali.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(236,72,153,0.12);color:#ec4899">
-                                <span class="material-symbols-outlined" style="font-size:26px">translate</span>
+                        <!-- Grade 11: Nepali -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none"
+                            data-path="question-bank" href="../class-11/nepali.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-neb-bg flex items-center justify-center text-tag-neb-text group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">translate</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[20px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        Nepali (नेपाली)
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        पाठ्यक्रममा आधारित पाठहरू, कविता, कथा, निबन्ध र व्याकरण अभ्यासका प्रश्नोत्तरहरू।
+                                    </p>
+                                </div>
                             </div>
-                            <h3 class="qb-sub-title">Nepali (नेपाली)</h3>
-                            <p class="qb-sub-desc">पाठ्यक्रममा आधारित पाठहरू, कविता, कथा, निबन्ध र व्याकरण अभ्यासका प्रश्नोत्तरहरू।</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>75</strong> Marks</span>
-                                <span>•</span>
-                                <span>नेपाली</span>
-                                <span>•</span>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">75 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">नेपाली</span>
+                                <span class="text-surface-container-highest">•</span>
                                 <span>व्याकरण र साहित्य</span>
                             </div>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <!-- ════ CLASS 12 (NEB) ════ -->
-                <div class="class-block" id="block-class-12">
-                    <div class="class-section-header">
-                        <div class="class-section-title">
-                            <span class="material-symbols-outlined" style="color:#f59e0b">workspace_premium</span>
-                            Grade 12 — NEB Question Bank
-                        </div>
-                        <span class="class-section-badge">Board Exam Solutions</span>
-                    </div>
-
-                    <div class="qb-portal-grid">
-                        <!-- Computer Science -->
-                        <a href="../class-12/question-bank/computer/index.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(99,102,241,0.12);color:#6366f1">
-                                <span class="material-symbols-outlined" style="font-size:26px">terminal</span>
+                <!-- ==================== SECTION: GRADE 12 (NEB) ==================== -->
+                <section class="grade-section flex flex-col gap-space-md transition-all duration-300"
+                    id="section-grade-12">
+                    <div class="flex items-center justify-between flex-wrap gap-space-sm pb-space-xs">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-accent-purple-light flex items-center justify-center text-accent-purple">
+                                <span class="material-symbols-outlined text-[20px]">workspace_premium</span>
                             </div>
-                            <h3 class="qb-sub-title">Computer Science</h3>
-                            <p class="qb-sub-desc">DBMS, Networking, Web Technology, C Programming, OOP, Software Engineering, and Recent Trends with solved MCQs &amp; explanations.</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>75</strong> Marks</span>
-                                <span>•</span>
-                                <span>3 Groups (A/B/C)</span>
-                                <span>•</span>
-                                <span>Fully Solved</span>
+                            <h2 class="font-headline-lg text-headline-lg text-on-surface">Grade 12 — NEB Question Bank
+                            </h2>
+                        </div>
+                        <div
+                            class="inline-flex items-center px-space-md py-1 rounded-full bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge shadow-sm">
+                            Board Exam Solutions
+                        </div>
+                    </div>
+                    <!-- Subject Cards Grid (3 Columns) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+                        <!-- Grade 12: Computer Science -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none"
+                            data-path="question-bank" href="../class-12/question-bank/computer/index.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-year-bg flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">terminal</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[20px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        Computer Science
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        DBMS, Networking, Web Technology, C Programming, OOP, Software Engineering, and
+                                        Recent Trends with solved MCQs &amp; explanations.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">75 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">3
+                                    Groups (A/B/C)</span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span class="text-tag-type-text font-label-md text-label-md">Fully Solved</span>
                             </div>
                         </a>
-
-                        <!-- English -->
-                        <a href="../class-12/question-bank/english/index.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(59,130,246,0.12);color:#3b82f6">
-                                <span class="material-symbols-outlined" style="font-size:26px">auto_stories</span>
+                        <!-- Grade 12: English -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none"
+                            data-path="question-bank" href="../class-12/question-bank/english/index.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-year-bg/80 flex items-center justify-center text-secondary-container group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">auto_stories</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[20px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        English
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        Comprehension Passages, Literature (Short Stories, Poems, Plays), Composition
+                                        &amp; Grammar with model solutions.
+                                    </p>
+                                </div>
                             </div>
-                            <h3 class="qb-sub-title">English</h3>
-                            <p class="qb-sub-desc">Comprehension Passages, Literature (Short Stories, Poems, Plays), Composition &amp; Grammar with model solutions.</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>75</strong> Marks</span>
-                                <span>•</span>
-                                <span>5 Sections (A to E)</span>
-                                <span>•</span>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">75 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">5
+                                    Sections (A to E)</span>
+                                <span class="text-surface-container-highest">•</span>
                                 <span>Model Solutions</span>
                             </div>
                         </a>
-
-                        <!-- Nepali -->
-                        <a href="../class-12/question-bank/nepali/index.html" class="qb-subject-card">
-                            <div class="qb-sub-icon-wrap" style="background:rgba(236,72,153,0.12);color:#ec4899">
-                                <span class="material-symbols-outlined" style="font-size:26px">translate</span>
+                        <!-- Grade 12: Nepali -->
+                        <a class="group relative flex flex-col justify-between p-space-lg bg-surface-card rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-decoration-none"
+                            data-path="question-bank" href="../class-12/question-bank/nepali/index.html">
+                            <div class="flex flex-col gap-space-md">
+                                <div class="flex items-start justify-between">
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-tag-neb-bg flex items-center justify-center text-tag-neb-text group-hover:scale-105 transition-transform">
+                                        <span class="material-symbols-outlined text-[28px]">translate</span>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors text-[20px]">arrow_forward</span>
+                                </div>
+                                <div class="flex flex-col gap-space-xs">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+                                        Nepali (नेपाली)
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-text-muted leading-relaxed">
+                                        पद्य, गद्य, व्यावहारिक लेखन, बोध र व्याकरण सम्बन्धी विगतका बोर्ड परीक्षाका सबै
+                                        प्रश्नहरूको समाधान।
+                                    </p>
+                                </div>
                             </div>
-                            <h3 class="qb-sub-title">Nepali (नेपाली)</h3>
-                            <p class="qb-sub-desc">पद्य, गद्य, व्यावहारिक लेखन, बोध र व्याकरण सम्बन्धी विगतका बोर्ड परीक्षाका सबै प्रश्नहरूको समाधान।</p>
-                            <div class="qb-sub-meta">
-                                <span><strong>75</strong> Marks</span>
-                                <span>•</span>
-                                <span>नेपाली</span>
-                                <span>•</span>
-                                <span>पूर्ण समाधान</span>
+                            <div
+                                class="mt-space-lg pt-space-sm flex items-center flex-wrap gap-x-space-sm gap-y-1 font-body-sm text-body-sm text-text-muted">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">75 <span
+                                        class="font-body-sm text-body-sm text-text-muted font-normal">Marks</span></span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">नेपाली</span>
+                                <span class="text-surface-container-highest">•</span>
+                                <span class="text-tag-type-text font-label-md text-label-md">पूर्ण समाधान</span>
                             </div>
                         </a>
                     </div>
-                </div>
+                </section>
 
-                <!-- ════ FEATURES BENTO ════ -->
-                <div class="qb-fgrid animate-fade-up" style="margin-top:3rem">
-                    <div class="qb-fcard">
-                        <span class="material-symbols-outlined" style="font-size:32px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">filter_alt</span>
-                        <h4>Dynamic Smart Filters</h4>
-                        <p>Filter questions dynamically by year, exam type, chapter, and question format without reloading the page.</p>
+                <!-- ==================== FEATURE HIGHLIGHTS GRID ==================== -->
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-md">
+                    <!-- Feature 1: Dynamic Smart Filters -->
+                    <div
+                        class="flex flex-col items-center text-center p-space-xl bg-surface-card rounded-2xl shadow-sm hover:shadow-md transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-tag-marks-bg/60 flex items-center justify-center text-tag-marks-text mb-space-md group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-[30px]">filter_alt</span>
+                        </div>
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-space-xs">
+                            Dynamic Smart Filters
+                        </h4>
+                        <p class="font-body-md text-body-md text-text-muted">
+                            Filter questions dynamically by year, exam type, chapter, and question format without
+                            reloading the page.
+                        </p>
                     </div>
-                    <div class="qb-fcard">
-                        <span class="material-symbols-outlined" style="font-size:32px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">check_circle</span>
-                        <h4>Verified Answers</h4>
-                        <p>Detailed step-by-step solutions, code snippets, and grading guidance written for NEB exam scoring.</p>
+                    <!-- Feature 2: Verified Answers -->
+                    <div
+                        class="flex flex-col items-center text-center p-space-xl bg-surface-card rounded-2xl shadow-sm hover:shadow-md transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-tag-type-bg flex items-center justify-center text-tag-type-text mb-space-md group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-[30px]">check_circle</span>
+                        </div>
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-space-xs">
+                            Verified Answers
+                        </h4>
+                        <p class="font-body-md text-body-md text-text-muted">
+                            Detailed step-by-step solutions, code snippets, and grading guidance written for NEB exam
+                            scoring.
+                        </p>
                     </div>
-                    <div class="qb-fcard">
-                        <span class="material-symbols-outlined" style="font-size:32px;color:var(--qb-gold);margin-bottom:0.75rem;display:block">translate</span>
-                        <h4>Bilingual Ready</h4>
-                        <p>Instant switching between English and Nepali Devanagari scripts for bilingual academic subjects.</p>
+                    <!-- Feature 3: Bilingual Ready -->
+                    <div
+                        class="flex flex-col items-center text-center p-space-xl bg-surface-card rounded-2xl shadow-sm hover:shadow-md transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-accent-purple-light flex items-center justify-center text-accent-purple mb-space-md group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-[30px]">translate</span>
+                        </div>
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-space-xs">
+                            Bilingual Ready
+                        </h4>
+                        <p class="font-body-md text-body-md text-text-muted">
+                            Instant switching between English and Nepali Devanagari scripts for bilingual academic
+                            subjects.
+                        </p>
                     </div>
-                </div>
-
+                </section>
             </div>
-        </section>
 
+            <!-- Interactive JavaScript Filter Behavior -->
+            <script>
+                function filterGrade(grade) {
+                    const buttons = document.querySelectorAll('.filter-btn');
+                    const sections = document.querySelectorAll('.grade-section');
+
+                    // Update button styling
+                    buttons.forEach(btn => {
+                        const btnFilter = btn.getAttribute('data-filter');
+                        const icon = btn.querySelector('.material-symbols-outlined');
+                        if (btnFilter === grade) {
+                            btn.classList.add('active', 'bg-primary-container', 'text-on-primary', 'shadow-[0_4px_14px_rgba(38,37,216,0.3)]');
+                            btn.classList.remove('bg-surface-card', 'border', 'border-border-subtle', 'hover:border-border-hover', 'text-on-surface', 'hover:text-primary', 'shadow-sm');
+                            if (icon) {
+                                icon.classList.remove('text-text-muted');
+                            }
+                        } else {
+                            btn.classList.remove('active', 'bg-primary-container', 'text-on-primary', 'shadow-[0_4px_14px_rgba(38,37,216,0.3)]');
+                            btn.classList.add('bg-surface-card', 'border', 'border-border-subtle', 'hover:border-border-hover', 'text-on-surface', 'hover:text-primary', 'shadow-sm');
+                            if (icon) {
+                                icon.classList.add('text-text-muted');
+                            }
+                        }
+                    });
+
+                    // Filter grade sections
+                    sections.forEach(sec => {
+                        if (grade === 'all') {
+                            sec.style.display = 'flex';
+                            setTimeout(() => { sec.style.opacity = '1'; }, 10);
+                        } else {
+                            if (sec.id === `section-${grade}`) {
+                                sec.style.display = 'flex';
+                                setTimeout(() => { sec.style.opacity = '1'; }, 10);
+                            } else {
+                                sec.style.opacity = '0';
+                                sec.style.display = 'none';
+                            }
+                        }
+                    });
+                }
+            </script>
+        </div>
     </main>
 
     <!-- ═══ FOOTER ═══ -->
@@ -415,7 +767,8 @@
                         <img src="../../assets/images/logo.png" alt="LearnNepal">
                         LearnNepal
                     </a>
-                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes &amp; question banks — completely free.</p>
+                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes &amp;
+                        question banks — completely free.</p>
                 </div>
                 <div class="footer-col">
                     <h5 class="footer-heading">Class 10 (SEE)</h5>
@@ -447,26 +800,10 @@
         </div>
     </footer>
 
+
     <script src="../../scripts/app.js"></script>
     <script src="../../scripts/search.js"></script>
     <script src="../../scripts/transitions.js"></script>
-    <script>
-        // Interactive Class Tab Filtering
-        document.querySelectorAll('.class-tab-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.class-tab-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const selectedClass = this.dataset.class;
-                
-                document.querySelectorAll('.class-block').forEach(block => {
-                    if (selectedClass === 'all') {
-                        block.style.display = 'block';
-                    } else {
-                        block.style.display = block.id === 'block-' + selectedClass ? 'block' : 'none';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
+
 </html>

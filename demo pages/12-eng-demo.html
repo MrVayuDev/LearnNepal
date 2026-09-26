@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
+    <title>LearnNepal</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#e9e7ed", "on-background": "#1a1b20", "tag-year-bg": "#EEF2FF", "on-primary": "#ffffff", "on-primary-container": "#afb2ff", "secondary-container": "#5563f7", "on-secondary-container": "#fffbff", "surface": "#faf8fe", "tag-neb-text": "#991B1B", "on-secondary-fixed": "#000668", "border-subtle": "#E2E8F0", "surface-tint": "#4044ec", "tag-marks-bg": "#FEF3C7", "on-tertiary-fixed-variant": "#005137", "tertiary-fixed-dim": "#68dba9", "text-muted": "#64748B", "surface-bright": "#faf8fe", "accent-purple": "#7C3AED", "surface-container-highest": "#e3e2e8", "outline": "#767587", "surface-card": "#FFFFFF", "on-secondary": "#ffffff", "secondary-fixed-dim": "#bdc2ff", "tag-topic-text": "#334155", "error": "#ba1a1a", "inverse-surface": "#2f3035", "surface-container-low": "#f4f3f9", "tag-topic-bg": "#F1F5F9", "border-hover": "#CBD5E1", "accent-purple-light": "#EDE9FE", "tag-marks-text": "#92400E", "surface-container-lowest": "#ffffff", "on-surface": "#1a1b20", "surface-container": "#efedf3", "surface-bg": "#F8FAFC", "on-error-container": "#93000a", "tag-type-text": "#065F46", "tag-neb-bg": "#FEE2E2", "on-tertiary-container": "#58cd9b", "tag-year-text": "#3730A3", "primary-fixed-dim": "#c0c1ff", "on-tertiary": "#ffffff", "tertiary": "#003b27", "outline-variant": "#c6c4d9", "background": "#faf8fe", "error-container": "#ffdad6", "on-error": "#ffffff", "inverse-primary": "#c0c1ff", "tertiary-container": "#005439", "tertiary-fixed": "#85f8c4", "on-tertiary-fixed": "#002114", "inverse-on-surface": "#f2f0f6", "on-primary-fixed": "#04006d", "on-surface-variant": "#454556", "on-primary-fixed-variant": "#2220d6", "on-secondary-fixed-variant": "#1d2cc9", "primary-container": "#2625d8", "primary-fixed": "#e1e0ff", "surface-dim": "#dbd9df", "primary": "#0c00b1", "secondary": "#3947dd", "surface-variant": "#e3e2e8", "secondary-fixed": "#e0e0ff", "tag-type-bg": "#ECFDF5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin": "2rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-sm": "1rem" }, "fontFamily": { "label-badge": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "16px", "fontWeight": "600" }], "display-hero-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface-bg font-body-md text-on-surface antialiased">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="h-16 max-w-[1200px] mx-auto px-gutter flex items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-md"><a
+                    class="flex items-center gap-space-sm text-decoration-none group" data-path="home" href="#">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-tag-year-bg flex items-center justify-center text-primary border border-primary-fixed">
+                        <span class="material-symbols-outlined text-[24px]">school</span></div><span
+                        class="font-headline-md text-headline-md tracking-tight text-primary">LearnNepal</span>
+                </a></div>
+            <nav class="hidden md:flex items-center gap-space-lg"
+                data-active-classes="text-primary font-headline-sm border-b-[3px] border-primary pb-space-xs"><a
+                    class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors py-space-xs"
+                    data-path="home" href="#">Home</a><a
+                    class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors py-space-xs"
+                    data-path="courses" href="#">Courses</a><a aria-current="page"
+                    class="transition-colors py-space-xs text-primary font-headline-sm border-b-[3px] border-primary pb-space-xs"
+                    data-path="question-bank" href="#">Question Bank</a><a
+                    class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-colors py-space-xs"
+                    data-path="about" href="#">About</a></nav>
+            <div class="flex items-center gap-space-md"><button
+                    class="hidden sm:flex items-center gap-space-sm px-space-md py-space-xs bg-tag-topic-bg border border-border-subtle hover:border-border-hover rounded-full text-text-muted hover:text-on-surface transition-all text-left"
+                    type="button"><span class="material-symbols-outlined text-[18px]">search</span><span
+                        class="font-body-sm text-body-sm pr-space-xs">Search notes, questions...</span><kbd
+                        class="font-label-badge text-label-badge bg-surface-card border border-border-subtle text-text-muted px-1.5 py-0.5 rounded shadow-sm">Ctrl
+                        K</kbd></button><a
+                    class="hidden sm:inline-flex items-center justify-center px-space-lg py-space-xs rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm hover:bg-secondary-container transition-all shadow-sm"
+                    data-path="contact" href="#">Contact Us</a>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-16 bg-surface-bg min-h-screen">
+        <div class="flex flex-col w-full">
+            <!-- Interactive Top Action & Meta Banner -->
+            <section
+                class="w-full relative overflow-hidden bg-gradient-to-b from-tag-year-bg/60 via-surface to-surface-bg pb-space-lg">
+                <div class="max-w-[1200px] mx-auto px-gutter pt-space-md sm:pt-space-lg">
+                    <!-- Breadcrumb Bar -->
+                    <nav aria-label="Breadcrumb"
+                        class="flex items-center gap-space-xs text-text-muted font-body-sm text-body-sm mb-space-md">
+                        <a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+                            <span class="material-symbols-outlined text-[16px]">home</span>
+                            <span class="">Home</span>
+                        </a>
+                        <span class="text-outline-variant">›</span>
+                        <a class="hover:text-primary transition-colors" href="#">Question Bank</a>
+                        <span class="text-outline-variant">›</span>
+                        <span class="text-primary font-headline-sm text-headline-sm">Class 12 English</span>
+                    </nav>
+                    <!-- Rounded Card Hero Banner with Floating Document Graphic -->
+                    <div
+                        class="w-full rounded-2xl bg-gradient-to-r from-tag-year-bg via-surface-card to-accent-purple-light/40 border border-border-subtle p-6 sm:p-8 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-lg relative overflow-hidden">
+                        <div class="max-w-2xl flex flex-col gap-space-sm z-10">
+                            <div
+                                class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-tag-marks-bg text-tag-marks-text border border-tag-marks-text/20 w-fit font-label-badge text-label-badge shadow-sm">
+                                <span class="material-symbols-outlined text-[16px]">school</span>
+                                <span class="">Class 12 Compulsory • 75 Full Marks</span>
+                            </div>
+                            <h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+                                English Question <span class="text-primary-container">Bank</span>
+                            </h1>
+                            <p class="font-body-lg text-body-lg text-text-muted leading-relaxed">
+                                Comprehensive solved archives featuring Reading Comprehension, Literature Analysis,
+                                Applied Composition, Grammar &amp; Phonetics with step-by-step marking rubrics.
+                            </p>
+                            <!-- Quick Metadata Stats Pills -->
+                            <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-card border border-border-subtle shadow-sm text-on-surface font-label-md text-label-md">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">quiz</span>
+                                    <span class="font-bold text-primary">28</span> Questions Archival
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-card border border-border-subtle shadow-sm text-on-surface font-label-md text-label-md">
+                                    <span
+                                        class="material-symbols-outlined text-tertiary-container text-[18px]">event_note</span>
+                                    <span class="">Years: <strong class="text-on-surface">2079 - 2082
+                                            B.S.</strong></span>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-card border border-border-subtle shadow-sm text-on-surface font-label-md text-label-md">
+                                    <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                                    <span class="">Updated Syllabus &amp; Rubrics</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating Stacked Paper Cards Illustration Graphic -->
+                        <div class="relative w-64 h-52 shrink-0 hidden sm:flex items-center justify-center select-none">
+                            <!-- Background subtle glow -->
+                            <div class="absolute w-44 h-44 rounded-full bg-primary-fixed/30 blur-2xl"></div>
+                            <!-- Sparkle Accents -->
+                            <span
+                                class="material-symbols-outlined absolute top-2 right-4 text-accent-purple text-[24px]">auto_awesome</span>
+                            <span
+                                class="material-symbols-outlined absolute bottom-4 left-2 text-primary-container text-[20px]">sparkles</span>
+                            <!-- Back card tilted right -->
+                            <div
+                                class="absolute w-44 h-56 rounded-xl bg-surface-card border border-border-subtle shadow-md p-4 rotate-6 flex flex-col justify-between">
+                                <div class="flex items-center justify-between">
+                                    <div
+                                        class="w-6 h-6 rounded-lg bg-tag-year-bg flex items-center justify-center text-primary">
+                                        <span class="material-symbols-outlined text-[14px]">description</span></div>
+                                    <span class="text-[11px] font-bold text-tag-year-text">2082</span>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="h-2 bg-surface-container rounded w-3/4"></div>
+                                    <div class="h-2 bg-surface-container rounded w-full"></div>
+                                    <div class="h-2 bg-surface-container rounded w-2/3"></div>
+                                </div>
+                                <div class="flex justify-between items-center text-[11px] text-text-muted">
+                                    <span class="">Solved</span>
+                                    <span
+                                        class="w-4 h-4 rounded-full bg-tag-type-bg text-tag-type-text flex items-center justify-center font-bold">✓</span>
+                                </div>
+                            </div>
+                            <!-- Front card tilted left -->
+                            <div
+                                class="absolute w-44 h-56 rounded-xl bg-surface-card border border-primary-fixed shadow-md p-4 -rotate-3 flex flex-col justify-between hover:rotate-0 transition-transform">
+                                <div class="flex items-center justify-between">
+                                    <div
+                                        class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-[16px]">menu_book</span></div>
+                                    <span
+                                        class="px-1.5 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text text-[11px] font-bold">75
+                                        Marks</span>
+                                </div>
+                                <div class="space-y-2 mt-2">
+                                    <div class="h-2.5 bg-primary-fixed rounded w-4/5"></div>
+                                    <div class="h-2 bg-surface-container rounded w-full"></div>
+                                    <div class="h-2 bg-surface-container rounded w-full"></div>
+                                    <div class="h-2 bg-surface-container rounded w-1/2"></div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-1.5 pt-2 border-t border-border-subtle text-[11px] font-bold text-primary">
+                                    <span class="material-symbols-outlined text-[14px]">verified</span>
+                                    <span class="">Model Answers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Sticky Interactive Filter Controls Strip -->
+            <div class="sticky top-16 z-30 bg-surface-card/95 backdrop-blur-md border-b border-border-subtle shadow-sm">
+                <div class="max-w-[1200px] mx-auto px-gutter py-2.5 flex flex-col gap-2.5">
+                    <!-- Top Row: Section Quick Pills & Search -->
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                        <!-- Section Quick Selectors -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 scrollbar-none"
+                            id="sectionFilterTabs">
+                            <button
+                                class="filter-tab active-filter px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-primary-container text-on-primary shadow-sm"
+                                data-filter="all">
+                                All Sections (28)
+                            </button>
+                            <button
+                                class="filter-tab px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-low hover:bg-surface-container text-text-muted hover:text-on-surface"
+                                data-filter="sec-a">
+                                Sec A: Comprehension (3)
+                            </button>
+                            <button
+                                class="filter-tab px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-low hover:bg-surface-container text-text-muted hover:text-on-surface"
+                                data-filter="sec-b">
+                                Sec B: Literature (7)
+                            </button>
+                            <button
+                                class="filter-tab px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-low hover:bg-surface-container text-text-muted hover:text-on-surface"
+                                data-filter="sec-c">
+                                Sec C: Composition (3)
+                            </button>
+                            <button
+                                class="filter-tab px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-low hover:bg-surface-container text-text-muted hover:text-on-surface"
+                                data-filter="sec-d">
+                                Sec D: Grammar (10)
+                            </button>
+                            <button
+                                class="filter-tab px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-low hover:bg-surface-container text-text-muted hover:text-on-surface"
+                                data-filter="sec-e">
+                                Sec E: Vocabulary (5)
+                            </button>
+                        </div>
+                        <!-- Quick Search Input -->
+                        <div class="relative w-full md:w-64 shrink-0">
+                            <span
+                                class="material-symbols-outlined text-[18px] text-text-muted absolute left-3 top-2 pointer-events-none">search</span>
+                            <input
+                                class="w-full bg-surface-bg border border-border-subtle hover:border-border-hover focus:border-primary rounded-full py-1.5 pl-9 pr-3 text-body-sm font-body-sm text-on-surface focus:outline-none transition-colors"
+                                placeholder="Search questions, topics..." type="text">
+                        </div>
+                    </div>
+                    <!-- Bottom Row: Unified Smart Dropdowns (Year, Province, Type, Marks, Expand Solutions) -->
+                    <div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-border-subtle">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <!-- Year Filter -->
+                            <div class="relative">
+                                <select
+                                    class="appearance-none bg-surface-bg border border-border-subtle rounded-lg py-1.5 pl-3 pr-8 font-label-md text-label-md text-on-surface focus:outline-none focus:border-primary cursor-pointer"
+                                    id="yearFilter">
+                                    <option value="all">All Years (2079 - 2082)</option>
+                                    <option value="2082">2082 B.S. (Latest NEB)</option>
+                                    <option value="2081">2081 B.S.</option>
+                                    <option value="2080">2080 B.S.</option>
+                                    <option value="2079">2079 B.S.</option>
+                                </select>
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-text-muted absolute right-2.5 top-2 pointer-events-none">expand_more</span>
+                            </div>
+                            <!-- Province Filter -->
+                            <div class="relative">
+                                <select
+                                    class="appearance-none bg-surface-bg border border-border-subtle rounded-lg py-1.5 pl-3 pr-8 font-label-md text-label-md text-on-surface focus:outline-none focus:border-primary cursor-pointer"
+                                    id="provinceFilter">
+                                    <option value="all">All Provinces</option>
+                                    <option value="koshi">Koshi Province</option>
+                                    <option value="madhesh">Madhesh Province</option>
+                                    <option value="bagmati">Bagmati Province</option>
+                                    <option value="gandaki">Gandaki Province</option>
+                                    <option value="lumbini">Lumbini Province</option>
+                                    <option value="karnali">Karnali Province</option>
+                                    <option value="sudurpashchim">Sudurpashchim Province</option>
+                                </select>
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-text-muted absolute right-2.5 top-2 pointer-events-none">expand_more</span>
+                            </div>
+                            <!-- Question Type Filter -->
+                            <div class="relative">
+                                <select
+                                    class="appearance-none bg-surface-bg border border-border-subtle rounded-lg py-1.5 pl-3 pr-8 font-label-md text-label-md text-on-surface focus:outline-none focus:border-primary cursor-pointer"
+                                    id="typeFilter">
+                                    <option value="all">All Question Types</option>
+                                    <option value="mcq">MCQs</option>
+                                    <option value="short">Short Answer</option>
+                                    <option value="long">Long Answer</option>
+                                    <option value="grammar">Grammar Rules</option>
+                                    <option value="phonetics">Phonetics &amp; Sounds</option>
+                                </select>
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-text-muted absolute right-2.5 top-2 pointer-events-none">expand_more</span>
+                            </div>
+                            <!-- Marks Filter -->
+                            <div class="relative">
+                                <select
+                                    class="appearance-none bg-surface-bg border border-border-subtle rounded-lg py-1.5 pl-3 pr-8 font-label-md text-label-md text-on-surface focus:outline-none focus:border-primary cursor-pointer"
+                                    id="marksFilter">
+                                    <option value="all">Marks: All Types</option>
+                                    <option value="1">1 Mark (Objective/Grammar)</option>
+                                    <option value="2">2 Marks (Literature)</option>
+                                    <option value="5">5 Marks (Comprehension/Poem)</option>
+                                    <option value="7">7-10 Marks (Composition)</option>
+                                </select>
+                                <span
+                                    class="material-symbols-outlined text-[16px] text-text-muted absolute right-2.5 top-2 pointer-events-none">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-bg border border-border-subtle hover:border-primary text-on-surface hover:text-primary transition-all font-label-md text-label-md shadow-xs group"
+                                id="expandAllBtn" type="button">
+                                <span
+                                    class="material-symbols-outlined text-[16px] group-hover:scale-110 transition-transform">unfold_more</span>
+                                <span class="">Expand Solutions</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Question Flow Container (900px Optimal Reading Width) -->
+            <div class="w-full max-w-[940px] mx-auto px-gutter py-space-xl flex flex-col gap-space-xl">
+                <!-- ==========================================
+         SECTION A: COMPREHENSION PASSAGES
+         ========================================== -->
+                <section class="question-section flex flex-col gap-space-md" id="sec-a">
+                    <div class="flex items-center justify-between border-b border-border-subtle pb-space-sm">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-tag-year-bg text-primary flex items-center justify-center font-bold font-headline-sm">
+                                A
+                            </div>
+                            <div>
+                                <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Section A:
+                                    Comprehension Passages</h2>
+                                <p class="font-body-sm text-body-sm text-text-muted">Reading skill evaluation: context
+                                    vocabulary, inference &amp; thematic interpretation (15 Marks)</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-2.5 py-1 rounded-md bg-tag-topic-bg text-tag-topic-text font-label-badge text-label-badge">
+                            3 Items • 15 Marks
+                        </span>
+                    </div>
+                    <!-- Question 1 -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="5" data-year="2082">
+                        <div class="flex items-start justify-between gap-space-md mb-3">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">1.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2081
+                                    Koshi Q.N. 1]</span><span
+                                    class="font-headline-sm text-headline-sm text-on-surface">Sentence Completion
+                                    (Vocabulary in Context)</span></div>
+                            <div class="flex items-center gap-1.5 flex-wrap justify-end">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">5
+                                    Marks</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-type-bg text-tag-type-text font-label-badge text-label-badge">Short
+                                    Answer</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            Complete the following sentences using the correct words highlighted in the unseen passage:
+                        </p>
+                        <!-- Nested Items -->
+                        <div
+                            class="flex flex-col gap-2.5 pl-3 border-l-2 border-primary-fixed mb-4 font-body-md text-body-md text-on-surface">
+                            <div class="flex items-baseline gap-2">
+                                <span class="font-semibold text-text-muted">a.</span>
+                                <span class="">World leaders are now united in their <span
+                                        class="px-2 py-0.5 rounded bg-surface-container font-mono text-[13px]">______</span>
+                                    for global peace.</span>
+                            </div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="font-semibold text-text-muted">b.</span>
+                                <span class="">People are impressed by her <span
+                                        class="px-2 py-0.5 rounded bg-surface-container font-mono text-[13px]">______</span>
+                                    manner and relaxed style of public writing.</span>
+                            </div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="font-semibold text-text-muted">c.</span>
+                                <span class="">As I started to live on my own, I <span
+                                        class="px-2 py-0.5 rounded bg-surface-container font-mono text-[13px]">______</span>
+                                    myself in my professional career.</span>
+                            </div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="font-semibold text-text-muted">d.</span>
+                                <span class="">The stuff written about me helped to establish me as a/an <span
+                                        class="px-2 py-0.5 rounded bg-surface-container font-mono text-[13px]">______</span>
+                                    figure in public life.</span>
+                            </div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="font-semibold text-text-muted">e.</span>
+                                <span class="">His desire for money is completely <span
+                                        class="px-2 py-0.5 rounded bg-surface-container font-mono text-[13px]">______</span>.</span>
+                            </div>
+                        </div>
+                        <!-- Accordion Answer Toggle -->
+                        <details class="group mt-2 border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View Solution &amp; Marking Rubric</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle text-on-surface font-body-md text-body-md space-y-2">
+                                <div
+                                    class="flex items-center justify-between text-text-muted font-label-md text-label-md pb-2 border-b border-border-subtle">
+                                    <span class="">Standard Model Answers (NEB 2082 Marking Guide)</span>
+                                    <span class="text-tertiary-container font-bold">1 Mark each</span>
+                                </div>
+                                <ul class="space-y-1.5 font-mono text-[13px]">
+                                    <li class=""><strong class="text-primary">a.</strong> quest / commitment / crusade
+                                    </li>
+                                    <li class=""><strong class="text-primary">b.</strong> genial / dazzling / amicable
+                                    </li>
+                                    <li class=""><strong class="text-primary">c.</strong> immersed / absorbed</li>
+                                    <li class=""><strong class="text-primary">d.</strong> esteemed / venerable /
+                                        towering</li>
+                                    <li class=""><strong class="text-primary">e.</strong> insatiable / voracious</li>
+                                </ul>
+                                <p class="font-body-sm text-body-sm text-text-muted pt-1"><em>Examiner Note: Exact
+                                        synonyms derived from paragraph 2 are awarded full credit. Minor spelling
+                                        variations permitted if phonetically uncompromised.</em></p>
+                            </div>
+                        </details>
+                    </article>
+                    <!-- Question 2 -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="5" data-year="2082">
+                        <div class="flex items-start justify-between gap-space-md mb-3">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">2.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2082
+                                    Bagmati Q.N. 2]</span><span
+                                    class="font-headline-sm text-headline-sm text-on-surface">Multiple-Choice Reading
+                                    Inference</span></div>
+                            <div class="flex items-center gap-1.5 flex-wrap justify-end">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">5
+                                    Marks</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-type-bg text-tag-type-text font-label-badge text-label-badge">MCQ</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            Choose and copy the correct alternatives based on Sarah's library encounter:
+                        </p>
+                        <!-- Nested MCQ Items -->
+                        <div class="space-y-4">
+                            <!-- Item a -->
+                            <div class="p-3.5 rounded-xl bg-surface-bg border border-border-subtle">
+                                <p class="font-headline-sm text-headline-sm text-on-surface mb-2.5">a. Where is the
+                                    story primarily set?</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-body-sm font-body-sm">
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-border-subtle bg-surface-card cursor-pointer hover:border-primary transition-colors">
+                                        <span
+                                            class="w-5 h-5 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-text-muted">i</span>
+                                        <span class="">A bustling city center</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-border-subtle bg-surface-card cursor-pointer hover:border-primary transition-colors">
+                                        <span
+                                            class="w-5 h-5 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-text-muted">ii</span>
+                                        <span class="">A dazzling archival chamber</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-primary bg-primary-fixed/30 cursor-pointer">
+                                        <span
+                                            class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">iii</span>
+                                        <span class="font-semibold text-primary">An enchanted royal library</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-border-subtle bg-surface-card cursor-pointer hover:border-primary transition-colors">
+                                        <span
+                                            class="w-5 h-5 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-text-muted">iv</span>
+                                        <span class="">A mystical deep forest</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Item b -->
+                            <div class="p-3.5 rounded-xl bg-surface-bg border border-border-subtle">
+                                <p class="font-headline-sm text-headline-sm text-on-surface mb-2.5">b. Who is Ms.
+                                    Abernathy in the story?</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-body-sm font-body-sm">
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-border-subtle bg-surface-card cursor-pointer hover:border-primary">
+                                        <span
+                                            class="w-5 h-5 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-text-muted">i</span>
+                                        <span class="">A magical guardian creature</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-border-subtle bg-surface-card cursor-pointer hover:border-primary">
+                                        <span
+                                            class="w-5 h-5 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-text-muted">ii</span>
+                                        <span class="">The omniscient narrator</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-primary bg-primary-fixed/30 cursor-pointer">
+                                        <span
+                                            class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] font-bold">iii</span>
+                                        <span class="font-semibold text-primary">A librarian</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2.5 rounded-lg border border-border-subtle bg-surface-card cursor-pointer hover:border-primary">
+                                        <span
+                                            class="w-5 h-5 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-text-muted">iv</span>
+                                        <span class="">A character stepping out of a novel</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="group mt-3 border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View All Option Keys (a - e)</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle text-on-surface font-body-md text-body-md space-y-1">
+                                <p class=""><strong>(a)</strong> -&gt; (iii) An enchanted building / library</p>
+                                <p class=""><strong>(b)</strong> -&gt; (iii) A librarian</p>
+                                <p class=""><strong>(c)</strong> -&gt; (ii) They can make readers a part of the
+                                    adventure</p>
+                                <p class=""><strong>(d)</strong> -&gt; (iii) Awakened and thrilled</p>
+                                <p class=""><strong>(e)</strong> -&gt; (ii) Determined and courageous</p>
+                            </div>
+                        </details>
+                    </article>
+                    <!-- Question 3 -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="5" data-year="2082">
+                        <div class="flex items-start justify-between gap-space-md mb-3">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">3.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2080
+                                    Gandaki Q.N. 3]</span><span
+                                    class="font-headline-sm text-headline-sm text-on-surface">Comprehension Analytical
+                                    Short Questions</span></div>
+                            <div class="flex items-center gap-1.5 flex-wrap justify-end">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">5
+                                    Marks</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-type-bg text-tag-type-text font-label-badge text-label-badge">Descriptive</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            Answer the following textual questions in concise, grammatically coherent sentences:
+                        </p>
+                        <ol class="list-[lower-alpha] pl-5 space-y-2 font-body-md text-body-md text-on-surface mb-4">
+                            <li class="">Why did Sarah go to the library in the beginning?</li>
+                            <li class="">What happened when Sarah reads the book about a boy who can fly?</li>
+                            <li class="">What was special about the book "The Lost Amulet of Althoria"?</li>
+                            <li class="">What was Alaric searching for in the tale?</li>
+                            <li class="">Was Sarah more determined to read books at the end? Give a valid textual
+                                reason.</li>
+                        </ol>
+                        <details class="group border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View Model Answers</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle space-y-3 font-body-md text-body-md">
+                                <div>
+                                    <p class="font-semibold text-primary">a. Motivation for visiting library:</p>
+                                    <p class="text-text-muted">Sarah visited the library seeking solace and escape from
+                                        her monotonous daily routine, attracted by the sanctuary of ancient chronicles.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-primary">b. Sensory experience while reading:</p>
+                                    <p class="text-text-muted">She experienced vivid sensory illusions where the
+                                        classroom faded and she felt tangible gusts of wind lifting her off the stone
+                                        floor alongside the protagonist.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-primary">c. Special property of the book:</p>
+                                    <p class="text-text-muted">The text was alive; illuminated script rearranged
+                                        dynamically depending on the emotional resonance of the reader holding the
+                                        leather-bound pages.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                </section>
+                <!-- ==========================================
+         SECTION B: LITERATURE (Prescribed Texts)
+         ========================================== -->
+                <section class="question-section flex flex-col gap-space-md" id="sec-b">
+                    <div class="flex items-center justify-between border-b border-border-subtle pb-space-sm">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-accent-purple-light text-accent-purple flex items-center justify-center font-bold font-headline-sm">
+                                B
+                            </div>
+                            <div>
+                                <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Section B:
+                                    Literature</h2>
+                                <p class="font-body-sm text-body-sm text-text-muted">Short Stories, Poems, Essays &amp;
+                                    One-Act Plays (20 Marks)</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-2.5 py-1 rounded-md bg-tag-topic-bg text-tag-topic-text font-label-badge text-label-badge">
+                            7 Items • 20 Marks
+                        </span>
+                    </div>
+                    <!-- Question 4 -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="2" data-year="2080">
+                        <div class="flex items-start justify-between gap-space-md mb-2">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">4.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2081
+                                    Madhesh Q.N. 4]</span>
+                                <div class="flex items-center gap-2 flex-wrap"><span
+                                        class="font-headline-sm text-headline-sm text-on-surface">Neighbours by Tim
+                                        Winton</span><span
+                                        class="px-2 py-0.5 rounded-full bg-accent-purple-light text-accent-purple font-label-badge text-label-badge">Short
+                                        Story</span></div>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2080
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">2
+                                    Marks</span>
+                            </div>
+                        </div>
+                        <p class="font-body-lg text-body-lg text-on-surface font-medium my-3">
+                            How would you react if you were in the young man's situation at the end of the story?
+                            (Neighbours)
+                        </p>
+                        <details class="group border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View Model Answer &amp; Theme Analysis</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle text-on-surface font-body-md text-body-md space-y-2">
+                                <p class="">
+                                    If I were in the young man's position at the conclusion of Tim Winton's
+                                    <em>"Neighbours"</em>, I would feel an overwhelming mixture of humility, relief, and
+                                    profound emotional awakening. Initially prejudiced against the boisterous European
+                                    immigrant neighborhood, his final realization through weeping demonstrates that
+                                    human solidarity transcends cultural barriers.
+                                </p>
+                                <div
+                                    class="p-2.5 rounded-lg bg-tag-type-bg text-tag-type-text text-body-sm font-body-sm">
+                                    <strong>Key Marks Indicator:</strong> Mention of intercultural empathy, breakdown of
+                                    intellectual arrogance, and emotional solidarity during childbirth.
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <!-- Question 5 (With Internal Choice OR) -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="2" data-year="2082">
+                        <div class="flex items-start justify-between gap-space-md mb-2">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">5.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2082
+                                    Koshi Q.N. 5]</span><span
+                                    class="font-headline-sm text-headline-sm text-on-surface">Character Contrasts &amp;
+                                    Moral Conflict</span></div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">2
+                                    Marks</span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface-bg border border-border-subtle my-3 space-y-3">
+                            <div>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge mb-1 inline-block">Option
+                                    1 • A Respectable Woman</span>
+                                <p class="font-body-lg text-body-lg text-on-surface">
+                                    How was Gouvernail different from Mrs. Baroda's expectation?
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 py-1">
+                                <div class="h-[1px] bg-border-subtle flex-1"></div>
+                                <span
+                                    class="font-label-badge text-label-badge uppercase px-2 py-0.5 rounded-full bg-tag-marks-bg text-tag-marks-text font-bold">OR</span>
+                                <div class="h-[1px] bg-border-subtle flex-1"></div>
+                            </div>
+                            <div>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-type-bg text-tag-type-text font-label-badge text-label-badge mb-1 inline-block">Option
+                                    2 • A Devoted Son</span>
+                                <p class="font-body-lg text-body-lg text-on-surface">
+                                    Do you think Rakesh was a devoted son? Explain with references from the story.
+                                </p>
+                            </div>
+                        </div>
+                        <details class="group border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View Both Model Answers</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle space-y-3 font-body-md text-body-md">
+                                <div>
+                                    <p class="font-semibold text-primary">For "A Respectable Woman":</p>
+                                    <p class="text-on-surface-variant">Mrs. Baroda pictured Gouvernail as a cynical,
+                                        brilliant, and demanding city journalist who would disrupt her plantation peace.
+                                        Instead, she found him courteous, quiet, undemanding, and fond of meditative
+                                        silences under the night sky.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-primary">For "A Devoted Son":</p>
+                                    <p class="text-on-surface-variant">Rakesh exemplified filial devotion by touching
+                                        his father's feet and prioritizing his medical care. However, as an adult
+                                        physician, his strict dietary constraints transformed devotion into an
+                                        authoritarian regimen, causing emotional alienation for Varma.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <!-- Question 6 & 10 Poem Context -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="5" data-year="2082">
+                        <div class="flex items-start justify-between gap-space-md mb-2">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">10.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2081
+                                    Lumbini Q.N. 10]</span>
+                                <div class="flex items-center gap-2"><span
+                                        class="font-headline-sm text-headline-sm text-on-surface">Poetry Context &amp;
+                                        Stanza Paraphrase</span><span
+                                        class="px-2 py-0.5 rounded-full bg-accent-purple-light text-accent-purple font-label-badge text-label-badge">Poetry</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">5
+                                    Marks</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-text-muted mb-2">
+                            Explain the following lines of the poem <em>'A Day'</em> by Emily Dickinson with reference
+                            to context:
+                        </p>
+                        <!-- Poem Stanza Callout -->
+                        <blockquote
+                            class="p-4 rounded-xl bg-surface-bg border-l-4 border-accent-purple italic font-serif text-body-lg text-on-surface my-3">
+                            "The hills untied their bonnets,<br>
+                            The bobolinks begun.<br>
+                            Then I said softly to myself,<br>
+                            That must have been the sun!"
+                        </blockquote>
+                        <details class="group border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View Critical Explanation &amp; Poetic Devices</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle space-y-2 font-body-md text-body-md">
+                                <p class=""><strong>Context:</strong> These lines are extracted from Emily Dickinson's
+                                    celebrated nature poem <em>'A Day'</em>, which describes sunrise and sunset through
+                                    innocent childlike observation.</p>
+                                <p class=""><strong>Poetic Devices:</strong> Personification (hills untying bonnets like
+                                    cheerful village maidens removing their morning hoods as morning light dispels
+                                    shadows). Imagery and Auditory appeal through the singing bobolinks.</p>
+                                <p class=""><strong>Significance:</strong> Represents awakening, natural delight, and
+                                    unpretentious discovery of daylight.</p>
+                            </div>
+                        </details>
+                    </article>
+                </section>
+                <!-- ==========================================
+         SECTION C: COMPOSITION (Extended Writing)
+         ========================================== -->
+                <section class="question-section flex flex-col gap-space-md" id="sec-c">
+                    <div class="flex items-center justify-between border-b border-border-subtle pb-space-sm">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-tag-marks-bg text-tag-marks-text flex items-center justify-center font-bold font-headline-sm">
+                                C
+                            </div>
+                            <div>
+                                <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Section C:
+                                    Composition &amp; Writing</h2>
+                                <p class="font-body-sm text-body-sm text-text-muted">Data Interpretation, Formal Editor
+                                    Letters, and Reflective Essays (25 Marks)</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-2.5 py-1 rounded-md bg-tag-topic-bg text-tag-topic-text font-label-badge text-label-badge">
+                            3 Items • 25 Marks
+                        </span>
+                    </div>
+                    <!-- Question 11: Data Interpretation with Visual Chart/Table -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="7" data-year="2082">
+                        <div class="flex items-start justify-between gap-space-md mb-2">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">11.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2082
+                                    Bagmati Q.N. 11]</span><span
+                                    class="font-headline-sm text-headline-sm text-on-surface">Data Interpretation &amp;
+                                    Comparative Analysis</span></div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">7
+                                    Marks</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-type-bg text-tag-type-text font-label-badge text-label-badge">Long
+                                    Answer</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface mb-3">
+                            Study the following survey table showing <strong>Internet Usage Trends Among Secondary
+                                Students in Nepal (2020 vs 2025)</strong> and interpret the information in about
+                            <strong>150 words</strong>. Make comparisons where necessary.
+                        </p>
+                        <!-- Inset Table Chart Component -->
+                        <div
+                            class="overflow-x-auto rounded-xl border border-border-subtle bg-surface-card my-3 shadow-xs">
+                            <table class="w-full text-left font-body-sm text-body-sm">
+                                <thead
+                                    class="bg-surface-container-low text-on-surface font-headline-sm text-headline-sm border-b border-border-subtle">
+                                    <tr>
+                                        <th class="p-3">Primary Purpose</th>
+                                        <th class="p-3 text-center">2020 (%)</th>
+                                        <th class="p-3 text-center">2025 (%)</th>
+                                        <th class="p-3">Trend Direction</th>
+                                    </tr>
+                                </thead>
+                                <tbody
+                                    class="divide-y divide-border-subtle font-body-md text-body-md text-on-surface-variant">
+                                    <tr>
+                                        <td class="p-3 font-semibold text-on-surface">Online Classes &amp; Research</td>
+                                        <td class="p-3 text-center">24%</td>
+                                        <td class="p-3 text-center font-bold text-primary">58%</td>
+                                        <td class="p-3 text-tag-type-text flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[16px]">trending_up</span> Sharp
+                                            Rise (+34%)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-on-surface">Social Media Networking</td>
+                                        <td class="p-3 text-center">45%</td>
+                                        <td class="p-3 text-center">26%</td>
+                                        <td class="p-3 text-tag-neb-text flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[16px]">trending_down</span>
+                                            Significant Decline (-19%)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-on-surface">Online Gaming &amp; Video
+                                            Streaming</td>
+                                        <td class="p-3 text-center">21%</td>
+                                        <td class="p-3 text-center">11%</td>
+                                        <td class="p-3 text-tag-neb-text flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[16px]">trending_down</span>
+                                            Moderated Use (-10%)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-on-surface">Skill Dev &amp; Coding Portals
+                                        </td>
+                                        <td class="p-3 text-center">10%</td>
+                                        <td class="p-3 text-center font-bold text-primary">15%</td>
+                                        <td class="p-3 text-tag-type-text flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[16px]">trending_up</span>
+                                            Steady Growth (+5%)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <details class="group border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View 150-Word Model Interpretation</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle space-y-2 text-on-surface font-body-md text-body-md">
+                                <p class="">
+                                    The provided dataset portrays a noticeable shift in internet utilization patterns
+                                    among Nepali secondary school students between 2020 and 2025. Most strikingly,
+                                    educational browsing—encompassing online classes and academic research—surged more
+                                    than two-fold from 24% to 58%, marking a clear transformation into an academic tool.
+                                </p>
+                                <p class="">
+                                    Conversely, leisure activities experienced a downward trajectory. Social media
+                                    engagement dropped dramatically from 45% to 26%, while gaming and video streaming
+                                    saw a 10% decline down to 11%. Independent skill acquisition and coding portals
+                                    gained ground, advancing from 10% to 15%. In summary, Nepali youth have pivoted from
+                                    passive entertainment toward productive digital scholarship over the five-year
+                                    timeframe.
+                                </p>
+                            </div>
+                        </details>
+                    </article>
+                    <!-- Question 12 & 13 Writing Prompts -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="8" data-year="2082">
+                        <div class="flex items-start justify-between gap-space-md mb-2">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">12.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2080
+                                    Karnali Q.N. 12]</span><span
+                                    class="font-headline-sm text-headline-sm text-on-surface">Letter to the National
+                                    Newspaper Editor</span></div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">8
+                                    Marks</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface mb-3">
+                            It is often said, <em>"Save nature to save the future"</em>. Write a formal letter to the
+                            editor of a national daily newspaper highlighting the severe consequences of unmanaged
+                            environmental pollution in urban valleys and suggesting actionable municipal solutions
+                            (around 180 words).
+                        </p>
+                        <details class="group border-t border-border-subtle pt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View Letter Format &amp; Salutation Layout</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle space-y-2 text-on-surface font-body-sm text-body-sm">
+                                <div class="p-3 bg-surface-card rounded border border-border-subtle text-text-muted">
+                                    Kathmandu-10, Baneshwor<br>
+                                    24th Baishakh, 2082<br><br>
+                                    The Editor,<br>
+                                    The Kathmandu Post, Tinkune, Kathmandu.<br><br>
+                                    <strong>Subject: Urgent intervention needed for urban pollution
+                                        containment</strong><br><br>
+                                    Sir/Madam,<br>
+                                    Through the esteemed columns of your widely circulated daily, I wish to draw the
+                                    urgent attention of municipal authorities towards the deteriorating air and river
+                                    quality within our major urban valleys...
+                                </div>
+                                <p class="text-tag-marks-text font-label-badge text-label-badge pt-1">
+                                    Marking Checklist: Proper Sender/Receiver layout (2M), Coherent Paragraph
+                                    transitions (4M), Grammar &amp; Vocabulary (2M).
+                                </p>
+                            </div>
+                        </details>
+                    </article>
+                    <!-- Question 13: Walking Essay -->
+                    <article
+                        class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 md:p-6 shadow-sm hover:border-border-hover transition-all"
+                        data-marks="10" data-year="2080">
+                        <div class="flex items-start justify-between gap-space-md mb-2">
+                            <div class="flex items-center gap-3"><span
+                                    class="w-7 h-7 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm">13.</span><span
+                                    class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2081
+                                    Sudurpashchim Q.N. 13]</span><span
+                                    class="font-headline-sm text-headline-sm text-on-surface">Expository Essay Writing
+                                    (300 Words)</span></div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2080
+                                    NEB</span>
+                                <span
+                                    class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">10
+                                    Marks</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface">
+                            <em>"Walking is not just a physical activity. It has manifold holistic benefits."</em> Write
+                            an essay on walking as a physical activity and its role in fostering physical vitality,
+                            cognitive clarity, and societal harmony.
+                        </p>
+                        <details class="group border-t border-border-subtle pt-3 mt-3">
+                            <summary
+                                class="flex items-center gap-2 cursor-pointer list-none text-secondary hover:text-primary font-headline-sm text-headline-sm select-none transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-[18px] transition-transform group-open:rotate-90">chevron_right</span>
+                                <span class="">View Suggested Outline &amp; High-Scoring Vocabulary</span>
+                            </summary>
+                            <div
+                                class="mt-3 p-4 rounded-xl bg-surface-bg border border-border-subtle text-on-surface font-body-md text-body-md space-y-2">
+                                <p class=""><strong>Paragraph 1 (Intro):</strong> Introduce walking as the most natural,
+                                    egalitarian form of human mobility and cardiovascular wellness.</p>
+                                <p class=""><strong>Paragraph 2 (Physical &amp; Mental):</strong> Endorphin secretion,
+                                    alleviation of stress, reduction in chronic lifestyle risks (hypertension, metabolic
+                                    disorders).</p>
+                                <p class=""><strong>Paragraph 3 (Social Connection):</strong> Strolling in neighborhoods
+                                    encourages community interactions, decreases motorized traffic congestion, and
+                                    reclaims public spaces.</p>
+                                <p class=""><strong>Paragraph 4 (Conclusion):</strong> Synthesis: A call to integrate
+                                    daily walks into our tech-bound sedentary lives.</p>
+                            </div>
+                        </details>
+                    </article>
+                </section>
+                <!-- ==========================================
+         SECTION D: GRAMMAR (Applied Sentence Structure)
+         ========================================== -->
+                <section class="question-section flex flex-col gap-space-md" id="sec-d">
+                    <div class="flex items-center justify-between border-b border-border-subtle pb-space-sm">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-tag-type-bg text-tag-type-text flex items-center justify-center font-bold font-headline-sm">
+                                D
+                            </div>
+                            <div>
+                                <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Section D:
+                                    Grammar</h2>
+                                <p class="font-body-sm text-body-sm text-text-muted">High-yield NEB Grammar rules:
+                                    Modals, Voices, Prepositions &amp; Clauses (10 Marks)</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-2.5 py-1 rounded-md bg-tag-topic-bg text-tag-topic-text font-label-badge text-label-badge">
+                            10 Items • 10 Marks
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-1 gap-3">
+                        <!-- Q14 -->
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Koshi Q.N. 14]</span>Question 14 • Adjective Identification</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                Health care in Nepal is not as <span
+                                    class="underline decoration-primary decoration-2 font-semibold">expensive</span> as
+                                it is in the US. (Identify the adjective in the sentence.)
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">expensive</span><br>
+                                    <span class="text-text-muted text-[12px]">Rule: 'Expensive' functions as a predicate
+                                        adjective modifying the noun phrase 'Health care in Nepal' within the
+                                        comparative construction 'as ... as'.</span>
+                                </div>
+                            </details>
+                        </article>
+                        <!-- Q15 -->
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Madhesh Q.N. 15]</span>Question 15 • Gerund vs Infinitive</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                My car needs ______ right now. <em>(repair / repairing / to repair / repaired)</em>
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">repairing</span> (or:
+                                    <em>to be repaired</em>)<br>
+                                    <span class="text-text-muted text-[12px]">Rule: The verb 'need' when followed by an
+                                        inanimate object having something done to it takes either a Gerund with passive
+                                        meaning (<em>needs repairing</em>) or passive infinitive (<em>needs to be
+                                            repaired</em>).</span>
+                                </div>
+                            </details>
+                        </article>
+                        <!-- Q16 -->
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Bagmati Q.N. 16]</span>Question 16 • Relative Clauses</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                This is the house. We spent our childhood in the house. <em>(Join the sentences using an
+                                    appropriate relative pronoun.)</em>
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">This is the house
+                                        where we spent our childhood.</span><br>
+                                    <span class="text-text-muted text-[12px]">Alternative: <em>This is the house in
+                                            which we spent our childhood.</em></span>
+                                </div>
+                            </details>
+                        </article>
+                        <!-- Q17 -->
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Gandaki Q.N. 17]</span>Question 17 • Subject-Verb Agreement</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                Sumsher along with his friends ______ me well. <em>(know / knows / have known /
+                                    knowing)</em>
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">knows</span><br>
+                                    <span class="text-text-muted text-[12px]">Rule: When subjects are joined by phrases
+                                        like 'along with', 'as well as', or 'accompanied by', the verb agrees with the
+                                        first subject ('Sumsher' - singular).</span>
+                                </div>
+                            </details>
+                        </article>
+                        <!-- Q18 & Q19 -->
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Lumbini Q.N. 18]</span>Question 18 • Prepositions</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                Don't stare ______ me. I have no mistake. <em>(Use an appropriate preposition in the
+                                    blank.)</em>
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">at</span> (stare at
+                                    somebody).
+                                </div>
+                            </details>
+                        </article>
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Karnali Q.N. 19]</span>Question 19 • Modal Auxiliaries</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                You ______ tell anyone about this. It's strictly confidential. <em>(may / must / would /
+                                    could)</em>
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">must not</span> (or:
+                                    <em>must</em> in negative prohibition context). Expresses absolute obligation /
+                                    prohibition.
+                                </div>
+                            </details>
+                        </article>
+                        <!-- Q21 & Q22 Transformations -->
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Sudurpashchim Q.N. 21]</span>Question 21 • Concession Clauses</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                We are close friends. We have not seen each other's houses. <em>(Join the sentences with
+                                    'despite'.)</em>
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">Despite being close
+                                        friends, we have not seen each other's houses.</span><br>
+                                    <span class="text-text-muted text-[12px]">Or: <em>Despite the fact that we are close
+                                            friends, we have not seen each other's houses.</em></span>
+                                </div>
+                            </details>
+                        </article>
+                        <article
+                            class="question-card bg-surface-card rounded-xl border border-border-subtle p-4 shadow-sm hover:border-primary/50 transition-all flex flex-col gap-2"
+                            data-marks="1" data-year="2082">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-md text-label-md text-primary font-bold"><span
+                                        class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed mr-2">[2082
+                                        Koshi Q.N. 22]</span>Question 22 • Indirect Speech</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-year-bg text-tag-year-text font-label-badge text-label-badge">2082</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-surface">
+                                Yangma said, "You are my source of inspiration in life." <em>(Change into indirect
+                                    speech.)</em>
+                            </p>
+                            <details class="group mt-1">
+                                <summary
+                                    class="flex items-center gap-1 cursor-pointer text-secondary font-headline-sm text-headline-sm text-[13px] list-none">
+                                    <span
+                                        class="material-symbols-outlined text-[16px] group-open:rotate-90 transition-transform">arrow_right</span>
+                                    <span class="">Solution</span>
+                                </summary>
+                                <div
+                                    class="mt-2 p-3 rounded-lg bg-surface-bg border border-border-subtle text-body-sm font-body-sm text-on-surface">
+                                    <strong>Answer:</strong> <span class="text-primary font-bold">Yangma told me that I
+                                        was her source of inspiration in life.</span>
+                                </div>
+                            </details>
+                        </article>
+                    </div>
+                </section>
+                <!-- ==========================================
+         SECTION E: SOUNDS, VOCABULARY & DICTIONARY
+         ========================================== -->
+                <section class="question-section flex flex-col gap-space-md" id="sec-e">
+                    <div class="flex items-center justify-between border-b border-border-subtle pb-space-sm">
+                        <div class="flex items-center gap-space-sm">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center font-bold font-headline-sm">
+                                E
+                            </div>
+                            <div>
+                                <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Section E:
+                                    Sounds, Vocabulary &amp; Dictionary Use</h2>
+                                <p class="font-body-sm text-body-sm text-text-muted">Phonetic transcriptions, word
+                                    classes, prefixes and dictionary headwords (5 Marks)</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-2.5 py-1 rounded-md bg-tag-topic-bg text-tag-topic-text font-label-badge text-label-badge">
+                            5 Items • 5 Marks
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Q24 -->
+                        <article
+                            class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 shadow-sm hover:border-border-hover transition-all flex flex-col justify-between"
+                            data-marks="1" data-year="2082">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center gap-2"><span
+                                            class="w-6 h-6 rounded-md bg-surface-container text-primary flex items-center justify-center font-bold text-[12px]">24</span><span
+                                            class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2082
+                                            Bagmati Q.N. 24]</span></div><span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface mb-3">
+                                    It's a beautiful <u>present</u> for me. What is the grammatical word class of the
+                                    underlined word?
+                                </p>
+                                <div class="grid grid-cols-2 gap-2 font-body-sm text-body-sm mb-3">
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(i)
+                                        noun</span>
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(ii)
+                                        adjective</span>
+                                    <span
+                                        class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(iii)
+                                        adverb</span>
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(iv)
+                                        verb</span>
+                                </div>
+                            </div>
+                            <div class="pt-2 border-t border-border-subtle">
+                                <p class="font-body-sm text-body-sm"><strong
+                                        class="text-tertiary-container">Correct:</strong> <strong>(i) Noun</strong>
+                                    (gift/object, stressed on first syllable: /ˈprez.ənt/).</p>
+                            </div>
+                        </article>
+                        <!-- Q25 -->
+                        <article
+                            class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 shadow-sm hover:border-border-hover transition-all flex flex-col justify-between"
+                            data-marks="1" data-year="2082">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center gap-2"><span
+                                            class="w-6 h-6 rounded-md bg-surface-container text-primary flex items-center justify-center font-bold text-[12px]">25</span><span
+                                            class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2082
+                                            Gandaki Q.N. 25]</span></div><span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface mb-3">
+                                    Which of the following words comes <strong>before</strong> the word
+                                    <strong>'choice'</strong> in the standard English dictionary?
+                                </p>
+                                <div class="grid grid-cols-2 gap-2 font-body-sm text-body-sm mb-3">
+                                    <span
+                                        class="p-2 rounded bg-primary-fixed/30 border border-primary text-primary font-bold text-center">(i)
+                                        choose</span>
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(ii)
+                                        chrome</span>
+                                    <span
+                                        class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(iii)
+                                        chide</span>
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(iv)
+                                        chord</span>
+                                </div>
+                            </div>
+                            <div class="pt-2 border-t border-border-subtle">
+                                <p class="font-body-sm text-body-sm"><strong
+                                        class="text-tertiary-container">Correct:</strong> <strong>(iii) chide</strong>
+                                    (Alphabetical ordering: 'chi...' precedes 'cho...').</p>
+                            </div>
+                        </article>
+                        <!-- Q27 -->
+                        <article
+                            class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 shadow-sm hover:border-border-hover transition-all flex flex-col justify-between"
+                            data-marks="1" data-year="2082">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center gap-2"><span
+                                            class="w-6 h-6 rounded-md bg-surface-container text-primary flex items-center justify-center font-bold text-[12px]">27</span><span
+                                            class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2082
+                                            Madhesh Q.N. 27]</span></div><span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface mb-3">
+                                    Which of the following base words takes the negative prefix <strong>'il-'</strong>?
+                                </p>
+                                <div class="grid grid-cols-2 gap-2 font-body-sm text-body-sm mb-3">
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(i)
+                                        balance</span>
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(ii)
+                                        fertile</span>
+                                    <span
+                                        class="p-2 rounded bg-primary-fixed/30 border border-primary text-primary font-bold text-center">(iii)
+                                        legal</span>
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(iv)
+                                        mobile</span>
+                                </div>
+                            </div>
+                            <div class="pt-2 border-t border-border-subtle">
+                                <p class="font-body-sm text-body-sm"><strong
+                                        class="text-tertiary-container">Correct:</strong> <strong>(iii) legal</strong>
+                                    -&gt; <em>illegal</em> (Prefix 'il-' attaches to roots starting with 'l').</p>
+                            </div>
+                        </article>
+                        <!-- Q28 -->
+                        <article
+                            class="question-card bg-surface-card rounded-2xl border border-border-subtle p-5 shadow-sm hover:border-border-hover transition-all flex flex-col justify-between"
+                            data-marks="1" data-year="2082">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center gap-2"><span
+                                            class="w-6 h-6 rounded-md bg-surface-container text-primary flex items-center justify-center font-bold text-[12px]">28</span><span
+                                            class="inline-flex items-center px-2 py-0.5 rounded text-[12px] font-mono font-semibold bg-tag-year-bg text-tag-year-text border border-primary-fixed">[2082
+                                            Lumbini Q.N. 28]</span></div><span
+                                        class="px-2 py-0.5 rounded bg-tag-marks-bg text-tag-marks-text font-label-badge text-label-badge">1
+                                        Mark</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface mb-3">
+                                    Which of the following words has the identical initial consonant sound /k/ as in the
+                                    word <strong>'chaos'</strong>?
+                                </p>
+                                <div class="grid grid-cols-2 gap-2 font-body-sm text-body-sm mb-3">
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(i)
+                                        chance</span>
+                                    <span
+                                        class="p-2 rounded bg-primary-fixed/30 border border-primary text-primary font-bold text-center">(ii)
+                                        chemical</span>
+                                    <span
+                                        class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(iii)
+                                        circus</span>
+                                    <span class="p-2 rounded bg-surface-bg border border-border-subtle text-center">(iv)
+                                        cinema</span>
+                                </div>
+                            </div>
+                            <div class="pt-2 border-t border-border-subtle">
+                                <p class="font-body-sm text-body-sm"><strong
+                                        class="text-tertiary-container">Correct:</strong> <strong>(ii) chemical</strong>
+                                    (/ˈkem.ɪ.kəl/ begins with /k/ sound like /ˈkeɪ.ɒs/).</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- Practical Exam Preparation Callout Box -->
+                <div
+                    class="w-full rounded-2xl bg-gradient-to-r from-tag-year-bg via-surface-card to-accent-purple-light/40 border border-border-subtle p-6 flex flex-col sm:flex-row items-center justify-between gap-space-md shadow-sm">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-md shrink-0">
+                            <span class="material-symbols-outlined text-[28px]">lightbulb</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface">NEB Class 12 English Marking
+                                Guide</h3>
+                            <p class="font-body-md text-body-md text-text-muted">Mastering comprehension answers and
+                                10-mark free compositions requires strictly adhering to prescribed rubric points.</p>
+                        </div>
+                    </div>
+                    <a class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary hover:bg-secondary-container transition-all font-headline-sm text-headline-sm shrink-0 shadow-sm"
+                        href="#">
+                        Download PDF Guide
+                    </a>
+                </div>
+                <!-- Bottom Portal Navigation Actions -->
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-lg border-t border-border-subtle">
+                    <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-surface-card border border-border-subtle hover:border-border-hover text-on-surface font-headline-sm text-headline-sm shadow-sm transition-all hover:-translate-x-0.5"
+                        href="#">
+                        <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                        <span class="">All Question Banks</span>
+                    </a>
+                    <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+                        <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary hover:bg-secondary-container font-headline-sm text-headline-sm shadow-md transition-all hover:translate-x-0.5"
+                            href="#">
+                            <span class="">Explore English Syllabus</span>
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Dynamic Solution Accordion Toggle All
+            const expandBtn = document.getElementById('expandAllBtn');
+            let allExpanded = false;
+
+            expandBtn?.addEventListener('click', () => {
+                const detailsElements = document.querySelectorAll('details');
+                allExpanded = !allExpanded;
+                detailsElements.forEach(el => {
+                    el.open = allExpanded;
+                });
+                expandBtn.querySelector('span:last-child').textContent = allExpanded ? 'Collapse Solutions' : 'Expand Solutions';
+            });
+
+            // Section Filter Controls
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const sections = document.querySelectorAll('.question-section');
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Toggle Tab Active Classes
+                    filterTabs.forEach(t => {
+                        t.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+                        t.classList.add('bg-surface-container-low', 'text-text-muted');
+                    });
+                    tab.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+                    tab.classList.remove('bg-surface-container-low', 'text-text-muted');
+
+                    const filterVal = tab.getAttribute('data-filter');
+                    sections.forEach(sec => {
+                        if (filterVal === 'all' || sec.id === filterVal) {
+                            sec.style.display = 'flex';
+                        } else {
+                            sec.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Year & Marks Client Filtering
+            const yearSelect = document.getElementById('yearFilter');
+            const marksSelect = document.getElementById('marksFilter');
+            const questionCards = document.querySelectorAll('.question-card');
+
+            function applyFilters() {
+                const yr = yearSelect.value;
+                const mrk = marksSelect.value;
+
+                questionCards.forEach(card => {
+                    const cardYear = card.getAttribute('data-year');
+                    const cardMarks = card.getAttribute('data-marks');
+
+                    const yearMatch = (yr === 'all') || (cardYear === yr);
+                    const marksMatch = (mrk === 'all') || (cardMarks === mrk);
+
+                    if (yearMatch && marksMatch) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            yearSelect?.addEventListener('change', applyFilters);
+            marksSelect?.addEventListener('change', applyFilters);
+        </script>
+    </main>
+    <footer class="w-full bg-surface-bg border-t border-border-subtle pt-space-xl pb-space-lg">
+        <div class="max-w-[1200px] mx-auto px-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-xl">
+                <div class="lg:col-span-2 flex flex-col gap-space-md pr-space-md">
+                    <div class="flex items-center gap-space-sm">
+                        <div
+                            class="w-9 h-9 rounded-xl bg-tag-year-bg flex items-center justify-center text-primary border border-primary-fixed">
+                            <span class="material-symbols-outlined text-[22px]">school</span></div><span
+                            class="font-headline-md text-headline-md tracking-tight text-primary">LearnNepal</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-text-muted max-w-sm">Empowering NEB students with
+                        high-quality, structured, and accessible digital study notes &amp; question banks — completely
+                        free.</p>
+                </div>
+                <div class="flex flex-col gap-space-sm">
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Class 10 (SEE)</h3>
+                    <ul class="flex flex-col gap-space-xs">
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="question-bank" href="#">Science Question Bank</a></li>
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="question-bank" href="#">Optional Math</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-space-sm">
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Class 12 (NEB)</h3>
+                    <ul class="flex flex-col gap-space-xs">
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="question-bank" href="#">Computer Science</a></li>
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="question-bank" href="#">English</a></li>
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="question-bank" href="#">Nepali</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-space-sm">
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Resources</h3>
+                    <ul class="flex flex-col gap-space-xs">
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="courses" href="#">All Courses</a></li>
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="about" href="#">About Us</a></li>
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="contact" href="#">Contact</a></li>
+                        <li class="list-none"><a
+                                class="font-body-md text-body-md text-text-muted hover:text-primary transition-colors"
+                                data-path="privacy-policy" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-border-subtle pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+                <p class="font-body-sm text-body-sm text-text-muted text-center sm:text-left">© 2026 LearnNepal — Built
+                    with ❤️ for NEB students across Nepal</p>
+            </div>
+        </div>
+    </footer><a aria-label="Scroll to top"
+        class="fixed bottom-space-lg right-space-lg w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-[0_8px_20px_rgba(38,37,216,0.35)] hover:bg-secondary-container transition-all z-40"
+        href="#"><span class="material-symbols-outlined text-[24px]">arrow_upward</span></a>
+
+</body>
+
+</html>

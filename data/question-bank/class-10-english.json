@@ -1,0 +1,1458 @@
+{
+  "classId": "class-10",
+  "className": "Class 10 (SEE)",
+  "subjectId": "english",
+  "subjectName": "Compulsory English",
+  "languageMode": "english",
+  "lastUpdated": "2081-12-30",
+  "exams": [
+    {
+      "year": "2081",
+      "examType": {
+        "id": "regular",
+        "name": "Regular Examination"
+      },
+      "fullMarks": 75,
+      "duration": "3 Hours",
+      "instructions": [
+        {
+          "type": "text",
+          "value": "Candidates are required to answer the questions in their own words as far as practicable. Figures in the margin indicate the full marks. Attempt all the questions."
+        }
+      ],
+      "sets": [
+        {
+          "id": "bagmati-bp",
+          "name": "Bagmati Province (RE-1011 'BP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-bp-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "weathers", "true-false", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "1. Read the poem and write 'TRUE' for true and 'FALSE' for the false statements. (5×1=5)\n\nWeathers\nThis is the weather the cuckoo likes,\nAnd so do I;\nWhen showers betumble the chestnut spikes,\nAnd nestlings fly;\nAnd the little brown nightingale bills his best.\nAnd they sit outside at 'The Traveller's Rest',\nAnd maids come forth sprig-muslin drest,\nAnd citizens dream of the south and west,\nAnd so do I.\n\nThis is the weather the shepherd shuns,\nAnd so do I;\nWhen beeches drip in browns and duns,\nAnd thresh and ply;\nAnd hill-hid tides throb, throe on throe,\nAnd meadow rivulets overflow,\nAnd drops on gate bars hang in a row,\nAnd rooks in families homeward go,\nAnd so do I.\n– Thomas Hardy"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-2081-bp-q1-i",
+                      "questionNumber": "i",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "The speaker likes the spring season."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q1-ii",
+                      "questionNumber": "ii",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "The girls wear thick cloths in spring."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q1-iii",
+                      "questionNumber": "iii",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "People love to travel far and wide in spring."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q1-iv",
+                      "questionNumber": "iv",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "The tides are silent in winter."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q1-v",
+                      "questionNumber": "v",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Rooks hate the winter season."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    }
+                  ],
+                  "answer": {
+                    "content": []
+                  }
+                },
+                {
+                  "id": "c10-eng-2081-bp-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "pratap-malla", "history", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "2. Read the text and do the tasks. (10 Marks)\n\nPratap Malla was one of the most famous kings of Malla Dynasty. He constructed some magnificent and beautiful architectural structure around Kathmandu. The way he came to the throne is very interesting and controversial at the same time. He had the experience of administration even when his father was alive. When his father Laxmi Nara Singh's madness grew worse, he imprisoned his father and he himself ruled as a regent of his father in Kantipur.\n\nHe was an able administrator. Kantipur was highly developed during his reign. Trade with Lhasa (Tibet) was also going on well. By his tact he was making the kings of Lalitpur and Bhaktapur play against each other. Sometimes he sided with Bhaktapur and posed a threat to Lalitpur. On other occasions, he aligned with Lalitpur and fell upon Bhaktapur.\n\nPratap Malla was religious minded person. He built a beautiful temple at Guhyeshwari and fenced it. He renovated the temple of Pashupatinath and raised a pinnacle over it. At Swayambhu he built Pratappur, Kabeendrapur and many other temples and also set up a copper gilt 'Bajra'. He also renovated the temples and Basuki Bhimsen, Taleju and Degutale. With a view to warding off evils, he erected an image of Hanuman, the monkey god, by the side of his palace gate and called the palace Hanumandhoka. He erected the golden gate of the palace, set up an image of Nri Simha, Kal Bhairab and Vishwaroop at Layaku Bahi. Inside the palace, he also set up Sundari Chowk and Mohan Chowk. A pond was dug at Bhandarkhal and filled with water brought from Budhanilakantha. He installed an image of Narayan lying in the pond, an exact replica from Budhanilakantha Temple."
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-2081-bp-q2-a",
+                      "questionNumber": "A",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Fill in the blanks with the correct information from the text. (5×1=5)\n(i) After sending his father to prison, Pratap Malla ruled in Kantipur as a ..........\n(ii) Pratap Malla made the kings of ......... fight with each other.\n(iii) Pratap Malla set up a ....... over the Pashupatinath Temple.\n(iv) An image of Hanuman was raised at Hanumandhoka to get rid of ..........\n(v) Sundari Chowk and Mohan chowk were set up inside .........."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q2-b",
+                      "questionNumber": "B",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Answer the following questions. (5×1=5)\n(i) Why is Pratap Malla popular as a king? Give a reason.\n(ii) Do you think Pratap Malla did a right job by imprisoning his father? Why/Why not?\n(iii) Write the names of two temples that Pratap Malla built at Swayambhu.\n(iv) Who is Hanuman?\n(v) What is common between Bhandarkhal and Budhanilakantha?"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    }
+                  ],
+                  "answer": {
+                    "content": []
+                  }
+                },
+                {
+                  "id": "c10-eng-2081-bp-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "job-vacancy", "advertisement", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "3. Read the following text and do the tasks. (10 Marks)\n\nWANTED\nWe, a prominent importer and distributor of Medical devices, are seeking dynamic candidates for the following posts.\n\n1. Marketing Executive - 3\n(Kathmandu and Outside)\nScience/ Commerce Graduate with good communication skills, having pleasant and smart personality and willing to work and travel extensively. Experience in similar products will be an added advantage.\n\n2. Sales/ Delivery - 2\nAt least a High School Graduate. The candidate should be smart and willing to work at odd hours.\n\"Note: For the post 1 & 2 - Candidates having own bike will have added advantage.\"\n\n3. Account Officer (Ladies) - 1\nMaster's in Accounting with good English language, excellent computer skill and willing to work independently (Some experience will be preferred.)\n\nIf you meet above criteria, please apply with CV and a recent photograph mentioning expected salary to the following email address by 25 March, 2025.\n\nEmail : info.mediaids@gmail.com\n(Only short listed candidates matching our criteria will be called for interview.)\n\nABC International Pvt. Ltd.\nKathmandu, Nepal"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-2081-bp-q3-a",
+                      "questionNumber": "A",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Fill in the blanks with the correct information from the text. (5×1=5)\n(i) ABC International Pvt. Ltd. is looking for dynamic .....\n(ii) Applicants having bikes will be preferred for the post of .....\n(iii) Interested candidates should mention their ..... while applying for the posts.\n(iv) Qualified candidates can apply through .....\n(v) Female candidates with Master's degree in ..... can apply for Account Officer."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q3-b",
+                      "questionNumber": "B",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Answer the following questions. (5×1=5)\n(i) What does ABC International Pvt. Ltd. deal with?\n(ii) What academic qualification is required for the post of Marketing Executive?\n(iii) Which post requires the staff to work at unusual hours?\n(iv) What is the last date to apply?\n(v) Who will be called for the interview?"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    }
+                  ],
+                  "answer": {
+                    "content": []
+                  }
+                },
+                {
+                  "id": "c10-eng-2081-bp-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "health", "school-lunches", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "4. Read the article given below and do the tasks. (15 Marks)\n\nHealth experts get tough on school lunches\nIt's lunchtime at Hall Memorial School in Connecticut, and 10 year old Haley is making her way through the food line. Many of her friends are thrilled with the day's lunch selections: pizza and French fries and hot dogs. But Haley feels discouraged. \"I use four or five napkins just trying to get the grease off the pizza,\" she says. \"Where are the healthy options?\"\n\nHealth experts are asking the same question. They say foods high in fat, salt and sugar should be banned from school lunch programs. This includes some items you might not suspect, like fruit punch, which is loaded with sugar, and macaroni and cheese, which is sky-high in fat and salt. \"Children are already consuming too much junk food,\" says Jen Keller, a dietitian at the Physician's Committee for Responsible Medicine. \"It's important to offer them only healthy items in school.\"\n\nIt's not that health experts want to deprive kids of foods they like best. They just want to help kids avoid many of the health problems that come with eating large quantities of unhealthy food. Today, 15 percent of children ages 6 to 11 are obese or seriously overweight. That's up from just 6.5 percent in the late 1970s. Poor diet and obesity can cause diseases like type - 2 diabetes, which can lead to blindness and kidney problems. As of a few years ago, this disease was so rare in children that it was called \"adult onset diabetes.\" \"Many foods that are offered in cafeterias are linked to these problems,\" Keller says.\n\nMost schools do offer some healthful foods, but experts say that doesn't solve the problem. \"Given a choice, most kids are going to choose junk over something healthy,\" says Pat Thorton, a psychologist who studies obesity in children. Throton and other experts agree that schools and parents need to educate kids about making good food choices, both in and out of school."
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-2081-bp-q4-a",
+                      "questionNumber": "A",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Write 'TRUE' for true and 'FALSE' for the false statements. (5×1=5)\n(i) Haley found the pizza in the school lunch too oily.\n(ii) Fruit punch is a hygienic food.\n(iii) Obesity can cause type 2 diabetes.\n(iv) Most foods at school cafeteria are healthy.\n(v) Pat Thorton is a food expert."
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q4-b",
+                      "questionNumber": "B",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Match the meanings in column 'A' with the correct words in column 'B'. One word does not have a match. (5×1=5)"
+                          },
+                          {
+                            "type": "table",
+                            "headers": ["Column A", "Column B"],
+                            "rows": [
+                              ["(i) feeling or showing great excitement and pleasure", "(a) obesity"],
+                              ["(ii) feeling less confident", "(b) punch"],
+                              ["(iii) a drink made by mixing water, fruit, juice and spices", "(c) dietitian"],
+                              ["(iv) A person who advises people about healthy food habits", "(d) expert"],
+                              ["(v) the fact of being fat in an unhealthy way", "(e) discouraged"],
+                              ["", "(f) thrilled"]
+                            ]
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q4-c",
+                      "questionNumber": "C",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Answer the following questions. (5×1=5)\n(i) Who are thrilled with the day's lunch selection?\n(ii) According to experts, what kind of foods should be banned from schools?\n(iii) what can be the cause of blindness and kidney problems?\n(iv) What is the percentage of obese children of 6 to 11 years?\n(v) Where do the kids need to be educated about food choices?"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    }
+                  ],
+                  "answer": {
+                    "content": []
+                  }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-bp-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "rules-and-regulations", "library", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "5. Write a set of rules and regulations to be followed in a library. Write it in about 100 words using the clues given below. (5 Marks)\n\nopening time : 10 am – 4 pm ......... switch off mobile phone ...... not making noise ..... no littering ........ issue books before borrowing"
+                      }
+                    ]
+                  },
+                  "answer": {
+                    "content": []
+                  }
+                },
+                {
+                  "id": "c10-eng-2081-bp-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "invitation-letter", "wedding", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "6. Your sister is going to get married next month. Write a letter to your friend inviting him/her in the wedding ceremony using the following clues in about 100 words. (5 Marks)\n\n26 April, 2025 ........ own home ........ no gifts ...... blessings to bride and bridegroom ........ wedding party ....... presence of the whole family ........ RSVP"
+                      }
+                    ]
+                  },
+                  "answer": {
+                    "content": []
+                  }
+                },
+                {
+                  "id": "c10-eng-2081-bp-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "paragraph-writing", "festivals-spending", "social-issues", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "7. People, in our society, tend to spend money beyond the capacity for show off in the name of festivals and celebrations. Write two paragraphs in about 150 words expressing your views on the issue. (6 Marks)"
+                      }
+                    ]
+                  },
+                  "answer": {
+                    "content": []
+                  }
+                },
+                {
+                  "id": "c10-eng-2081-bp-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "book-review", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "8. Write a review of a book that you have recently read in about 200 words. Include book details / main plot, your analysis (strength and weaknesses) and recommendation. (8 Marks)"
+                      }
+                    ]
+                  },
+                  "answer": {
+                    "content": []
+                  }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-bp-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation", "tag-question", "speech", "voice", "tense"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-2081-bp-q9-i",
+                      "questionNumber": "i",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "He cut his finger accidently, ............? (Add a correct question tag.)"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q9-ii",
+                      "questionNumber": "ii",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "By next week, I ........ (submit) my project work. (Use correct form of the verb 'submit' to complete the sentence.)"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q9-iii",
+                      "questionNumber": "iii",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Hari said to me, \"Where did you go last holiday?\" (Change into indirect speech.)"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q9-iv",
+                      "questionNumber": "iv",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Somebody knocked the door. (Change into passive voice.)"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q9-v",
+                      "questionNumber": "v",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "John likes to read newspapers. (Change into negative.)"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    },
+                    {
+                      "id": "c10-eng-2081-bp-q9-vi",
+                      "questionNumber": "vi",
+                      "marks": 1,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Babita will visit Jomsom next week. (Change into 'When' question.)"
+                          }
+                        ]
+                      },
+                      "answer": {
+                        "content": []
+                      }
+                    }
+                  ],
+                  "answer": {
+                    "content": []
+                  }
+                },
+                {
+                  "id": "c10-eng-2081-bp-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test", "articles", "prepositions", "concord", "connectives"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (Rewriting the text is not compulsory.) (10×0.5=5)\n\nA few years ago, Mr. Badal and Mr. Gautam migrated to (a) ...... (a/ an/ the/ nothing) capital. One of them (b) ...... (is/ was/ are/ were) from Kavrepalanchok and the other was from Ramechhap. Both of them were retired teachers as well as social reformers. They were accompanied by Mr. Regmi. The three gentlemen noticed the condition of a community school (c) ..... (in/ on/ at/ from) their new society. In spite of quality education, the school lacked physical infrastructure. The school was in need of some change makers with a wide vision. Meanwhile, the three wise people (d) ...... (start/ were starting/ started/ had started) to raise awareness of the locals for the reform of the school. A team of land management committee was formed, (e) ..... (was it/wasn't it/ weren't it/ doesn't it)? The committee moved door to door and collected more than 1,000,000 rupees. (f) ....... (Although/ In spite of/ so that/ however) they were new, they persuaded every house owner for donation. With the money and the financial support from the municipality, two pieces of land (g) ...... (had bought/ bought/ were bought/ is bought) by the school. The land registration officer asked the school team (h) ...... (how did you/ how do you/ how they have/ how they had) collected the money to buy the land. Knowing the mission of those three people, he was surprised and congratulated the school team. If the three gentlemen had not initiated for the school project, the school (i) ........ (won't/ wouldn't/ wouldn't have/ mayn't have) got a spacious ground and a new building. This made the villagers (j) .... (realize /realized/ to realize/ realizing) that perseverance and continuous effort is the key to success."
+                      }
+                    ]
+                  },
+                  "answer": {
+                    "content": []
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "koshi-kp",
+          "name": "Koshi Province (RE-1011 'KP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-kp-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "1. Read the poem and do the tasks. (5 Marks)\n\n[Upload Koshi Province Seen Poem here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kp-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "2. Read the text and do the tasks. (10 Marks)\n\n[Upload Koshi Province Seen Prose Text here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kp-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "3. Read the following text and do the tasks. (10 Marks)\n\n[Upload Koshi Province Unseen Notice / Ad / Vacancy here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kp-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "4. Read the article given below and do the tasks. (15 Marks)\n\n[Upload Koshi Province Unseen Article / Story here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-kp-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "5. Guided Writing I (Rules / Regulations / Directions / Recipe) in about 100 words. (5 Marks)\n\n[Upload Koshi Province Guided Writing 1 question and clues here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kp-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "6. Guided Writing II (Invitation / Condolence / Congratulation) in about 100 words. (5 Marks)\n\n[Upload Koshi Province Guided Writing 2 question and clues here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kp-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "7. Free Writing I (Views / Paragraphs on social issues) in about 150 words. (6 Marks)\n\n[Upload Koshi Province Free Writing 1 prompt here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kp-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "8. Free Writing II (Book / Movie Review / Essay / Report) in about 200 words. (8 Marks)\n\n[Upload Koshi Province Free Writing 2 prompt here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-kp-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)\n\n[Upload Koshi Province Grammar transformation questions (i) to (vi) here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kp-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (10×0.5=5)\n\n[Upload Koshi Province Grammar Cloze passage here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "madhesh-mp",
+          "name": "Madhesh Province (RE-1011 'MP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-mp-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "1. Read the poem and do the tasks. (5 Marks)\n\n[Upload Madhesh Province Seen Poem here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-mp-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "2. Read the text and do the tasks. (10 Marks)\n\n[Upload Madhesh Province Seen Prose Text here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-mp-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "3. Read the following text and do the tasks. (10 Marks)\n\n[Upload Madhesh Province Unseen Notice / Ad / Vacancy here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-mp-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "4. Read the article given below and do the tasks. (15 Marks)\n\n[Upload Madhesh Province Unseen Article / Story here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-mp-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "5. Guided Writing I in about 100 words. (5 Marks)\n\n[Upload Madhesh Province Guided Writing 1 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-mp-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "6. Guided Writing II in about 100 words. (5 Marks)\n\n[Upload Madhesh Province Guided Writing 2 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-mp-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "7. Free Writing I in about 150 words. (6 Marks)\n\n[Upload Madhesh Province Free Writing 1 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-mp-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "8. Free Writing II in about 200 words. (8 Marks)\n\n[Upload Madhesh Province Free Writing 2 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-mp-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)\n\n[Upload Madhesh Province Grammar transformation questions (i) to (vi) here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-mp-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (10×0.5=5)\n\n[Upload Madhesh Province Grammar Cloze passage here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gandaki-gp",
+          "name": "Gandaki Province (RE-1011 'GP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-gp-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "1. Read the poem and do the tasks. (5 Marks)\n\n[Upload Gandaki Province Seen Poem here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-gp-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "2. Read the text and do the tasks. (10 Marks)\n\n[Upload Gandaki Province Seen Prose Text here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-gp-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "3. Read the following text and do the tasks. (10 Marks)\n\n[Upload Gandaki Province Unseen Notice / Ad / Vacancy here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-gp-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "4. Read the article given below and do the tasks. (15 Marks)\n\n[Upload Gandaki Province Unseen Article / Story here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-gp-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "5. Guided Writing I in about 100 words. (5 Marks)\n\n[Upload Gandaki Province Guided Writing 1 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-gp-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "6. Guided Writing II in about 100 words. (5 Marks)\n\n[Upload Gandaki Province Guided Writing 2 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-gp-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "7. Free Writing I in about 150 words. (6 Marks)\n\n[Upload Gandaki Province Free Writing 1 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-gp-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "8. Free Writing II in about 200 words. (8 Marks)\n\n[Upload Gandaki Province Free Writing 2 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-gp-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)\n\n[Upload Gandaki Province Grammar transformation questions (i) to (vi) here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-gp-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (10×0.5=5)\n\n[Upload Gandaki Province Grammar Cloze passage here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lumbini-lp",
+          "name": "Lumbini Province (RE-1011 'LP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-lp-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "1. Read the poem and do the tasks. (5 Marks)\n\n[Upload Lumbini Province Seen Poem here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-lp-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "2. Read the text and do the tasks. (10 Marks)\n\n[Upload Lumbini Province Seen Prose Text here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-lp-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "3. Read the following text and do the tasks. (10 Marks)\n\n[Upload Lumbini Province Unseen Notice / Ad / Vacancy here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-lp-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "4. Read the article given below and do the tasks. (15 Marks)\n\n[Upload Lumbini Province Unseen Article / Story here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-lp-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "5. Guided Writing I in about 100 words. (5 Marks)\n\n[Upload Lumbini Province Guided Writing 1 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-lp-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "6. Guided Writing II in about 100 words. (5 Marks)\n\n[Upload Lumbini Province Guided Writing 2 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-lp-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "7. Free Writing I in about 150 words. (6 Marks)\n\n[Upload Lumbini Province Free Writing 1 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-lp-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "8. Free Writing II in about 200 words. (8 Marks)\n\n[Upload Lumbini Province Free Writing 2 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-lp-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)\n\n[Upload Lumbini Province Grammar transformation questions (i) to (vi) here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-lp-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (10×0.5=5)\n\n[Upload Lumbini Province Grammar Cloze passage here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "karnali-kap",
+          "name": "Karnali Province (RE-1011 'KaP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-kap-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "1. Read the poem and do the tasks. (5 Marks)\n\n[Upload Karnali Province Seen Poem here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kap-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "2. Read the text and do the tasks. (10 Marks)\n\n[Upload Karnali Province Seen Prose Text here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kap-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "3. Read the following text and do the tasks. (10 Marks)\n\n[Upload Karnali Province Unseen Notice / Ad / Vacancy here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kap-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "4. Read the article given below and do the tasks. (15 Marks)\n\n[Upload Karnali Province Unseen Article / Story here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-kap-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "5. Guided Writing I in about 100 words. (5 Marks)\n\n[Upload Karnali Province Guided Writing 1 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kap-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "6. Guided Writing II in about 100 words. (5 Marks)\n\n[Upload Karnali Province Guided Writing 2 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kap-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "7. Free Writing I in about 150 words. (6 Marks)\n\n[Upload Karnali Province Free Writing 1 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kap-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "8. Free Writing II in about 200 words. (8 Marks)\n\n[Upload Karnali Province Free Writing 2 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-kap-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)\n\n[Upload Karnali Province Grammar transformation questions (i) to (vi) here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-kap-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (10×0.5=5)\n\n[Upload Karnali Province Grammar Cloze passage here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sudurpashchim-sp",
+          "name": "Sudurpashchim Province (RE-1011 'SP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-sp-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "1. Read the poem and do the tasks. (5 Marks)\n\n[Upload Sudurpashchim Province Seen Poem here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-sp-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "2. Read the text and do the tasks. (10 Marks)\n\n[Upload Sudurpashchim Province Seen Prose Text here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-sp-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "3. Read the following text and do the tasks. (10 Marks)\n\n[Upload Sudurpashchim Province Unseen Notice / Ad / Vacancy here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-sp-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "4. Read the article given below and do the tasks. (15 Marks)\n\n[Upload Sudurpashchim Province Unseen Article / Story here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-sp-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "5. Guided Writing I in about 100 words. (5 Marks)\n\n[Upload Sudurpashchim Province Guided Writing 1 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-sp-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "6. Guided Writing II in about 100 words. (5 Marks)\n\n[Upload Sudurpashchim Province Guided Writing 2 question here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-sp-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "7. Free Writing I in about 150 words. (6 Marks)\n\n[Upload Sudurpashchim Province Free Writing 1 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-sp-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "8. Free Writing II in about 200 words. (8 Marks)\n\n[Upload Sudurpashchim Province Free Writing 2 prompt here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-2081-sp-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)\n\n[Upload Sudurpashchim Province Grammar transformation questions (i) to (vi) here]" }]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-2081-sp-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test"],
+                  "question": {
+                    "content": [{ "type": "text", "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (10×0.5=5)\n\n[Upload Sudurpashchim Province Grammar Cloze passage here]" }]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

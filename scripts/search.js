@@ -10,6 +10,10 @@
         { name: "About Us", desc: "Our mission, value statement, and story", url: "about.html", cat: "Navigation", icon: "📖" },
         { name: "Contact Us", desc: "Get in touch or subscribe to our channel", url: "contact.html", cat: "Navigation", icon: "✉️" },
         
+        // Grade 8
+        { name: "Class 8 Social Studies (सामाजिक अध्ययन)", desc: "हामी र हाम्रो समाज, नागरिक चेतना, विकास र नेपाल, संविधान, संसद्, सरकार", url: "pages/class-8/social.html", cat: "Class 8", icon: "🌏" },
+        { name: "Class 8 Social: विकास र नेपाल (Unit 1)", desc: "विकास र नेपाल सम्पूर्ण अभ्यास तथा क्रियाकलाप", url: "pages/class-8/social/unit-1-chapter-1.html", cat: "Class 8", icon: "📝" },
+
         // Grade 10
         { name: "Class 10 Optional Mathematics", desc: "Functions, Polynomials, Linear Programming, Quadratic Equations, Surds, Matrices, Trigonometry, Coordinate Geometry, Vectors, Transformations, Statistics, and Continuity solutions", url: "pages/class-10/opt-math/index.html", cat: "Class 10", icon: "📐" },
         { name: "Class 10 Social Studies (सामाजिक अध्ययन)", desc: "हामी र हाम्रो समाज, विकास र पूर्वाधार, सामाजिक मूल्य, नागरिक चेतना, हाम्रो पृथ्वी, हाम्रो विगत, आर्थिक क्रियाकलाप, अन्तर्राष्ट्रिय सम्बन्ध र जनसङ्ख्या व्यवस्थापन", url: "pages/class-10/social/index.html", cat: "Class 10", icon: "🌏" },

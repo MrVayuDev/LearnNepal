@@ -1,0 +1,418 @@
+{
+  "$schema-description": "LearnNepal Class 10 Compulsory English Question Bank Template (75 Marks, 3 Hours, CDC SEE Grid). Answers left empty as requested.",
+  "classId": "class-10",
+  "className": "Class 10 (SEE)",
+  "subjectId": "english",
+  "subjectName": "Compulsory English",
+  "languageMode": "english",
+  "lastUpdated": "2081-12-30",
+  "exams": [
+    {
+      "year": "2081",
+      "examType": {
+        "id": "regular",
+        "name": "Regular Examination"
+      },
+      "fullMarks": 75,
+      "duration": "3 Hours",
+      "instructions": [
+        {
+          "type": "text",
+          "value": "Candidates are required to answer the questions in their own words as far as practicable. Figures in the margin indicate the full marks. Attempt all the questions."
+        }
+      ],
+      "sets": [
+        {
+          "id": "province-code-here",
+          "name": "Province Name (Code e.g. RE-1011 'KP')",
+          "groups": [
+            {
+              "id": "reading",
+              "name": "Reading Comprehension (Q1 – Q4)",
+              "questionType": "comprehension",
+              "totalMarks": 40,
+              "instruction": "Read the following texts and complete the tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q1",
+                  "questionNumber": 1,
+                  "marks": 5,
+                  "questionType": "comprehension",
+                  "tags": ["seen-poem", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "1. Read the poem and write 'TRUE' for true and 'FALSE' for the false statements. (5×1=5)\n\n[Poem Title]\n[Poem Stanzas]\n– [Poet Name]"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q1-i",
+                      "questionNumber": "i",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "Statement 1" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q1-ii",
+                      "questionNumber": "ii",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "Statement 2" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q1-iii",
+                      "questionNumber": "iii",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "Statement 3" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q1-iv",
+                      "questionNumber": "iv",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "Statement 4" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q1-v",
+                      "questionNumber": "v",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "Statement 5" }] },
+                      "answer": { "content": [] }
+                    }
+                  ],
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q2",
+                  "questionNumber": 2,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["seen-prose", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "2. Read the text and do the tasks. (10 Marks)\n\n[Seen Prose Text Paragraphs from Grade 10 English Textbook]"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q2-a",
+                      "questionNumber": "A",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Fill in the blanks with the correct information from the text. (5×1=5)\n(i) ...\n(ii) ...\n(iii) ...\n(iv) ...\n(v) ..."
+                          }
+                        ]
+                      },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q2-b",
+                      "questionNumber": "B",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Answer the following questions. (5×1=5)\n(i) ...\n(ii) ...\n(iii) ...\n(iv) ...\n(v) ..."
+                          }
+                        ]
+                      },
+                      "answer": { "content": [] }
+                    }
+                  ],
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q3",
+                  "questionNumber": 3,
+                  "marks": 10,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "3. Read the following text and do the tasks. (10 Marks)\n\n[Unseen Notice / Job Vacancy / Advertisement / Product Label]"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q3-a",
+                      "questionNumber": "A",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Fill in the blanks / True False / Matching (5×1=5)\n(i) ...\n(ii) ...\n(iii) ...\n(iv) ...\n(v) ..."
+                          }
+                        ]
+                      },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q3-b",
+                      "questionNumber": "B",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Answer the following questions. (5×1=5)\n(i) ...\n(ii) ...\n(iii) ...\n(iv) ...\n(v) ..."
+                          }
+                        ]
+                      },
+                      "answer": { "content": [] }
+                    }
+                  ],
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q4",
+                  "questionNumber": 4,
+                  "marks": 15,
+                  "questionType": "comprehension",
+                  "tags": ["unseen-text", "reading"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "4. Read the article given below and do the tasks. (15 Marks)\n\n[Unseen Story / Essay / News Article / Biography]"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q4-a",
+                      "questionNumber": "A",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Write 'TRUE' for true and 'FALSE' for the false statements. (5×1=5)\n(i) ...\n(ii) ...\n(iii) ...\n(iv) ...\n(v) ..."
+                          }
+                        ]
+                      },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q4-b",
+                      "questionNumber": "B",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Match the meanings in column 'A' with the correct words in column 'B'. (5×1=5)"
+                          },
+                          {
+                            "type": "table",
+                            "headers": ["Column A", "Column B"],
+                            "rows": [
+                              ["(i) Meaning 1", "(a) Word 1"],
+                              ["(ii) Meaning 2", "(b) Word 2"],
+                              ["(iii) Meaning 3", "(c) Word 3"],
+                              ["(iv) Meaning 4", "(d) Word 4"],
+                              ["(v) Meaning 5", "(e) Word 5"],
+                              ["", "(f) Distractor Word"]
+                            ]
+                          }
+                        ]
+                      },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q4-c",
+                      "questionNumber": "C",
+                      "marks": 5,
+                      "question": {
+                        "content": [
+                          {
+                            "type": "text",
+                            "value": "Answer the following questions. (5×1=5)\n(i) ...\n(ii) ...\n(iii) ...\n(iv) ...\n(v) ..."
+                          }
+                        ]
+                      },
+                      "answer": { "content": [] }
+                    }
+                  ],
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "writing",
+              "name": "Writing (Q5 – Q8)",
+              "questionType": "creative-writing",
+              "totalMarks": 24,
+              "instruction": "Complete the following guided and free writing tasks as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q5",
+                  "questionNumber": 5,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "5. Guided Writing I (Rules and Regulations / Directions / Recipe / Notice) in about 100 words using the clues. (5 Marks)\n\n[Clues here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q6",
+                  "questionNumber": 6,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["guided-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "6. Guided Writing II (Invitation Letter / Condolence Message / Congratulation) in about 100 words using the clues. (5 Marks)\n\n[Clues here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q7",
+                  "questionNumber": 7,
+                  "marks": 6,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "7. Free Writing I (Paragraph / Essay / Views on a social issue) in about 150 words. (6 Marks)\n\n[Prompt here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q8",
+                  "questionNumber": 8,
+                  "marks": 8,
+                  "questionType": "long",
+                  "tags": ["free-writing", "writing"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "8. Free Writing II (Book / Movie Review / News Report / Formal Essay) in about 200 words. (8 Marks)\n\n[Prompt here]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            },
+            {
+              "id": "grammar",
+              "name": "Grammar (Q9 – Q10)",
+              "questionType": "grammar",
+              "totalMarks": 11,
+              "instruction": "Answer the following grammar questions as instructed.",
+              "questions": [
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q9",
+                  "questionNumber": 9,
+                  "marks": 6,
+                  "questionType": "short",
+                  "tags": ["grammar", "transformation"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "9. Reproduce the following sentences as instructed in the brackets. (6×1=6)"
+                      }
+                    ]
+                  },
+                  "subQuestions": [
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q9-i",
+                      "questionNumber": "i",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "(i) Sentence (Add question tag)" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q9-ii",
+                      "questionNumber": "ii",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "(ii) Sentence (Tense form of verb)" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q9-iii",
+                      "questionNumber": "iii",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "(iii) Sentence (Indirect speech)" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q9-iv",
+                      "questionNumber": "iv",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "(iv) Sentence (Passive voice)" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q9-v",
+                      "questionNumber": "v",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "(v) Sentence (Negative / Interrogative)" }] },
+                      "answer": { "content": [] }
+                    },
+                    {
+                      "id": "c10-eng-YEAR-PROVINCE-q9-vi",
+                      "questionNumber": "vi",
+                      "marks": 1,
+                      "question": { "content": [{ "type": "text", "value": "(vi) Sentence ('Wh-' question)" }] },
+                      "answer": { "content": [] }
+                    }
+                  ],
+                  "answer": { "content": [] }
+                },
+                {
+                  "id": "c10-eng-YEAR-PROVINCE-q10",
+                  "questionNumber": 10,
+                  "marks": 5,
+                  "questionType": "short",
+                  "tags": ["grammar", "cloze-test"],
+                  "question": {
+                    "content": [
+                      {
+                        "type": "text",
+                        "value": "10. Choose and copy the correct answers from the brackets to complete the given text. (10×0.5=5)\n\n[Contextual passage with 10 bracketed grammar items (a) through (j): articles, prepositions, concord, connectives, conditionals, causative verbs, relative pronouns, etc.]"
+                      }
+                    ]
+                  },
+                  "answer": { "content": [] }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
