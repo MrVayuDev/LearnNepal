@@ -1893,8 +1893,9 @@ textarea.input-field {
 .courses-search-btn { padding: 0.6rem 1.25rem; background: var(--secondary); color: white; border: none; border-radius: var(--radius-lg); font-weight: 600; cursor: pointer; transition: background 0.2s ease; white-space: nowrap; }
 .courses-search-btn:hover { background: var(--on-secondary-fixed-variant); }
 
-.courses-bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
+.courses-bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: stretch; }
 .courses-bento-8  { grid-column: span 8; }
+.courses-bento-6  { grid-column: span 6; }
 .courses-bento-4  { grid-column: span 4; }
 .courses-bento-12 { grid-column: span 12; margin-top: var(--space-xl); }
 
@@ -2083,7 +2084,8 @@ textarea.input-field {
     .team-grid { grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
     .contact-section-grid { grid-template-columns: 1fr; }
     .info-cards-grid { grid-template-columns: 1fr; }
-    .courses-bento-8, .courses-bento-4, .courses-bento-12 { grid-column: span 12; }
+    .courses-bento-8, .courses-bento-6, .courses-bento-4, .courses-bento-12 { grid-column: span 12; }
+    .courses-bento-4 .bento-card[style*="linear-gradient"] { min-height: 280px; flex-direction: row; flex-wrap: wrap; justify-content: space-around; padding: var(--space-xl); }
     .bento-split { flex-direction: column; }
     .bento-split .bento-card-img { width: 100%; height: 200px; min-height: unset; }
     .g12-grid { grid-template-columns: 1fr 1fr; }
