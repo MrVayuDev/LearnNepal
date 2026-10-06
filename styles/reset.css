@@ -1,4 +1,4 @@
-﻿/* Modern CSS Reset */
+/* Modern CSS Reset */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -66,12 +66,10 @@ pre {
     word-break: break-all;
 }
 
-/* Ensure all tables are responsive to prevent breaking layout on mobile */
+/* Ensure tables take full width and collapse borders properly */
 table {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 iframe, object, embed {

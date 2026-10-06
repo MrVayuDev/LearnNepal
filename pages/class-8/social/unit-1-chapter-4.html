@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>स्थानीय, प्रादेशिक र सङ्घीय सरकार - कक्षा ८ सामाजिक अध्ययन | LearnNepal</title>
+    <meta name="description"
+        content="कक्षा ८ सामाजिक अध्ययन तथा मानवमूल्य शिक्षा, एकाइ १ पाठ ४: स्थानीय, प्रादेशिक र सङ्घीय सरकार — पूर्ण प्रश्नोत्तर, क्रियाकलाप र अध्ययन सामग्री।">
+
+    <link rel="icon" type="image/png" href="../../../assets/images/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="../../../scripts/theme.js"></script>
+    <link rel="stylesheet" href="../../../styles/main.css" />
+
+    <style>
+        :root {
+            --devanagari-font: 'Mukta', sans-serif;
+        }
+
+        .devanagari {
+            font-family: var(--devanagari-font);
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined' !important;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            vertical-align: middle;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Activity Card ─────────────────────────────────────── */
+        .activity-card {
+            background: var(--surface-container-low);
+            border: 1px solid var(--outline-variant);
+            border-left: 5px solid var(--secondary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .activity-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: var(--space-md);
+            color: var(--secondary);
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            line-height: 1.65;
+            color: var(--on-surface);
+            font-size: 0.98rem;
+        }
+
+        .activity-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: var(--radius-full);
+            background: rgba(53, 37, 205, 0.1);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+
+        /* ── Custom Table Styles ───────────────────────────────── */
+        .custom-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 0.8rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--outline-variant);
+        }
+
+        .custom-table {
+            width: 100%;
+            display: table;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .custom-table th,
+        .custom-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .custom-table th {
+            background-color: rgba(53, 37, 205, 0.06);
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .custom-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .custom-table tr:nth-child(even) {
+            background-color: var(--surface-container-lowest);
+        }
+
+        .custom-table tr.total-row {
+            font-weight: 700;
+            background-color: rgba(53, 37, 205, 0.04);
+        }
+
+        /* ── Q&A Card ─────────────────────────────────────────── */
+        .qa-card {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .qa-card:hover {
+            border-color: rgba(53, 37, 205, 0.3);
+            box-shadow: var(--shadow-md);
+        }
+
+        .qa-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .qa-badge {
+            background: var(--primary);
+            color: var(--on-primary);
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-full);
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+
+        .qa-question {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--on-surface);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .qa-answer {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--on-surface-variant);
+            padding-left: 2.2rem;
+        }
+
+        @media (max-width: 640px) {
+            .qa-answer {
+                padding-left: 0;
+            }
+            .activity-detail {
+                margin-left: 0 !important;
+            }
+        }
+
+        /* ── Extra Knowledge Grid ─────────────────────────────── */
+        .extra-card {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-left: 5px solid var(--tertiary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            margin-top: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .extra-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tertiary);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+        }
+
+        /* ── Section Dividers & Badges ────────────────────────── */
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-full);
+            background: rgba(53, 37, 205, 0.08);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+
+        .chapter-heading-icon {
+            font-size: 1.4rem;
+            vertical-align: middle;
+            margin-right: 0.3rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+
+<body class="devanagari">
+
+    <!-- Reading Progress Indicator -->
+    <div id="reading-progress"></div>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header" id="site-header">
+        <div class="header-container">
+            <a href="../../../index.html" class="logo">
+                <img src="../../../assets/images/logo.png" alt="LearnNepal">
+                LearnNepal
+            </a>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="../../../index.html" class="nav-link">Home</a>
+                <a href="../../../pages/courses.html" class="nav-link">Courses</a>
+                <a href="../../../pages/question-bank/index.html" class="nav-link">Question Bank</a>
+                <a href="../../../about.html" class="nav-link">About</a>
+
+                <button class="search-trigger btn-search" aria-label="Search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                    <span>Search</span>
+                    <kbd>Ctrl K</kbd>
+                </button>
+                <a href="../../../contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══ DOCS MAIN CONTAINER ═══ -->
+    <main>
+        <div class="docs-layout">
+
+            <!-- ─── SIDEBAR ────────────────────────────────────────── -->
+            <aside class="sidebar" id="chapter-sidebar">
+                <div class="sidebar-header-row">
+                    <div class="sidebar-title">
+                        <a href="index.html"
+                            style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:0.4rem; font-weight:700;">
+                            <span class="material-symbols-outlined" style="font-size:18px;">arrow_back</span>
+                            <span>पाठ्यक्रम (Index)</span>
+                        </a>
+                    </div>
+                    <button class="sidebar-close-btn" aria-label="Close sidebar" title="Close sidebar">
+                        <span class="material-symbols-outlined" style="font-size:18px;">close</span>
+                    </button>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <!-- Unit 1 -->
+                    <div class="sidebar-group active">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder_open</span>
+                            एकाइ १: हामी र हाम्रो समाज
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="unit-1-chapter-1.html" class="sidebar-link">पाठ १: विकास र नेपाल</a>
+                            <a href="unit-1-chapter-2.html" class="sidebar-link">पाठ २: विकासका पूर्वाधार</a>
+                            <a href="unit-1-chapter-3.html" class="sidebar-link">पाठ ३: सङ्घीय राज्यको अवधारणा</a>
+                            <a href="unit-1-chapter-4.html" class="sidebar-link active">पाठ ४: स्थानीय, प्रादेशिक र
+                                सङ्घीय सरकार</a>
+                            <a href="unit-1-chapter-5.html" class="sidebar-link">पाठ ५: मेरो प्रदेश</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ २: हाम्रो मानव मूल्यमान्यता
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ १: हाम्रा आदर्श व्यवहार</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ २: नेपालमा प्रचलित सामाजिक परम्परा र
+                                प्रचलन</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ ३: नेपालमा जातिगत परम्परा र संस्कार</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ ४: हाम्रा धार्मिक एवम् सांस्कृतिक
+                                क्रियाकलाप</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ ५: विविधतामा एकता</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ ६: नेपालमा सामाजिक सद्भाव, सहिष्णुता र
+                                एकता</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ ७: नेपालका राष्ट्रिय सम्पदाहरू</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ ८: अन्तर्राष्ट्रिय व्यक्तित्वहरू</a>
+                            <a href="index.html#unit-2" class="sidebar-link">पाठ ९: स्काउट र अनुशासन</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ ३: नागरिक चेतना, कर्तव्य र अधिकार
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="unit-3-chapter-1.html" class="sidebar-link">पाठ १: संविधानको परिचय</a>
+                            <a href="unit-3-chapter-1.html#lesson-2" class="sidebar-link">पाठ २: सङ्घीय संसद्</a>
+                            <a href="unit-3-chapter-1.html#lesson-3" class="sidebar-link">पाठ ३: सङ्घीय सरकार</a>
+                            <a href="unit-3-chapter-1.html#lesson-4" class="sidebar-link">पाठ ४: न्यायपालिका</a>
+                            <a href="unit-3-chapter-1.html#lesson-5" class="sidebar-link">पाठ ५: समावेशीकरण</a>
+                            <a href="unit-3-chapter-1.html#lesson-6" class="sidebar-link">पाठ ६: लोकतान्त्रिक
+                                गणतन्त्र</a>
+                            <a href="unit-3-chapter-1.html#lesson-7" class="sidebar-link">पाठ ७: सुशासन</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 4 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ ४: सामाजिक समस्या र विकृतिहरू
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="index.html#unit-4" class="sidebar-link">पाठ १: सामाजिक विकृति अन्त्य गरौँ</a>
+                            <a href="index.html#unit-4" class="sidebar-link">पाठ २: सामाजिक समस्या</a>
+                            <a href="index.html#unit-4" class="sidebar-link">पाठ ३: सामाजिक विकृति र समस्या समाधानका
+                                उपाय</a>
+                            <a href="index.html#unit-4" class="sidebar-link">पाठ ४: सामाजिक समस्या र अन्तर्राष्ट्रिय
+                                सङ्घसंस्थाको भूमिका</a>
+                            <a href="index.html#unit-4" class="sidebar-link">पाठ ५: द्वन्द्व व्यवस्थापन</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 5 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ ५: हाम्रो विगत
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ १: नेपाल शब्दको अर्थ र उत्पत्ति</a>
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ २: प्राचीन नेपाल : आर्थिक र सामाजिक
+                                अवस्था</a>
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ ३: काठमाडौँ उपत्यकाको सभ्यता</a>
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ ४: हाम्रा वीर सहिद</a>
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ ५: लोकतान्त्रिक गणतन्त्र र यसका
+                                उपलब्धिहरू</a>
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ ६: ग्रिस र रोमको सभ्यता</a>
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ ७: सिन्धु उपत्यकाको सभ्यता</a>
+                            <a href="index.html#unit-5" class="sidebar-link">पाठ ८: पुनर्जागरण र यसको प्रभाव</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 6 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ ६: हाम्रो आर्थिक क्रियाकलाप
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="index.html#unit-6" class="sidebar-link">पाठ १: मौद्रिक कारोबार</a>
+                            <a href="index.html#unit-6" class="sidebar-link">पाठ २: नेपालका वित्तीय संस्थाहरू</a>
+                            <a href="index.html#unit-6" class="sidebar-link">पाठ ३: नेपालमा पर्यटन</a>
+                            <a href="index.html#unit-6" class="sidebar-link">पाठ ४: वैदेशिक व्यापार</a>
+                            <a href="index.html#unit-6" class="sidebar-link">पाठ ५: वैदेशिक रोजगारी</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 7 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ ७: हाम्रो पृथ्वी
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="index.html#unit-7" class="sidebar-link">पाठ १: पृथ्वीको दैनिक र वार्षिक गति</a>
+                            <a href="index.html#unit-7" class="sidebar-link">पाठ २: मौसम र हावापानी</a>
+                            <a href="index.html#unit-7" class="sidebar-link">पाठ ३: जलवायु परिवर्तन</a>
+                            <a href="index.html#unit-7" class="sidebar-link">पाठ ४: नेपालका छिमेकी देशहरू</a>
+                            <a href="index.html#unit-7" class="sidebar-link">पाठ ५: सार्क राष्ट्रहरू र नेपाल</a>
+                            <a href="index.html#unit-7" class="sidebar-link">पाठ ६: विपत् व्यवस्थापन</a>
+                            <a href="index.html#unit-7" class="sidebar-link">पाठ ७: नक्सा तथा प्रयोगात्मक कार्य</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 8 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ ८: जनसङ्ख्या र यसको व्यवस्थापन
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="index.html#unit-8" class="sidebar-link">पाठ १: जनसङ्ख्या परिवर्तनका निर्धारक
+                                तत्त्वहरू</a>
+                            <a href="index.html#unit-8" class="sidebar-link">पाठ २: नेपालको जनसङ्ख्या</a>
+                            <a href="index.html#unit-8" class="sidebar-link">पाठ ३: नेपालको जनसङ्ख्याको वितरण र
+                                जनघनत्व</a>
+                            <a href="index.html#unit-8" class="sidebar-link">पाठ ४: नेपालमा बसाइँसराइ</a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 9 -->
+                    <div class="sidebar-group">
+                        <div class="sidebar-group-title">
+                            <span class="material-symbols-outlined"
+                                style="font-size:18px; margin-right:4px;">folder</span>
+                            एकाइ ९: अन्तर्राष्ट्रिय सम्बन्ध, समसामयिक घटना र सूचना प्रविधि
+                        </div>
+                        <div class="sidebar-group-content">
+                            <a href="index.html#unit-9" class="sidebar-link">पाठ १: कूटनीतिक नियोग</a>
+                            <a href="index.html#unit-9" class="sidebar-link">पाठ २: बिमस्टेक र नेपाल</a>
+                            <a href="index.html#unit-9" class="sidebar-link">पाठ ३: संयुक्त राष्ट्रसङ्घ</a>
+                            <a href="index.html#unit-9" class="sidebar-link">पाठ ४: साइबर अपराध</a>
+                            <a href="index.html#unit-9" class="sidebar-link">पाठ ५: समसामयिक घटना</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="ad-container ad-sidebar">
+                    <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener"
+                        style="text-decoration:none; display:block; text-align:center;">
+                        <div
+                            style="font-size:0.85rem; font-weight:700; color:#FF0000; margin-bottom:0.4rem; display:flex; align-items:center; justify-content:center; gap:0.3rem;">
+                            <span class="material-symbols-outlined" style="font-size:18px;">smart_display</span>
+                            <span>OFFICIAL YOUTUBE</span>
+                        </div>
+                        <div
+                            style="color:var(--on-surface-variant); font-size:0.82rem; margin-bottom:0.8rem; line-height:1.4;">
+                            भिडियो पाठहरू तथा परीक्षा टिप्स हेर्नुहोस्।</div>
+                        <button class="btn btn-sm"
+                            style="background:#FF0000; color:white; width:100%; justify-content:center; border:none; font-size:0.8rem;">
+                            Watch Channel &rarr;
+                        </button>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- ─── DOCS CONTENT ────────────────────────────────────── -->
+            <main class="docs-content">
+                <div>
+                    <!-- Sidebar Toggle Button for Desktop/Mobile -->
+                    <button class="sidebar-toggle-btn" aria-label="Toggle chapters sidebar"
+                        title="Toggle chapters sidebar">
+                        <span class="material-symbols-outlined">menu_open</span>
+                        <span>Chapters</span>
+                    </button>
+
+                    <!-- Breadcrumbs -->
+                    <nav class="breadcrumb" aria-label="Breadcrumbs"
+                        style="padding-left:0; padding-right:0; margin:0 0 var(--space-md) 0;">
+                        <a href="../../../index.html">Home</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <a href="../../../pages/courses.html">Courses</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <a href="index.html">Class 8 Social</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">स्थानीय, प्रादेशिक र सङ्घीय सरकार</span>
+                    </nav>
+
+                    <!-- Chapter Header -->
+                    <div style="margin-bottom:var(--space-2xl);">
+                        <div
+                            style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.5rem;">
+                            <span class="section-tag">
+                                <span class="material-symbols-outlined" style="font-size:16px;">school</span>
+                                कक्षा ८ सामाजिक अध्ययन
+                            </span>
+                            <span class="section-tag" style="background:rgba(0,108,73,0.08); color:var(--tertiary);">
+                                <span class="material-symbols-outlined" style="font-size:16px;">verified</span>
+                                नयाँ पाठ्यक्रम (CDC)
+                            </span>
+                        </div>
+                        <h1 class="chapter-title"
+                            style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0.5rem 0 0.75rem;">
+                            पाठ ४: स्थानीय, प्रादेशिक र सङ्घीय सरकार
+                        </h1>
+                        <div class="chapter-meta"
+                            style="display:flex; align-items:center; gap:0.5rem; color:var(--on-surface-variant); font-size:0.9rem;">
+                            <span>एकाइ-एक: हामी र हाम्रो समाज</span>
+                            <span>&bull;</span>
+                            <span>सैद्धान्तिक तथा प्रयोगात्मक सामग्री</span>
+                        </div>
+                    </div>
+
+                    <!-- ─── 1. क्रियाकलाप (ACTIVITIES & SOLUTIONS) ─── -->
+                    <section class="activity-card" aria-labelledby="activity-heading">
+                        <div class="activity-card-header" id="activity-heading">
+                            <span class="material-symbols-outlined" style="font-size:24px;">group_work</span>
+                            <span>क्रियाकलाप र समाधान (Activities & Solutions)</span>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                            <!-- Activity 1 -->
+                            <div
+                                style="background:var(--surface-container-lowest); border:1px solid var(--outline-variant); border-radius:var(--radius-lg); padding:1.2rem;">
+                                <div class="activity-item"
+                                    style="font-weight:700; color:var(--on-surface); margin-bottom:0.5rem;">
+                                    <span class="activity-num">१</span>
+                                    <div>विभिन्न पत्रपत्रिका, पुस्तक, इन्टरनेटबाट खोज गरी तल दिइएको तालिका भरी कक्षामा
+                                        प्रस्तुत गर्नुहोस् ।</div>
+                                </div>
+                                <div class="activity-detail"
+                                    style="margin-left:2.2rem; font-size:0.95rem; color:var(--on-surface-variant); line-height:1.75;">
+                                    <div class="custom-table-wrapper">
+                                        <table class="custom-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>प्रदेशको नाम</th>
+                                                    <th>प्रदेश राजधानी</th>
+                                                    <th style="text-align:center;">जिल्ला सङ्ख्या</th>
+                                                    <th style="text-align:center;">स्थानीय तह सङ्ख्या</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>कोशी प्रदेश</td>
+                                                    <td>विराटनगर</td>
+                                                    <td style="text-align:center;">१४</td>
+                                                    <td style="text-align:center;">१३७</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>मधेस प्रदेश</td>
+                                                    <td>जनकपुरधाम</td>
+                                                    <td style="text-align:center;">८</td>
+                                                    <td style="text-align:center;">१३६</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>बागमती प्रदेश</td>
+                                                    <td>हेटौँडा</td>
+                                                    <td style="text-align:center;">१३</td>
+                                                    <td style="text-align:center;">११९</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>गण्डकी प्रदेश</td>
+                                                    <td>पोखरा</td>
+                                                    <td style="text-align:center;">११</td>
+                                                    <td style="text-align:center;">८५</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>लुम्बिनी प्रदेश</td>
+                                                    <td>देउखुरी</td>
+                                                    <td style="text-align:center;">१२</td>
+                                                    <td style="text-align:center;">१०९</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>कर्णाली प्रदेश</td>
+                                                    <td>वीरेन्द्रनगर</td>
+                                                    <td style="text-align:center;">१०</td>
+                                                    <td style="text-align:center;">७९</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>सुदूरपश्चिम प्रदेश</td>
+                                                    <td>गोदावरी</td>
+                                                    <td style="text-align:center;">९</td>
+                                                    <td style="text-align:center;">८८</td>
+                                                </tr>
+                                                <tr class="total-row">
+                                                    <td>जम्मा</td>
+                                                    <td>—</td>
+                                                    <td style="text-align:center;">७७</td>
+                                                    <td style="text-align:center;">७५३</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Activity 2 -->
+                            <div
+                                style="background:var(--surface-container-lowest); border:1px solid var(--outline-variant); border-radius:var(--radius-lg); padding:1.2rem;">
+                                <div class="activity-item"
+                                    style="font-weight:700; color:var(--on-surface); margin-bottom:0.5rem;">
+                                    <span class="activity-num">२</span>
+                                    <div>नेपालको नक्सा बनाई सात प्रदेश छुट्‌याउनुहोस् । त्यसलाई कक्षाकोठामा प्रदर्शन
+                                        गर्नुहोस् र प्रयोगात्मक फाइलमा सुरक्षित गरी राख्नुहोस् ।</div>
+                                </div>
+                                <div class="activity-detail"
+                                    style="margin-left:2.2rem; font-size:0.95rem; color:var(--on-surface-variant); line-height:1.75;">
+                                    <p style="margin:0 0 0.8rem 0;"><strong>नेपालका सात प्रदेशहरू दर्शाउने
+                                            नक्सा:</strong></p>
+                                    <div style="text-align:center; margin-top:0.5rem;">
+                                        <img src="https://img.magnific.com/premium-vector/vector-map_85216-37.jpg"
+                                            alt="नेपालका सात प्रदेशहरू"
+                                            style="max-width:100%; height:auto; border-radius:var(--radius-lg); border:1px solid var(--outline-variant); box-shadow:var(--shadow-sm);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ─── 2. अभ्यास (EXERCISES) ─── -->
+                    <section aria-labelledby="exercise-heading" style="margin-bottom:var(--space-3xl);">
+                        <div
+                            style="display:flex; align-items:center; justify-content:space-between; margin-bottom:var(--space-xl); border-bottom:2px solid var(--outline-variant); padding-bottom:var(--space-sm);">
+                            <h2 id="exercise-heading"
+                                style="font-size:1.5rem; margin:0; display:flex; align-items:center; gap:0.5rem;">
+                                <span class="material-symbols-outlined chapter-heading-icon">assignment</span>
+                                अभ्यास (Exercise Solutions)
+                            </h2>
+                            <span style="font-size:0.85rem; color:var(--on-surface-variant); font-weight:600;">३
+                                प्रश्नोत्तरहरू</span>
+                        </div>
+
+                        <!-- Question 1 -->
+                        <div class="qa-card">
+                            <div class="qa-header">
+                                <span class="qa-badge">प्रश्न १</span>
+                                <h3 class="qa-question">नेपालमा कति तहका सरकार छन् ? ती कुन कुन हुन् ?</h3>
+                            </div>
+                            <div class="qa-answer">
+                                <p><strong>उत्तरः</strong> नेपालमा संविधानअनुसार तीन तहको सङ्घीय संरचना रहेको छ। ती
+                                    तहहरू सङ्घ, प्रदेश र स्थानीय तह हुन्। यी तीनै तहका सरकारले संविधान तथा कानुनबमोजिम
+                                    राज्य शक्तिको प्रयोग गर्छन्।</p>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="qa-card">
+                            <div class="qa-header">
+                                <span class="qa-badge">प्रश्न २</span>
+                                <h3 class="qa-question">सङ्घीय सरकारको कुनै चारओटा काम लेख्नुहोस् ।</h3>
+                            </div>
+                            <div class="qa-answer">
+                                <p><strong>उत्तरः</strong> सङ्घीय सरकार केन्द्रमा रहने सरकार हो। यसले सम्पूर्ण नेपालभरि
+                                    शासन गर्छ। यसको मुख्य चारओटा कामहरू देहायबमोजिम छन्ः</p>
+                                <ul style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.75;">
+                                    <li>- देशको रक्षा तथा सुरक्षा सम्बन्धी काम गर्ने।</li>
+                                    <li>- परराष्ट्र तथा वैदेशिक सम्बन्ध सञ्चालन गर्ने।</li>
+                                    <li>- राष्ट्रिय सरोकारका विषयमा सन्धि-सम्झौता गर्ने।</li>
+                                    <li>- ठूला तथा राष्ट्रिय महत्त्वका विकास आयोजना सञ्चालन गर्ने।</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="qa-card">
+                            <div class="qa-header">
+                                <span class="qa-badge">प्रश्न ३</span>
+                                <h3 class="qa-question">यदि तपाईं स्थानीय सरकारको प्रमुख हुनुभयो भने के के काम
+                                    गर्नुहुन्छ ? ती कामको सूची बनाउनुहोस् ।</h3>
+                            </div>
+                            <div class="qa-answer">
+                                <p><strong>उत्तरः</strong> यदि म स्थानीय सरकारको प्रमुख बने भने मैले गर्ने कामहरूको सूची
+                                    निम्नानुसार छः</p>
+                                <ul style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.75;">
+                                    <li>- स्थानीय सडक, पुल तथा बाटोघाटोको निर्माण र मर्मत गर्ने।</li>
+                                    <li>- आधारभूत शिक्षा तथा स्वास्थ्य सेवाको व्यवस्था गर्ने।</li>
+                                    <li>- खानेपानी तथा सरसफाइको व्यवस्था गर्ने।</li>
+                                    <li>- स्थानीय विकासका योजना निर्माण तथा कार्यान्वयन गर्ने।</li>
+                                    <li>- स्थानीय स्तरमा आवश्यक सेवा-सुविधा उपलब्ध गराई जनताका समस्या समाधान गर्ने।</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ─── 3. थप जानकारी (EXTRA / ADVANCED KNOWLEDGE) ─── -->
+                    <section class="extra-card" aria-labelledby="extra-heading">
+                        <div class="extra-card-header" id="extra-heading">
+                            <span class="material-symbols-outlined" style="font-size:24px;">menu_book</span>
+                            <span>थप जानकारी (Extra Learning Material)</span>
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                            <!-- Topic 1 -->
+                            <div
+                                style="background:var(--surface-container-low); border:1px solid var(--outline-variant); border-radius:var(--radius-lg); padding:1.25rem;">
+                                <h3
+                                    style="font-size:1.1rem; color:var(--primary); margin:0 0 0.5rem 0; display:flex; align-items:center; gap:0.4rem;">
+                                    <span class="material-symbols-outlined">domain</span>
+                                    १. प्रदेश सरकार
+                                </h3>
+                                <p style="margin:0; color:var(--on-surface-variant); line-height:1.7;">
+                                    प्रदेश सरकार प्रत्येक प्रदेशमा रहने सरकार हो। यसले आफ्नो प्रदेशभित्र मात्र राज्य
+                                    शक्तिको प्रयोग गर्छ। नेपालमा ७ वटा प्रदेश छन् र प्रत्येक प्रदेश सरकारले संविधान तथा
+                                    कानुनले तोकेका अधिकार र जिम्मेवारीअनुसार आफ्नो प्रदेशको शासन सञ्चालन गर्छ।
+                                </p>
+                            </div>
+
+                            <!-- Topic 2 -->
+                            <div
+                                style="background:var(--surface-container-low); border:1px solid var(--outline-variant); border-radius:var(--radius-lg); padding:1.25rem;">
+                                <h3
+                                    style="font-size:1.1rem; color:var(--primary); margin:0 0 0.5rem 0; display:flex; align-items:center; gap:0.4rem;">
+                                    <span class="material-symbols-outlined">location_city</span>
+                                    २. स्थानीय सरकार
+                                </h3>
+                                <p style="margin:0; color:var(--on-surface-variant); line-height:1.7;">
+                                    स्थानीय सरकार जनताको सबैभन्दा नजिकको सरकार हो। यसले स्थानीय जनताका आवश्यकता पूरा
+                                    गर्न र सेवा सुविधा उपलब्ध गराउन सहयोग गर्छ। नेपालमा गाउँपालिका र नगरपालिकाले स्थानीय
+                                    सरकारको अभ्यास गर्छन्। नेपालमा ७५३ स्थानीय तह छन्।
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ─── 4. BOTTOM NAVIGATION ─── -->
+                    <nav class="chapter-nav-bottom" aria-label="Chapter Navigation"
+                        style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--outline-variant); margin-top:var(--space-3xl); padding-top:var(--space-xl); flex-wrap:wrap; gap:var(--space-md);">
+                        <a href="unit-1-chapter-3.html" class="btn btn-outline" style="gap:0.4rem;">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                            अघिल्लो पाठ: सङ्घीय राज्यको अवधारणा
+                        </a>
+
+                        <a href="index.html" class="btn btn-outline" style="gap:0.4rem;">
+                            <span class="material-symbols-outlined">list</span>
+                            पाठ्यक्रम सूची (Index)
+                        </a>
+
+                        <a href="unit-1-chapter-5.html" class="btn btn-primary" style="gap:0.4rem;">
+                            अर्को पाठ: मेरो प्रदेश
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </nav>
+
+                </div>
+            </main>
+        </div>
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../../../index.html" class="logo">
+                        <img src="../../../assets/images/logo.png" alt="LearnNepal">
+                        LearnNepal
+                    </a>
+                    <p>Empowering students across Nepal with high-quality, structured, and accessible digital study
+                        notes &mdash; completely free.</p>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener"
+                            aria-label="YouTube" class="social-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z" />
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5 class="footer-heading">कक्षा ८ (Grade 8)</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">सामाजिक अध्ययन (Social Studies)</a></li>
+                        <li><a href="unit-1-chapter-1.html">पाठ १: विकास र नेपाल</a></li>
+                        <li><a href="unit-1-chapter-4.html">पाठ ४: स्थानीय, प्रादेशिक र सङ्घीय सरकार</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5 class="footer-heading">कक्षा १०, ११ र १२</h5>
+                    <ul class="footer-links">
+                        <li><a href="../../../pages/class-10/social/index.html">Class 10 Social</a></li>
+                        <li><a href="../../../pages/class-11/english.html">Class 11 English</a></li>
+                        <li><a href="../../../pages/class-12/english/c12_english_syllabus.html">Class 12 English</a>
+                        </li>
+                        <li><a href="../../../pages/question-bank/index.html">Question Bank Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5 class="footer-heading">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="../../../pages/courses.html">All Courses</a></li>
+                        <li><a href="../../../about.html">About Us</a></li>
+                        <li><a href="../../../contact.html">Contact Us</a></li>
+                        <li><a href="../../../privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for students across Nepal</p>
+                <div class="footer-bottom-links">
+                    <a href="../../../privacy.html">Privacy</a>
+                    <span>&bull;</span>
+                    <a href="../../../contact.html">Contact</a>
+                    <span>&bull;</span>
+                    <a href="../../../about.html">About</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script>
+        // Reading Progress Indicator Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (height > 0) {
+                const scrolled = (winScroll / height) * 100;
+                const bar = document.getElementById('reading-progress');
+                if (bar) bar.style.width = scrolled + '%';
+            }
+        });
+    </script>
+    <script src="../../../scripts/app.js"></script>
+    <script src="../../../scripts/search.js"></script>
+    <script src="../../../scripts/transitions.js"></script>
+</body>
+
+</html>
