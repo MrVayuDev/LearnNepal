@@ -19,6 +19,8 @@ main {
   transition: background var(--duration-smooth), border-color var(--duration-smooth);
   /* iOS safe area: pad the top on notched devices (only in env() environments) */
   padding-top: env(safe-area-inset-top, 0px);
+  font-family: var(--font-body) !important;
+  font-size: 1rem;
 }
 
 /* Lift header and nav-menu above nav-backdrop (z-index: 1050) when mobile menu is open */
@@ -38,6 +40,7 @@ body.nav-open .header {
   padding-left: max(var(--margin-desktop), env(safe-area-inset-left, 0px));
   padding-right: max(var(--margin-desktop), env(safe-area-inset-right, 0px));
   min-width: 0;
+  font-family: var(--font-body) !important;
 }
 
 @media (max-width: 1024px) {
@@ -51,7 +54,7 @@ body.nav-open .header {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  font-family: var(--font-heading);
+  font-family: var(--font-heading) !important;
   font-weight: 800;
   font-size: 1.5rem;
   color: var(--primary);
@@ -68,9 +71,11 @@ body.nav-open .header {
   display: flex;
   align-items: center;
   gap: var(--space-lg);
+  font-family: var(--font-body) !important;
 }
 
 .nav-link {
+  font-family: var(--font-body) !important;
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--on-surface-variant);
@@ -107,6 +112,7 @@ body.nav-open .header {
   border: 1px solid var(--outline-variant);
   border-radius: var(--radius-full);
   color: var(--on-surface-variant);
+  font-family: var(--font-body) !important;
   font-size: 0.875rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -160,6 +166,8 @@ body.nav-open .header {
    FOOTER STYLES
    ═══════════════════════════════════════════════════════════ */
 .footer {
+  font-family: var(--font-body) !important;
+  font-size: 1rem;
   background: var(--surface-container-low);
   border-top: 1px solid var(--outline-variant);
   padding: var(--space-3xl) 0 var(--space-xl);
@@ -177,6 +185,7 @@ body.nav-open .header {
 }
 
 .footer-brand p {
+  font-family: var(--font-body) !important;
   margin: var(--space-md) 0;
   max-width: 320px;
   font-size: 0.92rem;
@@ -209,7 +218,7 @@ body.nav-open .header {
 }
 
 .footer-heading {
-  font-family: var(--font-heading);
+  font-family: var(--font-heading) !important;
   font-weight: 700;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -228,6 +237,7 @@ body.nav-open .header {
 }
 
 .footer-links a {
+  font-family: var(--font-body) !important;
   color: var(--on-surface-variant);
   text-decoration: none;
   font-size: 0.92rem;
@@ -239,6 +249,7 @@ body.nav-open .header {
 }
 
 .footer-bottom {
+  font-family: var(--font-body) !important;
   border-top: 1px solid var(--outline-variant);
   padding-top: var(--space-lg);
   display: flex;
@@ -253,6 +264,7 @@ body.nav-open .header {
 }
 
 .footer-bottom-links a {
+  font-family: var(--font-body) !important;
   color: var(--on-surface-variant);
   text-decoration: none;
 }

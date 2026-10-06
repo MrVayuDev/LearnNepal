@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════
    LearnNepal — Typography v7 "Vibrant Academic Pulse"
    Plus Jakarta Sans + Mukta · 8pt scale · WCAG contrast
    ═══════════════════════════════════════════════════════════ */
@@ -84,13 +84,23 @@ p {
   letter-spacing: 0.01em;
 }
 
-/* ── Devanagari ─────────────────────────────────────────── */
-.devanagari,
-.nepali-text,
-[lang="ne"] {
+/* ── Base Font Consistency ─────────────────────────────── */
+:root {
+  font-size: 16px;
+}
+
+/* ── Devanagari Content Styling ─────────────────────────── */
+.devanagari:not(html):not(body):not(.header):not(.footer):not(.header *):not(.footer *),
+.nepali-text:not(html):not(body):not(.header):not(.footer):not(.header *):not(.footer *),
+[lang="ne"]:not(html):not(body):not(.header):not(.footer):not(.header *):not(.footer *) {
   font-family: var(--font-devanagari);
-  font-size: 1.125rem;
   line-height: var(--leading-normal);
+}
+
+.content-body.devanagari,
+.docs-content.nepali-text,
+article.devanagari {
+  font-size: 1.0625rem;
 }
 
 /* ── Monospace ──────────────────────────────────────────── */

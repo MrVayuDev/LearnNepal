@@ -75,7 +75,8 @@ LearnNepal/
 │   │   └── Solved Board Examination Papers (2080-2082)
 │   ├── English (Compulsory)
 │   │   └── Unit Solutions, Grammar Bank, Reading Comprehension
-│   └── Social Studies (सामाजिक अध्ययन)
+│   ├── Social Studies (सामाजिक अध्ययन)
+│   └── Economics (अर्थशास्त्र)
 ├── Class 11 (National Examinations Board - NEB)
 │   ├── Compulsory English
 │   ├── Compulsory Nepali (अनिवार्य नेपाली)

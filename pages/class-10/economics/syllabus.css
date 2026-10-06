@@ -1,0 +1,811 @@
+/* ═══════════════════════════════════════════════════════════
+   LearnNepal — Class 10 Economics Syllabus Dashboard
+   "Vibrant Academic Pulse" · Professional SEE Course UI
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Hero Section ───────────────────────────────────────── */
+.econ-hero {
+  position: relative;
+  background: linear-gradient(135deg, rgba(53, 37, 205, 0.06) 0%, rgba(0, 108, 73, 0.05) 50%, rgba(246, 250, 254, 1) 100%);
+  border-bottom: 1px solid var(--outline-variant);
+  padding: var(--space-2xl) var(--margin-desktop) var(--space-3xl);
+  overflow: hidden;
+}
+
+.econ-hero::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(53, 37, 205, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.econ-hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .econ-hero-inner {
+    grid-template-columns: 1.55fr 1fr;
+  }
+}
+
+.econ-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.econ-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.econ-badge.primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 2px 8px rgba(53, 37, 205, 0.3);
+}
+
+.econ-badge.secondary {
+  background: rgba(0, 108, 73, 0.1);
+  color: var(--secondary);
+  border: 1px solid rgba(0, 108, 73, 0.2);
+}
+
+.econ-badge.tertiary {
+  background: rgba(104, 64, 0, 0.1);
+  color: var(--tertiary);
+  border: 1px solid rgba(104, 64, 0, 0.2);
+}
+
+.econ-title {
+  font-family: var(--font-heading), var(--font-devanagari), sans-serif;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.econ-desc {
+  font-family: var(--font-devanagari), var(--font-body), sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: var(--on-surface-variant);
+  max-width: 680px;
+  margin-bottom: var(--space-xl);
+}
+
+.econ-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* ─── Hero Overview Card ─────────────────────────────────── */
+.econ-overview-card {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.econ-overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad-primary);
+}
+
+.overview-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.overview-card-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.overview-card-header .live-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--secondary);
+  background: rgba(0, 108, 73, 0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.overview-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.overview-stat-box {
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.overview-stat-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.stat-box-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  margin-bottom: 0.25rem;
+}
+.stat-box-label .material-symbols-outlined {
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.stat-box-value {
+  font-family: var(--font-heading), var(--font-devanagari), sans-serif;
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--on-surface);
+}
+
+/* ─── Main Content Layout ────────────────────────────────── */
+.econ-main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--margin-desktop);
+}
+
+.econ-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .econ-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .econ-main-content {
+    padding: var(--space-2xl) var(--margin-mobile);
+  }
+}
+
+/* ─── Search & Filter Toolbar ────────────────────────────── */
+.curriculum-toolbar {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-box-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon-left {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.econ-search-input {
+  width: 100%;
+  padding: 0.95rem 1rem 0.95rem 3rem;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  font-family: var(--font-devanagari), var(--font-body), sans-serif;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.econ-search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--surface-container-lowest);
+  box-shadow: 0 0 0 4px rgba(53, 37, 205, 0.12);
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: color 0.2s;
+}
+.search-clear-btn:hover {
+  color: var(--primary);
+}
+
+/* Category Filter Chips */
+.filter-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--outline-variant);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.filter-chips-row::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  color: var(--on-surface-variant);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: var(--font-devanagari), var(--font-body), sans-serif;
+}
+.filter-chip-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.filter-chip-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 2px 8px rgba(53, 37, 205, 0.25);
+}
+
+/* ─── Curriculum Section Header ──────────────────────────── */
+.curriculum-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.curriculum-header-row h2 {
+  font-family: var(--font-heading), var(--font-devanagari), sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.curriculum-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.expand-collapse-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.95rem;
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-full);
+  color: var(--on-surface);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.expand-collapse-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ─── Unit Accordion ─────────────────────────────────────── */
+.curriculum-unit {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-2xl);
+  margin-bottom: var(--space-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.curriculum-unit:hover {
+  border-color: rgba(53, 37, 205, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.curriculum-unit.open {
+  border-color: rgba(53, 37, 205, 0.25);
+}
+
+.curriculum-unit-header {
+  padding: var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  background: var(--surface-container-lowest);
+  transition: background 0.2s ease;
+}
+
+.curriculum-unit-header:hover {
+  background: var(--surface-container-low);
+}
+
+.curriculum-unit.open .curriculum-unit-header {
+  background: linear-gradient(135deg, rgba(53, 37, 205, 0.03) 0%, var(--surface-container-low) 100%);
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.curriculum-unit-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex: 1;
+}
+
+.unit-number-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary) 0%, #4f46e5 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading), var(--font-devanagari), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(53, 37, 205, 0.25);
+  flex-shrink: 0;
+}
+
+.curriculum-unit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.curriculum-unit-info h3 {
+  font-family: var(--font-heading), var(--font-devanagari), sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.unit-meta-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+}
+
+.unit-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: rgba(53, 37, 205, 0.08);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.curriculum-unit-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.accordion-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-container-low);
+  color: var(--on-surface-variant);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s, color 0.2s;
+}
+
+.curriculum-unit.open .accordion-arrow {
+  transform: rotate(180deg);
+  background: var(--primary);
+  color: white;
+}
+
+/* ─── Unit Body & Lesson Cards ───────────────────────────── */
+.curriculum-unit-body {
+  display: none;
+  padding: var(--space-lg);
+  background: var(--surface-container-lowest);
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.curriculum-unit.open .curriculum-unit-body {
+  display: flex;
+}
+
+.econ-lesson-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.15rem var(--space-xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+  gap: var(--space-lg);
+}
+
+.econ-lesson-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.econ-lesson-card:hover {
+  transform: translateY(-2px);
+  background: var(--surface-container-lowest);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.econ-lesson-card:hover::before {
+  opacity: 1;
+}
+
+.lesson-card-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex: 1;
+}
+
+.lesson-badge-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--surface-container-high);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.econ-lesson-card:hover .lesson-badge-circle {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.lesson-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lesson-card-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lesson-card-title {
+  font-family: var(--font-heading), var(--font-devanagari), sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.lesson-card-desc {
+  font-family: var(--font-devanagari), var(--font-body), sans-serif;
+  font-size: 0.88rem;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.lesson-card-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+.lesson-time-pill {
+  font-size: 0.76rem;
+  color: var(--on-surface-variant);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.lesson-read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(53, 37, 205, 0.25);
+}
+
+.econ-lesson-card:hover .lesson-read-btn {
+  transform: translateX(3px);
+  background: #2516a8;
+  box-shadow: 0 4px 12px rgba(53, 37, 205, 0.4);
+}
+
+@media (max-width: 640px) {
+  .econ-lesson-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+  .lesson-card-right {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: var(--space-xs);
+    border-top: 1px solid var(--outline-variant);
+  }
+}
+
+/* ─── Right Study Dashboard Sidebar ──────────────────────── */
+.econ-sidebar-sticky {
+  position: sticky;
+  top: calc(var(--header-height) + 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.dash-widget {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease;
+}
+.dash-widget:hover {
+  border-color: rgba(53, 37, 205, 0.3);
+}
+
+.dash-widget-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.dash-widget-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0;
+}
+
+.dash-widget-header .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+/* Fast Action Banner */
+.start-learning-card {
+  background: linear-gradient(135deg, var(--primary) 0%, #4338ca 100%);
+  color: white;
+  border: none;
+}
+.start-learning-card h3 {
+  color: white;
+}
+.start-learning-card p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-md);
+  line-height: 1.5;
+}
+
+.start-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  background: white;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* SEE Exam Blueprint Table */
+.blueprint-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin-bottom: var(--space-md);
+}
+.blueprint-table th,
+.blueprint-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--outline-variant);
+}
+.blueprint-table th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--on-surface-variant);
+  background: var(--surface-container-low);
+}
+.blueprint-table td {
+  color: var(--on-surface);
+}
+
+/* Quick Jump Links */
+.sidebar-jump-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sidebar-jump-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  background: var(--surface-container-low);
+  transition: all 0.2s ease;
+  font-family: var(--font-devanagari), var(--font-body), sans-serif;
+}
+.sidebar-jump-item:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateX(3px);
+}
+.sidebar-jump-item .jump-count {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* No results state */
+.no-results-state {
+  display: none;
+  text-align: center;
+  padding: var(--space-4xl) var(--space-xl);
+  background: var(--surface-container-lowest);
+  border: 1px dashed var(--outline-variant);
+  border-radius: var(--radius-2xl);
+  margin-top: var(--space-xl);
+}
+.no-results-state .material-symbols-outlined {
+  font-size: 48px;
+  color: var(--on-surface-variant);
+  margin-bottom: var(--space-md);
+}
+.no-results-state h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-xs);
+}
+.no-results-state p {
+  color: var(--on-surface-variant);
+  font-size: 0.95rem;
+}
