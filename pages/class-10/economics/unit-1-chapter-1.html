@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ne">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>अर्थव्यवस्था - कक्षा १० अर्थशास्त्र | LearnNepal</title>
-    <meta name="description" content="कक्षा १० अर्थशास्त्र, एकाइ १ पाठ १: अर्थव्यवस्था (Economy) — पूँजीवादी, समाजवादी र मिश्रित अर्थव्यवस्था, विशेषताहरू तथा सम्पूर्ण अभ्यास।">
+    <title>पाठ १: अर्थव्यवस्था — कक्षा १० अर्थशास्त्र | LearnNepal</title>
+    <meta name="description" content="कक्षा १० अर्थशास्त्र, एकाइ १ पाठ १: अर्थव्यवस्था (Economy) — क्रियाकलाप, अभ्यासका सम्पूर्ण २१ प्रश्नोत्तर समाधान र परियोजना कार्य।">
 
-    <!-- â”€â”€ Favicon â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- ── Favicon ──────────────────────────────────────────── -->
     <link rel="icon" type="image/png" href="../../../assets/images/logo.png">
     <link rel="apple-touch-icon" href="../../../assets/images/logo.png">
 
-    <!-- â”€â”€ Preconnect & Google Fonts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- ── Preconnect & Google Fonts ───────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,7 +20,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <!-- â”€â”€ Core Stylesheets â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <!-- ── Core Stylesheets ─────────────────────────────────── -->
     <script src="../../../scripts/theme.js"></script>
     <link rel="stylesheet" href="../../../styles/main.css" />
     <link rel="stylesheet" href="chapter.css" />
@@ -30,7 +30,7 @@
     <!-- Top Reading Progress Indicator -->
     <div id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
 
-    <!-- â•â•â• HEADER â•â•â• -->
+    <!-- ═══ HEADER ═══ -->
     <header class="header" id="site-header">
         <div class="header-container">
             <a href="../../../index.html" class="logo">
@@ -60,9 +60,18 @@
         </div>
     </header>
 
-    <!-- â•â•â• CHAPTER PAGE WRAPPER â•â•â• -->
+    <!-- ═══ CHAPTER PAGE WRAPPER ═══ -->
     <div class="chapter-page-wrapper">
-        <div class="docs-layout">
+
+        <!-- Sidebar overlay (mobile) -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Sidebar Toggle Tab -->
+        <button class="sidebar-toggle-tab" id="sidebarToggleTab" aria-label="Toggle Sidebar" title="Toggle Sidebar">
+            <span class="material-symbols-outlined sidebar-toggle-icon" id="sidebarToggleIcon">menu_book</span>
+        </button>
+
+        <div class="docs-layout" id="docsLayout">
 
         <aside class="chapter-sidebar" id="chapterSidebar" aria-label="Course Navigation">
             <div class="sidebar-top-card">
@@ -196,21 +205,32 @@
                     </div>
                 </div>
             </div>
+
+            <!-- In This Lesson TOC -->
             <div class="sidebar-toc">
                 <div class="sidebar-section-title">
                     <span>In This Lesson</span>
                 </div>
-                <a href="#objectives" class="sidebar-toc-link">
-                    <span class="material-symbols-outlined">lightbulb</span>
-                    <span>Learning Objectives</span>
-                </a>
-                <a href="#theory" class="sidebar-toc-link">
-                    <span class="material-symbols-outlined">menu_book</span>
-                    <span>Concepts &amp; Theory</span>
+                <a href="#kriyakalap" class="sidebar-toc-link">
+                    <span class="material-symbols-outlined">group_work</span>
+                    <span>क्रियाकलाप (Activities)</span>
                 </a>
                 <a href="#exercises" class="sidebar-toc-link">
                     <span class="material-symbols-outlined">quiz</span>
-                    <span>Questions &amp; Answers</span>
+                    <span>अभ्यास (Exercises)</span>
+                </a>
+                <a href="#sec-very-short" class="sidebar-toc-link" style="padding-left:1.75rem;font-size:0.82rem;">
+                    <span>१. अति छोटो उत्तर (१४)</span>
+                </a>
+                <a href="#sec-short" class="sidebar-toc-link" style="padding-left:1.75rem;font-size:0.82rem;">
+                    <span>२. छोटो उत्तर (४)</span>
+                </a>
+                <a href="#sec-long" class="sidebar-toc-link" style="padding-left:1.75rem;font-size:0.82rem;">
+                    <span>३. लामो उत्तर (३)</span>
+                </a>
+                <a href="#pariyojana" class="sidebar-toc-link">
+                    <span class="material-symbols-outlined">engineering</span>
+                    <span>परियोजना कार्य (Project Work)</span>
                 </a>
                 <a href="#navigation" class="sidebar-toc-link">
                     <span class="material-symbols-outlined">sync_alt</span>
@@ -219,333 +239,822 @@
             </div>
         </aside>
 
+        <!-- ─── MAIN CONTENT ────────────────────────────────── -->
+        <main class="chapter-content-main" id="main-content">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb-trail" aria-label="Breadcrumbs">
+                <a href="../../../index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../../pages/courses.html">Courses</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="index.html">Class 10 Economics</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">पाठ १</span>
+            </nav>
 
-            <!-- â”€â”€â”€ MAIN CONTENT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
-            <main class="chapter-content-main" id="main-content">
-                <!-- Breadcrumb -->
-                <nav class="breadcrumb-trail" aria-label="Breadcrumbs">
-                    <a href="../../../index.html">Home</a>
-                    <span class="breadcrumb-separator">â€º</span>
-                    <a href="../../../pages/courses.html">Courses</a>
-                    <span class="breadcrumb-separator">â€º</span>
-                    <a href="index.html">Class 10 Economics</a>
-                    <span class="breadcrumb-separator">â€º</span>
-                    <span class="breadcrumb-current">पाठ १</span>
-                </nav>
+            <!-- Hero Header -->
+            <header class="chapter-hero-header">
+                <div class="chapter-unit-pill">
+                    <span class="material-symbols-outlined">menu_book</span>
+                    <span>एकाइ १: अर्थशास्त्रको आधारभूत अवधारणा र साधनको बाँडफाँट</span>
+                </div>
+                <h1 class="chapter-title">पाठ १: अर्थव्यवस्था (Economy)</h1>
+                <p class="chapter-subtitle">क्रियाकलाप, अभ्यासका सम्पूर्ण २१ प्रश्नोत्तर समाधान (पुँजीवादी, समाजवादी र मिश्रित अर्थव्यवस्था) तथा परियोजना कार्य।</p>
 
-                <!-- Hero Header -->
-                <header class="chapter-hero-header">
-                    <div class="chapter-unit-pill">
-                        <span class="material-symbols-outlined">menu_book</span>
-                        <span>एकाइ १: अर्थशास्त्रको आधारभूत अवधारणा</span>
+                <div class="chapter-toolbar">
+                    <div class="toolbar-left">
+                        <span class="tool-chip">
+                            <span class="material-symbols-outlined" style="font-size:15px;color:var(--primary);">schedule</span>
+                            15 min read
+                        </span>
+                        <span class="tool-chip">
+                            <span class="material-symbols-outlined" style="font-size:15px;color:var(--secondary);">verified</span>
+                            क्रियाकलाप, अभ्यास र परियोजना कार्य
+                        </span>
                     </div>
-                    <h1 class="chapter-title">पाठ १: अर्थव्यवस्था (Economy)</h1>
-                    <p class="chapter-subtitle">अर्थव्यवस्थाको अवधारणा, प्रकार (पूँजीवादी, समाजवादी र मिश्रित) तथा नेपालको परिप्रेक्ष्यमा अर्थव्यवस्थाको स्वरूप।</p>
-
-                    <div class="chapter-toolbar">
-                        <div class="toolbar-left">
-                            <span class="tool-chip">
-                                <span class="material-symbols-outlined" style="font-size:15px;color:var(--primary);">schedule</span>
-                                11 min read
-                            </span>
-                            <span class="tool-chip">
-                                <span class="material-symbols-outlined" style="font-size:15px;color:var(--secondary);">verified</span>
-                                SEE Exam Preparation
-                            </span>
+                    <div class="toolbar-right">
+                        <div class="font-size-group" title="Adjust Font Size">
+                            <button type="button" class="font-size-btn" id="btnFontDec">A-</button>
+                            <button type="button" class="font-size-btn" id="btnFontInc">A+</button>
                         </div>
-                        <div class="toolbar-right">
-                            <div class="font-size-group" title="Adjust Font Size">
-                                <button type="button" class="font-size-btn" id="btnFontDec">A-</button>
-                                <button type="button" class="font-size-btn" id="btnFontInc">A+</button>
+                        <button type="button" class="tool-btn" id="copyLinkBtn" title="Copy Page Link">
+                            <span class="material-symbols-outlined">link</span>
+                            Copy Link
+                        </button>
+                        <button type="button" class="tool-btn" onclick="window.print()" title="Print / Save PDF">
+                            <span class="material-symbols-outlined">print</span>
+                            Print / PDF
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ═══════════════════════════════════════════════════
+                 १. क्रियाकलाप (ACTIVITIES & SOLUTIONS)
+                 ═══════════════════════════════════════════════════ -->
+            <section class="activity-section" id="kriyakalap" style="margin-bottom: var(--space-4xl);">
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:var(--space-xl); border-bottom:2px solid var(--outline-variant); padding-bottom:var(--space-sm); flex-wrap:wrap; gap:0.5rem;">
+                    <h2 style="font-size:1.55rem; font-weight:800; color:var(--primary); margin:0; display:flex; align-items:center; gap:0.5rem; font-family: var(--font-heading), var(--font-devanagari), sans-serif;">
+                        <span class="material-symbols-outlined" style="font-size:26px;">group_work</span>
+                        क्रियाकलाप (Activities &amp; Solutions)
+                    </h2>
+                    <span class="tool-chip" style="font-size:0.75rem;font-weight:700;">२ क्रियाकलापहरू</span>
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                    <!-- Activity 1 -->
+                    <div style="background:var(--surface-container-lowest); border:1px solid var(--outline-variant); border-radius:var(--radius-xl); padding:1.5rem; box-shadow:var(--shadow-sm);">
+                        <div style="font-weight:700; color:var(--on-surface); font-size:1.08rem; line-height:1.6; margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;">
+                            <span style="background:var(--primary); color:white; border-radius:var(--radius-full); width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; font-size:0.85rem; flex-shrink:0;">१</span>
+                            <div>तपाईँको वरपर वा समुदायमा सञ्चालन भइरहेका आर्थिक गतिविधिहरूको अवलोकन गरी ती कुन-कुन आर्थिक क्रियाकलाप (उत्पादन, उपभोग, विनिमय, वितरण) अन्तर्गत पर्दछन्, समूहमा छलफल गरी तालिका बनाउनुहोस् ।</div>
+                        </div>
+                        <div style="padding-left:2.5rem; font-size:1.02rem; color:var(--on-surface-variant); line-height:1.8;">
+                            <p style="margin-top:0;"><strong>उत्तर/समाधानः</strong> समुदायमा देखिएका आर्थिक गतिविधिहरूको वर्गीकरण देहायबमोजिमको तालिकामा प्रस्तुत गरिएको छः</p>
+                            <div class="comparison-table-wrap" style="margin-top:0.75rem;">
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:25%;">आर्थिक क्रियाकलाप</th>
+                                            <th style="width:45%;">समुदायमा देखिने गतिविधिहरू</th>
+                                            <th style="width:30%;">उद्देश्य / प्रभाव</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>उत्पादन (Production)</strong></td>
+                                            <td>खेतबारीमा तरकारी तथा अन्नबाली लगाउने, कुखुरापालन, डेरी सञ्चालन, कपडा सिलाउने कार्य आदि।</td>
+                                            <td>उपयोगिता सिर्जना गरी नयाँ वस्तु वा सेवा उत्पादन गर्ने।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>उपभोग (Consumption)</strong></td>
+                                            <td>खाद्यान्न, लत्ताकपडा, बिजुली, इन्टरनेट, औषधि आदिको दैनिक प्रयोग गर्ने।</td>
+                                            <td>मानवीय आवश्यकताको प्रत्यक्ष परिपूर्ति गर्ने।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>विनिमय (Exchange)</strong></td>
+                                            <td>हाटबजार वा किराना पसलमा पैसा दिएर सरसामान खरिद-बिक्री गर्ने कार्य।</td>
+                                            <td>वस्तु तथा सेवाको स्वामित्व हस्तान्तरण गर्ने।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>वितरण (Distribution)</strong></td>
+                                            <td>कामदारलाई ज्याला, जग्गाको भाडा, पुँजीको ब्याज र व्यवसायीलाई मुनाफा बाँडफाँट गर्ने।</td>
+                                            <td>उत्पादनका साधनहरूबीच राष्ट्रिय आयको न्यायोचित विभाजन गर्ने।</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <button type="button" class="tool-btn" id="copyLinkBtn" title="Copy Page Link">
-                                <span class="material-symbols-outlined">link</span>
-                                Copy Link
-                            </button>
-                            <button type="button" class="tool-btn" onclick="window.print()" title="Print / Save PDF">
-                                <span class="material-symbols-outlined">print</span>
-                                Print / PDF
-                            </button>
                         </div>
                     </div>
-                </header>
 
-                <!-- Learning Objectives -->
-                <section class="learning-objectives-card" id="objectives">
-                    <div class="learning-objectives-header">
-                        <span class="material-symbols-outlined">lightbulb</span>
-                        <span>Learning Objectives &amp; Key Takeaways</span>
+                    <!-- Activity 2 -->
+                    <div style="background:var(--surface-container-lowest); border:1px solid var(--outline-variant); border-radius:var(--radius-xl); padding:1.5rem; box-shadow:var(--shadow-sm);">
+                        <div style="font-weight:700; color:var(--on-surface); font-size:1.08rem; line-height:1.6; margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;">
+                            <span style="background:var(--primary); color:white; border-radius:var(--radius-full); width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; font-size:0.85rem; flex-shrink:0;">२</span>
+                            <div>पुँजीवादी, समाजवादी र मिश्रित अर्थव्यवस्था अपनाएका विश्वका प्रमुख देशहरू खोजी गरी कक्षामा प्रस्तुत गर्नुहोस् ।</div>
+                        </div>
+                        <div style="padding-left:2.5rem; font-size:1.02rem; color:var(--on-surface-variant); line-height:1.8;">
+                            <p style="margin-top:0;"><strong>उत्तर/समाधानः</strong> विश्वका प्रमुख देशहरूले अपनाएको अर्थव्यवस्थाको वर्गीकरण निम्नअनुसार छः</p>
+                            <div class="comparison-table-wrap" style="margin-top:0.75rem;">
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>अर्थव्यवस्थाको प्रकार</th>
+                                            <th>प्रमुख देशहरू</th>
+                                            <th>मुख्य विशेषता</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="table-pill pill-capitalist">पुँजीवादी अर्थव्यवस्था</span></td>
+                                            <td>संयुक्त राज्य अमेरिका (USA), संयुक्त अधिराज्य (बेलायत), जापान, जर्मनी</td>
+                                            <td>निजी स्वामित्व, नाफाको उद्देश्य र खुला बजार प्रतिस्पर्धा</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="table-pill pill-socialist">समाजवादी अर्थव्यवस्था</span></td>
+                                            <td>क्युबा, उत्तर कोरिया, (पूर्व सोभियत सङ्घ)</td>
+                                            <td>राज्यको पूर्ण स्वामित्व, केन्द्रीय योजना र सामाजिक समानता</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="table-pill pill-mixed">मिश्रित अर्थव्यवस्था</span></td>
+                                            <td>नेपाल, भारत, फ्रान्स, बङ्गलादेश</td>
+                                            <td>निजी तथा सार्वजनिक दुवै क्षेत्रको सह-अस्तित्व र सन्तुलन</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="learning-objectives-list">
+                </div>
+            </section>
 
-                    <li><span class="objective-check-icon material-symbols-outlined">check_circle</span><span>अर्थव्यवस्थाको स्पष्ट अर्थ र परिभाषा बताउन।</span></li>
-                    <li><span class="objective-check-icon material-symbols-outlined">check_circle</span><span>पूँजीवादी, समाजवादी र मिश्रित अर्थव्यवस्थाका विशेषताहरू र भिन्नता छुट्याउन।</span></li>
-                    <li><span class="objective-check-icon material-symbols-outlined">check_circle</span><span>नेपालको मिश्रित अर्थव्यवस्थाको संरचना र महत्त्व विश्लेषण गर्न।</span></li>
-                
-                    </ul>
-                </section>
+            <!-- ═══════════════════════════════════════════════════
+                 २. अभ्यास (EXERCISES & COMPLETE SOLUTIONS)
+                 ═══════════════════════════════════════════════════ -->
+            <section class="qa-section" id="exercises" style="margin-bottom: var(--space-4xl);">
+                <div class="qa-section-header">
+                    <h2 class="qa-section-title">
+                        <span class="material-symbols-outlined" style="font-size:26px;">quiz</span>
+                        अभ्यास (Exercise Solutions)
+                    </h2>
+                    <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+                        <span class="tool-chip" style="font-size:0.75rem;font-weight:700;">२१ प्रश्नोत्तर</span>
+                        <button type="button" class="qa-toggle-all-btn" id="toggleAllQABtn">
+                            <span class="material-symbols-outlined" style="font-size:16px;">unfold_less</span>
+                            सबै लुकाउनुहोस्
+                        </button>
+                    </div>
+                </div>
 
-                <!-- Main Study Content -->
-                <article class="content-body" id="theory">
-<h2>१. अर्थव्यवस्थाको परिचय (Concept of Economy)</h2>
-            <p>
-                कुनै निश्चित भौगोलिक क्षेत्र वा देशमा बस्ने मानिसहरूले आफ्नो जीविकोपार्जनका लागि सम्पादन गर्ने सम्पूर्ण आर्थिक क्रियाकलापहरू (उत्पादन, उपभोग, विनिमय र वितरण) को एकीकृत प्रणालीलाई <strong>अर्थव्यवस्था (Economy)</strong> भनिन्छ।
-                अर्थव्यवस्थाले समाजमा वस्तु तथा सेवाको कसरी उत्पादन गरिन्छ, कसरी वितरण गरिन्छ र कसरी उपभोग गरिन्छ भन्ने निर्धारण गर्दछ।
-            </p>
+                <!-- खण्ड १: अति छोटो उत्तर आउने प्रश्नहरू -->
+                <div class="qa-group-header" id="sec-very-short">
+                    <h3 class="qa-group-title">
+                        <span class="material-symbols-outlined" style="color:var(--primary);">edit_note</span>
+                        १. तलका प्रश्नको अति छोटो उत्तर दिनुहोस्:
+                    </h3>
+                    <span class="qa-group-badge">१४ प्रश्नहरू</span>
+                </div>
 
-            <h2>२. अर्थव्यवस्थाका प्रमुख प्रकारहरू (Types of Economy)</h2>
-            <p>उत्पादनका साधनहरूको स्वामित्व र नियन्त्रणका आधारमा अर्थव्यवस्थालाई मुख्यतया ३ भागमा वर्गीकरण गरिन्छ:</p>
+                <div class="qa-cards-container">
+                    <!-- प्रश्न १ (क) -->
+                    <div class="qa-card" id="q1-ka">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (क)</span>
+                                <h3 class="qa-question">अर्थव्यवस्था भनेको के हो ?</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> कुनै निश्चित भौगोलिक क्षेत्रभित्र वस्तु तथा सेवाको उत्पादन, वितरण, विनिमय र उपभोगका गतिविधि सञ्चालन गर्ने आर्थिक प्रणालीलाई अर्थव्यवस्था भनिन्छ ।
+                        </div>
+                    </div>
 
-            <div class="comparison-table-wrap">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>अर्थव्यवस्थाको प्रकार</th>
-                            <th>स्वामित्व (Ownership)</th>
-                            <th>मुख्य उद्देश्य</th>
-                            <th>मूल्य निर्धारण</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>पूँजीवादी (Capitalist Economy)</strong></td>
-                            <td>निजी क्षेत्र (Private Owners)</td>
-                            <td>अधिकतम नाफा कमाउनु</td>
-                            <td>बजारका माग र आपूर्ति शक्तिहरूद्वारा</td>
-                        </tr>
-                        <tr>
-                            <td><strong>समाजवादी (Socialist Economy)</strong></td>
-                            <td>राज्य/सरकार (Public/State)</td>
-                            <td>सामाजिक कल्याण (Social Welfare)</td>
-                            <td>केन्द्रीय आयोजना/सरकारद्वारा</td>
-                        </tr>
-                        <tr>
-                            <td><strong>मिश्रित (Mixed Economy)</strong></td>
-                            <td>निजी र सरकारी दुवै क्षेत्र</td>
-                            <td>नाफा र सामाजिक कल्याणको सन्तुलन</td>
-                            <td>बजार संयन्त्र र सरकारी नियन्त्रण दुवै</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <!-- प्रश्न १ (ख) -->
+                    <div class="qa-card" id="q1-kha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ख)</span>
+                                <h3 class="qa-question">विश्वमा विद्यमान आर्थिक प्रणालीहरूको नाम लेख्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> विश्वमा विद्यमान आर्थिक प्रणालीहरू पुँजीवादी, समाजवादी र मिश्रित अर्थव्यवस्था हुन् ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ग) -->
+                    <div class="qa-card" id="q1-ga">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ग)</span>
+                                <h3 class="qa-question">पुँजीवादी अर्थव्यवस्थालाई परिभाषित गर्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> उत्पादनका साधनस्रोतमाथि निजी क्षेत्रको स्वामित्व र नियन्त्रण हुने आर्थिक प्रणालीलाई पुँजीवादी अर्थव्यवस्था भनिन्छ ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (घ) -->
+                    <div class="qa-card" id="q1-gha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (घ)</span>
+                                <h3 class="qa-question">पुँजीवादी अर्थव्यवस्थालाई अर्को कुन नामले चिनिन्छ ?</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> पुँजीवादी अर्थव्यवस्थालाई अर्को 'बजार अर्थव्यवस्था' (market economy) नामले पनि चिनिन्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ङ) -->
+                    <div class="qa-card" id="q1-nga">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ङ)</span>
+                                <h3 class="qa-question">पुँजीवादी अर्थव्यवस्थामा मूल्य संयन्त्रले केलाई बुझाउँछ ?</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> पुँजीवादी अर्थव्यवस्थामा वस्तु तथा सेवाको मूल्य माग र आपूर्तिको अन्तक्रियाद्वारा निर्धारण हुन्छ। यसरी बजारमा माग र आपूर्तिका आधारमा मूल्य निर्धारण हुने प्रक्रियालाई नै मूल्य संयन्त्र भनिन्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (च) -->
+                    <div class="qa-card" id="q1-cha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (च)</span>
+                                <h3 class="qa-question">पुँजीवादी अर्थव्यवस्थासँग नजिक रहेका कुनै दुई देशको नाम लेख्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> पुँजीवादी अर्थव्यवस्थासँग नजिक रहेका दुई देशहरू:
+                            <ul>
+                                <li>अमेरिका</li>
+                                <li>बेलायत</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (छ) -->
+                    <div class="qa-card" id="q1-chha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (छ)</span>
+                                <h3 class="qa-question">समाजवादी अर्थव्यवस्थालाई परिभाषित गर्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> उत्पादनका साधनस्रोतमाथि सरकारको स्वामित्व र नियन्त्रण रहने आर्थिक प्रणालीलाई समाजवादी अर्थव्यवस्था भनिन्छ। यसलाई योजनाबद्ध अर्थव्यवस्था पनि भनिन्छ, जहाँ सरकारद्वारा आर्थिक गतिविधिहरू सञ्चालन गरिन्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ज) -->
+                    <div class="qa-card" id="q1-ja">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ज)</span>
+                                <h3 class="qa-question">समाजवादी अर्थव्यवस्थामा साधनस्रोतको स्वामित्वमा कसको नियन्त्रण रहन्छ ?</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> समाजवादी अर्थव्यवस्थामा साधनस्रोतको स्वामित्व र नियन्त्रण सरकार (राज्य) को हातमा रहन्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (झ) -->
+                    <div class="qa-card" id="q1-jha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (झ)</span>
+                                <h3 class="qa-question">समाजवादी अर्थव्यवस्थासँग नजिक रहेका कुनै दुई देशहरूको नाम लेख्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> समाजवादी अर्थव्यवस्थासँग नजिक रहेका दुई देशहरू क्युबा र उत्तर कोरिया हुन्।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ञ) -->
+                    <div class="qa-card" id="q1-yna">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ञ)</span>
+                                <h3 class="qa-question">पुँजीवादी र समाजवादी अर्थव्यवस्थाबिच कुनै एक भिन्नता देखाउनुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> पुँजीवादी अर्थव्यवस्थामा साधनस्रोतको स्वामित्व निजी क्षेत्रसँग हुन्छ भने समाजवादी अर्थव्यवस्थामा साधनस्रोतको स्वामित्व राज्यसँग हुन्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ट) -->
+                    <div class="qa-card" id="q1-ta">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ट)</span>
+                                <h3 class="qa-question">मिश्रित अर्थव्यवस्थालाई परिभाषित गर्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> पुँजीवादी र समाजवादी दुबै अर्थव्यवस्थाका राम्रा विशेषता समेटिएको र उत्पादनका साधनको स्वामित्व निजी तथा सरकारी दुबै क्षेत्रसँग हुने अर्थव्यवस्थालाई मिश्रित अर्थव्यवस्था भनिन्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ठ) -->
+                    <div class="qa-card" id="q1-tha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ठ)</span>
+                                <h3 class="qa-question">समाजवादी अर्थव्यवस्थाका कुनै दुई विशेषताहरू लेख्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> समाजवादी अर्थव्यवस्थाका कुनै दुई विशेषताहरू :-
+                            <ul>
+                                <li>उत्पादनका साधनहरू राज्यको स्वामित्वमा हुन्छन् ।</li>
+                                <li>जनकल्याण तथा सामाजिक समानतालाई प्राथमिकता दिइन्छ ।</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ड) -->
+                    <div class="qa-card" id="q1-da">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ड)</span>
+                                <h3 class="qa-question">मिश्रित अर्थव्यवस्थामा निजी क्षेत्र र सरकारको कस्तो कस्तो भूमिका हुन्छ ?</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> मिश्रित अर्थव्यवस्थामा निजी क्षेत्रले उद्योग, व्यापार र व्यवसाय सञ्चालन गरी नाफा कमाउने काम गर्छ भने सरकारले जनकल्याण, आधारभूत सेवा र पूर्वाधार विकासका कार्य गर्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ढ) -->
+                    <div class="qa-card" id="q1-dha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ढ)</span>
+                                <h3 class="qa-question">विश्वका धेरैजसो विकासशील देशले अपनाएको अर्थव्यवस्था कुन किसिमको अर्थव्यवस्था हो ?</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> विश्वका धेरैजसो विकासशील देशले अपनाएको अर्थव्यवस्था 'मिश्रित अर्थव्यवस्था' हो।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न १ (ण) -->
+                    <div class="qa-card" id="q1-na">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न १ (ण)</span>
+                                <h3 class="qa-question">मिश्रित अर्थव्यवस्था अपनाएका कुनै दुई देशको नाम लेख्नुहोस्।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> मिश्रित अर्थव्यवस्था अपनाएका दुई देशहरू नेपाल र भारत हुन्।
+                        </div>
+                    </div>
+                </div>
+
+                <!-- खण्ड २: छोटो उत्तर आउने प्रश्नहरू -->
+                <div class="qa-group-header secondary" id="sec-short">
+                    <h3 class="qa-group-title">
+                        <span class="material-symbols-outlined" style="color:var(--secondary);">description</span>
+                        2. तलका प्रश्नको अति छोटो उत्तर दिनुहोस्:
+                    </h3>
+                    <span class="qa-group-badge">४ प्रश्नहरू</span>
+                </div>
+
+                <div class="qa-cards-container">
+                    <!-- प्रश्न २ (क) -->
+                    <div class="qa-card" id="q2-ka">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न २ (क)</span>
+                                <h3 class="qa-question">पुँजीवादी अर्थव्यवस्थामा उपभोक्ता किन सार्वभौम हुन्छन् ?</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> पुँजीवादी अर्थव्यवस्थामा उपभोक्ता सार्वभौम हुन्छन् किनभने यस प्रणालीमा उपभोक्ताको चाहना र आवश्यकताअनुसार अर्थतन्त्र चल्छ।  उपभोक्ताको चाहना र आवश्यकताअनुसार वस्तु तथा सेवाको उत्पादन गरिन्छ। उपभोक्ताले जुन वस्तु तथा सेवा रुचाउँछन्, त्यसैको उत्पादन बढ्छ र नचाहेका वस्तु तथा सेवा बजारबाट हट्दै जान्छन्। उत्पादकको मुख्य उद्देश्य नै उपभोक्ताको रुचि र गुणस्तरअनुसारका वस्तु उत्पादन गरी बढीभन्दा बढी मुनाफा कमाउनु रहेको हुन्छ। त्यसैले उपभोक्ताको इच्छा नै बजार सञ्चालन गर्ने प्रमुख शक्ति हुन्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न २ (ख) -->
+                    <div class="qa-card" id="q2-kha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न २ (ख)</span>
+                                <h3 class="qa-question">समाजवादी अर्थव्यवस्थामा सरकारको भूमिका प्रस्ट पार्नुहोस् ।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> समाजवादी अर्थव्यवस्थामा सरकारको असीमित र हस्तक्षेपकारी भूमिका हुन्छ। सरकारले उत्पादनका साधनहरूको स्वामित्व र नियन्त्रण गर्छ तथा वस्तु तथा सेवाको उत्पादन, वितरण र मूल्य निर्धारणको कार्य सञ्चालन गर्छ। साथै जनकल्याण, सामाजिक न्याय र आर्थिक समानता कायम गर्न विभिन्न योजना तथा नीतिहरू लागू गर्छ।
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न २ (ग) -->
+                    <div class="qa-card" id="q2-ga">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न २ (ग)</span>
+                                <h3 class="qa-question">मिश्रित अर्थव्यवस्थाका विशेषताहरू उल्लेख गर्नुहोस् ।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> मिश्रित अर्थव्यवस्थाका प्रमुख विशेषताहरू निम्न छन्:
+                            <ul>
+                                <li><strong>निजी र सार्वजनिक स्वामित्व:</strong> उत्पादनका साधनहरूमा निजी र सार्वजनिक दुवै क्षेत्रको स्वामित्व हुन्छ।</li>
+                                <li><strong>नाफा तथा सामाजिक कल्याण:</strong> निजी क्षेत्रको मुख्य उद्देश्य नाफा कमाउनु हुन्छ भने सरकारको मुख्य उद्देश्य सामाजिक कल्याण गर्नु हो।</li>
+                                <li><strong>मूल्य संयन्त्र र मूल्य नियन्त्रण:</strong> धेरैजसो वस्तुको मूल्य बजार माग र पूर्तिका आधारमा निर्धारण हुन्छ तर अत्यावश्यक वस्तुको मूल्य सरकारले नियन्त्रण गर्न सक्छ।निजी क्षेत्रलाई आर्थिक स्वतन्त्रता प्रदान गरिन्छ।</li>
+                                <li><strong>सरकारको भूमिका:</strong> यसमा सरकारले निजी क्षेत्रलाई प्रेरित गर्ने, बजार नियमन गर्ने र नियामकको रूपमा सन्तुलित भूमिका निर्वाह गर्छ।</li>
+                                <li><strong>आर्थिक योजना:</strong> आर्थिक गतिविधिहरू योजनाबद्ध रूपमा सञ्चालन गरिन्छ।</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न २ (घ) -->
+                    <div class="qa-card" id="q2-gha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न २ (घ)</span>
+                                <h3 class="qa-question">पुँजीवादी र समाजवादी अर्थव्यवस्थाबिच कुनै पाँचओटा भिन्नता छुट्याउनुहोस् ।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong>
+                            <div class="comparison-table-wrap" style="margin-top: 1rem;">
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 8%; text-align: center;">क्र.सं.</th>
+                                            <th style="width: 46%;">पुँजीवादी अर्थव्यवस्था</th>
+                                            <th style="width: 46%;">समाजवादी अर्थव्यवस्था</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><strong>१</strong></td>
+                                            <td>उत्पादनका साधनहरू निजी स्वामित्व र नियन्त्रणमा हुन्छन्।</td>
+                                            <td>उत्पादनका साधनहरू राज्यको स्वामित्व र नियन्त्रणमा हुन्छन्।</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><strong>२</strong></td>
+                                            <td>सम्पूर्ण आर्थिक क्रियाकलापहरू नाफा (लाभ) कमाउने उद्देश्यले गरिन्छ।</td>
+                                            <td>नाफाभन्दा पनि सामाजिक समानता र जनकल्याणलाई प्राथमिकता दिइन्छ।</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><strong>३</strong></td>
+                                            <td>माग र आपूर्तिको अन्तक्रियाद्वारा बजार (मूल्य संयन्त्र) ले मूल्य निर्धारण गर्छ।</td>
+                                            <td>वस्तु तथा सेवाको मूल्य निर्धारण सरकारले गर्छ (नियन्त्रित मूल्य)।</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><strong>४</strong></td>
+                                            <td>सरकारको भूमिका सीमित हुन्छ र बजारमा हस्तक्षेप गर्दैन।</td>
+                                            <td>सरकारको असीमित र हस्तक्षेपकारी भूमिका हुन्छ।</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><strong>५</strong></td>
+                                            <td>उत्पादन, उपभोग तथा छनोटको पूर्ण आर्थिक स्वतन्त्रता हुन्छ।</td>
+                                            <td>सम्पूर्ण आर्थिक गतिविधिहरू सरकारी केन्द्रीय योजनाअनुसार सञ्चालन हुन्छन्।</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- खण्ड ३: लामो उत्तर आउने प्रश्नहरू -->
+                <div class="qa-group-header tertiary" id="sec-long">
+                    <h3 class="qa-group-title">
+                        <span class="material-symbols-outlined" style="color:var(--tertiary);">article</span>
+                        3. तलका प्रश्नको लामो उत्तर दिनुहोस् :
+                    </h3>
+                    <span class="qa-group-badge">३ प्रश्नहरू</span>
+                </div>
+
+                <div class="qa-cards-container">
+                    <!-- प्रश्न ३ (क) -->
+                    <div class="qa-card" id="q3-ka">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न ३ (क)</span>
+                                <h3 class="qa-question">पुँजीवादी अर्थव्यवस्थाको परिचय दिई यसका विशेषताहरूमाथि प्रकाश पार्नुहोस् ।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong>
+                            <p style="margin: 0.5rem 0;"><strong>पुँजीवादी अर्थव्यवस्थाको परिचय:</strong> उत्पादनका साधनस्रोतमाथि निजी क्षेत्रको स्वामित्व र नियन्त्रण हुने आर्थिक प्रणालीलाई पुँजीवादी अर्थव्यवस्था भनिन्छ। यसलाई बजार अर्थव्यवस्था (market economy) पनि भनिन्छ। यस प्रणालीमा व्यक्ति वा निजी संस्थाहरू उत्पादनका साधनका मालिक हुन्छन् र उद्यमीले नाफा कमाउने उद्देश्यले व्यवसाय सञ्चालन गर्छन्।</p>
+                            <p style="margin: 0.75rem 0 0.4rem;"><strong>पुँजीवादी अर्थव्यवस्थाका विशेषताहरू:</strong></p>
+                            <ul>
+                                <li><strong>निजी स्वामित्व:</strong> पुँजीवादी अर्थव्यवस्थामा साधनस्रोतको स्वामित्व र नियन्त्रण निजी क्षेत्रसँग रहेको हुन्छ। व्यक्तिले सम्पत्ति जम्मा गर्न, आफ्नो इच्छाअनुसार प्रयोग गर्न र बिक्री गर्न सक्छ, जसलाई राज्यको कानुनले संरक्षण गरेको हुन्छ।</li>
+                                <li><strong>नाफाको उद्देश्य:</strong> यस अर्थव्यवस्थामा उत्पादन, व्यापार, सेवा र सम्पूर्ण आर्थिक क्रियाकलापहरू नाफा (लाभ) कमाउने उद्देश्यले गरिन्छ। लाभको आशाले व्यवसायीलाई जोखिम वहन गर्न र उत्प्रेरणा दिन्छ।</li>
+                                <li><strong>मूल्य संयन्त्र:</strong> यसमा माग र आपूर्तिको अन्तक्रियाद्वारा मूल्य निर्धारण हुन्छ। मूल्य संयन्त्रले उपभोक्ता तथा उत्पादकलाई स्वतन्त्र रूपले आर्थिक निर्णय लिन मार्गनिर्देश गर्छ।</li>
+                                <li><strong>आर्थिक स्वतन्त्रता:</strong> उद्यम, पेसा वा व्यवसाय छनोट गर्ने र आफ्नो पुँजी लगानी गरी आर्थिक गतिविधिमा सहभागी हुन पाउने पूर्ण आर्थिक स्वतन्त्रता हुन्छ।</li>
+                                <li><strong>उपभोक्ताको सार्वभौमिकता:</strong> यस प्रणालीमा उपभोक्ता सार्वभौम हुन्छन् र उपभोक्ताको चाहना र आवश्यकताअनुसार अर्थतन्त्र चल्छ।</li>
+                                <li><strong>सरकारको सीमित भूमिका:</strong> सरकारले उत्पादन, मूल्य र वितरणमा हस्तक्षेप गर्दैन। सरकारको मुख्य काम शान्ति सुरक्षा, सामाजिक न्याय जस्ता विषयमा मात्र सीमित हुन्छ।</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न ३ (ख) -->
+                    <div class="qa-card" id="q3-kha">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न ३ (ख)</span>
+                                <h3 class="qa-question">समाजवादी अर्थव्यवस्थाका विशेषताहरू वर्णन गर्नुहोस् ।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> उत्पादनका साधनस्रोतमाथि सरकारको स्वामित्व र नियन्त्रण हुने आर्थिक प्रणालीलाई समाजवादी अर्थव्यवस्था भनिन्छ। समाजवादी अर्थव्यवस्थाका मुख्य विशेषताहरूलाई निम्नानुसार वर्णन गर्न सकिन्छ:
+                            <ul>
+                                <li><strong>राज्यको स्वामित्व:</strong> समाजवादी अर्थव्यवस्थामा उत्पादनका साधनहरू राज्यको स्वामित्वमा हुन्छन्। राज्यले उत्पादनका साधनहरूको विनियोजन तथा वितरण केन्द्रीय योजनामार्फत गर्छ।</li>
+                                <li><strong>सामाजिक कल्याण:</strong> सरकारले जनताको समग्र हितका लागि काम गर्छ र सबै नागरिकलाई शिक्षा, स्वास्थ्य, खाद्यान्न जस्ता आधारभूत सेवा न्यून लागतमा उपलब्ध गराउन प्रयासरत हुन्छ। यसले गरिब र अशक्तलाई विशेष सुरक्षा दिन्छ।</li>
+                                <li><strong>नियन्त्रित मूल्य:</strong> यस अर्थव्यवस्थामा वस्तु तथा सेवाको मूल्य निर्धारण सरकारले गर्छ। वस्तुको माग र पूर्तिका आधारमा नभई उत्पादन लागतका आधारमा सरकारले मूल्य निर्धारण गर्छ।</li>
+                                <li><strong>आर्थिक नियन्त्रण:</strong> उत्पादनका साधनस्रोत राज्यको स्वामित्व र नियन्त्रणमा हुने भएकाले वस्तु तथा सेवाको उत्पादन र वितरण सरकार आफैँले गर्छ।</li>
+                                <li><strong>केन्द्रीय योजना:</strong> सम्पूर्ण आर्थिक गतिविधिहरू सरकारी योजनाअनुसार सञ्चालन हुन्छन्। कुन वस्तु कति र कसका लागि उत्पादन गर्ने भन्ने निर्णय योजना आयोग वा सरकारी निकायले गर्छ।</li>
+                                <li><strong>सरकारको असीमित भूमिका:</strong> नियम कानुन बनाउनेदेखि लिएर वस्तु तथा सेवाको उत्पादन, उपयोग, वितरण र नियन्त्रण गर्नेसम्मका सबैजसो काम सरकार आफैँले गर्छ।</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- प्रश्न ३ (ग) -->
+                    <div class="qa-card" id="q3-ga">
+                        <div class="qa-header">
+                            <div class="qa-title-wrap">
+                                <span class="qa-badge">प्रश्न ३ (ग)</span>
+                                <h3 class="qa-question">मिश्रित अर्थव्यवस्थालाई पुँजीवादी र समाजवादी दुबैको विशेषता भएको अर्थव्यवस्था किन भनिएको हो, यसका विशेषताहरूका आधारमा व्याख्या गर्नुहोस् ।</h3>
+                            </div>
+                        </div>
+                        <div class="qa-answer">
+                            <strong>उत्तर:</strong> पुँजीवादी र समाजवादी दुबै अर्थव्यवस्थाका राम्रा विशेषता समेटिएको अर्थव्यवस्थालाई मिश्रित अर्थव्यवस्था भनिन्छ। यसमा उद्योग व्यवसायमा निजी तथा सार्वजनिक दुबै स्वामित्वको मिश्रण पाइने भएकाले यसलाई दुबैको विशेषता भएको अर्थव्यवस्था भनिएको हो। यसलाई मिश्रित अर्थव्यवस्थाका निम्न विशेषताहरूका आधारमा व्याख्या गर्न सकिन्छ:
+                            <ul>
+                                <li><strong>स्वामित्वको मिश्रण (निजी र सार्वजनिक स्वामित्व):</strong> पुँजीवादमा निजी र समाजवादमा राज्यको स्वामित्व हुन्छ, तर मिश्रित अर्थव्यवस्थामा यी दुबै एकैसाथ अस्तित्वमा हुन्छन्। उत्पादनका साधनस्रोतको स्वामित्व निजी क्षेत्र र सरकार दुबैसँग हुन्छ।</li>
+                                <li><strong>उद्देश्यको मिश्रण (नाफा तथा सामाजिक कल्याण):</strong> यसमा पुँजीवादी विशेषताअनुसार निजी क्षेत्रको मुख्य उद्देश्य व्यापार र उद्योगमा लगानी गरेर नाफा कमाउनु हुन्छ। त्यस्तै, समाजवादी विशेषताअनुसार सरकारको मुख्य उद्देश्य सामाजिक कल्याण गर्नु हुन्छ।</li>
+                                <li><strong>मूल्य निर्धारणमा मिश्रण (मूल्य संयन्त्र र मूल्य नियन्त्रण):</strong> धेरैजसो वस्तु तथा सेवाको मूल्य पुँजीवादी प्रणाली जस्तै बजार माग र पूर्तिका आधारमा निर्धारण हुन्छ। तर, अत्यावश्यक वस्तुको मूल्यमा भने समाजवादी प्रणाली जस्तै सरकारले नियन्त्रण गर्न सक्छ।</li>
+                                <li><strong>स्वतन्त्रता र नियन्त्रणको सन्तुलन:</strong> निजी क्षेत्रलाई व्यापार व्यवसाय गर्न आर्थिक स्वतन्त्रता हुन्छ। तर एकाधिकारको उदय हुन सक्ने अवस्थामा सरकार आफैँले अत्यावश्यक वस्तु उत्पादन र वितरण गरी नियन्त्रण गर्न सक्छ।</li>
+                                <li><strong>सरकार र बजारको भूमिका:</strong> सरकारले नियामकको भूमिका निर्वाह गर्दै निजी क्षेत्रलाई लगानी गर्न प्रेरित गर्छ र आफूले पनि आधारभूत क्षेत्रमा लगानी गरी दुबै (पुँजीवादी र समाजवादी) प्रणालीको सन्तुलन कायम गर्छ।</li>
+                            </ul>
+                            <p style="margin-top: 0.75rem;">यसरी मिश्रित अर्थव्यवस्थाले पुँजीवादको स्वतन्त्रता र नाफालाई समाजवादको समानता र जनकल्याणसँग जोड्ने काम गर्छ।</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════
+                 ३. परियोजना कार्य (PROJECT WORK)
+                 ═══════════════════════════════════════════════════ -->
+            <section class="project-work-section" id="pariyojana" style="margin-bottom: var(--space-4xl);">
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:var(--space-xl); border-bottom:2px solid var(--outline-variant); padding-bottom:var(--space-sm); flex-wrap:wrap; gap:0.5rem;">
+                    <h2 style="font-size:1.55rem; font-weight:800; color:var(--tertiary); margin:0; display:flex; align-items:center; gap:0.5rem; font-family: var(--font-heading), var(--font-devanagari), sans-serif;">
+                        <span class="material-symbols-outlined" style="font-size:26px;">engineering</span>
+                        परियोजना कार्य (Project Work)
+                    </h2>
+                    <span class="tool-chip" style="font-size:0.75rem;font-weight:700;">व्यावहारिक अध्ययन प्रतिवेदन</span>
+                </div>
+
+                <div style="background:var(--surface-container-lowest); border:1px solid var(--outline-variant); border-left:4px solid var(--tertiary); border-radius:var(--radius-xl); padding:1.75rem; box-shadow:var(--shadow-sm);">
+                    <h3 style="margin-top:0; color:var(--on-surface); font-size:1.2rem; font-weight:700; line-height:1.5;">
+                        शीर्षक: "हाम्रो स्थानीय समुदायमा मिश्रित अर्थव्यवस्थाको अभ्यास र प्रभाव सम्बन्धी अध्ययन प्रतिवेदन"
+                    </h3>
+                    
+                    <div style="display:flex; flex-direction:column; gap:1.25rem; margin-top:1.25rem; font-size:1.02rem; line-height:1.8; color:var(--on-surface-variant);">
+                        <div>
+                            <strong style="color:var(--on-surface); font-size:1.05rem;">१. उद्देश्य (Objectives):</strong>
+                            <ul style="margin:0.4rem 0 0 1.25rem; padding-left:0.5rem;">
+                                <li>नेपालले अपनाएको मिश्रित अर्थव्यवस्था स्थानीय समुदायमा कसरी सञ्चालन भइरहेको छ भनी अवलोकन गर्नु।</li>
+                                <li>स्थानीय बजारमा निजी क्षेत्र र सरकारी निकायको भूमिका पहिचान गर्नु।</li>
+                                <li>समुदायको आर्थिक विकासमा निजी र सार्वजनिक क्षेत्रको सहकार्यको प्रभाव विश्लेषण गर्नु।</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <strong style="color:var(--on-surface); font-size:1.05rem;">२. कार्यविधि तथा अध्ययन विधि (Methodology):</strong>
+                            <ul style="margin:0.4rem 0 0 1.25rem; padding-left:0.5rem;">
+                                <li>आफ्नो वरपरका स्थानीय पसल, उद्योग, तथा बैंक (निजी क्षेत्र) र सरकारी स्वास्थ्य चौकी, वडा कार्यालय, सामुदायिक विद्यालय, तथा कृषि सेवा केन्द्र (सार्वजनिक क्षेत्र) को स्थलगत अवलोकन गरियो।</li>
+                                <li>स्थानीय व्यवसायी, उपभोक्ता तथा वडा प्रतिनिधिसँग प्रश्न सोधी जानकारी सङ्कलन गरियो।</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <strong style="color:var(--on-surface); font-size:1.05rem;">३. तथ्य तथा अवलोकनका मुख्य निष्कर्षहरू (Key Findings):</strong>
+                            <div class="comparison-table-wrap" style="margin-top:0.6rem;">
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:25%;">क्षेत्र (Sector)</th>
+                                            <th style="width:40%;">समुदायमा देखिएका उदाहरणहरू</th>
+                                            <th style="width:35%;">सञ्चालन तथा नियमन प्रणाली</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>निजी क्षेत्र (Private Sector)</strong></td>
+                                            <td>किराना पसल, मेडिकल, निजी विद्यालय, घरेलु तथा साना उद्योगहरू</td>
+                                            <td>नाफा आर्जन र उपभोक्ताको मागमा आधारित, खुला प्रतिस्पर्धा।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>सार्वजनिक/सरकारी क्षेत्र (Public Sector)</strong></td>
+                                            <td>सामुदायिक विद्यालय, स्वास्थ्य चौकी, वडा कार्यालय, कृषि विकास बैंक</td>
+                                            <td>निःशुल्क वा न्यून शुल्कमा सेवा प्रवाह, जनकल्याण र सामाजिक सुरक्षा।</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>सहकारी क्षेत्र (Cooperative Sector)</strong></td>
+                                            <td>स्थानीय बचत तथा ऋण सहकारी, दुग्ध उत्पादक सहकारी संस्था</td>
+                                            <td>पारस्परिक सहयोग र सदस्यहरूको आर्थिक सशक्तीकरण।</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <strong style="color:var(--on-surface); font-size:1.05rem;">४. निष्कर्ष तथा सुझाव (Conclusion &amp; Suggestions):</strong>
+                            <p style="margin:0.4rem 0 0;">
+                                हाम्रो समुदायमा मिश्रित अर्थव्यवस्थाको प्रत्यक्ष अभ्यास भएको पाइयो। निजी क्षेत्रले दैनिक उपभोग्य वस्तु तथा सेवाको आपूर्तिमा सहजता ल्याएको छ भने सरकारले आधारभूत शिक्षा, स्वास्थ्य र पूर्वाधारमा लगानी गरी विपन्न वर्गलाई संरक्षण दिएको छ। बजारमा एकाधिकार हुन नदिन र गुणस्तरीय वस्तु उचित मूल्यमा उपलब्ध गराउन सरकारले बजार अनुगमनलाई अझ प्रभावकारी बनाउनु आवश्यक देखिन्छ।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ─── Previous / Next Navigation ──────────────────── -->
+            <nav class="chapter-nav-grid" id="navigation" aria-label="Lesson navigation">
+                <a href="index.html" class="nav-card nav-card-prev">
+                    <span class="nav-card-label">
+                        <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
+                        Syllabus
+                    </span>
+                    <div class="nav-card-title">Class 10 Economics Index</div>
+                </a>
+                <a href="unit-1-chapter-2.html" class="nav-card nav-card-next">
+                    <span class="nav-card-label">
+                        Next Lesson (पाठ २)
+                        <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+                    </span>
+                    <div class="nav-card-title">दुर्लभता, छनोट र अवसर लागत</div>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+</div>
+
+<!-- Mobile Sidebar Drawer Toggle Button -->
+<button type="button" class="mobile-sidebar-toggle-btn" id="mobileSidebarToggle" aria-label="Open lessons navigation">
+    <span class="material-symbols-outlined">menu_book</span>
+    Lessons
+</button>
+
+<!-- Floating Back to Top Button -->
+<button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Scroll to top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<!-- Sidebar Overlay for Mobile -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="../../../index.html" class="logo">
+                    <img src="../../../assets/images/logo.png" alt="LearnNepal">
+                    LearnNepal<span></span>
+                </a>
+                <p>Empowering NEB students with high-quality, structured, and accessible digital study notes &mdash; completely free.</p>
+                <div class="footer-social">
+                    <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                    </a>
+                    <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
             </div>
 
-            <h3>क) पूँजीवादी अर्थव्यवस्था (Capitalist Economy)</h3>
-            <p>
-                यस अर्थव्यवस्थामा उत्पादनका साधनहरूमा निजी व्यक्तिहरूको पूर्ण स्वामित्व रहन्छ। यसलाई उदार वा खुला बजार अर्थव्यवस्था पनि भनिन्छ। (उदाहरण: अमेरिका, जापान, बेलायत)।
-                <br><strong>मुख्य विशेषताहरू:</strong> निजी सम्पत्तिको अधिकार, नाफाको उद्देश्य, उपभोक्ताको सार्वभौमसत्ता, प्रतिस्पर्धा, र सरकारको न्यूनतम हस्तक्षेप।
-            </p>
+            <div class="footer-col">
+                <h5 class="footer-heading">Class 8 & 10</h5>
+                <ul class="footer-links">
+                    <li><a href="../../../pages/class-8/social/index.html">Class 8 Social Studies</a></li>
+                    <li><a href="../../../pages/class-10/social/index.html">Class 10 Social Studies</a></li>
+                    <li><a href="../../../pages/class-10/economics/index.html">Class 10 Economics</a></li>
+                    <li><a href="../../../pages/class-10/opt-math/index.html">Class 10 Opt. Math</a></li>
+                </ul>
+            </div>
 
-            <h3>ख) समाजवादी अर्थव्यवस्था (Socialist Economy)</h3>
-            <p>
-                यस अर्थव्यवस्थामा उत्पादनका सम्पूर्ण साधनहरूमा राज्य वा सरकारको स्वामित्व र नियन्त्रण रहन्छ। यसलाई नियन्त्रित वा योजनाबद्ध अर्थव्यवस्था पनि भनिन्छ। (उदाहरण: उत्तर कोरिया, भूतपूर्व सोभियत सङ्घ)।
-                <br><strong>मुख्य विशेषताहरू:</strong> सार्वजनिक स्वामित्व, केन्द्रीय आर्थिक योजना, सामाजिक समानता र जनकल्याण, प्रतिस्पर्धाको अभाव।
-            </p>
+            <div class="footer-col">
+                <h5 class="footer-heading">Class 11</h5>
+                <ul class="footer-links">
+                    <li><a href="../../../pages/class-11/english.html">English</a></li>
+                    <li><a href="../../../pages/class-11/nepali.html">Nepali</a></li>
+                    <li><a href="../../../pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
+                </ul>
+            </div>
 
-            <h3>ग) मिश्रित अर्थव्यवस्था (Mixed Economy)</h3>
-            <p>
-                पूँजीवादी र समाजवादी दुवै अर्थव्यवस्थाका सकारात्मक पक्षहरूलाई समावेश गरी निर्माण गरिएको प्रणालीलाई मिश्रित अर्थव्यवस्था भनिन्छ। (उदाहरण: नेपाल, भारत)।
-                <br><strong>मुख्य विशेषताहरू:</strong> सार्वजनिक र निजी क्षेत्रको सहअस्तित्व, आर्थिक कल्याण र नाफा दुवैको लक्ष्य, निर्देशित बजार प्रणाली, र सामाजिक सुरक्षा।
-            </p>
+            <div class="footer-col">
+                <h5 class="footer-heading">Class 12</h5>
+                <ul class="footer-links">
+                    <li><a href="../../../pages/class-12/english/c12_english_syllabus.html">English</a></li>
+                    <li><a href="../../../pages/class-12/nepali.html">Nepali</a></li>
+                    <li><a href="../../../pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
+                    <li><a href="../../../pages/question-bank/index.html" class="qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a></li>
+                </ul>
+            </div>
 
-            <h2>३. नेपालको अर्थव्यवस्था (Nepal's Economy)</h2>
-            <p>
-                नेपालले <strong>मिश्रित अर्थव्यवस्था (Mixed Economy)</strong> अपनाएको छ। नेपालको संविधान अनुसार नेपालको अर्थतन्त्र सार्वजनिक, निजी र सहकारी क्षेत्रको सहभागिता र स्वतन्त्र विकासमार्फत अर्थतन्त्र सुदृढ गर्ने नीति लिइएको छ।
-            </p>
-                </article>
+            <div class="footer-col">
+                <h5 class="footer-heading">Resources</h5>
+                <ul class="footer-links">
+                    <li><a href="../../../pages/courses.html">All Courses</a></li>
+                    <li><a href="../../../about.html">About Us</a></li>
+                    <li><a href="../../../contact.html">Contact</a></li>
+                    <li><a href="../../../privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
 
-                <!-- Exercises & Questions -->
-                <section class="qa-section" id="exercises">
-                    <div class="qa-section-header">
-                        <h2 class="qa-section-title">
-                            <span class="material-symbols-outlined" style="font-size:24px;">quiz</span>
-                            Questions &amp; Answers
-                        </h2>
-                        <div style="display:flex;align-items:center;gap:0.75rem;">
-                            <span class="tool-chip" style="font-size:0.75rem;font-weight:700;">3 Q&A Questions</span>
-                            <button type="button" class="qa-toggle-all-btn" id="toggleAllQABtn">
-                                <span class="material-symbols-outlined" style="font-size:16px;">unfold_less</span>
-                                Toggle All
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="qa-cards-container">
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-title-wrap">
-                            <span class="qa-badge">प्रश्न १</span>
-                            <h3 class="qa-question">अर्थव्यवस्था भनेको के हो? यसका मुख्य उद्देश्यहरू उल्लेख गर्नुहोस्।</h3>
-                        </div>
-                        <button type="button" class="copy-qa-btn" onclick="copyAnswer(this)" title="Copy Answer">
-                            <span class="material-symbols-outlined" style="font-size:14px;">content_copy</span>
-                            Copy Answer
-                        </button>
-                    </div>
-                    <div class="qa-answer">
-                        <strong>उत्तर:</strong> कुनै निश्चित क्षेत्र वा देशमा मानवीय आवश्यकता परिपूर्ति गर्नका लागि सञ्चालन गरिने उत्पादन, उपभोग, विनिमय र वितरणसम्बन्धी सम्पूर्ण आर्थिक क्रियाकलापहरूको सङ्गालोलाई अर्थव्यवस्था भनिन्छ।
-                    <br><strong>मुख्य उद्देश्यहरू:</strong>
-                    <ul>
-                        <li>आर्थिक साधन र स्रोतको कुशल प्रयोग गर्नु।</li>
-                        <li>नागरिकहरूलाई रोजगारी र जीविकोपार्जनका अवसरहरू प्रदान गर्नु।</li>
-                        <li>आर्थिक वृद्धि र स्थायित्व हासिल गर्नु।</li>
-                    </ul>
-                    </div>
-                </div>
-
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-title-wrap">
-                            <span class="qa-badge">प्रश्न २</span>
-                            <h3 class="qa-question">पूँजीवादी र समाजवादी अर्थव्यवस्थाबिचका कुनै तीन भिन्नता लेख्नुहोस्।</h3>
-                        </div>
-                        <button type="button" class="copy-qa-btn" onclick="copyAnswer(this)" title="Copy Answer">
-                            <span class="material-symbols-outlined" style="font-size:14px;">content_copy</span>
-                            Copy Answer
-                        </button>
-                    </div>
-                    <div class="qa-answer">
-                        <strong>उत्तर:</strong> पूँजीवादी र समाजवादी अर्थव्यवस्थाबिचका भिन्नताहरू निम्न बमोजिम छन्:
-                    <ol>
-                        <li><strong>स्वामित्व:</strong> पूँजीवादीमा उत्पादनका साधनमा निजी स्वामित्व हुन्छ भने समाजवादीमा राज्यको स्वामित्व हुन्छ।</li>
-                        <li><strong>उद्देश्य:</strong> पूँजीवादीको मुख्य उद्देश्य नाफा कमाउनु हो भने समाजवादीको उद्देश्य सामाजिक कल्याण गर्नु हो।</li>
-                        <li><strong>मूल्य निर्धारण:</strong> पूँजीवादीमा मूल्य बजारको माग र आपूर्तिले तोक्छ भने समाजवादीमा सरकारले मूल्य तोक्दछ।</li>
-                    </ol>
-                    </div>
-                </div>
-
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-title-wrap">
-                            <span class="qa-badge">प्रश्न ३</span>
-                            <h3 class="qa-question">नेपालमा मिश्रित अर्थव्यवस्था किन उपयुक्त मानिन्छ? तर्क प्रस्तुत गर्नुहोस्।</h3>
-                        </div>
-                        <button type="button" class="copy-qa-btn" onclick="copyAnswer(this)" title="Copy Answer">
-                            <span class="material-symbols-outlined" style="font-size:14px;">content_copy</span>
-                            Copy Answer
-                        </button>
-                    </div>
-                    <div class="qa-answer">
-                        <strong>उत्तर:</strong> नेपालजस्तो विकासोन्मुख देशमा निजी क्षेत्रको लगानी प्रवर्द्धन गरी आर्थिक विकास गर्न र आर्थिक रूपमा विपन्न नागरिकलाई सामाजिक सुरक्षा प्रदान गर्न मिश्रित अर्थव्यवस्था उपयुक्त मानिन्छ। यसले निजी क्षेत्रलाई उद्योग, व्यवसाय सञ्चालन गर्न उत्प्रेरित गर्छ भने सरकारले शिक्षा, स्वास्थ्य, र पूर्वाधार विकासमा प्रत्यक्ष लगानी गरी सन्तुलित विकास कायम गर्दछ।
-                    </div>
-                </div>
-                    </div>
-                </section>
-
-                <!-- Previous / Next Navigation -->
-        <nav class="chapter-nav-grid" id="navigation" aria-label="Lesson navigation">
-            <a href="index.html" class="nav-card nav-card-prev">
-                <span class="nav-card-label">
-                    <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
-                    Syllabus
-                </span>
-                <div class="nav-card-title">Class 10 Economics Index</div>
-            </a>
-            <a href="unit-1-chapter-2.html" class="nav-card nav-card-next">
-                <span class="nav-card-label">
-                    Next Lesson (पाठ २)
-                    <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
-                </span>
-                <div class="nav-card-title">दुर्लभता, छनोट र अवसर लागत</div>
-            </a>
-        </nav>
-
-
-            </main>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
+            <div class="footer-bottom-links">
+                <a href="../../../privacy.html">Privacy</a>
+                <span>&bull;</span>
+                <a href="../../../contact.html">Contact</a>
+                <span>&bull;</span>
+                <a href="../../../about.html">About</a>
+            </div>
         </div>
     </div>
+</footer>
 
-    <!-- Mobile Sidebar Drawer Toggle Button -->
-    <button type="button" class="mobile-sidebar-toggle-btn" id="mobileSidebarToggle" aria-label="Open lessons navigation">
-        <span class="material-symbols-outlined">menu_book</span>
-        Lessons
-    </button>
+<!-- ─── Scripts ─────────────────────────────────────────── -->
+<script src="../../../scripts/app.js"></script>
+<script src="../../../scripts/search.js"></script>
+<script src="../../../scripts/transitions.js"></script>
+<script src="chapter.js"></script>
+<script>
+  // Sidebar toggle for desktop & mobile
+  (function () {
+    const tab = document.getElementById('sidebarToggleTab');
+    const sidebar = document.getElementById('chapterSidebar');
+    const layout = document.getElementById('docsLayout');
+    const overlay = document.getElementById('sidebarOverlay');
+    const icon = document.getElementById('sidebarToggleIcon');
+    const MOBILE_BP = 1024;
 
-    <!-- Floating Back to Top Button -->
-    <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Scroll to top">
-        <span class="material-symbols-outlined">arrow_upward</span>
-    </button>
+    function isMobile() { return window.innerWidth <= MOBILE_BP; }
 
-    <!-- Sidebar Overlay for Mobile -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    function openSidebar() {
+      if (isMobile()) {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        layout.classList.remove('sidebar-collapsed');
+      }
+      icon.textContent = 'close';
+      tab.setAttribute('aria-expanded', 'true');
+    }
 
-    <!-- â•â•â• FOOTER â•â•â• -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="../../../index.html" class="logo">
-                        <img src="../../../assets/images/logo.png" alt="LearnNepal">
-                        LearnNepal<span></span>
-                    </a>
-                    <p>Empowering NEB students with high-quality, structured, and accessible digital study notes &mdash; completely free.</p>
-                    <div class="footer-social">
-                        <a href="https://www.youtube.com/@OfficialLearnNepal" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-                        </a>
-                        <a href="mailto:hello@learnnepal.com" aria-label="Email" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </a>
-                    </div>
-                </div>
+    function closeSidebar() {
+      if (isMobile()) {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      } else {
+        layout.classList.add('sidebar-collapsed');
+      }
+      icon.textContent = 'menu_book';
+      tab.setAttribute('aria-expanded', 'false');
+    }
 
-                <div class="footer-col">
-                    <h5 class="footer-heading">Class 8 & 10</h5>
-                    <ul class="footer-links">
-                        <li><a href="../../../pages/class-8/social/index.html">Class 8 Social Studies</a></li>
-                        <li><a href="../../../pages/class-10/social/index.html">Class 10 Social Studies</a></li>
-                        <li><a href="../../../pages/class-10/economics/index.html">Class 10 Economics</a></li>
-                        <li><a href="../../../pages/class-10/opt-math/index.html">Class 10 Opt. Math</a></li>
-                    </ul>
-                </div>
+    function isSidebarOpen() {
+      if (isMobile()) return sidebar.classList.contains('active');
+      return !layout.classList.contains('sidebar-collapsed');
+    }
 
-                <div class="footer-col">
-                    <h5 class="footer-heading">Class 11</h5>
-                    <ul class="footer-links">
-                        <li><a href="../../../pages/class-11/english.html">English</a></li>
-                        <li><a href="../../../pages/class-11/nepali.html">Nepali</a></li>
-                        <li><a href="../../../pages/class-11/computer/c11_computer_syllabus.html">Computer Science</a></li>
-                    </ul>
-                </div>
+    if (tab) {
+      tab.addEventListener('click', function () {
+        if (isSidebarOpen()) closeSidebar(); else openSidebar();
+      });
+    }
+    if (overlay) {
+      overlay.addEventListener('click', closeSidebar);
+    }
 
-                <div class="footer-col">
-                    <h5 class="footer-heading">Class 12</h5>
-                    <ul class="footer-links">
-                        <li><a href="../../../pages/class-12/english/c12_english_syllabus.html">English</a></li>
-                        <li><a href="../../../pages/class-12/nepali.html">Nepali</a></li>
-                        <li><a href="../../../pages/class-12/computer/c12_computer_syllabus.html">Computer Science</a></li>
-                        <li><a href="../../../pages/question-bank/index.html" class="qb-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/></svg>Question Bank</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-heading">Resources</h5>
-                    <ul class="footer-links">
-                        <li><a href="../../../pages/courses.html">All Courses</a></li>
-                        <li><a href="../../../about.html">About Us</a></li>
-                        <li><a href="../../../contact.html">Contact</a></li>
-                        <li><a href="../../../privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 LearnNepal &mdash; Built with &#10084; for NEB students across Nepal</p>
-                <div class="footer-bottom-links">
-                    <a href="../../../privacy.html">Privacy</a>
-                    <span>&bull;</span>
-                    <a href="../../../contact.html">Contact</a>
-                    <span>&bull;</span>
-                    <a href="../../../about.html">About</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- â”€â”€ Scripts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
-    <script src="../../../scripts/app.js"></script>
-    <script src="../../../scripts/search.js"></script>
-    <script src="../../../scripts/transitions.js"></script>
-    <script src="chapter.js"></script>
+    // On resize, clean up state
+    window.addEventListener('resize', function () {
+      if (!isMobile()) {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  })();
+</script>
 </body>
 
 </html>

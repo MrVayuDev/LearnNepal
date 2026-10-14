@@ -25,9 +25,11 @@ img, picture, video, canvas, svg {
     height: auto; /* Ensure aspect ratio is preserved */
 }
 
-/* Prevent horizontal scroll globally */
+/* Prevent horizontal scroll globally.
+   Both html and body use overflow-x: clip (not hidden) so position: sticky works.
+   overflow-x: hidden creates an overflow context that breaks sticky positioning. */
 html, body {
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
 }
 

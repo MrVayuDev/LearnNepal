@@ -20,48 +20,99 @@
 .chapter-page-wrapper {
   background: var(--background);
   min-height: calc(100vh - var(--header-height));
+  position: relative;
 }
 
+/* Push main content right of the fixed sidebar */
 .docs-layout {
-  display: grid;
-  grid-template-columns: 310px 1fr;
+  display: flex;
   max-width: var(--max-width);
   margin: 0 auto;
   min-height: calc(100vh - var(--header-height));
   position: relative;
-  transition: grid-template-columns 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.docs-layout.sidebar-collapsed {
-  grid-template-columns: 0px 1fr;
-}
-
+/* When sidebar is collapsed, the sidebar width is 0 so content fills all */
 .docs-layout.sidebar-collapsed .chapter-sidebar {
   width: 0 !important;
   min-width: 0 !important;
   padding: 0 !important;
-  margin: 0 !important;
   border: none !important;
   overflow: hidden !important;
   opacity: 0 !important;
   pointer-events: none !important;
   visibility: hidden !important;
+  flex-shrink: 0;
 }
 
 /* ─── Left Sticky Sidebar ────────────────────────────────── */
 .chapter-sidebar {
   position: sticky;
   top: var(--header-height);
+  align-self: flex-start;   /* CRITICAL: prevents flex stretch so sticky works */
+  flex-shrink: 0;
+  width: 300px;
+  min-width: 300px;
   height: calc(100vh - var(--header-height));
   height: calc(100dvh - var(--header-height));
   overflow-y: auto;
-  padding: var(--space-xl) var(--space-lg) var(--space-3xl) var(--margin-desktop);
+  overflow-x: hidden;
+  padding: var(--space-xl) var(--space-lg) var(--space-3xl) var(--space-lg);
   border-right: 1px solid var(--outline-variant);
   background: var(--surface-container-lowest);
   scrollbar-width: thin;
   scrollbar-color: var(--outline-variant) transparent;
-  transition: all 0.3s ease;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              min-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              padding 0.3s ease,
+              visibility 0.3s ease;
   z-index: 90;
+}
+
+/* ─── Sidebar Overlay (mobile dark backdrop) ─────────────── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1249;
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ─── Sidebar Toggle Tab (always visible) ────────────────── */
+.sidebar-toggle-tab {
+  position: fixed;
+  top: calc(var(--header-height) + 80px);
+  left: 0;
+  z-index: 1200;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.55rem 0.45rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 12px rgba(53, 37, 205, 0.35);
+  transition: background 0.2s, transform 0.2s, left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sidebar-toggle-tab:hover {
+  background: var(--primary-container, #4f35e0);
+  transform: translateX(2px);
+}
+.sidebar-toggle-tab .sidebar-toggle-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
 }
 
 .chapter-sidebar::-webkit-scrollbar {
@@ -276,32 +327,59 @@
 }
 
 /* ─── Main Content Container ─────────────────────────────── */
+/* ─── Main Content Container ──────────────────────────── */
 .chapter-content-main {
-  padding: var(--space-xl) var(--margin-desktop) var(--space-4xl) var(--space-2xl);
-  max-width: 920px;
+  /* Grow to fill ALL remaining horizontal space next to sidebar */
+  flex: 1 1 0;
   min-width: 0;
+  padding: var(--space-xl) var(--space-2xl) var(--space-4xl);
+  /* Center readable content within the available width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Give every direct child a max readable width, auto-centered */
+.chapter-content-main > * {
+  width: 100%;
+  max-width: 860px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
   .docs-layout {
-    grid-template-columns: 1fr;
+    /* On mobile the sidebar is off-screen, content fills full width */
+    display: block;
   }
   .chapter-sidebar {
     position: fixed;
     top: 0;
-    left: -100%;
-    width: min(320px, 86vw);
+    left: -105%;
+    width: min(300px, 86vw);
     height: 100vh;
     height: 100dvh;
-    z-index: var(--z-drawer, 1250);
+    z-index: 1250;
     padding: calc(var(--header-height) + 1rem) var(--space-lg) var(--space-3xl);
     box-shadow: 8px 0 32px rgba(0, 0, 0, 0.25);
+    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .chapter-sidebar.active {
     left: 0;
   }
+  /* Collapsed desktop state doesn't apply on mobile */
+  .docs-layout.sidebar-collapsed .chapter-sidebar {
+    width: min(300px, 86vw) !important;
+    padding: calc(var(--header-height) + 1rem) var(--space-lg) var(--space-3xl) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    overflow-y: auto !important;
+    border: none !important;
+  }
   .chapter-content-main {
-    padding: var(--space-lg) var(--margin-mobile) var(--space-3xl);
+    padding: var(--space-lg) var(--space-md) var(--space-3xl);
+  }
+  .chapter-content-main > * {
     max-width: 100%;
   }
 }
@@ -467,6 +545,9 @@
 .font-size-btn:hover {
   background: var(--primary);
   color: white;
+}
+.font-size-btn:active {
+  transform: scale(0.9);
 }
 
 /* ─── Learning Objectives Card ───────────────────────────── */
@@ -840,6 +921,71 @@
 
 .qa-answer strong {
   color: var(--on-surface);
+}
+
+.qa-answer ul,
+.qa-answer ol {
+  margin: 0.6rem 0 0.6rem 1.25rem;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.qa-answer li {
+  line-height: 1.7;
+}
+
+.qa-group-header {
+  margin: var(--space-2xl) 0 var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 4px solid var(--primary);
+  padding: 0.75rem 1.25rem;
+  background: var(--surface-container-low);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--outline-variant);
+  border-left-width: 4px;
+}
+
+.qa-group-header.secondary {
+  border-left-color: var(--secondary);
+}
+
+.qa-group-header.tertiary {
+  border-left-color: var(--tertiary);
+}
+
+.qa-group-title {
+  margin: 0;
+  font-family: var(--font-heading), var(--font-devanagari), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qa-group-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(53, 37, 205, 0.1);
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.qa-group-header.secondary .qa-group-badge {
+  background: rgba(0, 108, 73, 0.12);
+  color: var(--secondary);
+}
+
+.qa-group-header.tertiary .qa-group-badge {
+  background: rgba(104, 64, 0, 0.12);
+  color: var(--tertiary);
 }
 
 /* ─── Previous / Next Chapter Cards ──────────────────────── */
