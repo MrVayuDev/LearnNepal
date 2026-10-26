@@ -2154,6 +2154,197 @@ textarea.input-field {
     visibility: visible;
     transform: translateY(0) scale(1);
 }
+/* ── Exercise Item Internals ─────────────────────────────── */
+.exercise-item-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--outline);
+    margin-bottom: 0.25rem;
+}
+.exercise-item-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--on-surface);
+}
+.exercise-item-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: var(--space-sm);
+}
+.exercise-item-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 1rem;
+    border-radius: var(--radius-lg);
+    background: var(--surface-container-high);
+    color: var(--on-surface);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.exercise-item-btn:hover {
+    background: var(--primary-container);
+    color: var(--on-primary-container);
+    transform: translateY(-1px);
+}
+
+/* ── Progress Card (sidebar) ────────────────────────────── */
+.progress-card {
+    background: var(--surface-container-lowest);
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.progress-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--on-surface);
+    margin-bottom: var(--space-lg);
+}
+.progress-card-watermark {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    opacity: 0.08;
+}
+.progress-card-watermark .material-symbols-outlined {
+    font-size: 5rem;
+    color: var(--secondary);
+}
+.progress-card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-xs);
+}
+.progress-card-row .label {
+    font-size: 0.85rem;
+    color: var(--on-surface-variant);
+}
+.progress-card-row .value {
+    font-weight: 700;
+    color: var(--secondary);
+}
+.progress-bar-track {
+    height: 10px;
+    background: var(--secondary-container);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-lg);
+    overflow: hidden;
+}
+.progress-bar-fill {
+    height: 100%;
+    background: var(--secondary);
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease;
+}
+.progress-card p {
+    font-size: 0.875rem;
+    color: var(--on-surface-variant);
+    margin-bottom: var(--space-lg);
+}
+.btn-start {
+    width: 100%;
+    padding: 0.875rem 1.75rem;
+    background: var(--grad-primary);
+    background-size: 200% auto;
+    color: var(--on-primary);
+    border: none;
+    border-radius: var(--radius-xl);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    transition: all 0.3s var(--ease-spring);
+    box-shadow: var(--shadow-accent);
+}
+.btn-start:hover {
+    background-position: right center;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ── Search Lesson Box ──────────────────────────────────── */
+.search-lesson-box {
+    position: relative;
+    margin-bottom: var(--space-lg);
+}
+.search-lesson-input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--outline-variant);
+    background: var(--surface-container-lowest);
+    color: var(--on-surface);
+    font-family: var(--font-devanagari), var(--font-body), sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+}
+.search-lesson-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(53, 37, 205, 0.15);
+}
+.search-lesson-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--on-surface-variant);
+    pointer-events: none;
+}
+
+/* ── Unit Badge Count ───────────────────────────────────── */
+.unit-badge-count {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: rgba(53, 37, 205, 0.08);
+    color: var(--primary);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* ── Accordion Arrow ────────────────────────────────────── */
+.accordion-arrow {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.curriculum-unit.open .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+/* ── Hero Overview Card (compact variant) ────────────────── */
+.hero-overview-card {
+    max-width: 360px;
+    width: 100%;
+    justify-self: end;
+    padding: 1.25rem 1.4rem;
+}
+.hero-overview-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+.hero-overview-card .overview-stat {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.88rem;
+}
+.hero-overview-card .overview-stat + .overview-stat {
+    margin-top: 0.45rem;
+}
 
 /* ═══════════════════════════════════════════════════════════
    SYLLABUS & DOCUMENTATION UTILITY MAPPING SYSTEM

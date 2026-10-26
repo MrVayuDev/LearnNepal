@@ -51,214 +51,196 @@
         </div>
     </header>
 
-    <main class="flex-grow pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
-    <!-- Subject Header Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16 items-start">
-        <div class="lg:col-span-8">
-            <div class="flex items-center gap-2 mb-4">
-                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md">Grade 11</span>
-                <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-md">Computer Stream</span>
-            </div>
-            <h1 class="font-display-lg font-extrabold text-display-lg-mobile md:text-display-lg text-on-background mb-6 tracking-tight">Class 11 - Computer Science</h1>
-            <p class="font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                NEB Class 11 Computer Science syllabus notes, diagrams, and programming guides.
-            </p>
-        </div>
-        <div class="lg:col-span-4">
-            <div class="glass-card p-6 rounded-xl shadow-lg border border-primary/10">
-                <h3 class="font-headline-sm mb-4">Subject Overview</h3>
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">menu_book</span>
-                            <span class="font-body-md">Total Units</span>
-                        </div>
-                        <span class="font-bold">5 Units</span>
+    <main>
+        <!-- ═══ HERO ═══ -->
+        <section class="subject-hero">
+            <div class="subject-hero-inner">
+                <div>
+                    <nav class="breadcrumb-trail" aria-label="Breadcrumbs">
+                        <a href="../../../index.html">Home</a>
+                        <span class="breadcrumb-separator">›</span>
+                        <a href="../../../pages/courses.html">Courses</a>
+                        <span class="breadcrumb-separator">›</span>
+                        <a href="../../../pages/courses.html#grade11">Class 11</a>
+                        <span class="breadcrumb-separator">›</span>
+                        <span class="breadcrumb-current">Computer Science</span>
+                    </nav>
+                    <div class="subject-badges">
+                        <span class="subject-badge primary">Grade 11</span>
+                        <span class="subject-badge secondary">Computer Stream</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">schedule</span>
-                            <span class="font-body-md">Est. Study Time</span>
-                        </div>
-                        <span class="font-bold">80 Hours</span>
+                    <h1 class="subject-title">Class 11 &mdash; Computer Science</h1>
+                    <p class="subject-desc">NEB Class 11 Computer Science syllabus notes, diagrams, and programming guides.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>Subject Overview</h3>
+                    <div class="overview-stat">
+                        <div class="overview-stat-left"><span class="material-symbols-outlined">menu_book</span><span>Total Units</span></div>
+                        <span class="overview-stat-value">5 Units</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 bg-surface-container rounded-lg">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-tertiary">trending_up</span>
-                            <span class="font-body-md">Difficulty</span>
-                        </div>
-                        <span class="font-bold text-tertiary">NEB Curriculum</span>
+                    <div class="overview-stat">
+                        <div class="overview-stat-left"><span class="material-symbols-outlined">schedule</span><span>Est. Study Time</span></div>
+                        <span class="overview-stat-value">80 Hours</span>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="overview-stat-left"><span class="material-symbols-outlined" style="color:var(--tertiary);">trending_up</span><span>Difficulty</span></div>
+                        <span class="overview-stat-value" style="color:var(--tertiary);">NEB Curriculum</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Main Content Area: Curriculum Breakdown -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-        <div class="lg:col-span-8 space-y-6">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="font-headline-md text-2xl font-bold">Curriculum Breakdown</h2>
-                <button class="text-primary font-label-md flex items-center gap-1 hover:underline" onclick="document.querySelectorAll('.hidden.p-6.grid').forEach(el => el.classList.remove('hidden'))">
-                    Expand All <span class="material-symbols-outlined">expand_more</span>
-                </button>
-            </div>
-            
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">1</div>
-                    <div>
-                        <h3 class="font-headline-sm">Computer System</h3>
-                        <p class="text-on-surface-variant font-label-md">Concepts, Architecture & Components</p>
+        <!-- ═══ MAIN CONTENT ═══ -->
+        <div class="subject-page-main">
+            <div class="content-grid">
+                <div>
+                    <div class="section-header-row">
+                        <h2>Curriculum Breakdown</h2>
+                        <button class="expand-all-btn" onclick="document.querySelectorAll('.curriculum-unit-body').forEach(el => el.classList.add('open'))">
+                            Expand All <span class="material-symbols-outlined">expand_more</span>
+                        </button>
                     </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Chapter 01</span>
-                        <h4 class="font-headline-sm text-lg mt-1">Computer Architecture & Organization</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="c11_computer_chapter_1.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">2</div>
-                    <div>
-                        <h3 class="font-headline-sm">Number System & Boolean Logic</h3>
-                        <p class="text-on-surface-variant font-label-md">Binary, Octal, Hexadecimal & Logic Gates</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Chapter 02</span>
-                        <h4 class="font-headline-sm text-lg mt-1">Number System & Gates</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="c11_computer_chapter_2.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">3</div>
-                    <div>
-                        <h3 class="font-headline-sm">Computer Software & Operating System</h3>
-                        <p class="text-on-surface-variant font-label-md">System Software, OS Functions & Concepts</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Chapter 03</span>
-                        <h4 class="font-headline-sm text-lg mt-1">Software & OS</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">4</div>
-                    <div>
-                        <h3 class="font-headline-sm">Application Package & Web Technology</h3>
-                        <p class="text-on-surface-variant font-label-md">HTML, CSS & Office Tools</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Chapter 04</span>
-                        <h4 class="font-headline-sm text-lg mt-1">Web & Packages</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="group border border-outline-variant rounded-xl overflow-hidden bg-white shadow-sm transition-all hover:border-primary/30">
-            <div class="p-6 flex items-center justify-between cursor-pointer bg-surface-container-low group-hover:bg-primary/5 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">5</div>
-                    <div>
-                        <h3 class="font-headline-sm">Programming Concepts & C Language</h3>
-                        <p class="text-on-surface-variant font-label-md">Algorithms, Flowcharts & Control Statements</p>
-                    </div>
-                </div>
-                <span class="material-symbols-outlined transition-transform duration-300">keyboard_arrow_down</span>
-            </div>
-            <div class="hidden p-6 grid grid-cols-1 gap-4 bg-white border-t border-outline-variant">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl border border-outline-variant lift-hover">
-                    <div>
-                        <span class="text-on-surface-variant font-label-md uppercase tracking-wider">Chapter 05</span>
-                        <h4 class="font-headline-sm text-lg mt-1">C Programming Basics</h4>
-                    </div>
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface hover:bg-primary-container hover:text-white transition-all font-label-md">
-                            <span class="material-symbols-outlined text-[18px]">description</span> View Notes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-            
-        </div>
 
-        <!-- Sidebar -->
-        <div class="lg:col-span-4 space-y-gutter">
-            <div class="bg-white p-8 rounded-2xl shadow-md border border-outline-variant relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-10">
-                    <span class="material-symbols-outlined text-[80px] text-secondary">analytics</span>
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">1</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>Computer System</h3>
+                                    <p>Concepts, Architecture & Components</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div class="exercise-item-label">Chapter 01</div>
+                                    <div class="exercise-item-title">Computer Architecture & Organization</div>
+                                </div>
+                                <div class="exercise-item-actions">
+                                    <a href="c11_computer_chapter_1.html" class="exercise-item-btn"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">2</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>Number System & Boolean Logic</h3>
+                                    <p>Binary, Octal, Hexadecimal & Logic Gates</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div class="exercise-item-label">Chapter 02</div>
+                                    <div class="exercise-item-title">Number System & Gates</div>
+                                </div>
+                                <div class="exercise-item-actions">
+                                    <a href="c11_computer_chapter_2.html" class="exercise-item-btn"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">3</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>Computer Software & Operating System</h3>
+                                    <p>System Software, OS Functions & Concepts</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div class="exercise-item-label">Chapter 03</div>
+                                    <div class="exercise-item-title">Software & OS</div>
+                                </div>
+                                <div class="exercise-item-actions">
+                                    <a href="#" class="exercise-item-btn"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">4</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>Application Package & Web Technology</h3>
+                                    <p>HTML, CSS & Office Tools</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div class="exercise-item-label">Chapter 04</div>
+                                    <div class="exercise-item-title">Web & Packages</div>
+                                </div>
+                                <div class="exercise-item-actions">
+                                    <a href="#" class="exercise-item-btn"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="curriculum-unit">
+                        <div class="curriculum-unit-header" onclick="this.nextElementSibling.classList.toggle('open')">
+                            <div class="curriculum-unit-header-left">
+                                <div class="curriculum-unit-num">5</div>
+                                <div class="curriculum-unit-info">
+                                    <h3>Programming Concepts & C Language</h3>
+                                    <p>Algorithms, Flowcharts & Control Statements</p>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </div>
+                        <div class="curriculum-unit-body">
+                            <div class="exercise-item">
+                                <div>
+                                    <div class="exercise-item-label">Chapter 05</div>
+                                    <div class="exercise-item-title">C Programming Basics</div>
+                                </div>
+                                <div class="exercise-item-actions">
+                                    <a href="#" class="exercise-item-btn"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="font-headline-sm mb-6">Your Progress</h3>
-                <div class="flex items-center justify-between mb-2">
-                    <span class="font-label-md text-on-surface-variant">Course Completion</span>
-                    <span class="font-bold text-secondary">0%</span>
+
+                <div>
+                    <div class="progress-card">
+                        <div class="progress-card-watermark"><span class="material-symbols-outlined">analytics</span></div>
+                        <h3>Your Progress</h3>
+                        <div class="progress-card-row">
+                            <span class="label">Course Completion</span>
+                            <span class="value">0%</span>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill" style="width:0%;"></div>
+                        </div>
+                        <p>Start learning to track your progress across all chapters.</p>
+                        <button class="btn-start">Start Learning</button>
+                    </div>
                 </div>
-                <div class="h-3 w-full bg-secondary-container/20 rounded-full mb-6">
-                    <div class="h-full bg-secondary rounded-full" style="width: 0%"></div>
-                </div>
-                <p class="font-body-md text-on-surface-variant mb-6">
-                    Start learning to track your progress across all chapters.
-                </p>
-                <button class="w-full py-3 rounded-xl bg-primary text-white font-label-md hover:bg-primary/90 transition-all shadow-md">
-                    Start Learning
-                </button>
             </div>
         </div>
-    </div>
-</main>
-    <!-- â•â•â• FOOTER â•â•â• -->
     </main>
-    <!-- â•â•â• FOOTER â•â•â• -->
+    <!-- ═══ FOOTER ═══ -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-top">

@@ -15,100 +15,11 @@
     <script src="../../../scripts/theme.js"></script>
     <link rel="stylesheet" href="../../../styles/main.css">
     <style>
-        :root {
-            --devanagari-font: 'Mukta', sans-serif;
-        }
-        .devanagari {
-            font-family: var(--devanagari-font);
-        }
+        /* Devanagari font overrides for Nepali content pages */
         .curriculum-unit-info h3 {
-            font-family: var(--devanagari-font);
+            font-family: var(--font-devanagari), var(--font-heading), sans-serif;
             font-size: 1.2rem;
             letter-spacing: -0.01em;
-        }
-        .exercise-item-title {
-            font-family: var(--devanagari-font);
-            font-size: 1.05rem;
-            font-weight: 600;
-        }
-        .search-lesson-box {
-            position: relative;
-            margin-bottom: var(--space-lg);
-        }
-        .search-lesson-input {
-            width: 100%;
-            padding: 0.8rem 1rem 0.8rem 2.8rem;
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--outline-variant);
-            background: var(--surface-container-lowest);
-            color: var(--on-surface);
-            font-family: var(--devanagari-font), var(--font-sans);
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
-            box-shadow: var(--shadow-sm);
-        }
-        .search-lesson-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(53, 37, 205, 0.15);
-        }
-        .search-lesson-icon {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--on-surface-variant);
-            pointer-events: none;
-        }
-        .unit-badge-count {
-            font-size: 0.75rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: var(--radius-full);
-            background: rgba(53, 37, 205, 0.08);
-            color: var(--primary);
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        .accordion-arrow {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .curriculum-unit.open .accordion-arrow {
-            transform: rotate(180deg);
-        }
-        .breadcrumb-trail {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--on-surface-variant);
-            margin-bottom: var(--space-md);
-        }
-        .breadcrumb-trail a {
-            color: var(--on-surface-variant);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .breadcrumb-trail a:hover {
-            color: var(--primary);
-        }
-        .hero-overview-card {
-            max-width: 360px;
-            width: 100%;
-            justify-self: end;
-            padding: 1.25rem 1.4rem;
-        }
-        .hero-overview-card h3 {
-            font-size: 1.05rem;
-            margin-bottom: 0.75rem;
-        }
-        .hero-overview-card .overview-stat {
-            padding: 0.5rem 0.75rem;
-            font-size: 0.88rem;
-        }
-        .hero-overview-card .overview-stat + .overview-stat {
-            margin-top: 0.45rem;
         }
     </style>
 </head>

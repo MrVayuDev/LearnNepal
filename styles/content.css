@@ -57,6 +57,41 @@
   }
 }
 
+/* ─── Breadcrumb Trail (alias for hero/subject pages) ────── */
+.breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+.breadcrumb-trail a {
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.breadcrumb-trail a:hover {
+  color: var(--primary);
+}
+.breadcrumb-separator {
+  color: var(--outline-variant);
+  font-size: 0.85rem;
+  user-select: none;
+}
+.breadcrumb-current {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-trail {
+    font-size: 0.78rem;
+  }
+}
+
 /* ─── Docs Layout (Sidebar + Content) ────────────────────── */
 .docs-layout {
   display: grid;

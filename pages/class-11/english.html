@@ -46,9 +46,19 @@
     </header>
 
     <main>
-        <div class="content-page">
-            <div class="subject-header">
+        <!-- ═══ HERO ═══ -->
+        <section class="subject-hero">
+            <div class="subject-hero-inner">
                 <div>
+                    <nav class="breadcrumb-trail" aria-label="Breadcrumbs">
+                        <a href="../../index.html">Home</a>
+                        <span class="breadcrumb-separator">›</span>
+                        <a href="../../pages/courses.html">Courses</a>
+                        <span class="breadcrumb-separator">›</span>
+                        <a href="../../pages/courses.html#grade11">Class 11</a>
+                        <span class="breadcrumb-separator">›</span>
+                        <span class="breadcrumb-current">English</span>
+                    </nav>
                     <div class="subject-badges">
                         <span class="subject-badge primary">Grade 11</span>
                         <span class="subject-badge secondary">Compulsory</span>
@@ -72,7 +82,10 @@
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- ═══ MAIN CONTENT ═══ -->
+        <div class="subject-page-main">
             <div class="content-grid">
                 <div>
                     <div class="section-header-row">
@@ -96,11 +109,11 @@
                         <div class="curriculum-unit-body">
                             <div class="exercise-item">
                                 <div>
-                                    <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--outline);margin-bottom:0.25rem;">Section I</div>
-                                    <div style="font-size:1rem;font-weight:700;">Language Skills &amp; Grammar</div>
+                                    <div class="exercise-item-label">Section I</div>
+                                    <div class="exercise-item-title">Language Skills &amp; Grammar</div>
                                 </div>
-                                <div style="display:flex;gap:0.5rem;margin-top:var(--space-sm);">
-                                    <a href="#" class="btn btn-secondary btn-sm"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                <div class="exercise-item-actions">
+                                    <a href="#" class="exercise-item-btn"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
                                 </div>
                             </div>
                         </div>
@@ -120,11 +133,11 @@
                         <div class="curriculum-unit-body">
                             <div class="exercise-item">
                                 <div>
-                                    <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--outline);margin-bottom:0.25rem;">Section II</div>
-                                    <div style="font-size:1rem;font-weight:700;">Literary Texts &amp; Analysis</div>
+                                    <div class="exercise-item-label">Section II</div>
+                                    <div class="exercise-item-title">Literary Texts &amp; Analysis</div>
                                 </div>
-                                <div style="display:flex;gap:0.5rem;margin-top:var(--space-sm);">
-                                    <a href="#" class="btn btn-secondary btn-sm"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
+                                <div class="exercise-item-actions">
+                                    <a href="#" class="exercise-item-btn"><span class="material-symbols-outlined" style="font-size:0.9rem;">description</span> View Notes</a>
                                 </div>
                             </div>
                         </div>
@@ -132,18 +145,18 @@
                 </div>
 
                 <div>
-                    <div class="overview-card" style="text-align:center;">
-                        <div style="position:absolute;top:var(--space-md);right:var(--space-md);opacity:0.08;"><span class="material-symbols-outlined" style="font-size:5rem;color:var(--secondary);">analytics</span></div>
+                    <div class="progress-card">
+                        <div class="progress-card-watermark"><span class="material-symbols-outlined">analytics</span></div>
                         <h3>Your Progress</h3>
-                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-xs);">
-                            <span style="font-size:0.85rem;color:var(--on-surface-variant);">Course Completion</span>
-                            <span style="font-weight:700;color:var(--secondary);">0%</span>
+                        <div class="progress-card-row">
+                            <span class="label">Course Completion</span>
+                            <span class="value">0%</span>
                         </div>
-                        <div style="height:10px;background:var(--secondary-container);border-radius:var(--radius-full);margin-bottom:var(--space-lg);overflow:hidden;">
-                            <div style="height:100%;width:0%;background:var(--secondary);border-radius:var(--radius-full);"></div>
+                        <div class="progress-bar-track">
+                            <div class="progress-bar-fill" style="width:0%;"></div>
                         </div>
-                        <p style="font-size:0.875rem;color:var(--on-surface-variant);margin-bottom:var(--space-lg);">Start learning to track your progress across all chapters.</p>
-                        <button class="btn btn-primary" style="width:100%;justify-content:center;">Start Learning</button>
+                        <p>Start learning to track your progress across all chapters.</p>
+                        <button class="btn-start">Start Learning</button>
                     </div>
                 </div>
             </div>
